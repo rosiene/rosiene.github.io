@@ -1,0 +1,40 @@
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+
+h1{
+  font-weight: 200;
+  font-style: normal;
+  font-size: 54px;
+}
+
+h3 {
+  color: #555;
+}
+
+h3 a {
+  color: #555;
+}
+
+h3 a:hover {
+  color: #111;
+}
+
+img {
+  border-radius: 150px;
+  margin: 40px;
+}
+
+.social{
+  padding: 10px;
+}
+
+.social a{
+  color: #bbb;
+  margin: 5px;
+}
+
+.social a:hover{
+  color: #777;
+}
