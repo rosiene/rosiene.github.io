@@ -4,21 +4,22 @@ body{
 }
 
 h1{
+  color: #444;
   font-weight: 200;
   font-style: normal;
   font-size: 54px;
 }
 
 h3 {
-  color: #555;
+  color: #777;
 }
 
 h3 a {
-  color: #555;
+  color: #777;
 }
 
 h3 a:hover {
-  color: #111;
+  color: #333;
 }
 
 img {
@@ -31,13 +32,13 @@ img {
 }
 
 .social a{
-  color: #bbb;
+  color: #aaa;
   margin: 5px;
   text-decoration: none;
 }
 
 .social a:hover{
-  color: #777;
+  color: #666;
 }
 
 @media only screen and (max-width: 369px) {
