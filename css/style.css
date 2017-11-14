@@ -33,8 +33,25 @@ img {
 .social a{
   color: #bbb;
   margin: 5px;
+  text-decoration: none;
 }
 
 .social a:hover{
   color: #777;
+}
+
+@media only screen and (max-width: 369px) {
+
+  img {
+    margin: 10px;
+    width: 300px;
+  }
+
+  h1{
+  font-size: 38px;
+  }
+
+  h3{
+  font-size: 16px;
+  }
 }
