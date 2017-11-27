@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+}
+
+h1 {
+  font-family: 'Cabin', sans-serif;
+  color: #31D0BF;
+  font-size: 42px;
+  margin: 20px 0;
+  text-shadow: 1px 1px 1px #A6ABB4;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  margin: 0;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #196291;
+}
+
+a:hover {
+  color: #33253D;
+}
+
+.content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.venues-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.venues-list li{
+  border: white solid 1px;
+  box-shadow: 0px 1px 2px #A6ABB4;
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.venue_content {
+  display: flex;
+}
+
+.venue_img {
+  margin-right: 10px;
+}
+
+.venue-title {
+  font-size: 24px;
+}
+.venue-category {
+  margin-left: auto;
+}
+
+.rating {
+  background: #ECB4B8;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  padding: 5px;
+  margin: 5px;
+  vertical-align: super;
+  display: inline-block;
+  text-align: center;
+}
+
+.category {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #33253D;
+}
+
+.category img{
+  margin: 6px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.error_message {
+  border: solid 1px #ea777f;
+  color: #ea777f;
+  border-radius: 3px;
+  padding: 5px;
+  display: none;
+}
+
+.venue_img {
+  float: right;
+}
+
+.venue_details span {
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  margin: 30px 0;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .content {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .category {
+    width: 36px;
+    height: 36px;
+  }
+
+  .category img{
+    margin: 2px;
+  }
+}
