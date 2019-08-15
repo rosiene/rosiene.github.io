@@ -1,4 +1,4 @@
-var urlSendElement = document.getif(document.getElementById('urlSend');
+var urlSendElement = document.getElementById('urlSend');
                                     
 if(urlSendElement){
    urlSendElement.addEventListener("click", function(event){
