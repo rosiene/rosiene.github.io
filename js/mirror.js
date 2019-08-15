@@ -2,8 +2,8 @@ document.getElementById("urlSend").addEventListener("click", function(event){
   event.preventDefault();
   var str = document.getElementById("urlValue").value;
   var matches = str.match(/v=([^&]*)/);
-  console.log(matches[1]);
-  if (typeof matches[1] === 'undefined' || matches[1] === null) {
+  
+  if (typeof matches === 'undefined' || matches === null) {
     console.log("Erro");
     var textnode = document.createTextNode("Infelizmente não foi possível exibir o vídeo. Tente outro link conforme exemplo");
     document.getElementById("iframeAqui").appendChild(textnode);
