@@ -1,4 +1,6 @@
 document.getElementById("urlSend").addEventListener("click", function(event){
   event.preventDefault();
-  alert('yes');
+  var str = document.getElementById("urlValue").value;
+  var matches = str.match(/name=([^&]*)/);
+  alert(matches);
 });
