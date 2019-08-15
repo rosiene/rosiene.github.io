@@ -1,8 +1,4 @@
-$(document).ready(function() {
-  $('#urlSend').click(submitClick);
+document.getElementById("urlSend").addEventListener("click", function(event){
+  event.preventDefault();
+  alert('yes');
 });
-
-function submitClick(e){
-  e.preventDefault();
-  alert('xim');
-}
