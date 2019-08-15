@@ -1,5 +1,7 @@
-if(document.getif(document.getElementById('urlSend')){
-   document.getElementById("urlSend").addEventListener("click", function(event){
+var urlSendElement = document.getif(document.getElementById('urlSend');
+                                    
+if(urlSendElement){
+   urlSendElement.addEventListener("click", function(event){
       event.preventDefault();
       var str = document.getElementById("urlValue").value;
       var matches = str.match(/v=([^&]*)/);
