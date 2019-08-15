@@ -7,8 +7,8 @@ document.getElementById("urlSend").addEventListener("click", function(event){
       console.log("Erro");
       var p1 = document.createElement("p");
       var p2 = document.createElement("p");
-      p1.innerText("Infelizmente não foi possível exibir o vídeo.");
-      p2.innerText("Tente outro link conforme exemplo!");
+      p1.innerText = "Infelizmente não foi possível exibir o vídeo.";
+      p2.innerText = "Tente outro link conforme exemplo!";
       document.getElementById("iframeAqui").innerHTML = "";
       document.getElementById("iframeAqui").appendChild(p1);
       document.getElementById("iframeAqui").appendChild(p2);
@@ -17,8 +17,8 @@ document.getElementById("urlSend").addEventListener("click", function(event){
           console.log("Erro");
           var p1 = document.createElement("p");
           var p2 = document.createElement("p");
-          p1.innerText("Infelizmente não foi possível exibir o vídeo.");
-          p2.innerText("Tente outro link conforme exemplo!");
+          p1.innerText = "Infelizmente não foi possível exibir o vídeo.";
+          p2.innerText = "Tente outro link conforme exemplo!";
           document.getElementById("iframeAqui").innerHTML = "";
           document.getElementById("iframeAqui").appendChild(p1);
           document.getElementById("iframeAqui").appendChild(p2);
