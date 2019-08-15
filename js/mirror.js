@@ -1,6 +1,6 @@
 var urlSendElement = document.getElementById('urlSend');
                                     
-if(urlSendElement){
+if(urlSendElement != null){
    urlSendElement.addEventListener("click", function(event){
       event.preventDefault();
       var str = document.getElementById("urlValue").value;
