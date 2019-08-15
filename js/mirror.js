@@ -29,7 +29,7 @@ document.getElementById("urlSend").addEventListener("click", function(event){
           ifrm.setAttribute("src", iframeUrl);
           ifrm.width = 480;
           ifrm.height = 270;
-          ifrm.frameborder = 0 ;
+          ifrm.frameBorder = 0 ;
           ifrm.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
           ifrm.allowfullscreen =  "";
           ifrm.style = "-moz-transform: rotatey(180deg); -webkit-transform: rotatey(180deg); transform: rotatey(180deg);";
