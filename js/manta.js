@@ -24,11 +24,11 @@ $( document ).ready(function() {
 
       }else{
         $('.amostra_pontos').css('color','#4f4f4f');
-        $('#amostraPontos').css('border',' 1px solid #4f4f4f');
+        $('#amostraPontos').css('border',' 1px solid #ddd');
         $('.pto_multiplo').css('color','#4f4f4f');
-        $('#ptoMultiplo').css('border',' 1px solid #4f4f4f');
+        $('#ptoMultiplo').css('border',' 1px solid #ddd');
         $('.tamanho').css('color','#4f4f4f');
-        $('#tamanho').css('border',' 1px solid #4f4f4f');
+        $('#tamanho').css('border',' 1px solid #ddd');
 
         var amostraPontos = parseInt(document.getElementById("amostraPontos").value);
         var ptoMultiplo = parseInt(document.getElementById("ptoMultiplo").value);
