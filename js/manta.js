@@ -49,13 +49,15 @@ $( document ).ready(function() {
         var multiploTamanho = ptoMultiplo + ptoMais;
         var nPtoFantasia = 1;
 
-        do {
+        while (maxPontoComBorda > multiploTamanho) {
           multiploTamanho = multiploTamanho + ptoMultiplo;
           nPtoFantasia++;
-        } while (maxPontoComBorda > multiploTamanho);
+        }
+        multiploTamanho = multiploTamanho - ptoMultiplo + ptosBorda;
+        nPtoFantasia--;
 
         $('.resultado').append('A manta deverá ter '
-          + maxPontoComBorda + ' pontos, e a repetição do ponto fantasia será de '
+          + multiploTamanho + ' pontos, e a repetição do ponto fantasia será de '
           + nPtoFantasia + ' vezes, incluindo os ' + ptosBorda + ' pontos de borda.');
 
       }
