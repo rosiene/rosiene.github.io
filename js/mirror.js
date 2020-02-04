@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 var urlSendElement = document.getElementById('urlSend');
 console.log('1');                                    
 if(urlSendElement != null){
@@ -44,3 +45,4 @@ if(urlSendElement != null){
       }
     });
 }
+    });
