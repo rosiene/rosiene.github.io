@@ -1,7 +1,9 @@
 var urlSendElement = document.getElementById('urlSend');
-                                    
+console.log('1');                                    
 if(urlSendElement != null){
+  console.log('2');
    urlSendElement.addEventListener("click", function(event){
+      console.log('3');
       event.preventDefault();
       var str = document.getElementById("urlValue").value;
       var matches = str.match(/v=([^&]*)/);
