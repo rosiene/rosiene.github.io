@@ -55,6 +55,7 @@ $( document ).ready(function() {
           multiploTamanho = multiploTamanho - ptoMultiplo;
           nPtoFantasia--;
         }
+        $('.resultado').empty();
         $('.resultado').append('Você deve colocar '
           + multiploTamanho + ' pontos na agulha, e a repetição do ponto fantasia será de '
           + nPtoFantasia + ' vezes.');
