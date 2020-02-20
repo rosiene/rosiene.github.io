@@ -55,7 +55,8 @@ $( document ).ready(function() {
         }
         multiploTamanho = multiploTamanho - ptoMultiplo + ptosBorda;
         nPtoFantasia--;
-
+        
+        $('.resultado').empty();
         $('.resultado').append('A manta deverá ter '
           + multiploTamanho + ' pontos, e a repetição do ponto fantasia será de '
           + nPtoFantasia + ' vezes, incluindo os ' + ptosBorda + ' pontos de borda.');
