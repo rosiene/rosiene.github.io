@@ -1,58 +1,222 @@
-body{
-  font-family: 'Josefin Sans', sans-serif;
+
+/*  --
+@cor-preto: #241f20;
+@cor-cinza: #81827f;
+@cor-branco: #ffffff;
+  --cor-rosa-claro: #f0d7dd;
+  --cor-rosa-medio: #e49dac;
+  --cor-rosa-escuro: #be495f;
+  --cor-marrom-escuro: #a44030;
+  --cor-marrom-medio: #c37d5d;
+  --cor-marrom-claro: #caa175;
+  --cor-verde-claro: #98bcba;
+  --cor-verde-medio: #7AA9A6;
+  --cor-azul-claro: #a0bbd2;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #241f20;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
   text-align: center;
 }
 
-h1{
-  color: #444;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 54px;
+h2 {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 h3 {
-  color: #777;
+  font-size: 16px;
 }
 
-h3 a {
-  color: #777;
-}
-
-h3 a:hover {
-  color: #333;
-}
-
-img {
-  border-radius: 150px;
-  margin: 40px;
-}
-
-.social{
-  padding: 10px;
-}
-
-.social a{
-  color: #aaa;
-  margin: 5px;
+a {
   text-decoration: none;
 }
 
-.social a:hover{
-  color: #666;
+.session {
+  padding: 50px 0;
 }
 
-@media only screen and (max-width: 369px) {
+.top {
+    text-align: center;
+}
 
-  img {
-    margin: 10px;
-    width: 300px;
-  }
+.logo_principal {
+  width: 300px;
+  height: 300px;
+}
 
-  h1{
-  font-size: 38px;
-  }
+.img_capa {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+}
 
-  h3{
-  font-size: 16px;
-  }
+.receita {
+  text-align: center;
+}
+.receita .content{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.receita h1 {
+  margin-bottom: 40px;
+}
+
+.receita img {
+  width: 304px;
+}
+
+.receita .content a:hover img{
+  opacity: 0.7;
+}
+
+.receita_link {
+  text-transform: uppercase;
+  background: #000000;
+  color: #ffffff;
+  padding: 12px 24px ;
+  border-radius: 5px;
+}
+
+.clube {
+  background-color: #e49dac;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.clube div{
+  padding: 30px;
+}
+
+.clube div p{
+  font-style: italic;
+  text-align: center;
+  width: 400px;
+}
+
+.clube_link {
+  text-transform: uppercase;
+  background: #ffffff;
+  color: #be495f;
+  padding: 12px 24px ;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.iniciante {
+  text-align: center;
+}
+
+.iniciante h1 {
+  color: #7AA9A6;
+  margin-top: -40px;
+}
+.iniciante p {
+  color: #81827F;
+  width: 300px;
+}
+
+.util {
+  background-color: #7AA9A6;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.util > div {
+  padding: 24px;
+  text-align: center;
+  max-width: 190px;
+}
+.util img {
+}
+
+.util a {
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+.util a h2 {
+  font-size: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.util a p {
+  font-style: italic;
+  font-size: 14px;
+  padding-top: 8px;
+}
+
+.blog {}
+
+.newsletter {
+  background-color: #CAA175;
+  color: #ffffff;
+}
+
+.newsletter p {
+  text-align: center;
+  font-style: italic;
+}
+
+.newsletter .form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.newsletter .email {
+  padding: 8px;
+  border: none;
+}
+
+.newsletter .button {
+  background-color: #a44030;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  border: none;
+}
+
+footer {
+  background-color: #a44030;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 0 30px 0;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+.ico-logo {
+  width: 100px;
+}
+
+.social a img {
+  padding: 30px 10px;
+  width: 48px;
+}
+
+.social .youtube { fill: #B30017;}
+
+.ico-footer {
+  padding: 30px 10px;
 }
