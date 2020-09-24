@@ -44,6 +44,10 @@ a {
   text-decoration: none;
 }
 
+.section{
+  margin: 0;
+}
+
 .session {
   padding: 50px 0;
 }
