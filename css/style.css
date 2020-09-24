@@ -48,6 +48,10 @@ a {
   margin: 0;
 }
 
+.widget {
+    margin: 0;
+}
+
 .session {
   padding: 50px 0;
 }
