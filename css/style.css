@@ -196,12 +196,12 @@ a {
   font-style: italic;
 }
 
-.newsletter .form {
+.newsletter #mc_embed_signup form {
   text-align: center;
   margin: 20px 0;
 }
 
-.newsletter .email {
+.newsletter #mc_embed_signup input.email {
   padding: 8px;
   border: none;
 }
