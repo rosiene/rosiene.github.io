@@ -206,7 +206,7 @@ a {
   border: none;
 }
 
-.newsletter .button {
+.newsletter #mc_embed_signup .button {
   background-color: #a44030;
   color: #ffffff;
   text-transform: uppercase;
