@@ -253,3 +253,26 @@ footer a {
 .ico-footer {
   padding: 30px 10px;
 }
+
+table.gsc-search-box {
+  margin: 0 auto;
+}
+
+input.gsc-input {
+  border: 1px #81827f solid;
+  color: #241f20;
+  border-radius: 5px;
+  padding: 6px;
+  width: 200px;
+}
+
+input.gsc-search-button {
+  display: block;
+  background-image: url(img/ico/search.svg);
+  background-color: #fff;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin: 10px;
+}
