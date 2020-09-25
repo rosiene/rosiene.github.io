@@ -183,8 +183,6 @@ a {
   padding-top: 8px;
 }
 
-.blog {}
-
 .newsletter {
   background-color: #CAA175;
   color: #ffffff;
@@ -226,6 +224,11 @@ a {
   font-size: 14px;
   background-color: #a44030;
   color: #ffffff;
+}
+
+.newsletter #mc_embed_signup .button:active {
+  background-color: #c37d5d;
+  border: none;
 }
 
 footer {
