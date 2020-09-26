@@ -281,25 +281,32 @@ input.gsc-search-button {
   margin: 10px;
 }
 
-.post-title {
-  font-family: 'Bitter', serif;
-  font-size: 42px;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.date-header {
-  font-style: italic;
-  text-align: center;
-  line-height: 28px;
-  color: #81827f;
-}
-
 .blog-posts {
   width: 960px;
   margin: 10px auto;
-  background: #fbfbfb;
   padding: 30px;
+}
+
+.post-title {
+  font-family: 'Bitter', serif;
+  color: #be495f;
+  font-size: 42px;
+  text-align: center;
+  margin-top: 20px;
+  border-bottom: #e49dac dotted 1px;
+}
+
+.date-header {
+  font-weight: 100;
+  text-align: center;
+  line-height: 28px;
+  color: #e49dac;
+  margin-bottom: 20px;
+}
+
+.post-footer-line {
+  text-align: center;
+  margin: 20px;
 }
 
 .post-labels a {

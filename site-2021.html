@@ -303,7 +303,7 @@ URL:      www.rosiene.com.br
           <b:widget-settings>
             <b:widget-setting name='showDateHeader'>true</b:widget-setting>
             <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
-            <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+            <b:widget-setting name='showShareButtons'>true</b:widget-setting>
             <b:widget-setting name='authorLabel'>By</b:widget-setting>
             <b:widget-setting name='showCommentLink'>true</b:widget-setting>
             <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
@@ -771,7 +771,6 @@ URL:      www.rosiene.com.br
       <div class='post-footer-line post-footer-line-2'>
       <span class='post-labels'>
         <b:if cond='data:top.showPostLabels and data:post.labels'>
-          <data:postLabelsLabel/>
           <b:loop values='data:post.labels' var='label'>
             <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
           </b:loop>
