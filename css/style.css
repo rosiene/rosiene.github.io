@@ -143,6 +143,7 @@ a:hover {
 
 .clube_link:hover {
   text-decoration: none;
+}
 
 .iniciante {
   text-align: center;
@@ -190,7 +191,7 @@ a:hover {
 .util a h2 {
   font-size: 18px;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
 }
 
 .util a p {
@@ -264,7 +265,7 @@ footer a {
 }
 
 .social a img {
-  padding: 30px 10px;
+  margin: 30px 10px;
   width: 48px;
 }
 
@@ -301,7 +302,7 @@ input.gsc-search-button {
   width: 960px;
   margin: 10px auto;
   padding: 30px;
-  border: #fcfcfc dotted 1px;
+  border: #f0d7dd dotted 1px;
 }
 
 .post-title {
@@ -320,8 +321,6 @@ input.gsc-search-button {
   color: #e49dac;
   margin-bottom: 20px;
 }
-
-.post-footer
 
 .post-footer-line {
   text-align: center;
