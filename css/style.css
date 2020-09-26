@@ -43,6 +43,12 @@ h3 {
 
 a {
   text-decoration: none;
+  color: #be495f;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .section{
@@ -304,6 +310,8 @@ input.gsc-search-button {
   margin-bottom: 20px;
 }
 
+.post-footer
+
 .post-footer-line {
   text-align: center;
   margin: 20px;
@@ -356,9 +364,9 @@ input.gsc-search-button {
 }
 
 .share-button {
-    width: 32px;
-    height: 32px;
-    background: none;
+    width: 44px;
+    height: 44px;
+    background: none !important;
     overflow: hidden;
     margin: 3px;
 }
