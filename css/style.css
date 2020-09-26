@@ -327,6 +327,11 @@ input.gsc-search-button {
   background: #fff;
 }
 
+.comments h4 {
+  font-weight: 200;
+  font-size: 24px;
+}
+
 .comments .avatar-image-container {
   border-radius: 36px;
 }
