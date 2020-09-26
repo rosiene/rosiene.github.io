@@ -240,6 +240,7 @@ footer {
 
 footer a {
   color: #ffffff;
+  text-decoration: underline;
 }
 
 .ico-logo {
