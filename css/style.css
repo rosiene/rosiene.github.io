@@ -33,6 +33,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Bitter', serif;
   font-size: 24px;
   font-weight: bold;
 }
@@ -131,12 +132,17 @@ a:hover {
 
 .clube_link {
   text-transform: uppercase;
+  font-weight: 200;
   background: #ffffff;
   color: #be495f;
   padding: 12px 24px ;
   border-radius: 5px;
   font-size: 24px;
 }
+
+
+.clube_link:hover {
+  text-decoration: none;
 
 .iniciante {
   text-align: center;
@@ -146,6 +152,10 @@ a:hover {
 
 .iniciante div {
   margin: 0 30px;
+}
+
+.iniciante div a:hover{
+  text-decoration: none;
 }
 
 .iniciante h1 {
@@ -291,7 +301,7 @@ input.gsc-search-button {
   width: 960px;
   margin: 10px auto;
   padding: 30px;
-  background: #fcfcfc;
+  border: #fcfcfc dotted 1px;
 }
 
 .post-title {
