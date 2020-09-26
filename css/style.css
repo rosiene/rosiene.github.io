@@ -303,16 +303,21 @@ input.gsc-search-button {
 }
 
 .post-labels a {
-  text-decoration: none;
-  color: #fff;
-  background: #e49dac;
-  padding: 6px 12px;
-  border-radius: 10px;
-  margin: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: #e49dac;
+    padding: 10px 16px;
+    /* border-radius: 30px; */
+    margin: 2px;
 }
 
 .post-labels a:hover {
   background: #be495f;
+}
+
+.comments {
+  padding: 16px;
+  background: #fff;
 }
 
 .comments .avatar-image-container {
@@ -327,7 +332,7 @@ input.gsc-search-button {
   color: #fff;
   background: #e49dac;
   padding: 3px 6px;
-  border-radius: 6px;
+  /*border-radius: 6px; */
   margin: 3px;
 }
 
