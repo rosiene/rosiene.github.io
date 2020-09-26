@@ -6,7 +6,7 @@
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <link href='https://rosiene.github.io/css/style.css' media='all' rel='stylesheet' type='text/css'/>
-
+    <link href='https://fonts.googleapis.com/css2?family=Bitter:wght@100' rel='stylesheet'/>
     <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
@@ -301,7 +301,7 @@ URL:      www.rosiene.com.br
       <b:section class='main' id='main' name='Main' showaddelement='no'>
         <b:widget id='Blog1' locked='true' title='Postagens no blog' type='Blog' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+            <b:widget-setting name='showDateHeader'>true</b:widget-setting>
             <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
             <b:widget-setting name='showShareButtons'>false</b:widget-setting>
             <b:widget-setting name='authorLabel'>By</b:widget-setting>
@@ -336,9 +336,6 @@ URL:      www.rosiene.com.br
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-outer&quot;&gt;
-        </b:if>
-        <b:if cond='data:post.dateHeader'>
-          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-posts&quot;&gt;
@@ -623,9 +620,6 @@ URL:      www.rosiene.com.br
 </b:includable>
           <b:includable id='mobile-post' var='post'>
   <div class='date-outer'>
-    <b:if cond='data:post.dateHeader'>
-      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
-    </b:if>
     <div class='date-posts'>
       <div class='post-outer'>
 
@@ -754,7 +748,10 @@ URL:      www.rosiene.com.br
       </b:if>
       </h3>
     </b:if>
-
+    <!-- DATA DEPOIS DO TITULO -->
+    <b:if cond='data:post.dateHeader'>
+      <h4 class='date-header'><span><data:post.dateHeader/></span></h4>
+    </b:if>
     <!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
     <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
       <data:post.body/>

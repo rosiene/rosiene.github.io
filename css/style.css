@@ -280,3 +280,25 @@ input.gsc-search-button {
   border: none;
   margin: 10px;
 }
+
+.post-title {
+  font-family: 'Bitter', serif;
+  font-size: 32px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.date-header span{
+  font-style: italic;
+  text-align: center;
+  line-height: 30px;
+  color: #81827f;
+}
+
+.blog-posts {
+  width: 960px;
+  margin: 0 auto;
+  border-left: #f0d7dd solid 1px;
+  border-right: #f0d7dd solid 1px;
+  padding: 30px;
+}
