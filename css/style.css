@@ -346,3 +346,7 @@ input.gsc-search-button {
 .comment-actions a:hover {
   background: #be495f;
 }
+
+.share-button {
+  background: none;
+}
