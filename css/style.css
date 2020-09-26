@@ -283,22 +283,54 @@ input.gsc-search-button {
 
 .post-title {
   font-family: 'Bitter', serif;
-  font-size: 32px;
+  font-size: 42px;
   text-align: center;
   margin: 20px 0;
 }
 
-.date-header span{
+.date-header {
   font-style: italic;
   text-align: center;
-  line-height: 30px;
+  line-height: 28px;
   color: #81827f;
 }
 
 .blog-posts {
   width: 960px;
-  margin: 0 auto;
-  border-left: #f0d7dd solid 1px;
-  border-right: #f0d7dd solid 1px;
+  margin: 10px auto;
+  background: #fbfbfb;
   padding: 30px;
+}
+
+.post-labels a {
+  text-decoration: none;
+  color: #fff;
+  background: #e49dac;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin: 6px;
+}
+
+.post-labels a:hover {
+  background: #be495f;
+}
+
+.comments .avatar-image-container {
+  border-radius: 36px;
+}
+.comments .comments-content .datetime {
+  font-size: 12px;
+  font-style: italic;
+}
+.comment-actions a {
+  text-decoration: none;
+  color: #fff;
+  background: #e49dac;
+  padding: 3px 6px;
+  border-radius: 6px;
+  margin: 3px;
+}
+
+.comment-actions a:hover {
+  background: #be495f;
 }
