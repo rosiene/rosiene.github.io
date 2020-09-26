@@ -291,6 +291,7 @@ input.gsc-search-button {
   width: 960px;
   margin: 10px auto;
   padding: 30px;
+  background: #fcfcfc;
 }
 
 .post-title {
@@ -323,11 +324,15 @@ input.gsc-search-button {
     background: #e49dac;
     padding: 10px 16px;
     border-radius: 30px;
-    margin: 2px;
+    margin: 3px;
 }
 
 .post-labels a:hover {
   background: #be495f;
+}
+
+.comment-footer {
+  margin: 0;
 }
 
 .comments {
