@@ -769,6 +769,7 @@ URL:      www.rosiene.com.br
       <div class='post-footer-line post-footer-line-2'>
       <span class='post-labels'>
         <b:if cond='data:top.showPostLabels and data:post.labels'>
+          <h4>Marcadores:</h4>
           <b:loop values='data:post.labels' var='label'>
             <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
           </b:loop>
@@ -788,7 +789,8 @@ URL:      www.rosiene.com.br
     </span>
   </b:if>
 </b:includable>
-          <b:includable id='shareButtons' var='post'>
+  <b:includable id='shareButtons' var='post'>
+    <h4>Compartilhe:</h4>
   <b:if cond='data:top.showEmailButton'>
     <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
       <img src="https://rosiene.github.io/img/ico/share-email.svg"/></a>

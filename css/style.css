@@ -314,7 +314,7 @@ input.gsc-search-button {
     color: #fff;
     background: #e49dac;
     padding: 10px 16px;
-    /* border-radius: 30px; */
+    border-radius: 30px;
     margin: 2px;
 }
 
@@ -335,23 +335,30 @@ input.gsc-search-button {
 .comments .avatar-image-container {
   border-radius: 36px;
 }
+
 .comments .comments-content .datetime {
   font-size: 12px;
   font-style: italic;
 }
-.comment-actions a {
+
+.comments .comment .comment-actions a {
   text-decoration: none;
   color: #fff;
   background: #e49dac;
   padding: 3px 6px;
-  /*border-radius: 6px; */
+  border-radius: 6px;
   margin: 3px;
 }
 
 .comment-actions a:hover {
   background: #be495f;
+  text-decoration: none;
 }
 
 .share-button {
-  background: none;
+    width: 32px;
+    height: 32px;
+    background: none;
+    overflow: hidden;
+    margin: 3px;
 }
