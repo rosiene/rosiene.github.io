@@ -322,7 +322,7 @@ input.gsc-input {
   display: none;
 }
 
-.search input img{
+.search-ico{
   cursor: pointer;
   height: 24px;
   width: 24px;
