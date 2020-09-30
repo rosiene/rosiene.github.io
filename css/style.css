@@ -29,7 +29,7 @@ h1 {
   font-size: 48px;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 
 h2 {
@@ -61,6 +61,17 @@ a {
 .top {
   text-align: center;
   padding: 20px;
+}
+
+.titlewrapper h1{
+  font-family: 'Bitter', serif;
+  color: #a44030;
+  font-weight: 600;
+  font-size: 64px;
+}
+
+.descriptionwrapper{
+  margin-top: -24px;
 }
 
 .logo_principal {
@@ -307,12 +318,17 @@ footer a {
 }
 
 input.gsc-input {
-  color: #241f20;
+  color: #be495f;
+  font-size: 16px;
   padding: 6px;
   border: none;
   display: inline;
   outline: 0;
-  width: calc(100% - 48px);
+  width: calc(100% - 36px);
+}
+
+.search {
+  margin-top: 20px;
 }
 
 .search input[type=submit]{
