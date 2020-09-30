@@ -161,8 +161,8 @@ Vamos tricotar!?</b:widget-setting>
               <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
                 <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
                   <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
-                  <input class='gsc-search-button' type='submit'>
+                  <input placeholder="Pesquisar" autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
+                  <input type='submit'>
                     <img src="https://rosiene.github.io/img/ico/search.svg" />
                   </input>
                 </form>

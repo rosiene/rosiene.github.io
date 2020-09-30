@@ -320,7 +320,7 @@ input.gsc-input {
   width: 200px;
 }
 
-input.gsc-search-button img{
+.gsc-search-box input img{
   width: 28px;
   height: 28px;
 }
