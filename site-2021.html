@@ -161,10 +161,8 @@ Vamos tricotar!?</b:widget-setting>
               <div class='search' expr:id='data:widget.instanceId + &quot;_form&quot;'>
                 <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
                   <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-                  <input placeholder="Pesquisar" autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
-                  <input type='submit'>
-                    <img class="search-ico" src="https://rosiene.github.io/img/ico/search.svg" />
-                  </input>
+                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' placeholder='Pesquisar' size='10' title='search' type='text'/>
+                  <input class="search-ico" type="image" src="https://rosiene.github.io/img/ico/search.svg" alt="Submit" />
                 </form>
               </div>
             </div>
@@ -206,7 +204,7 @@ Vamos tricotar!?</b:widget-setting>
         &lt;h1&gt;Clube Tricô e Tal&lt;/h1&gt;
         &lt;p&gt;Através do meu canal no Youtube com o seu apoio eu
           consigo continuar produzindo conteúdo gratuito e você
-          ainda recebe vários benefícios e conteúdo EXCLUSIVO!&lt;/p&gt;
+          ainda recebe vários benefícios e conteúdo &lt;b&gt;EXCLUSIVO&lt;/b&gt;!&lt;/p&gt;
       &lt;/div&gt;
       &lt;div&gt;
         &lt;a class=&quot;clube_link&quot; href=&quot;#&quot;&gt;seja membro&lt;/a&gt;
@@ -288,6 +286,22 @@ Vamos tricotar!?</b:widget-setting>
     <data:content/>
   </div>
 
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML9' locked='false' title='Blog' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'/>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
       </b:section>
