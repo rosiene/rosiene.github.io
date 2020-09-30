@@ -158,7 +158,7 @@ Vamos tricotar!?</b:widget-setting>
         <b:widget id='BlogSearch1' locked='false' title='Pesquisar este blog' type='BlogSearch' version='1'>
           <b:includable id='main'>
             <div class='widget-content'>
-              <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
+              <div class='search' expr:id='data:widget.instanceId + &quot;_form&quot;'>
                 <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
                   <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
                   <input placeholder="Pesquisar" autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>

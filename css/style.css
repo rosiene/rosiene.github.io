@@ -310,22 +310,19 @@ footer a {
   padding: 30px 10px;
 }
 
-table.gsc-search-box {
-  margin: 0 auto;
-}
-
 input.gsc-input {
   color: #241f20;
   padding: 6px;
   width: 200px;
   border: none;
+  display: inline;
 }
 
 .search input[type=submit]{
   display: none;
 }
 
-.gsc-search-box input img{
+.search input img{
   cursor: pointer;
   height: 24px;
   width: 24px;
