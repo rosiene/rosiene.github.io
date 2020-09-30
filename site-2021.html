@@ -6,7 +6,7 @@
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <link href='https://rosiene.github.io/css/style.css' media='all' rel='stylesheet' type='text/css'/>
-    <link href='https://fonts.googleapis.com/css2?family=Bitter:wght@100' rel='stylesheet'/>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;1,300&display=swap" rel="stylesheet">
     <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
@@ -788,23 +788,23 @@ URL:      www.rosiene.com.br
     </span>
   </b:if>
 </b:includable>
-  <b:includable id='shareButtons' var='post'>
+          <b:includable id='shareButtons' var='post'>
     <h4>Compartilhe:</h4>
   <b:if cond='data:top.showEmailButton'>
     <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
-      <img src="https://rosiene.github.io/img/ico/share-email.svg"/></a>
+      <img src='https://rosiene.github.io/img/ico/share-email.svg'/></a>
   </b:if>
   <b:if cond='data:top.showFacebookButton'>
     <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
-      <img src="https://rosiene.github.io/img/ico/share-facebook.svg"/></a>
+      <img src='https://rosiene.github.io/img/ico/share-facebook.svg'/></a>
   </b:if>
   <b:if cond='data:top.showPinterestButton'>
     <a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'>
-      <img src="https://rosiene.github.io/img/ico/share-pinterest.svg"/></a>
+      <img src='https://rosiene.github.io/img/ico/share-pinterest.svg'/></a>
   </b:if>
   <b:if cond='data:top.showPlusOne'><div class='goog-inline-block google-plus-share-container'><data:post.googlePlusShareTag/></div></b:if>
 </b:includable>
-  <b:includable id='status-message'>
+          <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
   <div class='status-msg-wrap'>
     <div class='status-msg-body'>
