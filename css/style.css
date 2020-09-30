@@ -311,6 +311,8 @@ input.gsc-input {
   padding: 6px;
   border: none;
   display: inline;
+  outline: 0;
+  width: calc(100% - 48px);
 }
 
 .search input[type=submit]{
