@@ -59,7 +59,8 @@ a {
 }
 
 .top {
-    text-align: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .logo_principal {
@@ -80,6 +81,25 @@ a {
   text-align: center;
   color: #caa175;
   font-size: 28px;
+}
+
+#HTML8 .title{
+  text-align: center;
+}
+
+#HTML8 .widget-content{
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.BlogSearch {
+  width: 360px;
+  margin: 0 auto;
+}
+
+.BlogSearch input{
+  width: 100%;
 }
 
 .receita {
