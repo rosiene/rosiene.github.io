@@ -318,11 +318,18 @@ input.gsc-input {
   color: #241f20;
   padding: 6px;
   width: 200px;
+  border: none;
+}
+
+.search input[type=submit]{
+  display: none;
 }
 
 .gsc-search-box input img{
-  width: 28px;
-  height: 28px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
 }
 
 .blog-posts {
