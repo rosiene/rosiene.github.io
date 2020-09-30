@@ -102,6 +102,10 @@ a {
   width: 100%;
 }
 
+form.gsc-search-box {
+  border-bottom: dotted 1px #81827f;
+}
+
 .receita {
   text-align: center;
 }
@@ -311,22 +315,14 @@ table.gsc-search-box {
 }
 
 input.gsc-input {
-  border: 1px #81827f solid;
   color: #241f20;
-  border-radius: 5px;
   padding: 6px;
   width: 200px;
 }
 
-input.gsc-search-button {
-  display: block;
-  background-image: url(https://rosiene.github.io/img/ico/search.svg);
-  background-color: #fff;
-  background-size: 32px;
-  width: 32px;
-  height: 32px;
-  border: none;
-  margin: 10px;
+input.gsc-search-button img{
+  width: 28px;
+  height: 28px;
 }
 
 .blog-posts {

@@ -6,7 +6,7 @@
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <link href='https://rosiene.github.io/css/style.css' media='all' rel='stylesheet' type='text/css'/>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;1,300" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;1,300' rel='stylesheet'/>
     <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
@@ -136,9 +136,12 @@ URL:      www.rosiene.com.br
   <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
-        <b:widget id='HTML8' locked='false' title='Apresentação' type='HTML' version='1'>
+        <b:widget id='HTML8' locked='false' title='Oi, meu nome é Rosiene!' type='HTML' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='content'>Texto de Apresentação</b:widget-setting>
+            <b:widget-setting name='content'>Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam na Holanda.
+O tricô é uma arte para todas as idades e traz inúmeros benefícios.
+Bem-vinda(o) a nossa comunidade!
+Vamos tricotar!?</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
           <b:if cond='data:view.isHomepage'>
@@ -154,26 +157,18 @@ URL:      www.rosiene.com.br
         </b:widget>
         <b:widget id='BlogSearch1' locked='false' title='Pesquisar este blog' type='BlogSearch' version='1'>
           <b:includable id='main'>
-                    <div class='widget-content'>
-                      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
-                        <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
-                          <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-                          <table cellpadding='0' cellspacing='0' class='gsc-search-box'>
-                            <tbody>
-                              <tr>
-                                <td class='gsc-input'>
-                                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
-                                </td>
-                                <td class='gsc-search-button'>
-                                  <input class='gsc-search-button' title='search' type='submit'/>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </form>
-                      </div>
-                    </div>
-                  </b:includable>
+            <div class='widget-content'>
+              <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
+                <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
+                  <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
+                  <input class='gsc-search-button' type='submit'>
+                    <img src="https://rosiene.github.io/img/ico/search.svg" />
+                  </input>
+                </form>
+              </div>
+            </div>
+          </b:includable>
         </b:widget>
       </b:section>
 
