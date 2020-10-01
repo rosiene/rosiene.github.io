@@ -138,17 +138,12 @@ URL:      www.rosiene.com.br
         </b:widget>
         <b:widget id='HTML8' locked='false' title='Oi, meu nome é Rosiene!' type='HTML' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='content'>Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam na Holanda.
-O tricô é uma arte para todas as idades e traz inúmeros benefícios.
-Bem-vinda(o) a nossa comunidade!
-Vamos tricotar!?</b:widget-setting>
+            <b:widget-setting name='content'>&lt;h2 class=&#39;oi_home&#39;&gt;Oi, meu nome é Rosiene!&lt;/h2&gt;
+Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam na Holanda.&lt;br /&gt;O tricô é uma arte para todas as idades e traz inúmeros benefícios.&lt;br /&gt;Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
           <b:if cond='data:view.isHomepage'>
   <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
   <div class='widget-content'>
     <data:content/>
   </div>
@@ -359,7 +354,7 @@ Vamos tricotar!?</b:widget-setting>
                 </a>
               </div>
             <b:else/>
-              <div class="post-onlyone-item">
+              <div class='post-onlyone-item'>
                 <b:include data='post' name='post'/>
                 <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
             </div>
@@ -368,9 +363,9 @@ Vamos tricotar!?</b:widget-setting>
         </b:if>
       </div>
       <b:if cond='data:view.isHomepage'>
-        <a class="link-mais-blog" href="#">Ver mais posts...</a>
+        <a class='link-mais-blog' href='#'>Ver mais posts...</a>
       <b:else/>
-        <b:include name='nextprev' />
+        <b:include name='nextprev'/>
     </b:if>
     </div>
 

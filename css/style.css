@@ -496,9 +496,11 @@ input.gsc-input {
 
 .post-onlyone-item {
   width: 100%;
+  border: dotted 1px #e49dac;
+  padding: 30px;
 }
 
-.post-onlyone-item {
-  width: 100%;
-  border: dotted 1px #e49dac;
+.oi_home {
+  font-style: italic;
+  margin-bottom: 12px;
 }
