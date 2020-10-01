@@ -461,6 +461,17 @@ input.gsc-input {
   border: dotted 1px #e49dac;
 }
 
+.post-item-blog {
+  margin: 6px;
+  width: 312px;
+  border: 1px solid #F0D7DD;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.post-item-blog img {
+  object-fit: cover;
+  height: 130px;
+
 .post-item img{
   max-width: 100%;
 }

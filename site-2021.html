@@ -340,10 +340,10 @@ Vamos tricotar!?</b:widget-setting>
           <b:loop values='data:posts' var='post'>
             <b:loop values='data:post.labels' var='label'>
               <b:if cond='data:label.name == &quot;Blog&quot;'>
-                <div class='post-item'>
+                <div class='post-item-blog'>
                   <a expr:href='data:post.link ? data:post.link : data:post.url'>
-                    <h3 class='post-title-link'><data:post.title/></h3>
                     <img class='post-featuredImage' expr:src='data:post.firstImageUrl'/>
+                    <h3 class='post-title-link'><data:post.title/></h3>
                   </a>
                 </div>
               </b:if>
@@ -355,7 +355,7 @@ Vamos tricotar!?</b:widget-setting>
               <div class='post-item'>
                 <a expr:href='data:post.link ? data:post.link : data:post.url'>
                   <h3 class='post-title-link'><data:post.title/></h3>
-                  <img class='post-featuredImage' expr:src='data:post.firstImageUrl'/>
+                    <img class='post-featuredImage' expr:src='data:post.firstImageUrl'/>
                 </a>
               </div>
             <b:else/>
