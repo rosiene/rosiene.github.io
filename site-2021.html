@@ -17,6 +17,21 @@ URL:      www.rosiene.com.br
 
     ]]></b:skin>
 
+    <style>
+
+body {
+  background-color: lightgreen;
+
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+    </style>
+
     <b:if cond='data:skin.vars.body_background.image.isResizable'>
       <b:include cond='not data:view.isPreview' data='{                          image: data:skin.vars.body_background.image,                          selector: &quot;body&quot;                        }' name='responsiveImageStyle'/>
     </b:if>
@@ -349,8 +364,8 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
             <b:if cond='data:post.link or (data:post.url and data:blog.url != data:post.url)'>
               <div class='post-item'>
                 <a expr:href='data:post.link ? data:post.link : data:post.url'>
-                  <img expr:src='data:post.firstImageUrl'/>
                   <h3><data:post.title/></h3>
+                    <img expr:src='data:post.firstImageUrl'/>
                 </a>
               </div>
             <b:else/>

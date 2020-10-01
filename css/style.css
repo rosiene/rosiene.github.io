@@ -504,3 +504,10 @@ input.gsc-input {
   font-style: italic;
   margin-bottom: 12px;
 }
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
