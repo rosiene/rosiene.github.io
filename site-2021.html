@@ -342,8 +342,8 @@ Vamos tricotar!?</b:widget-setting>
               <b:if cond='data:label.name == &quot;Blog&quot;'>
                 <div class='post-item-blog'>
                   <a expr:href='data:post.link ? data:post.link : data:post.url'>
-                    <img class='post-featuredImage' expr:src='data:post.firstImageUrl'/>
-                    <h3 class='post-title-link'><data:post.title/></h3>
+                    <img expr:src='data:post.firstImageUrl'/>
+                    <h3><data:post.title/></h3>
                   </a>
                 </div>
               </b:if>
@@ -354,8 +354,8 @@ Vamos tricotar!?</b:widget-setting>
             <b:if cond='data:post.link or (data:post.url and data:blog.url != data:post.url)'>
               <div class='post-item'>
                 <a expr:href='data:post.link ? data:post.link : data:post.url'>
-                  <h3 class='post-title-link'><data:post.title/></h3>
-                    <img class='post-featuredImage' expr:src='data:post.firstImageUrl'/>
+                  <img expr:src='data:post.firstImageUrl'/>
+                  <h3><data:post.title/></h3>
                 </a>
               </div>
             <b:else/>

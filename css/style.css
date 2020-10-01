@@ -460,6 +460,17 @@ input.gsc-input {
   border: dotted 1px #e49dac;
 }
 
+.post-item h3 {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.post-item img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+
 .post-item-blog {
   margin: 6px;
   width: 300px;
@@ -468,6 +479,8 @@ input.gsc-input {
 }
 
 .post-item-blog h3{
+  font-family: 'Bitter', serif;
+  font-size: 18px;
   margin: 4px 10px 10px 10px;
 }
 
@@ -481,23 +494,11 @@ input.gsc-input {
   margin: 10px 0;
 }
 
-.post-item img{
-  max-width: 100%;
-}
-
-.post-item img:hover{
-  outline: 1px solid #be495f
-}
-
 .post-onlyone-item {
   width: 100%;
 }
 
-.post-title-link {
-  font-family: 'Bitter', serif;
-  font-size: 24px;
-}
-
 .post-onlyone-item {
   width: 100%;
+  border: dotted 1px #e49dac;
 }
