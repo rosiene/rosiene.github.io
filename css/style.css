@@ -440,3 +440,18 @@ input.gsc-input {
     overflow: hidden;
     margin: 3px;
 }
+
+.status-msg-border {
+  border: none
+}
+.status-msg-bg {
+  background-color: #f0d7dd;
+}
+.list-post{
+  width: 50%;
+  display: inline-block;
+}
+.post-featuredImage {
+  max-width: 100%;
+  max-height: 100%;
+}
