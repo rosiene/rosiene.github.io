@@ -434,11 +434,11 @@ input.gsc-input {
 }
 
 .share-button {
-    width: 44px;
-    height: 44px;
-    background: none !important;
-    overflow: hidden;
-    margin: 3px;
+  width: 44px;
+  height: 44px;
+  background: none !important;
+  overflow: hidden;
+  margin: 3px;
 }
 
 .status-msg-border {
@@ -455,10 +455,21 @@ input.gsc-input {
 }
 
 .post-item {
-  padding: 20px;
+  margin: 4px
+  padding: 16px;
   width: 430px;
+  border: dotted 1px #e49dac;
 }
 
 .post-item img{
   max-width: 100%;
+}
+
+.post-item img:hover{
+  outline: 1px solid #be495f
+}
+
+.post-title-link {
+  font-family: 'Bitter', serif;
+  font-size: 24px;
 }
