@@ -455,7 +455,7 @@ input.gsc-input {
 }
 
 .post-item {
-  margin: 4px
+  margin: 4px;
   padding: 16px;
   width: 430px;
   border: dotted 1px #e49dac;
