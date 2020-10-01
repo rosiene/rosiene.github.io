@@ -348,7 +348,6 @@ input.gsc-input {
   width: 960px;
   margin: 10px auto;
   padding: 30px;
-  border: #f0d7dd dotted 1px;
 }
 
 .blog-posts a{
@@ -473,8 +472,14 @@ input.gsc-input {
 }
 
 .post-item-blog img {
-  object-fit: cover;
-  height: 130px;
+  width: 100%;
+}
+
+.link-mais-blog {
+  text-align: right;
+  display: block;
+  margin: 10px 0;
+}
 
 .post-item img{
   max-width: 100%;
@@ -491,4 +496,8 @@ input.gsc-input {
 .post-title-link {
   font-family: 'Bitter', serif;
   font-size: 24px;
+}
+
+.post-onlyone-item {
+  width: 100%;
 }
