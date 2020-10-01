@@ -359,8 +359,10 @@ Vamos tricotar!?</b:widget-setting>
                 </a>
               </div>
             <b:else/>
-              <b:include data='post' name='post'/>
-              <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+              <div class="post-onlyone-item">
+                <b:include data='post' name='post'/>
+                <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+            </div>
             </b:if>
           </b:loop>
         </b:if>

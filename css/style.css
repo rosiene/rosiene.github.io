@@ -469,6 +469,10 @@ input.gsc-input {
   outline: 1px solid #be495f
 }
 
+.post-onlyone-item {
+  width: 100%;
+}
+
 .post-title-link {
   font-family: 'Bitter', serif;
   font-size: 24px;
