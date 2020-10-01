@@ -447,11 +447,12 @@ input.gsc-input {
 .status-msg-bg {
   background-color: #f0d7dd;
 }
-.list-post{
-  width: 50%;
-  display: inline-block;
+
+.post-container{
+  display: flex;
+
 }
-.post-featuredImage {
-  max-width: 100%;
-  max-height: 100%;
+
+.post-item {
+  margin: 20px;
 }
