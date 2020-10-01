@@ -463,9 +463,13 @@ input.gsc-input {
 
 .post-item-blog {
   margin: 6px;
-  width: 312px;
+  width: 300px;
   border: 1px solid #F0D7DD;
   border-radius: 0px 0px 5px 5px;
+}
+
+.post-item-blog h3{
+  margin: 4px 10px 10px 10px;
 }
 
 .post-item-blog img {

@@ -367,7 +367,11 @@ Vamos tricotar!?</b:widget-setting>
           </b:loop>
         </b:if>
       </div>
-      <b:include name='nextprev' />
+      <b:if cond='data:view.isHomepage'>
+        <a class="link-mais-blog" href="#">Ver mais posts...</a>
+      <b:else/>
+        <b:include name='nextprev' />
+    </b:if>
     </div>
 
   <b:include cond='data:top.showPlusOne' name='googlePlusBootstrap'/>
