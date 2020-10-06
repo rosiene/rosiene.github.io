@@ -172,6 +172,7 @@ URL:      www.rosiene.com.br
       border-radius: 5px;
       padding: 12px 24px ;
       font-weight: 200;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
     }
 
     .receita_link:hover {
@@ -208,6 +209,7 @@ URL:      www.rosiene.com.br
       padding: 12px 24px ;
       border-radius: 5px;
       font-size: 24px;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
     }
 
 
@@ -384,6 +386,7 @@ URL:      www.rosiene.com.br
 
     .post-labels {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
     }
 
@@ -412,7 +415,7 @@ URL:      www.rosiene.com.br
       height: 44px;
       background: none !important;
       overflow: hidden;
-      padding: 10px 3px;
+      margin: 3px;
     }
 
     .status-msg-border {
@@ -457,9 +460,11 @@ URL:      www.rosiene.com.br
     }
 
     #mc_embed_signup_scroll .button{
+      cursor: pointer;
       background: #a44030;
       color: #fff;
       border-radius: 5px;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
     }
 
     .status_message {
@@ -531,6 +536,11 @@ URL:      www.rosiene.com.br
 
       .post-onlyone-item{
         margin: 0 10%;
+      }
+
+      .post-body iframe{
+        width: auto;
+        height: auto;
       }
     }
 
@@ -1106,11 +1116,15 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
       </b:if>
     </div>
 
-   <b:include name='mobile-nextprev'/>
+   <b:include name='postPagination'/>
 </b:includable>
-          <b:includable id='mobile-nextprev'>
-          <!---PAGINACAO-->
-</b:includable>
+  <b:includable id='postPagination'>
+  <div class='blog-pager container' id='blog-pager'>
+  <b:include cond='data:newerPageUrl' name='previousPageLink'/>
+  <b:include cond='data:olderPageUrl' name='nextPageLink'/>
+  <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
+  </div>
+  </b:includable>
           <b:includable id='mobile-post' var='post'>
       <div class='post-outer'>
 
@@ -1194,8 +1208,20 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
         <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
       </div>
 </b:includable>
-          <b:includable id='nextprev'>
-  <!--PAGINACAO-->
+<b:includable id='previousPageLink'>
+<a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
+<data:messages.newerPosts/>
+</a>
+</b:includable>
+<b:includable id='homePageLink'>
+<a class='home-link' expr:href='data:blog.homepageUrl'>
+<data:messages.home/>
+</a>
+</b:includable>
+<b:includable id='nextPageLink'>
+<a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
+<data:messages.olderPosts/>
+</a>
 </b:includable>
           <b:includable id='post' var='post'>
   <div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
