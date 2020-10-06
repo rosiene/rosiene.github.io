@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
   text-transform: uppercase;
   text-align: center;
   font-weight: 100 !important;
@@ -503,11 +503,4 @@ input.gsc-input {
 .oi_home {
   font-style: italic;
   margin-bottom: 12px;
-}
-
-
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: lightblue;
-  }
 }

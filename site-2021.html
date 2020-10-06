@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
-    <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link href='https://rosiene.github.io/css/style.css' media='all' rel='stylesheet' type='text/css'/>
+    <!-- link href='https://rosiene.github.io/css/style.css' media='all' rel='stylesheet' type='text/css'/-->
     <link href='https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;1,300' rel='stylesheet'/>
     <b:skin><![CDATA[/*
 -----------------------------------------------
@@ -19,16 +19,520 @@ URL:      www.rosiene.com.br
 
     <style>
 
-body {
-  background-color: lightgreen;
 
-}
+    /*  --
+    @cor-preto: #241f20;
+    @cor-cinza: #81827f;
+    @cor-branco: #ffffff;
+      --cor-rosa-claro: #f0d7dd;
+      --cor-rosa-medio: #e49dac;
+      --cor-rosa-escuro: #be495f;
+      --cor-marrom-escuro: #a44030;
+      --cor-marrom-medio: #c37d5d;
+      --cor-marrom-claro: #caa175;
+      --cor-verde-claro: #98bcba;
+      --cor-verde-medio: #7AA9A6;
+      --cor-azul-claro: #a0bbd2;
+    }*/
 
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: lightblue;
-  }
-}
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: &#39;PT Sans&#39;, sans-serif;
+      color: #241f20;
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 100 !important;
+    }
+
+    h2 {
+      font-family: &#39;Bitter&#39;, serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    a {
+      text-decoration: none;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .section{
+      margin: 0;
+    }
+
+    .widget {
+        margin: 0;
+    }
+
+    .session {
+      padding: 50px 0;
+    }
+
+    .top {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .titlewrapper h1{
+      font-family: &#39;Bitter&#39;, serif;
+      color: #a44030;
+      font-weight: 600;
+      font-size: 56px;
+      margin-top: 30px;
+    }
+    .titlewrapper h1 a{
+      color: #a44030;
+    }
+
+    .descriptionwrapper{
+      margin-top: -24px;
+    }
+
+    .oi_home {
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .img_capa {
+      width: 200px;
+      height: 200px;
+      border-radius: 150px;
+    }
+
+    .Header .description {
+      font-family: &#39;Bitter&#39;, serif;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      color: #caa175;
+      font-size: 32px;
+    }
+
+    #HTML8 .title{
+      text-align: center;
+    }
+
+    #HTML8 .widget-content{
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .search {
+      width: 220px;
+      margin: 0 auto;
+      border-radius: 30px;
+      padding: 10px 20px;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    }
+    form.gsc-search-box{
+      margin: 0;
+    }
+
+    .receita {
+      text-align: center;
+    }
+
+    .receita .content{
+      margin: 0 auto;
+    }
+
+    .receita .content a img{
+      width: 48%;
+    }
+
+    .receita h1 {
+      margin-bottom: 40px;
+    }
+
+    .receita .content a:hover img{
+      opacity: 0.8;
+    }
+
+    .receita_link {
+      text-transform: uppercase;
+      background: #241f20;
+      color: #ffffff;
+      border-radius: 5px;
+      padding: 12px 24px ;
+      font-weight: 200;
+    }
+
+    .receita_link:hover {
+      text-decoration: none;
+      background: #be495f;
+    }
+
+    .clube {
+      background-color: #e49dac;
+      color: #ffffff;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .clube div{
+      padding: 20px;
+      text-align: center;
+    }
+
+    .clube div img{
+      height: 350px;
+    }
+
+    .clube div p{
+      font-style: italic;
+      text-align: center;
+    }
+
+    .clube_link {
+      text-transform: uppercase;
+      font-weight: 200;
+      background: #ffffff;
+      color: #be495f;
+      padding: 12px 24px ;
+      border-radius: 5px;
+      font-size: 24px;
+    }
+
+
+    .clube_link:hover {
+      text-decoration: none;
+      background: #be495f;
+      color: #ffffff;
+    }
+
+    .iniciante {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .iniciante div {
+      margin: 0 30px;
+    }
+    .iniciante div:first-of-type{
+      display: none;
+    }
+
+    .iniciante div a{
+      font-weight: 200;
+    }
+
+    .iniciante h1 {
+      color: #7AA9A6;
+      margin-top: -40px;
+    }
+    .iniciante p {
+      color: #81827F;
+    }
+
+    .util {
+      background-color: #7AA9A6;
+      color: #ffffff;
+      justify-content: center;
+      padding: 25px 0;
+    }
+
+    .util div {
+      padding: 25px;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 190px;
+    }
+
+    .util a {
+      color: #ffffff;
+      text-decoration: none;
+
+    }
+
+    .util a h2 {
+      padding: 8px 0 4px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .util a p {
+      font-style: italic;
+      padding-top: 8px;
+    }
+    .blog{
+      padding-bottom: 30px;
+    }
+
+    .newsletter {
+      background-color: #CAA175;
+      color: #ffffff;
+    }
+
+    .newsletter p {
+      text-align: center;
+      font-style: italic;
+    }
+
+
+    footer {
+      background-color: #a44030;
+      color: #ffffff;
+      text-align: center;
+      padding: 50px 0 30px 0;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .ico-logo {
+      width: 100px;
+    }
+    .social{
+      margin: 20px auto;
+    }
+
+    .social a {
+      margin: 0 4px;
+    }
+    .social a img {
+      width: 48px;
+    }
+
+    .ico-footer {
+      padding: 30px 6px;
+    }
+
+    input.gsc-input {
+      color: #be495f;
+      font-size: 16px;
+      padding: 6px;
+      border: none;
+      display: inline;
+      outline: 0;
+      width: calc(100% - 36px);
+    }
+
+    .search {
+      margin-top: 20px;
+    }
+
+    .search input[type=submit]{
+      display: none;
+    }
+
+    .search-ico{
+      cursor: pointer;
+      height: 18px;
+      width: 18px;
+      min-width: 18px;
+      margin: -10px;
+      padding: 6px;
+    }
+
+    .blog-posts {
+      margin: 0 auto;
+    }
+
+    .blog-posts a{
+      color: #be495f;
+      font-weight: 600;
+    }
+
+    .blog-posts a:hover {
+      text-decoration: underline;
+    }
+
+    .post-title {
+      color: #e49dac;
+      font-size: 26px;
+      font-weight: 200;
+      text-align: center;
+      margin-top: 20px;
+      border-bottom: #e49dac solid 1px;
+    }
+
+    .date-header {
+      font-weight: 100;
+      text-align: center;
+      line-height: 28px;
+      color: #e49dac;
+      margin-bottom: 20px;
+    }
+
+    .post-footer{
+      border-top: #e49dac solid 1px;
+      margin: 20px 0;
+      padding: 10px 0;
+    }
+
+    .post-footer-line {
+      text-align: center;
+    }
+
+    .post-labels {
+      display: flex;
+      justify-content: center;
+    }
+
+    .post-labels div {
+      margin: 10px 5px;
+    }
+
+    .post-labels div a {
+        text-decoration: none;
+        background: #e49dac;
+        padding: 10px 16px;
+        border-radius: 30px;
+        line-height: 20px;
+        margin: 3px;
+    }
+
+    .post-labels a {
+      color: #fff;
+    }
+    .post-labels a:hover {
+      background: #be495f;
+    }
+
+    .share-button {
+      width: 44px;
+      height: 44px;
+      background: none !important;
+      overflow: hidden;
+      padding: 10px 3px;
+    }
+
+    .status-msg-border {
+      border: none
+    }
+    .status-msg-bg {
+      background-color: #f0d7dd;
+    }
+
+    .post-container{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .post-item {
+      margin: 20px;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    }
+
+    .post-item h3 {
+      padding: 8px;
+    }
+
+    .post-item img{
+      max-width: 100%;
+    }
+
+    .link-mais-blog {
+      text-align: center;
+      margin: 10px 0 50px 0;
+    }
+
+    #mc_embed_signup_scroll {
+      margin: 20px 16% 0 16%;
+    }
+
+    #mc_embed_signup_scroll div input {
+      padding: 8px;
+      margin: 4px;
+      border: none;
+      width: -webkit-fill-available;
+    }
+
+    #mc_embed_signup_scroll .button{
+      background: #a44030;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .status_message {
+      margin: 20px;
+    }
+
+    .status_message h3{
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    .post-onlyone-item {
+      margin: 20px;
+    }
+
+    .post-body a img, .post-body iframe{
+      width: 100%;
+      height: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .img_capa {
+        width: 300px;
+        height: 300px;
+      }
+
+      .clube, .util, .iniciante, .post-container{
+        display: flex;
+      }
+
+      .iniciante div:first-of-type{
+        display: block;
+      }
+
+      .receita .content {
+        margin: 0 12%;
+      }
+
+      .receita .content a img {
+        width: 30%;
+      }
+
+      #mc_embed_signup_scroll{
+        display: flex;
+        margin: 20px 26% 0 26%
+      }
+
+      #mc_embed_signup_scroll div{
+        width: 50%
+      }
+
+      .post-onlyone-item{
+        width: 960px;
+        margin: 20px auto;
+      }
+
+      .post-container {
+        margin: 0 10%;
+      }
+      .post-item {
+        margin: 10px;
+        width: 40%;
+      }
+
+      .post-onlyone-item{
+        margin: 0 10%;
+      }
+    }
 
     </style>
 
@@ -154,7 +658,8 @@ body {
         <b:widget id='HTML8' locked='false' title='Oi, meu nome é Rosiene!' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;h2 class=&#39;oi_home&#39;&gt;Oi, meu nome é Rosiene!&lt;/h2&gt;
-Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam na Holanda.&lt;br /&gt;O tricô é uma arte para todas as idades e traz inúmeros benefícios.&lt;br /&gt;Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
+Sou mineira, professora e designer de tricô.&lt;br /&gt;
+Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
           <b:if cond='data:view.isHomepage'>
@@ -196,7 +701,7 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
         &lt;a href=&quot;https://www.rosiene.com.br/2019/12/almofada-trancada-em-trico.html&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-KyroSt0Pm9Q/XeUCw3LRd6I/AAAAAAABpok/wNBSKozrftwqTtWKYZbKkAvOzqJeqHRLwCLcBGAsYHQ/s640/almofada_blog.JPG&quot; /&gt;&lt;/a&gt;
       &lt;/div&gt;
       &lt;br/&gt;
-      &lt;a class=&quot;receita_link&quot; href=&quot;https://teste-tricoetal.blogspot.com/search/label/Receita&quot;&gt;Clique aqui para mais receitas!&lt;/a&gt;
+      &lt;a class=&quot;receita_link&quot; href=&quot;https://teste-tricoetal.blogspot.com/search/label/Receita&quot;&gt;mais receitas!&lt;/a&gt;
       &lt;br/&gt;
     &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -212,9 +717,9 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
             <b:widget-setting name='content'>&lt;div class=&quot;session clube&quot;&gt;
       &lt;div&gt;
         &lt;h1&gt;Clube Tricô e Tal&lt;/h1&gt;
-        &lt;p&gt;Através do meu canal no Youtube com o seu apoio eu
-          consigo continuar produzindo conteúdo gratuito e você
-          ainda recebe vários benefícios e conteúdo &lt;b&gt;EXCLUSIVO&lt;/b&gt;!&lt;/p&gt;
+        &lt;p&gt;Através do meu canal no Youtube&lt;br/&gt;
+          com o seu apoio eu consigo continuar&lt;br/&gt; produzindo conteúdo gratuito e você&lt;br/&gt;
+          ainda recebe vários benefícios &lt;br/&gt;e conteúdo &lt;b&gt;EXCLUSIVO&lt;/b&gt;!&lt;/p&gt;
       &lt;/div&gt;
       &lt;div&gt;
         &lt;a class=&quot;clube_link&quot; target=&quot;_blank&quot;  href=&quot;https://www.youtube.com/channel/UCJpglaG9Rk_XGgJcZ6BGYcA/join&quot;&gt;seja membro&lt;/a&gt;
@@ -238,8 +743,8 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
       &lt;a href=&quot;#&quot;&gt;
         &lt;img src=&#39;https://rosiene.github.io/img/ico/util-novelo.svg&#39; /&gt;
         &lt;h1&gt;CURSO DE TRICÔ &lt;br/&gt; PARA INICANTES&lt;/h1&gt;
-        &lt;p&gt;São 10 vídeo aulas para você aprender tricô
-&lt;br/&gt; de forma fácil e descomplicada!&lt;/p&gt;
+        &lt;p&gt;São 10 vídeo aulas para você &lt;br/&gt;
+ aprender tricô de forma fácil &lt;br/&gt; e descomplicada!&lt;/p&gt;
       &lt;/a&gt;
     &lt;/div&gt;
     &lt;/div&gt;</b:widget-setting>
@@ -300,7 +805,9 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
         </b:widget>
         <b:widget id='HTML9' locked='false' title='Blog' type='HTML' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='content'><![CDATA[<h1>Blog</h1>]]></b:widget-setting>
+            <b:widget-setting name='content'>&lt;div class=&quot;session blog&quot;&gt;
+&lt;h1&gt;Blog&lt;/h1&gt;
+&lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
   <div class='widget-content'>
@@ -320,7 +827,7 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
             <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
             <b:widget-setting name='showShareButtons'>true</b:widget-setting>
             <b:widget-setting name='authorLabel'>By</b:widget-setting>
-            <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+            <b:widget-setting name='showCommentLink'>false</b:widget-setting>
             <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
             <b:widget-setting name='showAuthor'>false</b:widget-setting>
             <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
@@ -346,26 +853,13 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
       <b:include data='top' name='status-message'/>
 
       <div class='post-container'>
-        <b:if cond='data:view.isHomepage'>
-          <b:loop values='data:posts' var='post'>
-            <b:loop values='data:post.labels' var='label'>
-              <b:if cond='data:label.name == &quot;Blog&quot;'>
-                <div class='post-item-blog'>
-                  <a expr:href='data:post.link ? data:post.link : data:post.url'>
-                    <img expr:src='data:post.firstImageUrl'/>
-                    <h3><data:post.title/></h3>
-                  </a>
-                </div>
-              </b:if>
-            </b:loop>
-          </b:loop>
-        <b:else/>
+        <b:if cond='!data:view.isHomepage'>
           <b:loop values='data:posts' var='post'>
             <b:if cond='data:post.link or (data:post.url and data:blog.url != data:post.url)'>
               <div class='post-item'>
                 <a expr:href='data:post.link ? data:post.link : data:post.url'>
+                  <img expr:src='data:post.firstImageUrl'/>
                   <h3><data:post.title/></h3>
-                    <img expr:src='data:post.firstImageUrl'/>
                 </a>
               </div>
             <b:else/>
@@ -378,7 +872,7 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
         </b:if>
       </div>
       <b:if cond='data:view.isHomepage'>
-        <a class='link-mais-blog' href='#'>Ver mais posts...</a>
+        <p class='link-mais-blog'><a href='#'>Ver mais posts...</a></p>
       <b:else/>
         <b:include name='nextprev'/>
     </b:if>
@@ -412,17 +906,6 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
   </div>
 </b:includable>
           <b:includable id='commentDeleteIcon' var='comment'>
-  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
-    <b:if cond='data:showCmtPopup'>
-      <div class='goog-toggle-button'>
-        <div class='goog-inline-block comment-action-icon'/>
-      </div>
-    <b:else/>
-      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
-      </a>
-    </b:if>
-  </span>
 </b:includable>
           <b:includable id='comment_count_picker' var='post'>
   <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
@@ -626,29 +1109,7 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
    <b:include name='mobile-nextprev'/>
 </b:includable>
           <b:includable id='mobile-nextprev'>
-  <div class='blog-pager' id='blog-pager'>
-    <b:if cond='data:newerPageUrl'>
-      <div class='mobile-link-button' id='blog-pager-newer-link'>
-      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>&amp;lsaquo;</a>
-      </div>
-    </b:if>
-
-    <b:if cond='data:olderPageUrl'>
-      <div class='mobile-link-button' id='blog-pager-older-link'>
-      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>&amp;rsaquo;</a>
-      </div>
-    </b:if>
-
-    <div class='mobile-link-button' id='blog-pager-home-link'>
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
-    </div>
-
-    <div class='mobile-desktop-link'>
-      <a class='home-link' expr:href='data:desktopLinkUrl'><data:desktopLinkMsg/></a>
-    </div>
-
-  </div>
-  <div class='clear'/>
+          <!---PAGINACAO-->
 </b:includable>
           <b:includable id='mobile-post' var='post'>
       <div class='post-outer'>
@@ -734,29 +1195,7 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
       </div>
 </b:includable>
           <b:includable id='nextprev'>
-  <div class='blog-pager' id='blog-pager'>
-    <b:if cond='data:newerPageUrl'>
-      <span id='blog-pager-newer-link'>
-      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
-      </span>
-    </b:if>
-
-    <b:if cond='data:olderPageUrl'>
-      <span id='blog-pager-older-link'>
-      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
-      </span>
-    </b:if>
-
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
-
-    <b:if cond='data:mobileLinkUrl'>
-      <div class='blog-mobile-link'>
-        <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
-      </div>
-    </b:if>
-
-  </div>
-  <div class='clear'/>
+  <!--PAGINACAO-->
 </b:includable>
           <b:includable id='post' var='post'>
   <div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
@@ -785,13 +1224,13 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
 
       <div class='post-footer'>
       <div class='post-footer-line post-footer-line-1'>
-        <span class='post-labels'>
+        <div class='post-labels'>
           <b:if cond='data:top.showPostLabels and data:post.labels'>
             <b:loop values='data:post.labels' var='label'>
-              <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+              <div><a expr:href='data:label.url' rel='tag'><data:label.name/></a></div>
             </b:loop>
           </b:if>
-        </span>
+        </div>
 
 
         </div>
@@ -832,19 +1271,26 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
   <b:if cond='data:top.showPlusOne'><div class='goog-inline-block google-plus-share-container'><data:post.googlePlusShareTag/></div></b:if>
 </b:includable>
           <b:includable id='status-message'>
-  <b:if cond='data:navMessage'>
-  <div class='status-msg-wrap'>
-    <div class='status-msg-body'>
-      <data:navMessage/>
-    </div>
-    <div class='status-msg-border'>
-      <div class='status-msg-bg'>
-        <div class='status-msg-hidden'><data:navMessage/></div>
-      </div>
-    </div>
-  </div>
-  <div style='clear: both;'/>
-  </b:if>
+          <div class='status_message'>
+            <b:if cond='data:numPosts == 0'>
+              <b:if cond='data:blog.searchLabel'>
+                  No posts for label: <data:blog.searchLabel/>.
+              <b:elseif cond='data:blog.searchQuery'/>
+                  No posts for query: <data:blog.searchQuery/>.
+              <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+                  Page not found.
+              <b:elseif cond='data:blog.url == data:blog.homepageUrl'/>
+                  No posts.
+              </b:if>
+          <b:else/>
+              <b:if cond='data:blog.searchLabel'>
+                  <h1><data:blog.searchLabel/></h1>
+              <b:elseif cond='data:blog.searchQuery'/>
+                  <h3>Resultado(s) para: <i><data:blog.searchQuery/></i></h3>
+              </b:if>
+          </b:if>
+        </div>
+
 </b:includable>
           <b:includable id='threaded-comment-form' var='post'>
   <div class='comment-form'>
@@ -928,7 +1374,6 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
                 }
               }
             }
-            comment.deleteclass = 'item-control blog-admin';
             if (entry.gd$extendedProperty) {
               for (var k in entry.gd$extendedProperty) {
                 if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
@@ -1092,14 +1537,19 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
          e ofertas em primeira mão? &lt;br/&gt;
          Assine a newsletter!!!&lt;/p&gt;
       &lt;!-- Begin Mailchimp Signup Form --&gt;
-  &lt;link href=&quot;//cdn-images.mailchimp.com/embedcode/slim-10_7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
   &lt;div id=&quot;mc_embed_signup&quot; class=&quot;form&quot;&gt;
     &lt;form action=&quot;https://rosiene.us20.list-manage.com/subscribe/post?u=773a2be776b2a77cee1c855b8&amp;amp;id=ef6a6ac87c&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate&gt;
         &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
-      &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
-        &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_773a2be776b2a77cee1c855b8_ef6a6ac87c&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;&lt;/div&gt;
-        &lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;seu@email.com&quot; required /&gt;
-        &lt;input type=&quot;submit&quot; value=&quot;Cadastrar!&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;
+          &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+          &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;
+            &lt;input type=&quot;text&quot; name=&quot;b_773a2be776b2a77cee1c855b8_ef6a6ac87c&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;seu@email.com&quot; required /&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Cadastrar!&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
     &lt;/form&gt;
   &lt;/div&gt;&lt;/div&gt;</b:widget-setting>
@@ -1118,7 +1568,7 @@ Sou mineira, professora e designer de tricô e atualmente vivendo em Amsterdam n
         <b:widget id='HTML1' locked='false' title='Footer' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;footer&gt;
-    &lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt; . &lt;a href=&quot;https://www.rosiene.com.br/&quot;&gt;Rosiene - Tricô e Tal&lt;/a&gt; &#169; 2020&lt;br/&gt;
+    &lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt; . &lt;a href=&quot;https://www.rosiene.com.br/&quot;&gt;Rosiene - Tricô e Tal&lt;/a&gt; &#169; 2021&lt;br/&gt;
     &lt;a href=&#39;https://www.youtube.com/Rosiene&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-youtube.svg&quot; alt=&quot;Youtube&quot; /&gt;&lt;/a&gt;
     &lt;a href=&#39;https://www.instagram.com/rosiene_tricoetal/&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-instagram.svg&quot; alt=&quot;Instagram&quot; /&gt;&lt;/a&gt;
     &lt;a href=&#39;https://www.ravelry.com/designers/rosiene&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-ravelry.svg&quot; alt=&quot;Ravelry&quot; /&gt;&lt;/a&gt;
