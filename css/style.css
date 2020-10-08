@@ -509,7 +509,7 @@ input.gsc-input {
     margin: 20px auto;
   }
 
-  .post-container {
+  .post-container, .blog-pager {
     margin: 0 10%;
   }
   .post-item {
