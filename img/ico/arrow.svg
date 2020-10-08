@@ -7,15 +7,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   enable-background="new 0 0 32 32"
-   height="32px"
-   id="Слой_1"
-   version="1.1"
-   viewBox="0 0 32 32"
-   width="32px"
-   xml:space="preserve"
+   inkscape:version="1.0beta1 (32d4812, 2019-09-19)"
    sodipodi:docname="arrow.svg"
-   inkscape:version="1.0beta1 (32d4812, 2019-09-19)">
+   xml:space="preserve"
+   width="32px"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="Слой_1"
+   height="32px"
+   enable-background="new 0 0 32 32">
   <metadata
    id="metadata851">
     <rdf:RDF>
@@ -23,65 +23,79 @@
    rdf:about="">
         <dc:format>image/svg+xml</dc:format>
 
+
         <dc:type
    rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
 
+
       </cc:Work>
+
 
     </rdf:RDF>
 
+
   </metadata>
+
 
   <defs
    id="defs849" />
 
+
   <sodipodi:namedview
-   pagecolor="#ffffff"
-   bordercolor="#666666"
-   inkscape:document-rotation="0"
-   borderopacity="1"
-   objecttolerance="10"
-   gridtolerance="10"
-   guidetolerance="10"
-   inkscape:pageopacity="0"
-   inkscape:pageshadow="2"
-   inkscape:window-width="1280"
-   inkscape:window-height="755"
-   id="namedview847"
-   showgrid="false"
-   inkscape:zoom="5.6"
-   inkscape:cx="30.17767"
-   inkscape:cy="31.005798"
-   inkscape:window-x="0"
-   inkscape:window-y="23"
+   inkscape:current-layer="Слой_1"
    inkscape:window-maximized="0"
-   inkscape:current-layer="Слой_1" />
+   inkscape:window-y="23"
+   inkscape:window-x="0"
+   inkscape:cy="31.597532"
+   inkscape:cx="21.375631"
+   inkscape:zoom="5.6"
+   showgrid="false"
+   id="namedview847"
+   inkscape:window-height="755"
+   inkscape:window-width="1280"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   inkscape:document-rotation="0"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+
 
   <path
-   inkscape:connector-curvature="0"
-   clip-rule="evenodd"
-   d="m 0,16.009 c 0,-0.267 0.11,-0.522 0.293,-0.714 l 9.899,-9.999 c 0.391,-0.395 1.024,-0.394 1.414,0 0.391,0.394 0.391,1.034 0,1.428 L 3.413,14.999 H 31 c 0.552,0 1,0.452 1,1.01 0,0.558 -0.448,1.01 -1,1.01 H 3.414 l 8.192,8.275 c 0.391,0.394 0.39,1.034 0,1.428 -0.391,0.394 -1.024,0.394 -1.414,0 L 0.293,16.723 C 0.106,16.534 0.003,16.274 0,16.009 Z"
-   fill="#121313"
-   fill-rule="evenodd"
+   style="fill:#241f20;fill-opacity:1;stroke-width:0.5"
    id="Arrow_Forward"
-   style="fill:#241f20;fill-opacity:1" />
+   fill-rule="evenodd"
+   fill="#121313"
+   d="m 8,16.000094 c 0,-0.1335 0.055,-0.261 0.1465,-0.357 l 4.9495,-4.9995 c 0.1955,-0.1975 0.512,-0.197 0.707,0 0.1955,0.197 0.1955,0.517 0,0.714 l -4.0965,4.1375 H 23.5 c 0.276,0 0.5,0.226 0.5,0.505 0,0.279 -0.224,0.505 -0.5,0.505 H 9.707 l 4.096,4.1375 c 0.1955,0.197 0.195,0.517 0,0.714 -0.1955,0.197 -0.512,0.197 -0.707,0 l -4.9495,-4.9995 C 8.053,16.262594 8.0015,16.132594 8,16.000094 Z"
+   clip-rule="evenodd"
+   inkscape:connector-curvature="0" />
+
 
   <g
    id="g834" />
 
+
   <g
    id="g836" />
+
 
   <g
    id="g838" />
 
+
   <g
    id="g840" />
+
 
   <g
    id="g842" />
 
+
   <g
    id="g844" />
+
 
 </svg>
