@@ -7,7 +7,7 @@
     <title><data:blog.pageTitle/></title>
     <link href='https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;1,300' rel='stylesheet'/>
     <!-- link href='https://rosiene.github.io/css/style.css' media='all' rel='stylesheet' type='text/css'/  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
     <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
@@ -480,6 +480,7 @@ URL:      www.rosiene.com.br
       margin: 4px;
       border: none;
       width: -webkit-fill-available;
+      background: #ffffff;
     }
 
     #mc_embed_signup_scroll .button{
@@ -524,6 +525,35 @@ URL:      www.rosiene.com.br
       display: none;
     }
 
+    .sidebar h1 {
+      fonts-size: 36px;
+    }
+
+    .sidebar h2 {
+      fonts-size: 24px;
+      font-family: 'PT Sans', sans-serif;
+      Color: #241f20;
+      margin: 36px 0 0 20px;
+      font-weight: 200;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      margin-left: 20px;
+      padding: 0;
+    }
+
+    .sidebar ul li{
+      font-size: 18px;
+      margin-top: 16px;
+    }
+
+    .sidebar ul li a{
+      color: #be495f;
+      text-decoration: none;
+    }
+    .sidebar ul li a:hover{
+      text-decoration: underline;
+    }
 
     @media only screen and (min-width: 768px) {
 
@@ -587,13 +617,13 @@ URL:      www.rosiene.com.br
     </style>
     <script>
     $( document ).ready(function() {
-        console.log( "ready!" );
+        console.log( &quot;ready!&quot; );
 
-        $('#menu-label').on("click", function(){
-          $('aside').show();
+        $(&#39;#menu-label&#39;).on(&quot;click&quot;, function(){
+          $(&#39;aside&#39;).show();
         });
-        $('#menu-back').on("click", function(){
-          $('aside').hide();
+        $(&#39;#menu-back&#39;).on(&quot;click&quot;, function(){
+          $(&#39;aside&#39;).hide();
         });
     });
 
@@ -604,25 +634,25 @@ URL:      www.rosiene.com.br
   <body>
     <div class='content'>
       <nav class='navigation'>
-        <img id='menu-label' class="menu-button" src='https://rosiene.github.io/img/ico/menu.svg' />
+        <img class='menu-button' id='menu-label' src='https://rosiene.github.io/img/ico/menu.svg'/>
       </nav>
       <aside class='sidebar'>
         <div>
           <a>
-            <img id='menu-back' class="menu-button" src='https://rosiene.github.io/img/ico/arrow.svg' />
+            <img class='menu-button' id='menu-back' src='https://rosiene.github.io/img/ico/arrow.svg'/>
           </a>
-          <h2>Receitas</h2>
+          <h1>Receitas</h1>
         </div>
         <b:section id='menu'>
-        <b:widget id='Label1' locked='false' title='Categoria' type='Label'>
-          <b:widget-settings>
-            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-            <b:widget-setting name='display'>LIST</b:widget-setting>
-            <b:widget-setting name='selectedLabelsList'>Acessório,Bolsa,Cachecol,Casaquinho de Bebê,Faixa de Cabelo,Gola,Gorro,Xale</b:widget-setting>
-            <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
+          <b:widget id='Label3' locked='false' title='Agulha' type='Label'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>LIST</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Agulha Circular nº 10,Agulha Circular nº 4,Agulha Circular nº 4.5,Agulha Circular nº 5,Agulha Circular nº 5.5,Agulha Circular nº 6,Agulha Circular nº 8,Agulhas Retas nº 10,Agulhas Retas nº 12,Agulhas Retas nº 3,Agulhas Retas nº 3.5,Agulhas Retas nº 4,Agulhas Retas nº 4.5,Agulhas Retas nº 5,Agulhas Retas nº 5.5,Agulhas Retas nº 6,Agulhas Retas nº 7,Agulhas Retas nº 8,Agulhas Retas nº 9</b:widget-setting>
+              <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
     <h2><data:title/></h2>
   </b:if>
@@ -659,8 +689,146 @@ URL:      www.rosiene.com.br
     <b:include name='quickedit'/>
   </div>
 </b:includable>
-        </b:widget>
-      </b:section>
+          </b:widget>
+          <b:widget id='Label1' locked='false' title='Categoria' type='Label'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>LIST</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Bebê,Casa,Feminino,Infantil,Masculino</b:widget-setting>
+              <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='Label4' locked='false' title='Estação do Ano' type='Label'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>LIST</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Inverno,Verão</b:widget-setting>
+              <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='Label2' locked='false' title='Modelo' type='Label'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>LIST</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Acessório,Almofada,Bolsa,Cachecol,Casaquinho de Bebê,Faixa de Cabelo,Gola,Gorro,Luva,Manta,Meia,Naninha,Peseira,Pet,Polaina,Poncho,Sapatinho de Bebê,Saída de Praia,Vestido de Bebê,Vestuário Feminino,Xale</b:widget-setting>
+              <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
     </aside>
       <b:section id='top'>
         <b:widget id='Header1' locked='false' title='( ROSIENE ) (Cabeçalho)' type='Header' version='1'>
