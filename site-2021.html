@@ -224,6 +224,12 @@ URL:      www.rosiene.com.br
       text-align: center;
     }
 
+    .clube p a {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
     .clube_link {
       text-transform: uppercase;
       font-weight: 200;
@@ -287,6 +293,7 @@ URL:      www.rosiene.com.br
     }
 
     .util a h2 {
+      font-size: 20px;
       padding: 8px 0 4px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
@@ -308,7 +315,6 @@ URL:      www.rosiene.com.br
       text-align: center;
       font-style: italic;
     }
-
 
     footer {
       background-color: #a44030;
@@ -524,17 +530,28 @@ URL:      www.rosiene.com.br
     .show-menu{
       display: none;
     }
+    .sidebar .menu-button{
+      margin-left:20px;
+    }
 
     .sidebar h1 {
       fonts-size: 36px;
     }
 
     .sidebar h2 {
+      cursor: pointer;
       fonts-size: 24px;
-      font-family: 'PT Sans', sans-serif;
+      font-family: &#39;PT Sans&#39;, sans-serif;
       Color: #241f20;
-      margin: 36px 0 0 20px;
+      margin-left: 20px;
       font-weight: 200;
+      background: url('https://rosiene.github.io/img/ico/arrow-menu.svg') no-repeat right;
+    }
+
+    .sidebar .Label{
+      margin: 10px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e49dac;
     }
     .sidebar ul {
       list-style-type: none;
@@ -551,8 +568,36 @@ URL:      www.rosiene.com.br
       color: #be495f;
       text-decoration: none;
     }
+
     .sidebar ul li a:hover{
       text-decoration: underline;
+    }
+
+    .sidebar .Label .list-label-widget-content {
+      display: none;
+    }
+
+    .status_message h3 {
+      text-align: center;
+    }
+
+    .post-share-buttons {
+      margin-top: 30px;
+    }
+
+    #blog-pager {
+      margin: 40px 0;
+      text-align: center;
+      overflow: inherit;
+    }
+
+    .blog-pager-older-link {
+      margin: 10px auto;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-radius: 5px;
+      padding: 12px 24px;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
     }
 
     @media only screen and (min-width: 768px) {
@@ -617,14 +662,47 @@ URL:      www.rosiene.com.br
     </style>
     <script>
     $( document ).ready(function() {
-        console.log( &quot;ready!&quot; );
+        console.log('ready');
 
-        $(&#39;#menu-label&#39;).on(&quot;click&quot;, function(){
-          $(&#39;aside&#39;).show();
+        $("#menu-label").on('click', function(){
+          $("aside").show();
         });
-        $(&#39;#menu-back&#39;).on(&quot;click&quot;, function(){
-          $(&#39;aside&#39;).hide();
+        $("#menu-back").on('click', function(){
+          $("aside").hide();
         });
+
+        $("#Label1 h2").on('click', function(){
+          if ( $('#Label1 div').is( ":hidden" ) ) {
+            $("#Label1 div").slideDown();
+          }else{
+            $("#Label1 div").slideUp();
+          }
+        });
+
+        $("#Label2 h2").on('click', function(){
+          if ( $('#Label2 div').is( ":hidden" ) ) {
+            $("#Label2 div").slideDown();
+          }else{
+            $("#Label2 div").slideUp();
+          }
+        });
+
+        $("#Label3 h2").on('click', function(){
+          if ( $('#Label3 div').is( ":hidden" ) ) {
+            $("#Label3 div").slideDown();
+          }else{
+            $("#Label3 div").slideUp();
+          }
+        });
+
+        $("#Label4 h2").on('click', function(){
+          if ( $('#Label4 div').is( ":hidden" ) ) {
+            $("#Label4 div").slideDown();
+          }else{
+            $("#Label4 div").slideUp();
+          }
+        });
+
     });
 
 
@@ -930,7 +1008,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
         &lt;a href=&quot;https://www.rosiene.com.br/2019/12/almofada-trancada-em-trico.html&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-KyroSt0Pm9Q/XeUCw3LRd6I/AAAAAAABpok/wNBSKozrftwqTtWKYZbKkAvOzqJeqHRLwCLcBGAsYHQ/s640/almofada_blog.JPG&quot; /&gt;&lt;/a&gt;
       &lt;/div&gt;
       &lt;br/&gt;
-      &lt;a class=&quot;receita_link&quot; href=&quot;https://teste-tricoetal.blogspot.com/search/label/Receita&quot;&gt;mais receitas!&lt;/a&gt;
+      &lt;a class=&quot;receita_link&quot; href=&quot;https://teste-tricoetal.blogspot.com/search/label/Receita?max-results=8&quot;&gt;mais receitas!&lt;/a&gt;
       &lt;br/&gt;
     &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -948,7 +1026,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
         &lt;h1&gt;Clube Tricô e Tal&lt;/h1&gt;
         &lt;p&gt;Através do meu canal no Youtube&lt;br/&gt;
           com o seu apoio eu consigo continuar&lt;br/&gt; produzindo conteúdo gratuito e você&lt;br/&gt;
-          ainda recebe vários benefícios &lt;br/&gt;e conteúdo &lt;b&gt;EXCLUSIVO&lt;/b&gt;!&lt;/p&gt;
+          ainda recebe vários benefícios &lt;br/&gt;e conteúdo &lt;a href=&quot;https://www.rosiene.com.br/p/clube-trico-e-tal.html&quot;&gt;EXCLUSIVO&lt;/a&gt;!&lt;/p&gt;
       &lt;/div&gt;
       &lt;div&gt;
         &lt;a class=&quot;clube_link&quot; target=&quot;_blank&quot;  href=&quot;https://www.youtube.com/channel/UCJpglaG9Rk_XGgJcZ6BGYcA/join&quot;&gt;seja membro&lt;/a&gt;
@@ -969,7 +1047,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
 &lt;img src=&#39;https://rosiene.github.io/img/curso.png&#39; /&gt;
     &lt;/div&gt;
     &lt;div&gt;
-      &lt;a href=&quot;#&quot;&gt;
+      &lt;a href=&quot;https://www.rosiene.com.br/search/label/Tric%C3%B4%20para%20Iniciantes&quot;&gt;
         &lt;img src=&#39;https://rosiene.github.io/img/ico/util-novelo.svg&#39; /&gt;
         &lt;h1&gt;CURSO DE TRICÔ &lt;br/&gt; PARA INICANTES&lt;/h1&gt;
         &lt;p&gt;São 10 vídeo aulas para você &lt;br/&gt;
@@ -989,21 +1067,21 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div class=&quot;session util&quot;&gt;
       &lt;div&gt;
-        &lt;a href=&quot;#&quot;&gt;
+        &lt;a href=&quot;https://www.rosiene.com.br/p/calculo-basico-de-trico.html&quot;&gt;
           &lt;img src=&quot;https://rosiene.github.io/img/ico/util-calculadora.svg&quot; alt=&quot;calculadora&quot; /&gt;&lt;br/&gt;
           &lt;h2&gt;Calculadora&lt;/h2&gt;
           &lt;p&gt;Calcule quantos pontos colocar na agulha conforme sua amostra e ponto fantasia.&lt;/p&gt;
         &lt;/a&gt;
       &lt;/div&gt;
       &lt;div&gt;
-      &lt;a href=&quot;#&quot;&gt;
+      &lt;a href=&quot;https://www.rosiene.com.br/p/legenda.html&quot;&gt;
         &lt;img src=&quot;https://rosiene.github.io/img/ico/util-legenda.svg&quot; alt=&quot;legenda&quot; /&gt;&lt;br/&gt;
         &lt;h2&gt;Legenda&lt;/h2&gt;
         &lt;p&gt;Lista de gráficos, pontos, abreviaturas em português e inglês.&lt;/p&gt;
       &lt;/a&gt;
     &lt;/div&gt;
     &lt;div&gt;
-      &lt;a href=&quot;#&quot;&gt;
+      &lt;a href=&quot;https://www.rosiene.com.br/search/label/Ponto?max-results=8&quot;&gt;
         &lt;img src=&quot;https://rosiene.github.io/img/ico/util-ponto.svg&quot; alt=&quot;ponto&quot; /&gt;&lt;br/&gt;
         &lt;h2&gt;Pontos&lt;/h2&gt;
         &lt;p&gt;Biblioteca com diferentes pontos em vídeo, instrução escrita e gráfico.&lt;/p&gt;
@@ -1288,11 +1366,6 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
   </b:loop>
   </div>
 </b:includable>
-          <b:includable id='homePageLink'>
-<a class='home-link' expr:href='data:blog.homepageUrl'>
-<data:messages.home/>
-</a>
-</b:includable>
           <b:includable id='iframe_comments' var='post'>
   <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
 </b:includable>
@@ -1354,26 +1427,11 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
 </b:includable>
           <b:includable id='mobile-nextprev'>
   <div class='blog-pager' id='blog-pager'>
-    <b:if cond='data:newerPageUrl'>
-      <div class='mobile-link-button' id='blog-pager-newer-link'>
-      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>&amp;lsaquo;</a>
-      </div>
-    </b:if>
-
     <b:if cond='data:olderPageUrl'>
       <div class='mobile-link-button' id='blog-pager-older-link'>
       <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>&amp;rsaquo;</a>
       </div>
     </b:if>
-
-    <div class='mobile-link-button' id='blog-pager-home-link'>
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
-    </div>
-
-    <div class='mobile-desktop-link'>
-      <a class='home-link' expr:href='data:desktopLinkUrl'><data:desktopLinkMsg/></a>
-    </div>
-
   </div>
   <div class='clear'/>
 </b:includable>
@@ -1467,19 +1525,10 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
 </b:includable>
           <b:includable id='nextprev'>
   <div class='blog-pager' id='blog-pager'>
-    <b:if cond='data:newerPageUrl'>
-      <span id='blog-pager-newer-link'>
-      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
-      </span>
-    </b:if>
 
     <b:if cond='data:olderPageUrl'>
-      <span id='blog-pager-older-link'>
       <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
-      </span>
     </b:if>
-
-    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
 
     <b:if cond='data:mobileLinkUrl'>
       <div class='blog-mobile-link'>
@@ -1540,9 +1589,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
 </b:includable>
           <b:includable id='postPagination'>
   <div class='blog-pager container' id='blog-pager'>
-  <b:include cond='data:newerPageUrl' name='previousPageLink'/>
   <b:include cond='data:olderPageUrl' name='nextPageLink'/>
-  <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
   </div>
   </b:includable>
           <b:includable id='postQuickEdit' var='post'>
@@ -1553,11 +1600,6 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
       </a>
     </span>
   </b:if>
-</b:includable>
-          <b:includable id='previousPageLink'>
-<a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
-<data:messages.newerPosts/>
-</a>
 </b:includable>
           <b:includable id='shareButtons' var='post'>
     <h4>Compartilhe:</h4>
@@ -1579,11 +1621,11 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
           <div class='status_message'>
             <b:if cond='data:numPosts == 0'>
               <b:if cond='data:blog.searchLabel'>
-                  No posts for label: <data:blog.searchLabel/>.
+                 <h3>Nenhum resultado para a tag: <i><data:blog.searchLabel/></i>.</h3>
               <b:elseif cond='data:blog.searchQuery'/>
-                  No posts for query: <data:blog.searchQuery/>.
+                  <h3>Nenhum resultado encontrado para: <i><data:blog.searchQuery/></i>.</h3>
               <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
-                  Page not found.
+                  <h3>Página não encontrada.</h3>
               <b:elseif cond='data:blog.url == data:blog.homepageUrl'/>
                   No posts.
               </b:if>
