@@ -81,19 +81,30 @@ URL:      www.rosiene.com.br
     }
 
     .navigation {
-      margin: 20px 0;
       text-align: center;
     }
 
     .sidebar {
       display: none;
       position: absolute;
+      padding: 0 14px  24px 0;
       top: 0;
       left: 0;
       min-width: 100%;
       min-height: 100%;
       background: #fff;
       z-index: 1;
+    }
+
+    .page-overlay{
+      background-color: rgba(0,0,0,.54);
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      display: none;
     }
 
     .section{
@@ -276,7 +287,6 @@ URL:      www.rosiene.com.br
       background-color: #7AA9A6;
       color: #ffffff;
       justify-content: center;
-      padding: 25px 0;
     }
 
     .util div {
@@ -336,7 +346,7 @@ URL:      www.rosiene.com.br
     }
 
     .social a {
-      margin: 0 4px;
+      padding: 0 3px;
     }
     .social a img {
       width: 48px;
@@ -525,7 +535,8 @@ URL:      www.rosiene.com.br
     }
 
     .menu-button{
-      width: 48px;
+      margin-top: 30px;
+      width: 42px;
     }
     .show-menu{
       display: none;
@@ -535,23 +546,23 @@ URL:      www.rosiene.com.br
     }
 
     .sidebar h1 {
-      fonts-size: 36px;
+      font-size: 36px;
     }
 
     .sidebar h2 {
       cursor: pointer;
-      fonts-size: 24px;
+      font-size: 18px;
       font-family: &#39;PT Sans&#39;, sans-serif;
-      Color: #241f20;
+      Color: #be495f;
       margin-left: 20px;
-      font-weight: 200;
+      font-weight: 600;
       background: url(&#39;https://rosiene.github.io/img/ico/arrow-menu.svg&#39;) no-repeat right;
     }
 
     .sidebar .Label{
       margin: 10px;
       padding: 20px 0;
-      border-bottom: 1px solid #e49dac;
+      border-bottom: 1px solid rgba(50, 51, 49, 0.2);;
     }
     .sidebar ul {
       list-style-type: none;
@@ -560,7 +571,7 @@ URL:      www.rosiene.com.br
     }
 
     .sidebar ul li{
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 16px;
     }
 
@@ -648,10 +659,12 @@ URL:      www.rosiene.com.br
       .post-container {
         margin: 0 10%;
       }
+
       .post-item {
         margin: 10px;
         width: 40%;
       }
+
       .Blog .post-item {
         width: 30%;
       }
@@ -663,6 +676,13 @@ URL:      www.rosiene.com.br
       .post-body iframe{
         width: 640px;
         height: 360px;
+      }
+      .sidebar {
+        min-width: 320px;
+      }
+
+      .Blog .post-item {
+        width: 30%;
       }
     }
 
@@ -681,21 +701,30 @@ URL:      www.rosiene.com.br
         display: block;
         text-align: center;
       }
-      .direitos_text p{
+      .direitos_text p {
         margin: 10px 50px;
+      }
     }
-
 
     </style>
     <script>
     $( document ).ready(function() {
-        console.log(&#39;ready&#39;);
+        console.log('ready');
 
-        $(&quot;#menu-label&quot;).on(&#39;click&#39;, function(){
-          $(&quot;aside&quot;).show();
+        $('#menu-label').on(&#39;click&#39;, function(){
+          $(&quot;aside&quot;).animate({
+            width: "toggle"
+          });
+          $('.page-overlay').show();
         });
         $(&quot;#menu-back&quot;).on(&#39;click&#39;, function(){
           $(&quot;aside&quot;).hide();
+          $('.page-overlay').hide();
+        });
+
+        $(&quot;.page-overlay&quot;).on(&#39;click&#39;, function(){
+          $(&quot;aside&quot;).hide();
+          $('.page-overlay').hide();
         });
 
         $(&quot;#Label1 h2&quot;).on(&#39;click&#39;, function(){
@@ -738,6 +767,7 @@ URL:      www.rosiene.com.br
   </head>
   <body>
     <div class='content'>
+      <div class="page-overlay"></div>
       <nav class='navigation'>
         <img class='menu-button' id='menu-label' src='https://rosiene.github.io/img/ico/menu.svg'/>
       </nav>
