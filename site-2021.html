@@ -54,7 +54,7 @@ URL:      www.rosiene.com.br
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 34px;
       text-transform: uppercase;
       text-align: center;
       font-weight: 100 !important;
@@ -367,7 +367,7 @@ URL:      www.rosiene.com.br
     }
 
     .search {
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .search input[type=submit]{
@@ -665,7 +665,7 @@ URL:      www.rosiene.com.br
         width: 40%;
       }
 
-      .Blog .post-item {
+      .home-blog {
         width: 30%;
       }
 
@@ -679,10 +679,6 @@ URL:      www.rosiene.com.br
       }
       .sidebar {
         min-width: 320px;
-      }
-
-      .Blog .post-item {
-        width: 30%;
       }
     }
 
@@ -1237,7 +1233,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
           <b:loop values='data:posts' var='post'>
             <b:loop values='data:post.labels' var='label'>
               <b:if cond='data:label.name == &quot;Blog&quot;'>
-                <div class='post-item'>
+                <div class='post-item home-blog'>
                   <a expr:href='data:post.link ? data:post.link : data:post.url'>
                     <img class='post-featuredImage' expr:src='data:post.firstImageUrl'/>
                     <h3 class='post-title-link'><data:post.title/></h3>
@@ -1249,7 +1245,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
         </b:if>
       </div>
       <b:if cond='data:view.isHomepage'>
-        <p class='link-mais-blog'><a href='#'>Ver mais posts...</a></p>
+        <p class='link-mais-blog'><a href='https://www.rosiene.com.br//search/label/Blog'>Ver mais posts...</a></p>
       <b:else/>
         <b:include name='nextprev'/>
     </b:if>
