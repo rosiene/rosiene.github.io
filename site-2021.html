@@ -545,7 +545,7 @@ URL:      www.rosiene.com.br
       Color: #241f20;
       margin-left: 20px;
       font-weight: 200;
-      background: url('https://rosiene.github.io/img/ico/arrow-menu.svg') no-repeat right;
+      background: url(&#39;https://rosiene.github.io/img/ico/arrow-menu.svg&#39;) no-repeat right;
     }
 
     .sidebar .Label{
@@ -598,6 +598,10 @@ URL:      www.rosiene.com.br
       border-radius: 5px;
       padding: 12px 24px;
       box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    }
+
+    .direitos_text {
+      display: none;
     }
 
     @media only screen and (min-width: 768px) {
@@ -659,47 +663,67 @@ URL:      www.rosiene.com.br
       }
     }
 
+    @media print {
+
+      html, body {
+        min-height: auto;
+        display:table;
+      }
+
+      .navigation, .BlogSearch, .post-footer, .blog-pager, #bottom, iframe {
+        display: none;
+      }
+
+      .direitos_text {
+        display: block;
+        text-align: center;
+      }
+      .direitos_text p{
+        margin: 10px 50px;
+    }
+
+
     </style>
     <script>
     $( document ).ready(function() {
-        console.log('ready');
+        console.log(&#39;ready&#39;);
 
-        $("#menu-label").on('click', function(){
-          $("aside").show();
+        $(&quot;#menu-label&quot;).on(&#39;click&#39;, function(){
+          $(&quot;aside&quot;).show();
         });
-        $("#menu-back").on('click', function(){
-          $("aside").hide();
+        $(&quot;#menu-back&quot;).on(&#39;click&#39;, function(){
+          $(&quot;aside&quot;).hide();
         });
 
-        $("#Label1 h2").on('click', function(){
-          if ( $('#Label1 div').is( ":hidden" ) ) {
-            $("#Label1 div").slideDown();
+        $(&quot;#Label1 h2&quot;).on(&#39;click&#39;, function(){
+          if ( $(&#39;#Label1 div&#39;).is( &quot;:hidden&quot; ) ) {
+            $(&quot;#Label1 div&quot;).slideDown();
           }else{
-            $("#Label1 div").slideUp();
+            $(&quot;#Label1 div&quot;).slideUp();
           }
         });
 
-        $("#Label2 h2").on('click', function(){
-          if ( $('#Label2 div').is( ":hidden" ) ) {
-            $("#Label2 div").slideDown();
+        $(&quot;#Label2 h2&quot;).on(&#39;click&#39;, function(){
+          if ( $(&#39;#Label2 div&#39;).is( &quot;:hidden&quot; ) ) {
+            $(&quot;#Label2 div&quot;).slideDown();
           }else{
-            $("#Label2 div").slideUp();
+            $(&quot;#Label2 div&quot;).slideUp();
           }
         });
 
-        $("#Label3 h2").on('click', function(){
-          if ( $('#Label3 div').is( ":hidden" ) ) {
-            $("#Label3 div").slideDown();
+        $(&quot;#Label3 h2&quot;).on(&#39;click&#39;, function(){
+          if ( $(&#39;#Label3 div&#39;).is( &quot;:hidden&quot; ) ) {
+            $(&quot;#Label3 div&quot;).slideDown();
           }else{
-            $("#Label3 div").slideUp();
+            $(&quot;#Label3 div&quot;).slideUp();
           }
         });
 
-        $("#Label4 h2").on('click', function(){
-          if ( $('#Label4 div').is( ":hidden" ) ) {
-            $("#Label4 div").slideDown();
+        $(&quot;#Label4 h2&quot;).on(&#39;click&#39;, function(){
+          if ( $(&#39;#Label4 div&#39;).is( &quot;:hidden&quot; ) ) {
+            $(&quot;#Label4 div&quot;).slideDown();
           }else{
-            $("#Label4 div").slideUp();
+            $(&quot;#Label4 div&quot;).slideUp();
           }
         });
 
@@ -1878,6 +1902,24 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
     </div>
     </div>
   </div>
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML10' locked='false' title='Direitos Autorais' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>&lt;div class=&quot;direitos_text&quot;&gt;
+&lt;p&gt;&#169; Rosiene - Tricô e Tal. Esta receita é uma criação de Rosiene Dilly.&lt;/p&gt;
+&lt;p&gt;
+É proibida cópia, distribuição ou reprodução total ou parcial deste material sem autorização prévia do autor
+por escrito. Você pode compartilhar este material indicando o link da receita no site.
+É permitida a venda de peças feitas a partir desta receita.&lt;/p&gt;
+&lt;/div&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
       </b:section>
