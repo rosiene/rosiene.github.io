@@ -80,6 +80,14 @@ URL:      www.rosiene.com.br
       font-size: 14px;
     }
 
+    #header-inner{
+      text-align: center;
+      margin-top: 20px;
+    }
+    #header-inner img{
+      width: 260px;
+    }
+
     .navigation {
       text-align: center;
     }
@@ -317,8 +325,8 @@ URL:      www.rosiene.com.br
     }
 
     .newsletter {
-      background-color: #CAA175;
-      color: #ffffff;
+      background-color: #f0d7dd;
+      color: #a44030;
     }
 
     .newsletter p {
@@ -327,7 +335,7 @@ URL:      www.rosiene.com.br
     }
 
     footer {
-      background-color: #a44030;
+      background-color: #e49dac;
       color: #ffffff;
       text-align: center;
       padding: 50px 0 30px 0;
@@ -342,11 +350,11 @@ URL:      www.rosiene.com.br
       width: 100px;
     }
     .social{
-      margin: 20px auto;
+      margin: 14px auto;
     }
 
     .social a {
-      padding: 0 3px;
+      padding: 0 2px;
     }
     .social a img {
       width: 48px;
@@ -357,7 +365,7 @@ URL:      www.rosiene.com.br
     }
 
     input.gsc-input {
-      color: #be495f;
+      color: #e49dac;
       font-size: 16px;
       padding: 6px;
       border: none;
@@ -705,22 +713,22 @@ URL:      www.rosiene.com.br
     </style>
     <script>
     $( document ).ready(function() {
-        console.log('ready');
+        console.log(&#39;ready&#39;);
 
-        $('#menu-label').on(&#39;click&#39;, function(){
+        $(&#39;#menu-label&#39;).on(&#39;click&#39;, function(){
           $(&quot;aside&quot;).animate({
-            width: "toggle"
+            width: &quot;toggle&quot;
           });
-          $('.page-overlay').show();
+          $(&#39;.page-overlay&#39;).show();
         });
         $(&quot;#menu-back&quot;).on(&#39;click&#39;, function(){
           $(&quot;aside&quot;).hide();
-          $('.page-overlay').hide();
+          $(&#39;.page-overlay&#39;).hide();
         });
 
         $(&quot;.page-overlay&quot;).on(&#39;click&#39;, function(){
           $(&quot;aside&quot;).hide();
-          $('.page-overlay').hide();
+          $(&#39;.page-overlay&#39;).hide();
         });
 
         $(&quot;#Label1 h2&quot;).on(&#39;click&#39;, function(){
@@ -763,7 +771,7 @@ URL:      www.rosiene.com.br
   </head>
   <body>
     <div class='content'>
-      <div class="page-overlay"></div>
+      <div class='page-overlay'/>
       <nav class='navigation'>
         <img class='menu-button' id='menu-label' src='https://rosiene.github.io/img/ico/menu.svg'/>
       </nav>
@@ -964,34 +972,31 @@ URL:      www.rosiene.com.br
       <b:section id='top'>
         <b:widget id='Header1' locked='false' title='( ROSIENE ) (Cabeçalho)' type='Header' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='displayUrl'/>
-            <b:widget-setting name='displayHeight'>0</b:widget-setting>
-            <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
-            <b:widget-setting name='useImage'>false</b:widget-setting>
+            <b:widget-setting name='displayUrl'>https://rosiene.github.io/img/rosiene_logo.png</b:widget-setting>
+            <b:widget-setting name='displayHeight'>301</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>921</b:widget-setting>
+            <b:widget-setting name='useImage'>true</b:widget-setting>
             <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
-            <b:widget-setting name='displayWidth'>0</b:widget-setting>
+            <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
+            <b:widget-setting name='displayWidth'>310</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
           <div id='header-inner'>
-            <div class='titlewrapper'>
-              <h1 class='title'>
-                <b:include name='title'/>
-              </h1>
-            </div>
-            <b:include name='description'/>
+            <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+              <img class='logowrapper' expr:alt='data:title' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl'/>
+            </b:tag>
           </div>
-      </b:includable>
+          </b:includable>
           <b:includable id='description'>
-        <div class='descriptionwrapper'>
-          <p class='description'><span><data:description/></span></p>
-        </div>
-      </b:includable>
+  <div class='descriptionwrapper'>
+    <p class='description'><span><data:description/></span></p>
+  </div>
+</b:includable>
           <b:includable id='title'>
-        <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
-          <data:title/>
-        </b:tag>
-      </b:includable>
+  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+    <data:title/>
+  </b:tag>
+</b:includable>
         </b:widget>
         <b:widget id='HTML7' locked='false' title='Redes Sociais' type='HTML' version='1'>
           <b:widget-settings>
@@ -1946,7 +1951,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
   </div>
 </b:includable>
         </b:widget>
-        <b:widget id='HTML10' locked='false' title='Direitos Autorais' type='HTML'>
+        <b:widget id='HTML10' locked='false' title='Direitos Autorais' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div class=&quot;direitos_text&quot;&gt;
 &lt;p&gt;&#169; Rosiene - Tricô e Tal. Esta receita é uma criação de Rosiene Dilly.&lt;/p&gt;
@@ -1967,42 +1972,6 @@ por escrito. Você pode compartilhar este material indicando o link da receita n
       </b:section>
 
       <b:section id='bottom'>
-        <b:widget id='HTML6' locked='false' title='Newsletter' type='HTML' version='1'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>&lt;div class=&quot;session newsletter&quot;&gt;
-      &lt;h1&gt;newsletter&lt;/h1&gt;
-      &lt;p&gt;Quer receber &lt;b&gt;CONTEÚDO EXCLUSIVO&lt;/b&gt;&lt;br/&gt;
-         e ofertas em primeira mão? &lt;br/&gt;
-         Assine a newsletter!!!&lt;/p&gt;
-      &lt;!-- Begin Mailchimp Signup Form --&gt;
-  &lt;div id=&quot;mc_embed_signup&quot; class=&quot;form&quot;&gt;
-    &lt;form action=&quot;https://rosiene.us20.list-manage.com/subscribe/post?u=773a2be776b2a77cee1c855b8&amp;amp;id=ef6a6ac87c&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate&gt;
-        &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
-          &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
-          &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;
-            &lt;input type=&quot;text&quot; name=&quot;b_773a2be776b2a77cee1c855b8_ef6a6ac87c&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;
-          &lt;/div&gt;
-          &lt;div&gt;
-            &lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;seu@email.com&quot; required /&gt;
-          &lt;/div&gt;
-          &lt;div&gt;
-            &lt;input type=&quot;submit&quot; value=&quot;Cadastrar!&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;&lt;/div&gt;</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-
-          <b:if cond='data:view.isHomepage'>
-
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-</b:if>
-
-</b:includable>
-        </b:widget>
         <b:widget id='HTML1' locked='false' title='Footer' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;footer&gt;
