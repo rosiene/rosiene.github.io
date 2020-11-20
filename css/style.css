@@ -1,8 +1,9 @@
 
-/*  --
+/*
 @cor-preto: #241f20;
 @cor-cinza: #81827f;
 @cor-branco: #ffffff;
+
   --cor-rosa-claro: #f0d7dd;
   --cor-rosa-medio: #e49dac;
   --cor-rosa-escuro: #be495f;
@@ -24,7 +25,7 @@
 }
 
 body {
-  font-family: &#39;PT Sans&#39;, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   color: #241f20;
   font-weight: normal;
   background-color: #fff;
@@ -517,11 +518,11 @@ input.gsc-input {
 .sidebar h2 {
   cursor: pointer;
   font-size: 18px;
-  font-family: &#39;PT Sans&#39;, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   Color: #be495f;
   margin-left: 20px;
   font-weight: 600;
-  background: url(&#39;https://rosiene.github.io/img/ico/arrow-menu.svg&#39;) no-repeat right;
+  background: url('https://rosiene.github.io/img/ico/arrow-menu.svg') no-repeat right;
 }
 
 .sidebar .Label{
