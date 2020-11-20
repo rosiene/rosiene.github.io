@@ -180,8 +180,8 @@ form.gsc-search-box{
 }
 
 .clube {
-  background-color: #e49dac;
-  color: #ffffff;
+  background: url('../img/clube_back.png');
+  color: #be495f;
   align-items: center;
   justify-content: center;
 }
@@ -189,6 +189,7 @@ form.gsc-search-box{
 .clube div{
   padding: 20px;
   text-align: center;
+  background: rgba(100, 100, 100, 0.5)
 }
 
 .clube div img{
