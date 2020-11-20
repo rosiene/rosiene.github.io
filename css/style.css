@@ -181,9 +181,12 @@ form.gsc-search-box{
 
 .clube {
   background-color: #e49dac;
+  background-image: url('../img/back_detalhe_branco.png');
+  background-repeat: repeat-x;
   color: #ffffff;
   align-items: center;
   justify-content: center;
+  padding-top: 90px;
 }
 
 .clube div{
