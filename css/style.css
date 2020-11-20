@@ -303,6 +303,11 @@ footer a {
   text-decoration: underline;
 }
 
+footer .img_logo {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
 .ico-logo {
   width: 100px;
 }
