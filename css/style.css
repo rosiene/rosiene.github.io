@@ -279,8 +279,8 @@ form.gsc-search-box{
 }
 .blog{
   background-image: url("../img/back_detalhe.png");
-  background-repeat: repeat-y;
-  padding-top: 120px;
+  background-repeat: repeat-x;
+  padding-top: 70px;
   padding-bottom: 30px;
 }
 
