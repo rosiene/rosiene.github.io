@@ -5,22 +5,22 @@
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
-    <link href='https://rosiene.github.io/css/style.css' rel='stylesheet' type='text/css' />
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://rosiene.github.io/js/script.js'></script>
-    <script src='https://rosiene.github.io/js/base.js'></script>
-    <script src='https://rosiene.github.io/js/manta.js'></script>
+    <link href='https://rosiene.github.io/css/style.css' rel='stylesheet' type='text/css'/>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
+    <script src='https://rosiene.github.io/js/script.js'/>
+    <script src='https://rosiene.github.io/js/base.js'/>
+    <script src='https://rosiene.github.io/js/manta.js'/>
 
-    <b:skin>
-    <![CDATA[/*
+    <b:skin><![CDATA[
+    /*
 -----------------------------------------------
 Blogger Template Style
 Name:     ROSIENE
 Designer: Rosiene Dilly
 URL:      www.rosiene.com.br
 ----------------------------------------------- */
-    ]]>
-  </b:skin>
+
+  ]]></b:skin>
     <b:include data='blog' name='google-analytics'/>
   </head>
   <body>
@@ -309,7 +309,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
       <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
         <b:widget id='HTML2' locked='false' title='Receitas' type='HTML' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='content'>&lt;div class=&quot;session receita&quot;&gt;
+            <b:widget-setting name='content'>&lt;div class=&quot;session receita&quot; style=&quot;display:none;&quot;&gt;
       &lt;h1&gt;Receitas&lt;/h1&gt;
       &lt;div class=&quot;content&quot;&gt;
         &lt;a href=&quot;https://www.rosiene.com.br/2019/11/blusa-top-down-raglan-em-trico.html&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-rKXIUX0bfmg/XcVgfSNslrI/AAAAAAABovE/wQJ2igxjn9oEA17oATojYO5mofMcThQlACLcBGAsYHQ/s640/blusa_top_down_blog.jpg&quot; /&gt;&lt;/a&gt;
@@ -329,6 +329,29 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
     <data:content/>
   </div>
 
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML6' locked='false' title='Slider' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>&lt;div class=&quot;slider-container&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;img-slider&quot; src=&quot;https://1.bp.blogspot.com/-cyrY58Mn6B4/X7qAjXpC83I/AAAAAAAB9nk/1UBQYjuZIgE1CeEhgQAXe6DZdt8mpIrhgCLcBGAsYHQ/w320-h400/destaque_cachecol.jpg&quot; /&gt;&lt;/a&gt;
+  &lt;a href=&quot;#3&quot;&gt;&lt;img class=&quot;img-slider&quot; src=&quot;https://1.bp.blogspot.com/-lhgo2XSzK-g/X7qAjUUQhjI/AAAAAAAB9ng/KABMk_rvCwYKQWWsveXvHbOjgC2T8q6eQCLcBGAsYHQ/w320-h400/destaque_xale.jpg&quot; /&gt;&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;img-slider&quot; src=&quot;https://1.bp.blogspot.com/-TpWy8NQSo50/X7qAjcsOXxI/AAAAAAAB9no/3Q5tjPUAnv4k5HGuTfecjt-szkads6lQwCLcBGAsYHQ/w320-h400/destaque_conjunto_ams.jpg&quot; /&gt;&lt;/a&gt;
+
+  &lt;button class=&quot;slider-destaque slider-button slider-left&quot; onclick=&quot;plusDivs(-1)&quot;&gt;&amp;#10094;&lt;/button&gt;
+  &lt;button class=&quot;slider-destaque slider-button slider-right&quot; onclick=&quot;plusDivs(1)&quot;&gt;&amp;#10095;&lt;/button&gt;
+&lt;/div&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
         <b:widget id='HTML3' locked='false' title='Clube' type='HTML' version='1'>

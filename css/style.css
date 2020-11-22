@@ -593,6 +593,44 @@ input.gsc-input {
   display: none;
 }
 
+.slider-container{
+  max-width: 960px;
+  text-align: center;
+}
+
+.img-slider {
+  display:none;
+  width: 100%;
+}
+
+.slider-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.slider-left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%,-50%);
+}
+
+.slider-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%,-50%);
+}
+
 @media only screen and (min-width: 768px) {
 
   h1 {
@@ -657,6 +695,17 @@ input.gsc-input {
   }
   .sidebar {
     min-width: 320px;
+  }
+
+  .img-slider {
+    width: 30%;
+    display: inline-flex;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .slider-button {
+    display: none;
   }
 }
 
