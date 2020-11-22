@@ -52,10 +52,10 @@ $( document ).ready(function() {
     //SLIDER
     var slideIndex = 1;
 
-    #('#buttonPrev').on('click', function(){
+    $('#buttonPrev').on('click', function(){
       plusDivs(-1);
     });
-    #('#buttonNext').on('click', function(){
+    $('#buttonNext').on('click', function(){
       plusDivs(1);
     });
 
