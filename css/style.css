@@ -595,12 +595,13 @@ input.gsc-input {
 
 .slider-container{
   text-align: center;
-  margin: 40px 0;
+  margin: 40px 0 10px 0;
 }
 
 .img-slider {
   display:none;
-  width: 100%;
+  width: 96%;
+  margin: auto;
 }
 
 .slider-button {
