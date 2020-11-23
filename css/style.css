@@ -22,11 +22,13 @@
   outline: 0;
   vertical-align: baseline;
   background: transparent;
+  font-size: 18px;
 }
 
 body {
   font-family: 'PT Sans', sans-serif;
   color: #241f20;
+  font-size: 18px;
   font-weight: normal;
   background-color: #fff;
   height: 100%;
@@ -43,7 +45,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -58,7 +60,7 @@ a {
 }
 
 p {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #header-inner{
@@ -142,41 +144,6 @@ p {
 }
 form.gsc-search-box{
   margin: 0;
-}
-
-.receita {
-  text-align: center;
-}
-
-.receita .content{
-  margin: 0 auto;
-}
-
-.receita .content a img{
-  width: 48%;
-}
-
-.receita h1 {
-  margin-bottom: 40px;
-}
-
-.receita .content a:hover img{
-  opacity: 0.8;
-}
-
-.receita_link {
-  text-transform: uppercase;
-  background: #241f20;
-  color: #ffffff;
-  border-radius: 5px;
-  padding: 12px 24px ;
-  font-weight: 200;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
-}
-
-.receita_link:hover {
-  text-decoration: none;
-  background: #be495f;
 }
 
 .clube {
@@ -271,7 +238,6 @@ form.gsc-search-box{
 }
 
 .util a h2 {
-  font-size: 20px;
   padding: 8px 0 4px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -649,14 +615,6 @@ input.gsc-input {
 
   .iniciante div:first-of-type{
     display: block;
-  }
-
-  .receita .content {
-    margin: 0 12%;
-  }
-
-  .receita .content a img {
-    width: 30%;
   }
 
   #mc_embed_signup_scroll{
