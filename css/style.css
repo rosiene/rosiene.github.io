@@ -113,6 +113,7 @@ p {
 .top {
   text-align: center;
   padding: 0;
+  margin-top: 30px;
 }
 
 .oi_home {
@@ -286,7 +287,7 @@ footer .img_logo {
   width: 100px;
 }
 .social{
-  margin: 14px auto;
+  margin-top: 14px;
 }
 
 .social a {
