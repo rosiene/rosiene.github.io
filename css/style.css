@@ -112,7 +112,7 @@ p {
 
 .top {
   text-align: center;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .oi_home {
@@ -141,6 +141,7 @@ p {
   border-radius: 30px;
   padding: 10px 20px;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  margin-top: 30px;
 }
 form.gsc-search-box{
   margin: 0;
@@ -511,12 +512,12 @@ input.gsc-input {
 }
 
 .sidebar ul li{
-  font-size: 16px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .sidebar ul li a{
   color: #be495f;
+  font-size: 16px;
   text-decoration: none;
 }
 
