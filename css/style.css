@@ -596,7 +596,7 @@ input.gsc-input {
   transform: translate(0%,-50%);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
 
   h1 {
     font-size: 48px;
@@ -613,6 +613,10 @@ input.gsc-input {
 
   .iniciante div:first-of-type{
     display: block;
+  }
+
+  .iniciante div:first-of-type img{
+    width: 500px;
   }
 
   #mc_embed_signup_scroll{
