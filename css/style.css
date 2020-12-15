@@ -126,8 +126,7 @@ p {
 }
 
 .oi_home {
-  font-style: italic;
-  margin-bottom: 12px;
+  margin: 12px 0;
 }
 
 .img_capa {
@@ -621,8 +620,8 @@ input.gsc-input {
   }
 
   .img_capa {
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
   }
 
   .clube, .util, .iniciante, .post-container{
