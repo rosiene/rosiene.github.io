@@ -613,6 +613,23 @@ a.destaque_links {
   color: #fff;
 }
 
+.contact-form-name,
+  .contact-form-email,
+  .contact-form-email-message {
+    max-width: 100%;
+    border: 1px solid #a0bbd2;
+    border-radius: 5px;
+    margin: 6px 0;
+    padding: 6px;
+}
+
+.contact-form-button-submit {
+  background-color: #be495f;
+  border-radius: 5px;
+  margin: 6px 0;
+  padding: 6px;
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
