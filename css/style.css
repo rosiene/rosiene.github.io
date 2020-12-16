@@ -624,10 +624,18 @@ a.destaque_links {
 }
 
 .contact-form-button-submit {
-  background-color: #be495f;
+  background: #e49dac;
+  border: none;
   border-radius: 5px;
   margin: 6px 0;
-  padding: 6px;
+  line-height: 36px;
+  height: 36px;
+  font-size: 16px;
+}
+
+.contact-form-button-submit:hover {
+  border: none;
+  background: #be495f;
 }
 
 @media only screen and (min-width: 1024px) {
