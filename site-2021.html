@@ -894,17 +894,16 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
             </b:loop>
           </b:if>
         </div>
-
-
         </div>
 
-        <div class='post-footer-line post-footer-line-2'>
-          <!-- share buttons -->
-          <div class='post-share-buttons goog-inline-block'>
-            <b:include cond='data:post.sharePostUrl' data='post' name='shareButtons'/>
+        <b:if cond='data:post.dateHeader'>
+          <div class='post-footer-line post-footer-line-2'>
+            <!-- share buttons -->
+            <div class='post-share-buttons goog-inline-block'>
+              <b:include cond='data:post.sharePostUrl' data='post' name='shareButtons'/>
+            </div>
           </div>
-        </div>
-
+        </b:if>
       </div> <!-- post-footer -->
   </div>
 </b:includable>
