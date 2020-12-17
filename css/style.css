@@ -252,10 +252,15 @@ form.gsc-search-box{
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.util a:hover h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
 .util a p {
   font-style: italic;
   padding-top: 8px;
 }
+
 .blog{
   background-image: url("../img/back_detalhe.png");
   background-repeat: repeat-x;
@@ -613,9 +618,16 @@ a.destaque_links {
   color: #fff;
 }
 
+.ferramenta-form {
+  padding: 20px;
+  background: #98bcba;
+  border-radius: 20px;
+}
+
 .contact-form-name,
   .contact-form-email,
-  .contact-form-email-message {
+  .contact-form-email-message,
+  .gsc-input {
     max-width: 100%;
     border: 1px solid #a0bbd2;
     border-radius: 5px;
@@ -623,14 +635,15 @@ a.destaque_links {
     padding: 6px;
 }
 
-.contact-form-button-submit {
-  background: #e49dac;
-  border: none;
-  border-radius: 5px;
-  margin: 6px 0;
-  line-height: 36px;
-  height: 36px;
-  font-size: 16px;
+.contact-form-button-submit,
+  .gsc-search-button {
+    background: #e49dac;
+    border: none;
+    border-radius: 5px;
+    margin: 6px 0;
+    line-height: 36px;
+    height: 36px;
+    font-size: 16px;
 }
 
 .contact-form-button-submit:hover {
