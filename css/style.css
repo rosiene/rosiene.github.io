@@ -489,6 +489,10 @@ input.gsc-input {
   height: 180px;
 }
 
+.post-body td{
+  vertical-align: top;
+}
+
 .menu-back {
   display: none;
 }
@@ -734,6 +738,7 @@ a.destaque_links {
     width: 640px;
     height: 360px;
   }
+
   .sidebar {
     min-width: 320px;
   }
