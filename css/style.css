@@ -318,6 +318,7 @@ input.gsc-input {
   color: #e49dac;
   font-size: 16px;
   padding: 6px;
+  background: #ffffff;
   border: none;
   display: inline;
   outline: 0;
@@ -626,6 +627,7 @@ a.destaque_links {
   margin: 10px;
   background: #98bcba;
   border-radius: 20px;
+  color: #ffffff;
 }
 
 .contact-form-name,
@@ -648,11 +650,24 @@ a.destaque_links {
     line-height: 36px;
     height: 36px;
     font-size: 16px;
+    padding: 0 20px;
+    color: #ffffff;
 }
 
 .contact-form-button-submit:hover {
   border: none;
   background: #be495f;
+}
+
+.destaque_clube {
+  display: flex;
+  list-style-type: none;
+}
+
+.destaque_clube li {
+  margin: 10px;
+  padding: 10px;
+  border: #e49dac solid 1px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -662,8 +677,8 @@ a.destaque_links {
   }
 
   .img_capa {
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
   }
 
   .clube, .util, .iniciante, .post-container{
