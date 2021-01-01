@@ -487,6 +487,7 @@ input.gsc-input {
 .post-body iframe{
   width: 320px;
   height: 180px;
+  margin: 10px;
 }
 
 .menu-back {
