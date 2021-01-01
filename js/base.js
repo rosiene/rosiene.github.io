@@ -23,11 +23,11 @@ $( document ).ready(function() {
         }
 
       }else{
-        $('.amostra_pontos').css('color','#4f4f4f');
+        $('.amostra_pontos').css('color','#ffffff');
         $('#amostraPontos').css('border',' 1px solid #ddd');
-        $('.pto_multiplo').css('color','#4f4f4f');
+        $('.pto_multiplo').css('color','#ffffff');
         $('#ptoMultiplo').css('border',' 1px solid #ddd');
-        $('.tamanho').css('color','#4f4f4f');
+        $('.tamanho').css('color','#ffffff');
         $('#tamanho').css('border',' 1px solid #ddd');
 
         var amostraPontos = parseInt(document.getElementById("amostraPontos").value);
@@ -47,7 +47,7 @@ $( document ).ready(function() {
           multiploTamanho = multiploTamanho + ptoMultiplo;
           nPtoFantasia++;
         }
-        
+
         var nProximoMenor = maxPonto - multiploTamanho + ptoMultiplo;
         var nProximoMaior = multiploTamanho - maxPonto;
 

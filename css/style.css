@@ -661,6 +661,11 @@ a.destaque_links {
   background: #be495f;
 }
 
+.resultado {
+  text-align: center;
+  margin: 20px;
+}
+
 .destaque_clube {
   display: flex;
   list-style-type: none;
