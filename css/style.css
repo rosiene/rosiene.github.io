@@ -644,7 +644,7 @@ a.destaque_links {
 
 .contact-form-button-submit,
   .gsc-search-button {
-    background: #e49dac;
+    background: #be495f;
     border: none;
     border-radius: 5px;
     margin: 6px 0;
@@ -653,6 +653,7 @@ a.destaque_links {
     font-size: 16px;
     padding: 0 20px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .contact-form-button-submit:hover {
