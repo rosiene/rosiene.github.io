@@ -49,6 +49,14 @@ $( document ).ready(function() {
       }
     });
 
+    $('#Label5 h2').on('click', function(){
+      if ( $('#Label5 div').is( ':hidden' ) ) {
+        $('#Label5 div').slideDown();
+      }else{
+        $('#Label5 div').slideUp();
+      }
+    });
+
     //SLIDER
     var slideIndex = 1;
 
