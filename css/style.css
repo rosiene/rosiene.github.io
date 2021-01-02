@@ -675,9 +675,7 @@ a.destaque_links {
 }
 
 .destaque_clube li {
-  margin: 10px;
-  padding: 10px;
-  border: #e49dac solid 1px;
+  margin: 5px;
 }
 
 @media only screen and (min-width: 1024px) {
