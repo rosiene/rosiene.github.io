@@ -670,7 +670,6 @@ a.destaque_links {
 }
 
 .destaque_clube {
-  display: flex;
   list-style-type: none;
 }
 
@@ -753,6 +752,10 @@ a.destaque_links {
   }
   .oi_home {
     font-size: 36px;
+  }
+
+  .destaque_clube {
+    display: flex;
   }
 }
 
