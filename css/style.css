@@ -232,6 +232,7 @@ form.gsc-search-box{
   background-color: #7AA9A6;
   color: #ffffff;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .util div {
@@ -694,6 +695,10 @@ a.destaque_links {
 
   .clube, .util, .iniciante, .post-container{
     display: flex;
+  }
+
+  .util div{
+    max-width: 250px;
   }
 
   .iniciante div:first-of-type{
