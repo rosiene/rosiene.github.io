@@ -240,7 +240,7 @@ form.gsc-search-box{
   padding: 40px 15px;
   margin: 0 auto;
   text-align: center;
-  max-width: 190px;
+  max-width: 260px;
 }
 
 .util a {
@@ -696,10 +696,6 @@ a.destaque_links {
 
   .clube, .util, .iniciante, .post-container{
     display: flex;
-  }
-
-  .util div{
-    max-width: 260px;
   }
 
   .iniciante div:first-of-type{
