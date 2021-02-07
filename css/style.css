@@ -491,7 +491,7 @@ input.gsc-input {
   max-width: 100%;
 }
 
-.post-body iframe, .video_espelhado iframe{
+.post-body iframe{
   width: 320px;
   height: 180px;
 }
@@ -682,6 +682,10 @@ a.destaque_links {
 
 .destaque_clube li {
   margin: 5px;
+}
+
+.video_espelhado iframe {
+  width: 100%;
 }
 
 @media only screen and (min-width: 1024px) {
