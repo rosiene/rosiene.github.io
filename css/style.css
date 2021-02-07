@@ -233,7 +233,7 @@ form.gsc-search-box{
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
-  justify-content: center;
+  padding: 0 8%;
 }
 
 .util div {
@@ -241,6 +241,7 @@ form.gsc-search-box{
   margin: 0 auto;
   text-align: center;
   max-width: 260px;
+  flex: 1 0 34%;
 }
 
 .util a {
