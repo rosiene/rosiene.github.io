@@ -38,6 +38,52 @@ URL:      www.rosiene.com.br
           <h1>Receitas</h1>
         </div>
         <b:section id='menu'>
+          <b:widget id='Label5' locked='false' title='Todas' type='Label'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>LIST</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Receita</b:widget-setting>
+              <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
           <b:widget id='Label3' locked='false' title='Agulha' type='Label'>
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
@@ -1205,6 +1251,28 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
   </div>
 </b:includable>
         </b:widget>
+
+          <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+            <b:widget-settings>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#be495f</b:widget-setting>
+              <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#be495f</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#241f20</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+
+    <b:if cond='!data:view.isHomepage'>
+      <div class='widget-content'>
+        <data:adCode/>
+        <b:include name='quickedit'/>
+      </div>
+
+    </b:if>
+  </b:includable>
+        </b:widget>
         <b:widget id='HTML10' locked='false' title='Direitos Autorais' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div class=&quot;direitos_text&quot;&gt;
@@ -1254,7 +1322,7 @@ por escrito. Você pode compartilhar este material indicando o link da receita n
           document.body.className = document.body.className.replace(&#39;loading&#39;, &#39;&#39;);
         }, 10);
     </script>
-    <script data-ad-client="ca-pub-6439179370140963" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async='async' data-ad-client='ca-pub-6439179370140963' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
   </body>
 
 </html>
