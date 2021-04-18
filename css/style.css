@@ -811,12 +811,12 @@ a.destaque_links {
   .destaque_clube {
     display: flex;
   }
+
+  .PopularPosts .widget-content ul li{
+    width: 30%;
+  }
 }
 
-
-.PopularPosts .widget-content ul li{
-  width: 30%;
-}
 
 @media print {
 
