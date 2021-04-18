@@ -510,6 +510,13 @@ input.gsc-input {
 .show-menu{
   display: none;
 }
+
+.receita_link {
+  margin-top: 30px;
+  background: #241f20;
+  color: #ffffff;
+}
+
 .sidebar .menu-button{
   margin-left:20px;
 }
