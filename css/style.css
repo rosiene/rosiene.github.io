@@ -718,6 +718,9 @@ a.destaque_links {
   padding: 0;
   position: relative;
   width: 100%;
+  object-fit: none;
+  object-position: center;
+  height: 300px;
 }
 
 .PopularPosts a h3{

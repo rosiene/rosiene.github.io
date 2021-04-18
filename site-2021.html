@@ -275,7 +275,7 @@ URL:      www.rosiene.com.br
         </b:section>
     </aside>
       <b:section id='top'>
-        <b:widget id='Header1' locked='false' title='Rosiene (Cabeçalho)' type='Header' version='1'>
+        <b:widget id='Header1' locked='false' title='( ROSIENE ) (Cabeçalho)' type='Header' version='1'>
           <b:widget-settings>
             <b:widget-setting name='displayUrl'>https://rosiene.github.io/img/rosiene_logo.png</b:widget-setting>
             <b:widget-setting name='displayHeight'>301</b:widget-setting>
@@ -358,33 +358,60 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
       <b:if cond='data:view.isHomepage'>
 
       <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
-        <b:widget id='PopularPosts1' locked='false' title='Destaque' type='PopularPosts' version='1'>
-          <b:widget-settings>
-            <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
-            <b:widget-setting name='showThumbnails'>true</b:widget-setting>
-            <b:widget-setting name='showSnippets'>false</b:widget-setting>
-            <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <div class='widget-content popular-posts'>
-    <ul>
-      <b:loop values='data:posts' var='post'>
-      <li>
-        <div class='item-thumbnail'>
-          <a expr:href='data:post.href' target='_blank'>
-            <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 400,&quot;1:1&quot;): data:post.thumbnail' var='image'>
-              <img alt='' border='0' expr:src='data:image'/>
-            </b:with>
-            <h3 class='post-title-link'><data:post.title/></h3>
-          </a>
-        </div>
-      </li>
-      </b:loop>
-    </ul>
-    <b:include name='quickedit'/>
+      <b:widget id='Blog2' locked='true' title='Destaque' type='Blog'>
+        <b:widget-settings>
+          <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
+          <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+          <b:widget-setting name='authorLabel'>By</b:widget-setting>
+          <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
+          <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+          <b:widget-setting name='reactionsLabel'/>
+          <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+          <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+          <b:widget-setting name='showLocation'>false</b:widget-setting>
+          <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+          <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+          <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
+          <b:widget-setting name='backlinksLabel'>Related Posts</b:widget-setting>
+          <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+          <b:widget-setting name='style.textcolor'>#4f4f4f</b:widget-setting>
+          <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+          <b:widget-setting name='style.urlcolor'>#e04861</b:widget-setting>
+          <b:widget-setting name='showAuthor'>false</b:widget-setting>
+          <b:widget-setting name='style.linkcolor'>#4f4f4f</b:widget-setting>
+          <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
+          <b:widget-setting name='showLabels'>true</b:widget-setting>
+          <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
+          <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+          <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+          <b:widget-setting name='showReactions'>false</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main' var='top'>
+
+  <!-- posts DESTAQUE -->
+  <div class='widget PopularPosts'>
+    <div class='widget-content popular-posts'>
+      <ul>
+        <b:loop values='data:posts' var='post'>
+          <b:loop values='data:post.labels' var='label'>
+            <b:if cond='data:label.name == &quot;Destaque&quot;'>
+            <li>
+              <div class='item-thumbnail'>
+                <a expr:href='data:post.link ? data:post.link : data:post.url'>
+                  <img expr:src='data:post.firstImageUrl'/>
+                  <h3><data:post.title/></h3>
+                </a>
+              </div>
+            </li>
+            </b:if>
+          </b:loop>
+        </b:loop>
+      </ul>
+    </div>
   </div>
+
 </b:includable>
-        </b:widget>
+      </b:widget>
         <b:widget id='HTML3' locked='false' title='Clube' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div class=&quot;session clube&quot;&gt;
