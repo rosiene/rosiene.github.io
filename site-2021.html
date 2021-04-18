@@ -25,6 +25,7 @@ URL:      www.rosiene.com.br
 ----------------------------------------------- */
 
   ]]></b:skin>
+
     <b:include data='blog' name='google-analytics'/>
   </head>
   <body>
@@ -179,7 +180,7 @@ URL:      www.rosiene.com.br
   </div>
 </b:includable>
           </b:widget>
-          <b:widget id='Label4' locked='false' title='Estação do Ano' type='Label' version='1'>
+          <b:widget id='Label4' locked='false' title='Estação do Ano' type='Label'>
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
               <b:widget-setting name='display'>LIST</b:widget-setting>
@@ -357,23 +358,31 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
       <b:if cond='data:view.isHomepage'>
 
       <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
-        <b:widget id='HTML6' locked='false' title='Slider' type='HTML' version='1'>
+        <b:widget id='PopularPosts1' locked='false' title='Destaque' type='PopularPosts' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='content'>&lt;div class=&quot;slider-container&quot;&gt;
-  &lt;a href=&quot;https://www.rosiene.com.br/2021/03/xale-florescer-em-trico.html&quot;&gt;&lt;img class=&quot;img-slider&quot; src=&quot;https://1.bp.blogspot.com/-VtSySaIPSwE/YEH2srrVbeI/AAAAAAACFQI/LjAAvHxzZww9rnA_CelPM4LTsTpDdAK3QCLcBGAsYHQ/s16000/xale_florescer_destaque.jpg&quot; /&gt;&lt;/a&gt;
-  &lt;a href=&quot;https://www.rosiene.com.br/2021/02/colete-yeddo-em-trico.html&quot;&gt;&lt;img class=&quot;img-slider&quot; src=&quot;https://1.bp.blogspot.com/-VWmH5t9bmIY/YDO_hGGANoI/AAAAAAACEvg/na_CuwduV7AQxCwldtuJzuj2lxFsikeBgCLcBGAsYHQ/w512-h640/colete_destaque.JPG&quot; /&gt;&lt;/a&gt;
-  &lt;a href=&quot;https://www.rosiene.com.br/2021/02/blusa-babado-em-trico.html&quot;&gt;&lt;img class=&quot;img-slider&quot; src=&quot;https://1.bp.blogspot.com/-L_PAmeFrDSs/YDPL3UfWjqI/AAAAAAACEv4/AN9sFWDDQMEoszJuphKNvyjNKiwb1oXQACLcBGAsYHQ/w512-h640/blusa_babado_destaque.jpg&quot; /&gt;&lt;/a&gt;
-
-  &lt;button class=&quot;slider-destaque slider-button slider-left&quot; id=&quot;buttonPrev&quot;&gt;&amp;#10094;&lt;/button&gt;
-  &lt;button class=&quot;slider-destaque slider-button slider-right&quot; id=&quot;buttonNext&quot;&gt;&amp;#10095;&lt;/button&gt;
-&lt;/div&gt;</b:widget-setting>
+            <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
+            <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+            <b:widget-setting name='showSnippets'>false</b:widget-setting>
+            <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
-  <div class='widget-content'>
-    <data:content/>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <div class='item-thumbnail'>
+          <a expr:href='data:post.href' target='_blank'>
+            <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 400,&quot;1:1&quot;): data:post.thumbnail' var='image'>
+              <img alt='' border='0' expr:src='data:image'/>
+            </b:with>
+            <h3 class='post-title-link'><data:post.title/></h3>
+          </a>
+        </div>
+      </li>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
   </div>
-
-  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
         <b:widget id='HTML3' locked='false' title='Clube' type='HTML' version='1'>
@@ -499,7 +508,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
             <b:widget-setting name='authorLabel'>By</b:widget-setting>
             <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
             <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-            <b:widget-setting name='reactionsLabel'>Reactions</b:widget-setting>
+            <b:widget-setting name='reactionsLabel'/>
             <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
             <b:widget-setting name='style.layout'>1x1</b:widget-setting>
             <b:widget-setting name='showLocation'>false</b:widget-setting>
@@ -511,7 +520,6 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?</b:widget-setting>
             <b:widget-setting name='style.textcolor'>#4f4f4f</b:widget-setting>
             <b:widget-setting name='showCommentLink'>false</b:widget-setting>
             <b:widget-setting name='style.urlcolor'>#e04861</b:widget-setting>
-            <b:widget-setting name='postLocationLabel'>Google Account Video Purchases</b:widget-setting>
             <b:widget-setting name='showAuthor'>false</b:widget-setting>
             <b:widget-setting name='style.linkcolor'>#4f4f4f</b:widget-setting>
             <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>

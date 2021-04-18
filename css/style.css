@@ -149,7 +149,7 @@ p {
   margin: 0 auto;
   border-radius: 30px;
   padding: 10px 20px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
   margin-top: 30px;
 }
 form.gsc-search-box{
@@ -194,7 +194,7 @@ form.gsc-search-box{
   padding: 12px 24px ;
   border-radius: 5px;
   font-size: 24px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
 }
 
 
@@ -432,7 +432,7 @@ input.gsc-input {
 
 .post-item {
   margin: 20px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
 }
 
 .post-item h3 {
@@ -466,7 +466,7 @@ input.gsc-input {
   background: #a44030;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
 }
 
 .status_message {
@@ -577,7 +577,7 @@ input.gsc-input {
   color: #ffffff;
   border-radius: 5px;
   padding: 12px 24px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
 }
 
 .direitos_text {
@@ -689,6 +689,48 @@ a.destaque_links {
   width: 100%;
 }
 
+
+
+.PopularPosts {
+  padding: 50px 0;
+}
+
+.popular-posts ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+.PopularPosts .widget-content ul li{
+  list-style-type: none;
+  padding: 0;
+}
+
+.PopularPosts .item-thumbnail {
+  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
+  float:none;
+  margin: 10px;
+}
+.PopularPosts img{
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.PopularPosts a h3{
+  color: #241f20;
+  font-weight: 200;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+}
+.PopularPosts a:hover h3{
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
@@ -769,6 +811,11 @@ a.destaque_links {
   .destaque_clube {
     display: flex;
   }
+}
+
+
+.PopularPosts .widget-content ul li{
+  width: 30%;
 }
 
 @media print {
