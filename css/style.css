@@ -510,6 +510,10 @@ input.gsc-input {
 .show-menu{
   display: none;
 }
+.todas_receitas{
+  text-align: center;
+  margin-top: 30px;
+}
 
 .receita_link {
   margin-top: 30px;
