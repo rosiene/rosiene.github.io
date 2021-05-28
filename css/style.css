@@ -160,6 +160,7 @@ form.gsc-search-box{
   background-color: #e49dac;
   background-image: url('../img/back_detalhe_branco.png');
   background-repeat: repeat-x;
+  background-size: 43px 50px;
   color: #ffffff;
   align-items: center;
   justify-content: center;
@@ -271,6 +272,7 @@ form.gsc-search-box{
 .blog{
   background-image: url("../img/back_detalhe.png");
   background-repeat: repeat-x;
+  background-size: 43px 50px;
   padding-top: 100px;
   padding-bottom: 0;
   color: #e49dac;
