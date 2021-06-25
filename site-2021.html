@@ -93,7 +93,7 @@ URL:      www.rosiene.com.br
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
               <b:widget-setting name='display'>LIST</b:widget-setting>
-              <b:widget-setting name='selectedLabelsList'>Agulha Circular nº 10,Agulha Circular nº 4,Agulha Circular nº 4.5,Agulha Circular nº 5,Agulha Circular nº 5.5,Agulha Circular nº 6,Agulha Circular nº 8,Agulhas Retas nº 10,Agulhas Retas nº 12,Agulhas Retas nº 3,Agulhas Retas nº 3.5,Agulhas Retas nº 4,Agulhas Retas nº 4.5,Agulhas Retas nº 5,Agulhas Retas nº 5.5,Agulhas Retas nº 6,Agulhas Retas nº 7,Agulhas Retas nº 8,Agulhas Retas nº 9</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Agulha Circular 10 mm,Agulha Circular 3.5 mm,Agulha Circular 4 mm,Agulha Circular 4.5 mm,Agulha Circular 5 mm,Agulha Circular 5.5 mm,Agulha Circular 6 mm,Agulha Circular 8 mm,Agulhas Retas 10 mm,Agulhas Retas 12 mm,Agulhas Retas 3 mm,Agulhas Retas 3.5 mm,Agulhas Retas 4 mm,Agulhas Retas 4.5 mm,Agulhas Retas 5 mm,Agulhas Retas 5.5 mm,Agulhas Retas 6 mm,Agulhas Retas 6.5 mm,Agulhas Retas 7 mm,Agulhas Retas 8 mm,Agulhas Retas 9 mm</b:widget-setting>
               <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
               <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
             </b:widget-settings>
@@ -185,7 +185,7 @@ URL:      www.rosiene.com.br
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
               <b:widget-setting name='display'>LIST</b:widget-setting>
-              <b:widget-setting name='selectedLabelsList'>Inverno,Verão</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Outono/Inverno,Primavera/Verão</b:widget-setting>
               <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
               <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
             </b:widget-settings>
@@ -231,7 +231,7 @@ URL:      www.rosiene.com.br
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
               <b:widget-setting name='display'>LIST</b:widget-setting>
-              <b:widget-setting name='selectedLabelsList'>Acessório,Almofada,Bolsa,Cachecol,Casaquinho de Bebê,Faixa de Cabelo,Gola,Gorro,Luva,Manta,Meia,Naninha,Peseira,Pet,Polaina,Poncho,Sapatinho de Bebê,Saída de Praia,Vestido de Bebê,Vestuário Feminino,Xale</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Acessório,Almofada,Blusa,Bolero,Bolsa,Cachecol,Casaco,Casaquinho,Colete,Conjunto de Bebê,Decoração,Faixa de Cabelo,Faixa de Cabeça,Gola,Gorro,Kimono,Luva,Manta,Meia,Naninha,Natal,Pantufa,Pelerine,Peseira,Pet,Polaina,Poncho,Sapatinho,Saída de Praia,Vestido,Xale</b:widget-setting>
               <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
               <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
             </b:widget-settings>
@@ -364,7 +364,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
       <b:if cond='data:view.isHomepage'>
 
       <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
-        <b:widget id='Blog2' locked='true' title='Postagens do blog' type='Blog' version='1'>
+        <b:widget id='Blog2' locked='true' title='Postagens no blog' type='Blog' version='1'>
           <b:widget-settings>
             <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
             <b:widget-setting name='showShareButtons'>false</b:widget-setting>
@@ -1054,13 +1054,13 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
 
       var paginator = function(callback) {
         if (hasMore()) {
-          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false';
           if (cursor) {
             url += '&published-min=' + new Date(cursor).toISOString();
           }
           window.bloggercomments = function(data) {
             var parsed = parse(data);
-            cursor = parsed.length < 50 ? null
+            cursor = parsed.length < 8 ? null
                 : parseInt(parsed[parsed.length - 1].timestamp) + 1
             callback(parsed);
             window.bloggercomments = null;
@@ -1260,7 +1260,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
       &lt;/a&gt;
     &lt;/div&gt;
     &lt;div&gt;
-      &lt;a href=&quot;https://www.rosiene.com.br/search/label/Ponto?max-results=8&quot;&gt;
+      &lt;a href=&quot;https://www.rosiene.com.br/search/label/Ponto&quot;&gt;
         &lt;img src=&quot;https://rosiene.github.io/img/ico/util-ponto.svg&quot; alt=&quot;ponto&quot; /&gt;&lt;br/&gt;
         &lt;h2&gt;Pontos&lt;/h2&gt;
         &lt;p&gt;Biblioteca com diferentes pontos em vídeo, instrução escrita e gráfico.&lt;/p&gt;
@@ -1314,7 +1314,7 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
     </b:if>
 
       <b:section class='main' id='main' name='Main' showaddelement='no'>
-        <b:widget id='Blog1' locked='true' title='Postagens do blog' type='Blog' version='1'>
+        <b:widget id='Blog1' locked='true' title='Postagens no blog' type='Blog' version='1'>
           <b:widget-settings>
             <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
             <b:widget-setting name='showShareButtons'>true</b:widget-setting>
@@ -1942,13 +1942,13 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
 
       var paginator = function(callback) {
         if (hasMore()) {
-          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false';
           if (cursor) {
             url += '&published-min=' + new Date(cursor).toISOString();
           }
           window.bloggercomments = function(data) {
             var parsed = parse(data);
-            cursor = parsed.length < 50 ? null
+            cursor = parsed.length < 8 ? null
                 : parseInt(parsed[parsed.length - 1].timestamp) + 1
             callback(parsed);
             window.bloggercomments = null;

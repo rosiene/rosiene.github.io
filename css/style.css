@@ -556,6 +556,9 @@ input.gsc-input {
   margin-top: 20px;
 }
 
+.sidebar ul li {
+  font-size: 16px;
+}
 .sidebar ul li a{
   color: #be495f;
   font-size: 16px;
