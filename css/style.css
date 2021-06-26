@@ -271,6 +271,9 @@ form.gsc-search-box{
 
 .exclusivo{
   color: #e49dac;
+  background-image: url('../img/back_detalhe.png');
+  background-repeat: repeat-x;
+  background-size: 43px 50px;
 }
 
 .newsletter {
@@ -509,13 +512,13 @@ input.gsc-input {
 }
 .todas_receitas{
   text-align: center;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .receita_link {
   margin-top: 30px;
   background: #241f20;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .sidebar .menu-button{
@@ -780,10 +783,6 @@ a.destaque_links {
   .post-onlyone-item{
     width: 960px;
     margin: 20px auto;
-  }
-
-  .post-container {
-    margin: 0 10%;
   }
 
   .post-item {
