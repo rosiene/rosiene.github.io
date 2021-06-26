@@ -269,12 +269,7 @@ form.gsc-search-box{
   width: 64px;
 }
 
-.blog{
-  background-image: url("../img/back_detalhe.png");
-  background-repeat: repeat-x;
-  background-size: 43px 50px;
-  padding-top: 100px;
-  padding-bottom: 0;
+.exclusivo{
   color: #e49dac;
 }
 
@@ -734,7 +729,7 @@ a.destaque_links {
   padding: 0;
   position: relative;
   width: 100%;
-  object-fit: none;
+  object-fit: cover;
   object-position: center;
   height: 360px;
 }

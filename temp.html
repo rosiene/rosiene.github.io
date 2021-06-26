@@ -1,0 +1,44 @@
+<div class="session">
+<h1>Exclusivo Clube Tricô e Tal</h1>
+</div>
+<script type='text/javascript'>
+//<![CDATA[
+function labelthumbs(json){
+  document.write('<ul id="label_with_thumbs">');
+  for(var i=0;i<numposts;i++){
+    var entry=json.feed.entry[i];
+    var posttitle=entry.title.$t;
+    var posturl;
+    if(i==json.feed.entry.length)break;
+    for(var k=0;k<entry.link.length;k++){
+      if(entry.link[k].rel=='replies'&&entry.link[k].type=='text/html'){
+        var commenttext=entry.link[k].title;
+        var commenturl=entry.link[k].href;
+      }
+      if(entry.link[k].rel=='alternate'){
+        posturl=entry.link[k].href;break;
+      }
+    }
+    var thumburl;
+    s=entry.content.$t;
+    a=s.indexOf("<img");
+    b=s.indexOf("src=\"",a);
+    c=s.indexOf("\"",b+5);
+    d=s.substr(b+5,c-b-5);
+    console.log(entry.content.$t);
+    if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!="")){
+      thumburl=d;
+    }else{
+      thumburl='http://3.bp.blogspot.com/-zP87C2q9yog/UVopoHY30SI/AAAAAAAAE5k/AIyPvrpGLn8/s1600/picture_not_available.png';
+    }
+    var postdate=entry.published.$t;
+    document.write('<li><div class="item-thumbnail">');
+    if(showpostthumbnails==true)
+    document.write('<a href="'+posturl+'" target ="_top"><img src="'+thumburl+'"/><h3>'+posttitle+'</h3></a>');
+    document.write('</div></li>');if(displayseparator==true)
+if(i!=(numposts-1))
+document.write('');}document.write('</ul>');}
+//]]>
+</script>
+<script type='text/javascript'>var numposts = 6;var showpostthumbnails = true;var displaymore = false;var displayseparator = true;var showcommentnum = false;var showpostdate = false;var showpostsummary = true;var numchars = 70;</script>
+<script type="text/javascript" src="/feeds/posts/default/-/Clube%20Tricô%20e%20Tal?published&alt=json-in-script&callback=labelthumbs"></script>
