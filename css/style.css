@@ -703,6 +703,13 @@ a.destaque_links {
   width: 100%;
 }
 
+.destaque_compra{
+  background: #be495f;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .popular-posts ul{
   list-style-type: none;
   padding: 0;
