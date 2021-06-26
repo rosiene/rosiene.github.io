@@ -158,6 +158,9 @@ form.gsc-search-box{
 
 .clube {
   background-color: #e49dac;
+  background-image: url('../img/back_detalhe_branco.png');
+  background-repeat: repeat-x;
+  background-size: 43px 50px;
   color: #ffffff;
   align-items: center;
   justify-content: center;
@@ -344,12 +347,6 @@ input.gsc-input {
   padding: 6px;
 }
 
-.receita_link {
-  margin-top: 30px;
-  background: #241f20;
-  color: #ffffff;
-}
-
 .blog-posts {
   margin: 0 auto;
 }
@@ -518,6 +515,12 @@ input.gsc-input {
 .todas_receitas{
   text-align: center;
   margin-top: 30px;
+}
+
+.receita_link {
+  margin-top: 30px;
+  background: #241f20;
+  color: #ffffff;
 }
 
 .sidebar .menu-button{
