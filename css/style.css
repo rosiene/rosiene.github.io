@@ -705,9 +705,10 @@ a.destaque_links {
 
 .destaque_compra{
   background: #be495f;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 10px;
   border-radius: 10px;
+  font-size: 16px;
 }
 
 .popular-posts ul{
