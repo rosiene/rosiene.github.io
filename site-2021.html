@@ -43,6 +43,19 @@ URL:      www.rosiene.com.br
           <h1>Receitas</h1>
         </div>
         <b:section id='menu'>
+          <b:widget id='BlogSearch1' locked='false' title='Pesquisar este blog' type='BlogSearch' version='1'>
+            <b:includable id='main'>
+        <div class='widget-content'>
+          <div class='search' expr:id='data:widget.instanceId + &quot;_form&quot;'>
+            <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
+              <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+              <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' placeholder='Pesquisar' size='10' title='search' type='text'/>
+              <input alt='Submit' class='search-ico' src='https://rosiene.github.io/img/ico/search.svg' type='image'/>
+            </form>
+          </div>
+        </div>
+      </b:includable>
+          </b:widget>
           <b:widget id='Label5' locked='false' title='Todas' type='Label'>
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
@@ -336,12 +349,9 @@ URL:      www.rosiene.com.br
         <b:widget id='HTML8' locked='false' title='Oi, meu nome é Rosiene!' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;h2 class=&#39;oi_home&#39;&gt;Oi, meu nome é Rosiene!&lt;/h2&gt;
+&lt;div&gt;
 Sou professora e designer de tricô.&lt;br /&gt;
 Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;div class=&quot;blog-posts&quot;&gt;
-&lt;a href=&quot;https://www.rosiene.com.br/p/calendario-2021.html&quot;&gt;Calendário 2021&lt;/a&gt;
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
@@ -353,25 +363,12 @@ Bem-vinda(o) a nossa comunidade!&lt;br /&gt;Vamos tricotar!?
 </b:if>
 </b:includable>
         </b:widget>
-        <b:widget id='BlogSearch1' locked='false' title='Pesquisar este blog' type='BlogSearch' version='1'>
-          <b:includable id='main'>
-        <div class='widget-content'>
-          <div class='search' expr:id='data:widget.instanceId + &quot;_form&quot;'>
-            <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
-              <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
-              <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' placeholder='Pesquisar' size='10' title='search' type='text'/>
-              <input alt='Submit' class='search-ico' src='https://rosiene.github.io/img/ico/search.svg' type='image'/>
-            </form>
-          </div>
-        </div>
-      </b:includable>
-        </b:widget>
         <b:widget id='HTML2' locked='false' title='Exclusivo' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;script type=&#39;text/javascript&#39;&gt;
 //&lt;![CDATA[
 function labelthumbs(json){
-document.write(&#39;&lt;ul id=&quot;label_with_thumbs&quot;&gt;&#39;);
+document.write(&#39;&lt;div class=&quot;session&quot;&gt;&lt;ul id=&quot;label_with_thumbs&quot;&gt;&#39;);
 for(var i=0;i&lt;numposts;i++){
 var entry=json.feed.entry[i];
 var posttitle=entry.title.$t;
@@ -404,7 +401,7 @@ if(showpostthumbnails==true)
 document.write(&#39;&lt;a href=&quot;&#39;+posturl+&#39;&quot; target =&quot;_top&quot;&gt;&lt;img src=&quot;&#39;+thumburl+&#39;&quot;/&gt;&lt;h3&gt;&#39;+posttitle+&#39;&lt;/h3&gt;&lt;/a&gt;&#39;);
 document.write(&#39;&lt;/div&gt;&lt;/li&gt;&#39;);if(displayseparator==true)
 if(i!=(numposts-1))
-document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&#39;);}
+document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&lt;/div&gt;&#39;);}
 //]]&gt;
 &lt;/script&gt;
 &lt;script type=&#39;text/javascript&#39;&gt;var numposts = 6;var showpostthumbnails = true;var displaymore = false;var displayseparator = true;var showcommentnum = false;var showpostdate = false;var showpostsummary = true;var numchars = 70;&lt;/script&gt;
@@ -494,10 +491,10 @@ document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&#39;);}
       &lt;/a&gt;
     &lt;/div&gt;
     &lt;div&gt;
-      &lt;a href=&quot;https://www.rosiene.com.br/search/label/Fios&quot;&gt;
+      &lt;a href=&quot;https://www.rosiene.com.br/search/label/Blog&quot;&gt;
         &lt;img src=&quot;https://rosiene.github.io/img/ico/util-fio.svg&quot; alt=&quot;fio&quot; /&gt;&lt;br/&gt;
-        &lt;h2&gt;Fios&lt;/h2&gt;
-        &lt;p&gt;Composição, cuidados e várias dicas para escolher o melhor fio para o seu projeto.&lt;/p&gt;
+        &lt;h2&gt;Blog&lt;/h2&gt;
+        &lt;p&gt;Bate papo sobre tricô e tal.&lt;/p&gt;
       &lt;/a&gt;
     &lt;/div&gt;
 &lt;div&gt;
@@ -1326,6 +1323,11 @@ por escrito. Você pode compartilhar este material indicando o link da receita n
 &lt;br/&gt;
 
     &lt;a href=&quot;https://mailchi.mp/17f360d38656/inscreva-se&quot; target=&quot;_blank&quot;&gt;Assine a Newsletter Tricô e Tal&lt;/a&gt;
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;a href=&quot;https://www.rosiene.com.br/p/calendario-2021.html&quot;&gt;Calendário 2021&lt;/a&gt;
 
 &lt;br/&gt;
 
