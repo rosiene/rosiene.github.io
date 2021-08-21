@@ -129,6 +129,10 @@ p {
   margin: 12px 0;
 }
 
+.oi_descricao {
+  line-height:28px;
+}
+
 .img_capa {
   width: 250px;
   height: 250px;
@@ -822,6 +826,11 @@ a.destaque_links {
   .oi_home {
     font-size: 36px;
   }
+  .oi_descricao {
+    width: 450px; 
+    margin: auto;
+  }
+
 
   .destaque_clube {
     display: flex;
