@@ -322,7 +322,7 @@ footer .img_logo {
 }
 
 .ico-footer {
-  padding: 30px 6px;
+  margin: 30px 6px;
 }
 
 input.gsc-input {
@@ -827,7 +827,7 @@ a.destaque_links {
     font-size: 36px;
   }
   .oi_descricao {
-    width: 450px; 
+    width: 450px;
     margin: auto;
   }
 
