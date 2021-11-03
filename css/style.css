@@ -676,6 +676,14 @@ a.destaque_links {
   list-style: none;
 }
 
+.input-group ul li{
+  margin: 6px 0;
+}
+
+.contact-input-group {
+  margin-right: 12px;
+}
+
 .resultado {
   text-align: center;
   margin: 20px;
