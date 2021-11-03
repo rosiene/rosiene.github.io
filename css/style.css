@@ -453,26 +453,6 @@ input.gsc-input {
   margin: 10px 0 50px 0;
 }
 
-#mc_embed_signup_scroll {
-  margin: 20px 16% 0 16%;
-}
-
-#mc_embed_signup_scroll div input {
-  padding: 8px;
-  margin: 4px;
-  border: none;
-  width: -webkit-fill-available;
-  background: #ffffff;
-}
-
-#mc_embed_signup_scroll .button{
-  cursor: pointer;
-  background: #a44030;
-  color: #fff;
-  border-radius: 5px;
-  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
-}
-
 .status_message {
   margin: 20px;
 }
@@ -775,15 +755,6 @@ a.destaque_links {
 
   .iniciante div:first-of-type img{
     width: 500px;
-  }
-
-  #mc_embed_signup_scroll{
-    display: flex;
-    margin: 20px 26% 0 26%
-  }
-
-  #mc_embed_signup_scroll div{
-    width: 50%
   }
 
   .post-onlyone-item{
