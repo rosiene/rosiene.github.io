@@ -751,7 +751,7 @@ a.destaque_links {
   background: #241f20;
 }
 
-.PopularPostsClube ul li div a, .PopularPostsReceitas ul li div a{
+.PopularPostsClube ul li div a h3, .PopularPostsReceitas ul li div a h3{
   color: #fff;
 }
 
