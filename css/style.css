@@ -162,13 +162,11 @@ form.gsc-search-box{
 
 .clube {
   background-color: #e49dac;
-  background-image: url('../img/back_detalhe_branco.png');
-  background-repeat: repeat-x;
-  background-size: 43px 50px;
   color: #ffffff;
   align-items: center;
   justify-content: center;
-  padding-top: 90px;
+  margin: 0 50px;
+  border-radius: 30px;
 }
 
 .clube div{
@@ -678,10 +676,6 @@ a.destaque_links {
 
 .input-group ul li{
   margin: 6px 0;
-}
-
-.contact-input-group {
-  margin-right: 12px;
 }
 
 .resultado {
