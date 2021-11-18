@@ -730,6 +730,7 @@ a.destaque_links {
   object-fit: cover;
   object-position: center;
   height: 360px;
+  border-top-left-radius: 40%;
 }
 
 .PopularPosts a h3{
@@ -753,6 +754,7 @@ a.destaque_links {
 
 .PopularPostsClube ul li div a h3, .PopularPostsReceitas ul li div a h3{
   color: #fff;
+  padding: 12px 0;
 }
 
 @media only screen and (min-width: 1024px) {
