@@ -718,7 +718,7 @@ a.destaque_links {
 }
 
 .PopularPosts .item-thumbnail {
-  border: 1px solid rgba(50.6, 51.0, 49.8, 0.1);
+  /* border: 1px solid rgba(50.6, 51.0, 49.8, 0.1); */
   float:none;
   margin: 5px;
   border-radius: 20px;
@@ -743,15 +743,15 @@ a.destaque_links {
   text-decoration: underline;
 }
 
-.PopularPostsClube ul li{
+.PopularPostsClube ul li div{
   background: #e49dac;
 }
 
-.PopularPostsReceitas ul li{
+.PopularPostsReceitas ul li div{
   background: #241f20;
 }
 
-.PopularPostsClube ul li a, .PopularPostsReceitas ul li a{
+.PopularPostsClube ul li div a, .PopularPostsReceitas ul li div a{
   color: #fff;
 }
 
