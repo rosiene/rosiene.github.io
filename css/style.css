@@ -743,11 +743,11 @@ a.destaque_links {
   text-decoration: underline;
 }
 
-.PopularPostsClube{
+.PopularPostsClube ul li{
   background: #e49dac;
 }
 
-.PopularPostsReceitas{
+.PopularPostsReceitas ul li{
   background: #241f20;
 }
 
