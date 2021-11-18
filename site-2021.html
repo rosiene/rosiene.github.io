@@ -290,7 +290,7 @@ URL:      www.rosiene.com.br
         </b:section>
     </aside>
       <b:section id='top'>
-        <b:widget id='Header1' locked='false' title='Rosiene (Cabeçalho)' type='Header' version='1'>
+        <b:widget id='Header1' locked='false' title='Rosiene - Tricô e Tal (Cabeçalho)' type='Header' version='1'>
           <b:widget-settings>
             <b:widget-setting name='displayUrl'>https://rosiene.github.io/img/rosiene_logo.png</b:widget-setting>
             <b:widget-setting name='displayHeight'>301</b:widget-setting>
@@ -411,7 +411,7 @@ document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&lt;/div&gt;&#39;);}
 &lt;script type=&quot;text/javascript&quot; src=&quot;/feeds/posts/default/-/Clube%20Tricô%20e%20Tal?published&amp;alt=json-in-script&amp;callback=labelthumbs&quot;&gt;&lt;/script&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
-<div class='widget PopularPosts'>
+<div class='widget PopularPosts PopularPostsClube'>
 <div class='widget-content popular-posts'>
   <data:content/>
 </div>
@@ -520,23 +520,6 @@ document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&lt;/div&gt;&#39;);}
     </b:if>
 
     <b:section class='main' id='main' name='Main' showaddelement='no'>
-      <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
-        <b:widget-settings>
-          <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-          <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-      </b:widget>
       <b:widget id='Blog1' locked='true' title='Postagens no blog' type='Blog' version='1'>
         <b:widget-settings>
           <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
@@ -592,7 +575,7 @@ document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&lt;/div&gt;&#39;);}
           </b:if>
         </b:loop>
       <b:else/>
-        <div class='widget PopularPosts'>
+        <div class='widget PopularPosts PopularPostsReceitas'>
           <div class='widget-content popular-posts'>
             <ul>
               <b:loop values='data:posts where (p=&gt; p.labels any (l=&gt; l.name == &quot;Receita&quot;)) take 6' var='post'>
@@ -1310,23 +1293,6 @@ document.write(&#39;&#39;);}document.write(&#39;&lt;/ul&gt;&lt;/div&gt;&#39;);}
 </div>
 </b:includable>
       </b:widget>
-      <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-        <b:widget-settings>
-          <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-          <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
-          <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-        </b:widget-settings>
-        <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-      </b:widget>
       <b:widget id='HTML10' locked='false' title='Direitos Autorais' type='HTML' version='1'>
         <b:widget-settings>
           <b:widget-setting name='content'>&lt;div class=&quot;direitos_text&quot;&gt;
@@ -1348,23 +1314,6 @@ por escrito. Você pode compartilhar este material indicando o link da receita n
     </b:section>
 
       <b:section id='bottom'>
-        <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
-          <b:widget-settings>
-            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
         <b:widget id='HTML1' locked='false' title='Footer' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;footer&gt;
@@ -1376,7 +1325,7 @@ por escrito. Você pode compartilhar este material indicando o link da receita n
 &lt;br/&gt;
 &lt;br/&gt;
 
-    &lt;a href=&quot;https://mailchi.mp/17f360d38656/inscreva-se&quot; target=&quot;_blank&quot;&gt;Assine a Newsletter Tricô e Tal&lt;/a&gt;
+    &lt;a href=&quot;https://www.rosiene.com.br/p/newsletter-trico-e-tal.html&quot;&gt;Assine a Newsletter Tricô e Tal&lt;/a&gt;
 
 &lt;br/&gt;
 
