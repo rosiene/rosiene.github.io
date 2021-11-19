@@ -503,7 +503,7 @@ input.gsc-input {
   color: #ffffff !important;
 }
 .receita_link:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .sidebar .menu-button{
