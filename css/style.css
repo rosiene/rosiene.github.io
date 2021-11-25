@@ -161,12 +161,10 @@ form.gsc-search-box{
 }
 
 .clube {
-  background-color: #caa175;
+  background-color: #e49dac;
   color: #ffffff;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
-  border-radius: 30px;
 }
 
 .clube div{
@@ -754,7 +752,7 @@ a.destaque_links {
 }
 
 .PopularPostsClube ul li div{
-  background: #caa175;
+  background: #e49dac;
 }
 
 .PopularPostsReceitas ul li div{
