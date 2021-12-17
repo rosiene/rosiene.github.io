@@ -161,7 +161,7 @@ form.gsc-search-box{
 }
 
 .clube {
-  background-color: #e49dac;
+  background-color: #be495f;
   color: #ffffff;
   align-items: center;
   justify-content: center;
@@ -201,7 +201,7 @@ form.gsc-search-box{
 
 .clube_link:hover {
   text-decoration: none;
-  background: #be495f;
+  background: #caa175;
   color: #ffffff;
 }
 
