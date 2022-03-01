@@ -212,6 +212,17 @@ form.gsc-search-box{
   justify-content: center;
 }
 
+.painel div p{
+  font-style: italic;
+  text-align: center;
+}
+
+.painel p a {
+  color: #241f20;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .iniciante {
   text-align: center;
   justify-content: center;
