@@ -205,6 +205,13 @@ form.gsc-search-box{
   color: #ffffff;
 }
 
+.painel {
+  background: url('../img/painel_capa.jpg') no-repeat right;
+  color: #241f20;
+  align-items: center;
+  justify-content: center;
+}
+
 .iniciante {
   text-align: center;
   justify-content: center;
@@ -519,7 +526,7 @@ input.gsc-input {
   Color: #be495f;
   margin-left: 20px;
   font-weight: 600;
-  background: url('https://rosiene.github.io/img/ico/arrow-menu.svg') no-repeat right;
+  background: url('../img/ico/arrow-menu.svg') no-repeat right;
 }
 
 .sidebar .Label{
