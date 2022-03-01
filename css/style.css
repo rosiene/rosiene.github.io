@@ -207,7 +207,7 @@ form.gsc-search-box{
 
 .painel {
   background: url('../img/painel_capa.jpg') no-repeat right;
-  color: #241f20;
+  color: #ffffff;
   align-items: center;
   justify-content: center;
 }
@@ -218,7 +218,7 @@ form.gsc-search-box{
 }
 
 .painel p a {
-  color: #241f20;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: underline;
 }
