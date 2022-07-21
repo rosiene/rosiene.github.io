@@ -31,25 +31,33 @@ URL:      www.rosiene.com.br
 
     <style>
       .curso-topo {
-        padding-top: 400px;
         text-align: center;
         background: #79a9a6;
       }
-      .curso-topo img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        max-width: 100%;
-      }
       .curso-topo h1{
-        color: #fff;
-        background: #0009;
-        margin: 30px;
-        border-radius: 10px;
-        padding: 6px;
+        display: none;
       }
-      .curso-topo h2{
+      .e-book {
+        padding: 40px;
+      }
+      .e-book h2{
         color: #fff;
+        font-size: 42px;
+      }
+      .e-book ul {
+        padding: 0;
+      }
+      .e-book ul li {
+        font-size: 36px;
+        background: url('https://rosiene.github.io/img/curso/check.png') no-repeat left center;
+        padding: 24px 0 24px 84px;
+        list-style: none;
+        margin: 0;
+        vertical-align: middle;
+      }
+      .e-book h3{
+        font-size: 36px;
+        margin: 30px 0;
       }
       .tricotar {
         background: #a44030;
@@ -62,6 +70,7 @@ URL:      www.rosiene.com.br
         height: 60%;
       }
       .tricotar p{
+        font-size: 24px;
         line-height: 2;
       }
       .aprender {
@@ -70,6 +79,15 @@ URL:      www.rosiene.com.br
       }
       .aprender h1 {
         color: #fff;
+        padding-bottom: 20px;
+      }
+      ul.aprender-lista {
+        font-size: 24px;
+        list-style-type: square;
+        line-height: 1.5;
+      }
+      ul.aprender-lista li{
+        padding: 12px;
       }
       .quem {
         background: #a44030;
@@ -84,7 +102,9 @@ URL:      www.rosiene.com.br
         margin: 30px 0;
       }
       .quem p{
+        font-size: 24px;
         line-height: 2;
+        padding-bottom: 16px;
       }
       .curso-iniciante {
         background: #79a9a6;
@@ -93,6 +113,8 @@ URL:      www.rosiene.com.br
         padding: 40px;
       }
       .curso-iniciante p {
+        font-size: 24px;
+        padding-bottom: 16px;
         color: #fff;
         line-height: 2;
       }
@@ -109,8 +131,10 @@ URL:      www.rosiene.com.br
         width: 100%;
       }
       .chamada-final h1{
+        font-size: 42px;
         color: #fff;
         margin: 0 30px;
+        font-size: 42px;
       }
       .chamada-final h2{
         color: #98bcba;
@@ -122,6 +146,9 @@ URL:      www.rosiene.com.br
         border-radius: 10px;
         color: #fff;
         font-size: 42px;
+      }
+      #Blog1 {
+        display: none;
       }
       </style>
     </head>
@@ -138,8 +165,12 @@ URL:      www.rosiene.com.br
     &lt;div&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/curso/capa_curso_trico.jpg&quot; /&gt;
   &lt;h1&gt;CURSO DE TRICÔ PARA INICIANTES&lt;/h1&gt;
-  &lt;div&gt;
+  &lt;div class=&quot;e-book&quot;&gt;
   &lt;h2&gt;E-book  Completo!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt; 10 Vídeo Aulas&lt;/li&gt;
+&lt;li&gt; 5 Vídeos Bônus&lt;/li&gt;
+&lt;/ul&gt;
   &lt;h3&gt;R$ 59,90&lt;/h3&gt;
   &lt;script type=&quot;text/javascript&quot;&gt;
   	function importHotmart(){
@@ -199,22 +230,22 @@ URL:      www.rosiene.com.br
               <b:widget-setting name='content'>&lt;div class=&quot;session aprender&quot;&gt;
     &lt;div&gt;
       &lt;h1&gt;O que você vai aprender:&lt;/h1&gt;
-      &lt;ul&gt;
-    &lt;l1&gt;Aula 1: Como Colocar Pontos na Agulha de Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 2: Como fazer o Ponto Tricô e Ponto Meia&lt;/l1&gt;
-    &lt;l1&gt;Aula 3: Como Arrematar os Pontos do Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 4: Como Fazer Aumentos em Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 5: Como Fazer Diminuição em Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 6: Como Fazer Laçadas em Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 7: Como Fazer Tranças em Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 8: Como Ler Gráficos de Tricô&lt;/l1&gt;
-    &lt;l1&gt;Aula 9: Como Fazer Emenda e Esconder Fio&lt;/l1&gt;
-    &lt;l1&gt;Aula 10: Como Seguir Receitas de Tricô&lt;/l1&gt;
-    &lt;l1&gt;Bônus 1: Costura em Tricô&lt;/l1&gt;
-    &lt;l1&gt;Bônus 2: Costura Invisível no Tricô: Grafting&lt;/l1&gt;
-    &lt;l1&gt;Bônus 3: O que é e Como Saber o Ponto Múltiplo no Tricô&lt;/l1&gt;
-    &lt;l1&gt;Bônus 4: Como Mudar o Ponto da Agulha Reta para Circular&lt;/l1&gt;
-    &lt;l1&gt;Bônus 5: Cálculo para Tricô Fácil + Calculadora&lt;/l1&gt;
+      &lt;ul class=&quot;aprender-lista&quot;&gt;
+    &lt;li&gt;&lt;b&gt;Aula 1:&lt;/b&gt; Como Colocar Pontos na Agulha de Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 2:&lt;/b&gt; Como fazer o Ponto Tricô e Ponto Meia&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 3:&lt;/b&gt; Como Arrematar os Pontos do Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 4:&lt;/b&gt; Como Fazer Aumentos em Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 5:&lt;/b&gt; Como Fazer Diminuição em Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 6:&lt;/b&gt; Como Fazer Laçadas em Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 7:&lt;/b&gt; Como Fazer Tranças em Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 8:&lt;/b&gt; Como Ler Gráficos de Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 9:&lt;/b&gt; Como Fazer Emenda e Esconder Fio&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Aula 10:&lt;/b&gt; Como Seguir Receitas de Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Bônus 1:&lt;/b&gt; Costura em Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Bônus 2:&lt;/b&gt; Costura Invisível no Tricô: Grafting&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Bônus 3:&lt;/b&gt; O que é e Como Saber o Ponto Múltiplo no Tricô&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Bônus 4:&lt;/b&gt; Como Mudar o Ponto da Agulha Reta para Circular&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Bônus 5:&lt;/b&gt; Cálculo para Tricô Fácil + Calculadora&lt;/li&gt;
   &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;</b:widget-setting>
@@ -1070,7 +1101,39 @@ URL:      www.rosiene.com.br
         </b:widget>
       </b:section>
 
-        <b:section id='bottom'/>
+        <b:section id='bottom'>
+          <b:widget id='HTML1' locked='false' title='Footer' type='HTML' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;footer&gt;
+&lt;img class=&quot;img_logo&quot; src=&quot;https://rosiene.github.io/img/rosiene_logo_branca.png&quot; /&gt;
+
+&lt;br/&gt;
+
+    &lt;a href=&quot;https://www.rosiene.com.br/p/entre-em-contato.html&quot;&gt;Contato&lt;/a&gt; . &lt;a href=&quot;https://www.rosiene.com.br/&quot;&gt;Rosiene - Tricô e Tal&lt;/a&gt; &#169; 2022
+&lt;br/&gt;
+&lt;br/&gt;
+
+    &lt;a href=&quot;https://www.rosiene.com.br/p/newsletter-trico-e-tal.html&quot;&gt;Assine a Newsletter Tricô e Tal&lt;/a&gt;
+
+&lt;br/&gt;
+
+    &lt;a href=&#39;https://www.youtube.com/Rosiene&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-youtube.svg&quot; alt=&quot;Youtube&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&#39;https://www.instagram.com/rosiene_tricoetal/&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-instagram.svg&quot; alt=&quot;Instagram&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&#39;https://www.ravelry.com/designers/rosiene&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-ravelry.svg&quot; alt=&quot;Ravelry&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&#39;https://www.facebook.com/tricoetal&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-facebook.svg&quot; alt=&quot;Facebook&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&#39;https://br.pinterest.com/tricoetal/&#39; target=&quot;_blank&quot;&gt;&lt;img class=&quot;ico-footer&quot; src=&quot;https://rosiene.github.io/img/ico/bottom-pinterest.svg&quot; alt=&quot;Pinterest&quot; /&gt;&lt;/a&gt;
+  &lt;/footer&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+          </b:widget>
+        </b:section>
 
     </div><!-- content -->
 
