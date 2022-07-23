@@ -92,6 +92,12 @@ URL:      www.rosiene.com.br
         color: #fff;
         padding-bottom: 20px;
       }
+      .aprender img {
+        width: -webkit-fill-available;
+        display: block;
+        margin: 15px 0;
+        border: solid #241f20 2px;
+      }
       ul.aprender-lista {
         font-size: 24px;
         list-style-type: square;
@@ -278,7 +284,20 @@ URL:      www.rosiene.com.br
               <b:widget-setting name='content'>&lt;div class=&quot;session aprender&quot;&gt;
     &lt;div&gt;
       &lt;h1&gt;O que você vai aprender:&lt;/h1&gt;
-      &lt;img src=&quot;https://rosiene.github.io/img/curso/aula.jpg&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  	function importHotmart(){
+   		var imported = document.createElement(&#39;script&#39;);
+   		imported.src = &#39;https://static.hotmart.com/checkout/widget.min.js&#39;;
+   		document.head.appendChild(imported);
+  		var link = document.createElement(&#39;link&#39;);
+  		link.rel = &#39;stylesheet&#39;;
+  		link.type = &#39;text/css&#39;;
+  		link.href = &#39;https://static.hotmart.com/css/hotmart-fb.min.css&#39;;
+  		document.head.appendChild(link);	}
+   	importHotmart();
+   &lt;/script&gt;
+   &lt;a onclick=&quot;return false;&quot; href=&quot;https://pay.hotmart.com/Q73037819N?checkoutMode=2&quot; class=&quot;hotmart-fb&quot;&gt;
+      &lt;img src=&quot;https://rosiene.github.io/img/curso/aula.jpg&quot;/&gt;&lt;/a&gt;
       &lt;ul class=&quot;aprender-lista&quot;&gt;
     &lt;li&gt;&lt;b&gt;Aula 1:&lt;/b&gt; Como Colocar Pontos na Agulha de Tricô&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;Aula 2:&lt;/b&gt; Como fazer o Ponto Tricô e Ponto Meia&lt;/li&gt;
