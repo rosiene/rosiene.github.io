@@ -33,11 +33,12 @@ URL:      www.rosiene.com.br
     <b:include data='blog' name='google-analytics'/>
 
     <style>
-      .curso-topo {
-        line-height: 0;
+      .curso-topo div {
+        margin: 30px;
       }
       .curso-topo img{
         width: 100%;
+        border-radius: 10px;
       }
       .curso-topo h1{
         display: none;
@@ -96,7 +97,6 @@ URL:      www.rosiene.com.br
         width: -webkit-fill-available;
         display: block;
         margin: 15px 0;
-        border: solid #241f20 2px;
       }
       ul.aprender-lista {
         font-size: 24px;
@@ -185,9 +185,35 @@ URL:      www.rosiene.com.br
 
       @media only screen and (min-width: 1024px) {
 
-        .homepage {
-          width: 640px;
-          margin: 0 auto;
+        .curso-topo {
+          display: flex;
+        }
+        .curso-topo img {
+          width: 600px;
+        }
+        .tricotar {
+          display: flex;
+          padding: 30px 20% 0 20%;
+        }
+        .curso-iniciante {
+          display: flex;
+          padding: 30px 10% 30px 10%;
+        }
+        .tricotar img, .curso-iniciante img {
+          width: 300px;
+        }
+        .aprender img {
+          width: 600px;
+        }
+        .aprender, .quem, .comentarios {
+          padding: 30px 20%;
+        }
+        .chamada-final {
+          padding: 30px 0;
+          background: url('https://rosiene.github.io/img/curso/final_curso.jpg'), rgba(0, 0, 0, 0.8);
+        }
+        .chamada-final img{
+          display: none;
         }
       }
 
@@ -252,6 +278,8 @@ URL:      www.rosiene.com.br
   melhor versa&#771;o
   de mim.
   &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/curso/tricotar.png&quot; /&gt;
     &lt;/div&gt;
   &lt;/div&gt;</b:widget-setting>
@@ -284,7 +312,7 @@ URL:      www.rosiene.com.br
    	importHotmart();
    &lt;/script&gt;
    &lt;a onclick=&quot;return false;&quot; href=&quot;https://pay.hotmart.com/Q73037819N?checkoutMode=2&quot; class=&quot;hotmart-fb&quot;&gt;
-      &lt;img src=&quot;https://rosiene.github.io/img/curso/aula.jpg&quot;/&gt;&lt;/a&gt;
+      &lt;img src=&quot;https://rosiene.github.io/img/curso/curso.png&quot;/&gt;&lt;/a&gt;
       &lt;ul class=&quot;aprender-lista&quot;&gt;
     &lt;li&gt;&lt;b&gt;Aula 1:&lt;/b&gt; Como Colocar Pontos na Agulha de Tricô&lt;/li&gt;
     &lt;li&gt;&lt;b&gt;Aula 2:&lt;/b&gt; Como fazer o Ponto Tricô e Ponto Meia&lt;/li&gt;
@@ -361,7 +389,9 @@ URL:      www.rosiene.com.br
   &lt;p&gt;
   Sa&#771;o 15 aulas preparadas de forma dida&#769;tica e com muitas dicas para voce&#770;! Ale&#769;m disso, voce&#770; tambe&#769;m tera&#769; acesso a&#768; calculadora de trico&#770;, uma ferramenta que vai te ajudar muito nessa fase!
   &lt;/p&gt;
-      &lt;/p&gt;&lt;img src=&quot;https://rosiene.github.io/img/curso/trico-1.png&quot; /&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;img src=&quot;https://rosiene.github.io/img/curso/trico-1.png&quot; /&gt;&lt;/div&gt;
       &lt;/div&gt;</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main'>
