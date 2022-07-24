@@ -781,6 +781,159 @@ a.destaque_links {
   padding: 12px 0;
 }
 
+.curso-topo {
+  padding: 30px;
+  text-align: center;
+  background: #79a9a6;
+  justify-content: center;
+}
+.curso-topo img{
+  width: 100%;
+  border-radius: 30px;
+}
+.curso-topo h1 {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.curso-topo h2{
+  font-family: "Bitter", serif;
+  color: #fff;
+  font-size: 36px;
+  margin: 20px 0;
+}
+.curso-topo ul {
+  padding: 0;
+}
+.curso-topo ul li {
+  font-size: 32px;
+  background: url("https://rosiene.github.io/img/curso/check.png") no-repeat left center;
+  padding: 24px 0 24px 84px;
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+}
+.curso-topo h3{
+  font-family: "Bitter", serif;
+  font-size: 36px;
+  margin: 30px 0;
+}
+.tricotar {
+  background: #a44030;
+  color: #fff;
+  padding: 30px 30px 0 30px;
+  text-align: center;
+}
+.tricotar img {
+  width: 60%;
+  height: 60%;
+}
+.tricotar p{
+  font-size: 24px;
+  line-height: 2;
+}
+.aprender {
+  background: #79a9a6;
+  padding: 30px;
+}
+.aprender h1 {
+  font-family: "Bitter", serif;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.aprender img {
+  width: -webkit-fill-available;
+  display: block;
+  margin: 15px auto;
+}
+ul.aprender-lista {
+  font-size: 24px;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  line-height: 1.5;
+}
+ul.aprender-lista li{
+  margin: 12px;
+  background-color: #98bcba;
+  border-radius: 20px;
+}
+.quem {
+  background: #a44030;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+.quem h1{
+  font-family: "Bitter", serif;
+  color: #fff;
+}
+.quem img{
+  margin: 30px 0;
+}
+.quem p{
+  font-size: 24px;
+  line-height: 2;
+  padding-bottom: 16px;
+}
+.comentarios {
+  padding: 15px;
+  line-height: 0;
+  background: #79a9a6;
+}
+.comentarios img{
+  width: -webkit-fill-available;
+  display: block;
+  padding: 15px;
+}
+
+.curso-iniciante {
+  background: #a44030;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+}
+.curso-iniciante p {
+  font-size: 24px;
+  padding-bottom: 16px;
+  color: #fff;
+  line-height: 2;
+}
+.curso-iniciante img{
+  width: 100%;
+  margin-top: 20px;
+}
+.chamada-final {
+  background-color: #130f10;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.chamada-final img{
+  width: 100%;
+}
+.chamada-final h1{
+  font-family: "Bitter", serif;
+  font-size: 42px;
+  color: #fff;
+  margin: 0 30px;
+}
+.chamada-final h2{
+  color: #fff;
+  margin: 30px 0;
+  text-shadow: 0 0 30px #000, 0 0 30px #000
+}
+.curso-topo a, .chamada-final a {
+  font-family: "Bitter", serif;
+  padding: 16px;
+  background: #be495f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 42px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
@@ -856,6 +1009,60 @@ a.destaque_links {
 
   .PopularPosts .widget-content ul li{
     width: 30%;
+  }
+  .curso-topo {
+    display: flex;
+  }
+  .curso-topo div {
+    padding: 50px;
+  }
+  .curso-topo img {
+    width: 500px;
+  }
+  .curso-topo h1{
+    margin-top: 0;
+  }
+  .curso-topo ul {
+    display: flex;
+  }
+  .curso-topo ul li {
+    padding: 8px 0 8px 64px;
+  }
+  .eu img {
+    margin: 20px;
+  }
+  .tricotar {
+    display: flex;
+    padding: 0 28%;
+  }
+  .tricotar div p, .quem{
+    padding: 50px 0;
+  }
+  .curso-iniciante, .eu {
+    display: flex;
+    padding: 50px 10% 50px 10%;
+  }
+  .tricotar img, .curso-iniciante img {
+    width: 200px;
+    height: auto;
+    margin: auto;
+  }
+  .curso-iniciante div{
+    margin: auto;
+  }
+  .aprender img {
+    width: 600px;
+  }
+  .aprender, .comentarios {
+    padding: 50px 20%;
+  }
+  .chamada-final {
+    padding: 280px 0;
+    background: url(&#39;https://rosiene.github.io/img/curso/final_curso.jpg&#39;), rgba(0, 0, 0, 0.8);
+    background-size: 100%;
+  }
+  .chamada-final img{
+    display: none;
   }
 }
 
