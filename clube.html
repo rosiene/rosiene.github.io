@@ -36,11 +36,27 @@ URL:      www.rosiene.com.br
         #Blog1 {
           display: none;
         }
-        .clube-topo {
+        .clube-topo, .clube-aprender, .comentarios-clube {
           background: #be495f;
         }
         .clube-topo a {
           background: #603813;
+        }
+        .trico-e-tal, .quem-clube {
+          background: #603813;
+        }
+        .trico-e-tal div p{
+          padding: 0;
+        }
+        .trico-e-tal div img{
+          width: 300px;
+        }
+        .clube-lista li {
+          padding: 12px;
+        }
+        h3 {
+          font-weight: bold;
+          margin-bottom: 12px;
         }
       </style>
     </head>
@@ -53,7 +69,7 @@ URL:      www.rosiene.com.br
         <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
           <b:widget id='HTML7' locked='false' title='Clube Tricô e Tal' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session curso-topo clube-topo&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session landing-topo fundo-rosa&quot;&gt;
     &lt;div&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/clube/capa-clube.jpg&quot; /&gt;
     &lt;/div&gt;
@@ -74,22 +90,23 @@ URL:      www.rosiene.com.br
   <b:include name='quickedit'/>
   </b:includable>
           </b:widget>
-          <b:widget id='HTML2' locked='false' title='Tricotar' type='HTML' version='1'>
+          <b:widget id='HTML2' locked='false' title='Clube' type='HTML' version='1'>
             <b:widget-settings>
               <b:widget-setting name='content'>&lt;div class=&quot;session tricotar&quot;&gt;
     &lt;div&gt;
-  &lt;p&gt;
-  Tricotar e&#769; muito mais que um verbo em minha vida,
-  e&#769; minha forma de
-  expressa&#771;o,  e&#769; como
-  eu olho pra dentro
-  e consigo ser a
-  melhor versa&#771;o
-  de mim.
+  &lt;p style=&quot;text-align: left;&quot;&gt;
+  O Clube Tricô e Tal é exatamente o que o nome diz...
   &lt;/p&gt;
+&lt;p&gt;tricô e prosa,&lt;/p&gt;
+&lt;p&gt;tricô e amigas,&lt;/p&gt;
+&lt;p&gt;tricô e receitas,&lt;/p&gt;
+&lt;p&gt;tricô e leitura,&lt;/p&gt;
+&lt;p&gt;tricô e chá ou café&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;simplesmente&lt;/b&gt;&lt;/p&gt;
+&lt;h2&gt;tricô e tal.&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div&gt;
-  &lt;img src=&quot;https://rosiene.github.io/img/curso/tricotar.png&quot; /&gt;
+  &lt;img src=&quot;https://rosiene.github.io/img/clube/clube.jpg&quot; /&gt;
     &lt;/div&gt;
   &lt;/div&gt;</b:widget-setting>
             </b:widget-settings>
@@ -103,41 +120,15 @@ URL:      www.rosiene.com.br
   <b:include name='quickedit'/>
   </b:includable>
           </b:widget>
-          <b:widget id='HTML3' locked='false' title='Aprender' type='HTML' version='1'>
+          <b:widget id='HTML3' locked='false' title='Perguntas' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session aprender&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session aprender clube-aprender&quot;&gt;
     &lt;div&gt;
-      &lt;h1&gt;O que você vai aprender:&lt;/h1&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-  	function importHotmart(){
-   		var imported = document.createElement(&#39;script&#39;);
-   		imported.src = &#39;https://static.hotmart.com/checkout/widget.min.js&#39;;
-   		document.head.appendChild(imported);
-  		var link = document.createElement(&#39;link&#39;);
-  		link.rel = &#39;stylesheet&#39;;
-  		link.type = &#39;text/css&#39;;
-  		link.href = &#39;https://static.hotmart.com/css/hotmart-fb.min.css&#39;;
-  		document.head.appendChild(link);	}
-   	importHotmart();
-   &lt;/script&gt;
-   &lt;a onclick=&quot;return false;&quot; href=&quot;https://pay.hotmart.com/Q73037819N?checkoutMode=2&quot; class=&quot;hotmart-fb&quot;&gt;
-      &lt;img src=&quot;https://rosiene.github.io/img/curso/curso.png&quot;/&gt;&lt;/a&gt;
-      &lt;ul class=&quot;aprender-lista&quot;&gt;
-    &lt;li&gt;&lt;b&gt;Aula 1:&lt;/b&gt; Como Colocar Pontos na Agulha de Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 2:&lt;/b&gt; Como fazer o Ponto Tricô e Ponto Meia&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 3:&lt;/b&gt; Como Arrematar os Pontos do Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 4:&lt;/b&gt; Como Fazer Aumentos em Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 5:&lt;/b&gt; Como Fazer Diminuição em Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 6:&lt;/b&gt; Como Fazer Laçadas em Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 7:&lt;/b&gt; Como Fazer Tranças em Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 8:&lt;/b&gt; Como Ler Gráficos de Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 9:&lt;/b&gt; Como Fazer Emenda e Esconder Fio&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Aula 10:&lt;/b&gt; Como Seguir Receitas de Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Bônus 1:&lt;/b&gt; Costura em Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Bônus 2:&lt;/b&gt; Costura Invisível no Tricô: Grafting&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Bônus 3:&lt;/b&gt; O que é e Como Saber o Ponto Múltiplo no Tricô&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Bônus 4:&lt;/b&gt; Como Mudar o Ponto da Agulha Reta para Circular&lt;/li&gt;
-    &lt;li&gt;&lt;b&gt;Bônus 5:&lt;/b&gt; Cálculo para Tricô Fácil + Calculadora&lt;/li&gt;
+      &lt;ul class=&quot;aprender-lista clube-lista&quot;&gt;
+    &lt;li&gt;&lt;h3&gt;Para quem é o clube?&lt;/h3&gt;
+&lt;p&gt;Para todas as pessoas que AMAM tricotar ou querem COMEÇAR a aprender essa arte.&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;h3&gt;Preciso ter experiência com tricô?&lt;/h3&gt;&lt;p&gt;Não. Você pode iniciar inclusive assistindo o curso completo de tricô para iniciantes.&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;h3&gt;Qual valor do investimento?&lt;/h3&gt;&lt;p&gt;R$ 19,99 por mês.&lt;/p&gt;&lt;/li&gt;
   &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;</b:widget-setting>
@@ -151,8 +142,8 @@ URL:      www.rosiene.com.br
           </b:widget>
           <b:widget id='HTML6' locked='false' title='Eu' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session quem&quot;&gt;
-  &lt;h1&gt;Com quem você vai aprender&lt;/h1&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session quem quem-clube&quot;&gt;
+  &lt;h1&gt;Quem sou eu&lt;/h1&gt;
 &lt;div class=&quot;eu&quot;&gt;
 &lt;div&gt;
   &lt;img src=&#39;https://rosiene.github.io/img/Rosiene_2022_1080.jpg&#39; class=&#39;img_capa&#39; /&gt;
@@ -176,7 +167,7 @@ URL:      www.rosiene.com.br
           </b:widget>
           <b:widget id='HTML9' locked='false' title='Comentários' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session comentarios&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session comentarios comentarios-clube&quot;&gt;
     &lt;div&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/clube/comentario_1.png&quot; /&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/clube/comentario_2.png&quot; /&gt;
