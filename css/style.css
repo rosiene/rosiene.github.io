@@ -822,7 +822,7 @@ a.destaque_links {
 }
 .landing-topo ul li {
   font-size: 32px;
-  background: url("https://rosiene.github.io/img/curso/check.png") no-repeat left center;
+  background: url("https://rosiene.github.io/img/curso-iniciante/check.png") no-repeat left center;
   padding: 24px 0 24px 84px;
   list-style: none;
   margin: 0;
@@ -1071,7 +1071,7 @@ a.destaque_links {
   }
   .chamada-final {
     padding: 280px 0;
-    background: url(&#39;https://rosiene.github.io/img/curso/final_curso.jpg&#39;), rgba(0, 0, 0, 0.8);
+    background: url(&#39;https://rosiene.github.io/img/curso-iniciante/final_curso.jpg&#39;), rgba(0, 0, 0, 0.8);
     background-size: 100%;
   }
   .chamada-final img{
