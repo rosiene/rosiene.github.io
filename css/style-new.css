@@ -365,7 +365,7 @@ footer .img_logo {
   }
 
   .img-novelo-coracao {
-    width: 180px;
+    width: 180px !important;
   }
 
 }
