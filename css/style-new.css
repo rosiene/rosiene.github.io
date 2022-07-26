@@ -86,7 +86,7 @@ p {
   background: #a44030;
 }
 .fundo-rosa {
-  background: #bd4b49;
+  background: #e49dac;
 }
 .fundo-cafe {
   background: #603813;
@@ -341,7 +341,7 @@ footer .img_logo {
     margin: auto;
   }
   .landing-texto-imagem div p{
-    margin: 20px;
+    margin: 12px;
   }
   .landing-lista img {
     width: 600px;
@@ -360,6 +360,10 @@ footer .img_logo {
   .eu {
     display: flex;
     padding: 50px 10% 50px 10%;
+  }
+
+  .img-novelo-coracao {
+    width: 180px;
   }
 
 }
