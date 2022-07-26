@@ -86,7 +86,7 @@ p {
   background: #a44030;
 }
 .fundo-rosa {
-  background: #e49dac;
+  background: ##be495f;
 }
 .fundo-cafe {
   background: #603813;
@@ -234,7 +234,7 @@ footer .img_logo {
 
 .landing-texto-imagem p{
   font-size: 24px;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .landing-comentarios {
