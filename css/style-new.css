@@ -294,3 +294,71 @@ footer .img_logo {
   line-height: 2;
   padding-bottom: 16px;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .img_capa {
+    width: 380px;
+    height: 380px;
+  }
+
+  .cta-topo {
+    display: flex;
+  }
+  .cta-topo div {
+    padding: 50px;
+  }
+  .cta-topo img {
+    width: 500px;
+  }
+  .cta-topo h1{
+    margin-top: 0;
+  }
+  .cta-topo ul {
+    display: flex;
+  }
+  .cta-topo ul li {
+    padding: 16px 10px 8px 70px
+  }
+  .eu img {
+    margin: 20px;
+  }
+  .landing-texto-imagem {
+    display: flex;
+    padding: 0 16%;
+  }
+  .landing-texto-imagem div p, .eu{
+    padding: 50px 0;
+  }
+  .landing-texto-imagem, .eu {
+    display: flex;
+    padding: 50px 10% 50px 10%;
+  }
+  .landing-texto-imagem img {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+  .landing-texto-imagem div{
+    margin: auto;
+  }
+  .landing-lista img {
+    width: 600px;
+  }
+  .landing-lista, .landing-comentarios {
+    padding: 50px 20%;
+  }
+  .cta-final {
+    padding: 280px 0;
+    background: url("https://rosiene.github.io/img/curso-iniciante/final_curso.jpg"), rgba(0, 0, 0, 0.8);
+    background-size: 100%;
+  }
+  .cta-final img{
+    display: none;
+  }
+
+}
