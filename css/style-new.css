@@ -73,6 +73,10 @@ p {
   height: 34px;
 }
 
+.section, .widget{
+  margin: 0;
+}
+
 /* background */
 .fundo-verde {
   background: #79a9a6;
