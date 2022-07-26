@@ -94,6 +94,9 @@ p {
 .fundo-verde-claro {
   background: #98bcba;
 }
+.fundo-rosa-claro {
+  background: #f0d7dd;
+}
 /* FOOTER */
 
 footer {
@@ -186,7 +189,7 @@ footer .img_logo {
 }
 
 .cta-final {
-  background-color: #130f10;
+  background-color: #241f20;
   text-align: center;
   padding-bottom: 60px;
 }
@@ -237,7 +240,6 @@ footer .img_logo {
 .landing-comentarios {
   padding: 15px;
   line-height: 0;
-  background: #79a9a6;
 }
 
 .landing-comentarios img{
