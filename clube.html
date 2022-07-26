@@ -12,7 +12,7 @@
     <link href='https://fonts.gstatic.com' rel='preconnect'/>
     <link href='https://fonts.googleapis.com/css2?family=Bitter' rel='stylesheet'/>
     <link href='https://rosiene.github.io/img/favicon.ico' rel='shortcut icon'/>
-    <link href='https://rosiene.github.io/css/style.css' rel='stylesheet' type='text/css'/>
+    <link href='https://rosiene.github.io/css/style-new.css' rel='stylesheet' type='text/css'/>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
     <script src='https://rosiene.github.io/js/script.js'/>
     <script src='https://rosiene.github.io/js/base.js'/>
@@ -36,28 +36,6 @@ URL:      www.rosiene.com.br
         #Blog1 {
           display: none;
         }
-        .clube-topo, .clube-aprender, .comentarios-clube {
-          background: #be495f;
-        }
-        .clube-topo a {
-          background: #603813;
-        }
-        .trico-e-tal, .quem-clube {
-          background: #603813;
-        }
-        .trico-e-tal div p{
-          padding: 0;
-        }
-        .trico-e-tal div img{
-          width: 300px;
-        }
-        .clube-lista li {
-          padding: 12px;
-        }
-        h3 {
-          font-weight: bold;
-          margin-bottom: 12px;
-        }
       </style>
     </head>
     <body>
@@ -67,17 +45,33 @@ URL:      www.rosiene.com.br
         <b:if cond='data:view.isHomepage'>
 
         <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
-          <b:widget id='HTML7' locked='false' title='Clube Tricô e Tal' type='HTML' version='1'>
+          <b:widget id='HTML7' locked='false' title='Curso de Tricô' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session landing-topo fundo-rosa&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session cta-topo fundo-verde&quot;&gt;
     &lt;div&gt;
-  &lt;img src=&quot;https://rosiene.github.io/img/clube/capa-clube.jpg&quot; /&gt;
+  &lt;img src=&quot;https://rosiene.github.io/img/clube/capa_clube.jpg&quot; /&gt;
     &lt;/div&gt;
     &lt;div&gt;
-    &lt;h1&gt;CLUBE TRICÔ E TAL&lt;/h1&gt;
-  &lt;h2&gt;Somos uma comunidade apaixonadas pela arte de tricotar. E você gostaria de fazer parte dela?&lt;/h2&gt;
-  &lt;h3&gt;R$ 19,99 por mês&lt;/h3&gt;
-  &lt;a href=&quot;https://www.youtube.com.br/Rosiene/join&quot;&gt;Eu quero!&lt;/a&gt;
+    &lt;h1&gt;CURSO DE TRICÔ PARA INICIANTES&lt;/h1&gt;
+  &lt;h2&gt;E-book  Completo!&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt; 10 Vídeo Aulas&lt;/li&gt;
+&lt;li&gt; 5 Vídeos Bônus&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;h3&gt;R$ 59,90&lt;/h3&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  	function importHotmart(){
+   		var imported = document.createElement(&#39;script&#39;);
+   		imported.src = &#39;https://static.hotmart.com/checkout/widget.min.js&#39;;
+   		document.head.appendChild(imported);
+  		var link = document.createElement(&#39;link&#39;);
+  		link.rel = &#39;stylesheet&#39;;
+  		link.type = &#39;text/css&#39;;
+  		link.href = &#39;https://static.hotmart.com/css/hotmart-fb.min.css&#39;;
+  		document.head.appendChild(link);	}
+   	importHotmart();
+   &lt;/script&gt;
+   &lt;a onclick=&quot;return false;&quot; href=&quot;https://pay.hotmart.com/Q73037819N?checkoutMode=2&quot; class=&quot;hotmart-fb&quot;&gt;Eu quero!&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
             </b:widget-settings>
@@ -90,20 +84,19 @@ URL:      www.rosiene.com.br
   <b:include name='quickedit'/>
   </b:includable>
           </b:widget>
-          <b:widget id='HTML2' locked='false' title='Clube' type='HTML' version='1'>
+          <b:widget id='HTML2' locked='false' title='Tricotar' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session tricotar&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session landing-texto-imagem fundo-chocolate&quot;&gt;
     &lt;div&gt;
-  &lt;p style=&quot;text-align: left;&quot;&gt;
-  O Clube Tricô e Tal é exatamente o que o nome diz...
+  &lt;p&gt;
+  Tricotar e&#769; muito mais que um verbo em minha vida,
+  e&#769; minha forma de
+  expressa&#771;o,  e&#769; como
+  eu olho pra dentro
+  e consigo ser a
+  melhor versa&#771;o
+  de mim.
   &lt;/p&gt;
-&lt;p&gt;tricô e prosa,&lt;/p&gt;
-&lt;p&gt;tricô e amigas,&lt;/p&gt;
-&lt;p&gt;tricô e receitas,&lt;/p&gt;
-&lt;p&gt;tricô e leitura,&lt;/p&gt;
-&lt;p&gt;tricô e chá ou café&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;simplesmente&lt;/b&gt;&lt;/p&gt;
-&lt;h2&gt;tricô e tal.&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/clube/clube.jpg&quot; /&gt;
@@ -120,15 +113,40 @@ URL:      www.rosiene.com.br
   <b:include name='quickedit'/>
   </b:includable>
           </b:widget>
-          <b:widget id='HTML3' locked='false' title='Perguntas' type='HTML' version='1'>
+          <b:widget id='HTML3' locked='false' title='Aprender' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session aprender clube-aprender&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session landing-lista fundo-verde&quot;&gt;
     &lt;div&gt;
-      &lt;ul class=&quot;aprender-lista clube-lista&quot;&gt;
-    &lt;li&gt;&lt;h3&gt;Para quem é o clube?&lt;/h3&gt;
-&lt;p&gt;Para todas as pessoas que AMAM tricotar ou querem COMEÇAR a aprender essa arte.&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;h3&gt;Preciso ter experiência com tricô?&lt;/h3&gt;&lt;p&gt;Não. Você pode iniciar inclusive assistindo o curso completo de tricô para iniciantes.&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;h3&gt;Qual valor do investimento?&lt;/h3&gt;&lt;p&gt;R$ 19,99 por mês.&lt;/p&gt;&lt;/li&gt;
+      &lt;h1&gt;O que você vai aprender:&lt;/h1&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  	function importHotmart(){
+   		var imported = document.createElement(&#39;script&#39;);
+   		imported.src = &#39;https://static.hotmart.com/checkout/widget.min.js&#39;;
+   		document.head.appendChild(imported);
+  		var link = document.createElement(&#39;link&#39;);
+  		link.rel = &#39;stylesheet&#39;;
+  		link.type = &#39;text/css&#39;;
+  		link.href = &#39;https://static.hotmart.com/css/hotmart-fb.min.css&#39;;
+  		document.head.appendChild(link);	}
+   	importHotmart();
+   &lt;/script&gt;
+   &lt;a onclick=&quot;return false;&quot; href=&quot;https://pay.hotmart.com/Q73037819N?checkoutMode=2&quot; class=&quot;hotmart-fb&quot;&gt;
+      &lt;ul&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 1:&lt;/b&gt; Como Colocar Pontos na Agulha de Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 2:&lt;/b&gt; Como fazer o Ponto Tricô e Ponto Meia&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 3:&lt;/b&gt; Como Arrematar os Pontos do Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 4:&lt;/b&gt; Como Fazer Aumentos em Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 5:&lt;/b&gt; Como Fazer Diminuição em Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 6:&lt;/b&gt; Como Fazer Laçadas em Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 7:&lt;/b&gt; Como Fazer Tranças em Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 8:&lt;/b&gt; Como Ler Gráficos de Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 9:&lt;/b&gt; Como Fazer Emenda e Esconder Fio&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Aula 10:&lt;/b&gt; Como Seguir Receitas de Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Bônus 1:&lt;/b&gt; Costura em Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Bônus 2:&lt;/b&gt; Costura Invisível no Tricô: Grafting&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Bônus 3:&lt;/b&gt; O que é e Como Saber o Ponto Múltiplo no Tricô&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Bônus 4:&lt;/b&gt; Como Mudar o Ponto da Agulha Reta para Circular&lt;/li&gt;
+    &lt;li class=&quot;fundo-verde-claro&quot;&gt;&lt;b&gt;Bônus 5:&lt;/b&gt; Cálculo para Tricô Fácil + Calculadora&lt;/li&gt;
   &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt;</b:widget-setting>
@@ -142,8 +160,8 @@ URL:      www.rosiene.com.br
           </b:widget>
           <b:widget id='HTML6' locked='false' title='Eu' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session quem quem-clube&quot;&gt;
-  &lt;h1&gt;Quem sou eu&lt;/h1&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session sobre-mim fundo-chocolate&quot;&gt;
+  &lt;h1&gt;Com quem você vai aprender&lt;/h1&gt;
 &lt;div class=&quot;eu&quot;&gt;
 &lt;div&gt;
   &lt;img src=&#39;https://rosiene.github.io/img/Rosiene_2022_1080.jpg&#39; class=&#39;img_capa&#39; /&gt;
@@ -167,7 +185,7 @@ URL:      www.rosiene.com.br
           </b:widget>
           <b:widget id='HTML9' locked='false' title='Comentários' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session comentarios comentarios-clube&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session landing-comentarios&quot;&gt;
     &lt;div&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/clube/comentario_1.png&quot; /&gt;
   &lt;img src=&quot;https://rosiene.github.io/img/clube/comentario_2.png&quot; /&gt;
@@ -188,13 +206,13 @@ URL:      www.rosiene.com.br
           </b:widget>
           <b:widget id='HTML4' locked='false' title='Curso' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session curso-iniciante&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session landing-texto-imagem fundo-chocolate&quot;&gt;
   &lt;div&gt;
     &lt;p&gt;Este curso foi feito para pessoas iniciantes no Trico&#770;. Voce&#770; vai aprender os primeiros passos para tricotar.&lt;/p&gt;
     &lt;p&gt;Sa&#771;o 15 aulas preparadas de forma dida&#769;tica e com muitas dicas para voce&#770;! Ale&#769;m disso, voce&#770; tambe&#769;m tera&#769; acesso a&#768; calculadora de trico&#770;, uma ferramenta que vai te ajudar muito nessa fase!&lt;/p&gt;
   &lt;/div&gt;
 &lt;div&gt;
-&lt;img src=&quot;https://rosiene.github.io/img/curso/trico-1.png&quot; /&gt;
+&lt;img src=&quot;https://rosiene.github.io/img/clube/trico-2.png&quot; /&gt;
 &lt;/div&gt;
       &lt;/div&gt;</b:widget-setting>
             </b:widget-settings>
@@ -207,9 +225,9 @@ URL:      www.rosiene.com.br
           </b:widget>
           <b:widget id='HTML5' locked='false' title='Final' type='HTML' version='1'>
             <b:widget-settings>
-              <b:widget-setting name='content'>&lt;div class=&quot;session chamada-final&quot;&gt;
+              <b:widget-setting name='content'>&lt;div class=&quot;session cta-final&quot;&gt;
         &lt;div&gt;
-  &lt;img src=&quot;https://rosiene.github.io/img/curso/seja-aluno.jpg&quot; /&gt;
+  &lt;img src=&quot;https://rosiene.github.io/img/clube/seja-membro.jpg&quot; /&gt;
   &lt;h1&gt;CURSO DE TRICÔ PARA INICIANTES&lt;/h1&gt;
   &lt;h2&gt;R$ 59,90&lt;/h2&gt;
   &lt;script type=&quot;text/javascript&quot;&gt;
@@ -241,28 +259,29 @@ URL:      www.rosiene.com.br
       <b:section class='main' id='main' name='Main' showaddelement='no'>
         <b:widget id='Blog1' locked='true' title='Postagens no blog' type='Blog' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='showDateHeader'>true</b:widget-setting>
             <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
-            <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
             <b:widget-setting name='showShareButtons'>true</b:widget-setting>
             <b:widget-setting name='authorLabel'>By</b:widget-setting>
-            <b:widget-setting name='showCommentLink'>false</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='showAuthor'>false</b:widget-setting>
-            <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
             <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
             <b:widget-setting name='timestampLabel'>at</b:widget-setting>
             <b:widget-setting name='reactionsLabel'/>
             <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
             <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='showLabels'>true</b:widget-setting>
             <b:widget-setting name='showLocation'>false</b:widget-setting>
-            <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
             <b:widget-setting name='showTimestamp'>false</b:widget-setting>
             <b:widget-setting name='postsPerAd'>1</b:widget-setting>
-            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
             <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+            <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+            <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='postLocationLabel'>Google Account Video Purchases</b:widget-setting>
+            <b:widget-setting name='showAuthor'>false</b:widget-setting>
+            <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='showLabels'>true</b:widget-setting>
+            <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
+            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
             <b:widget-setting name='showInlineAds'>true</b:widget-setting>
             <b:widget-setting name='showReactions'>false</b:widget-setting>
           </b:widget-settings>
