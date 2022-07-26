@@ -142,10 +142,12 @@ footer .img_logo {
   text-align: center;
   justify-content: center;
 }
+
 .cta-topo img{
   width: 100%;
   border-radius: 30px;
 }
+
 .cta-topo h1 {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -153,15 +155,18 @@ footer .img_logo {
   padding: 10px;
   border-radius: 10px;
 }
+
 .cta-topo h2{
   font-family: "Bitter", serif;
   color: #fff;
   font-size: 36px;
   margin: 20px 0;
 }
+
 .cta-topo ul {
   padding: 0;
 }
+
 .cta-topo ul li {
   font-size: 32px;
   background: url("https://rosiene.github.io/img/curso-iniciante/check.png") no-repeat left center;
@@ -170,10 +175,44 @@ footer .img_logo {
   margin: 0;
   vertical-align: middle;
 }
+
 .cta-topo h3{
   font-family: "Bitter", serif;
   font-size: 36px;
   margin: 30px 0;
+}
+
+.cta-final {
+  background-color: #130f10;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.cta-final img{
+  width: 100%;
+}
+
+.cta-final h1{
+  font-family: "Bitter", serif;
+  font-size: 42px;
+  color: #fff;
+  margin: 0 30px;
+}
+
+.cta-final h2{
+  color: #fff;
+  margin: 30px 0;
+  text-shadow: 0 0 30px #000, 0 0 30px #000
+}
+
+.cta-topo a, .cta-final a {
+  font-family: "Bitter", serif;
+  padding: 16px;
+  background: #be495f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 42px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .landing-texto-imagem {
@@ -181,10 +220,12 @@ footer .img_logo {
   padding: 30px 30px 0 30px;
   text-align: center;
 }
+
 .landing-texto-imagem img {
   width: 60%;
   height: 60%;
 }
+
 .landing-texto-imagem p{
   font-size: 24px;
   line-height: 2;
@@ -195,6 +236,7 @@ footer .img_logo {
   line-height: 0;
   background: #79a9a6;
 }
+
 .landing-comentarios img{
   width: -webkit-fill-available;
   display: block;
@@ -204,16 +246,19 @@ footer .img_logo {
 .landing-lista {
   padding: 30px;
 }
+
 .landing-lista h1 {
   font-family: "Bitter", serif;
   color: #fff;
   padding-bottom: 20px;
 }
+
 .landing-lista img {
   width: -webkit-fill-available;
   display: block;
   margin: 15px auto;
 }
+
 .landing-lista ul {
   font-size: 24px;
   padding: 0;
@@ -221,6 +266,7 @@ footer .img_logo {
   text-align: center;
   line-height: 1.5;
 }
+
 .landing-lista ul li{
   margin: 12px;
   border-radius: 20px;
@@ -231,35 +277,18 @@ footer .img_logo {
   text-align: center;
   color: #fff;
 }
+
 .eu h1{
   font-family: "Bitter", serif;
   color: #fff;
 }
+
 .eu img{
   margin: 30px 0;
 }
+
 .eu p{
   font-size: 24px;
   line-height: 2;
   padding-bottom: 16px;
-}
-
-.cta-final {
-  background-color: #130f10;
-  text-align: center;
-  padding-bottom: 60px;
-}
-.cta-final img{
-  width: 100%;
-}
-.cta-final h1{
-  font-family: "Bitter", serif;
-  font-size: 42px;
-  color: #fff;
-  margin: 0 30px;
-}
-.cta-final h2{
-  color: #fff;
-  margin: 30px 0;
-  text-shadow: 0 0 30px #000, 0 0 30px #000
 }
