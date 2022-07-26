@@ -833,17 +833,17 @@ a.destaque_links {
   font-size: 36px;
   margin: 30px 0;
 }
-.tricotar {
+.landing-texto-imagem {
   background: #a44030;
   color: #fff;
   padding: 30px 30px 0 30px;
   text-align: center;
 }
-.tricotar img {
+.landing-texto-imagem img {
   width: 60%;
   height: 60%;
 }
-.tricotar p{
+.landing-texto-imagem p{
   font-size: 24px;
   line-height: 2;
 }
@@ -1044,19 +1044,19 @@ a.destaque_links {
   .eu img {
     margin: 20px;
   }
-  .tricotar {
+  .landing-texto-imagem {
     display: flex;
-    padding: 0 28%;
+    padding: 0 16%;
   }
-  .tricotar div p, .quem{
+  .landing-texto-imagem div p, .quem{
     padding: 50px 0;
   }
   .curso-iniciante, .eu {
     display: flex;
     padding: 50px 10% 50px 10%;
   }
-  .tricotar img, .curso-iniciante img {
-    width: 200px;
+  .landing-texto-imagem img, .curso-iniciante img {
+    width: 300px;
     height: auto;
     margin: auto;
   }

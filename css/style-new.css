@@ -1,0 +1,240 @@
+/*
+@cor-preto: #241f20;
+@cor-cinza: #81827f;
+@cor-branco: #ffffff;
+
+  --cor-rosa-claro: #f0d7dd;
+  --cor-rosa-medio: #e49dac;
+  --cor-rosa-escuro: #be495f;
+  --cor-marrom-escuro: #a44030;
+  --cor-marrom-medio: #c37d5d;
+  --cor-marrom-claro: #caa175;
+  --cor-verde-claro: #98bcba;
+  --cor-verde-medio: #7AA9A6;
+  --cor-azul-claro: #a0bbd2;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #241f20;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #fff;
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+  font-size: 34px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100 !important;
+}
+
+h2 {
+  font-family: 'Bitter', serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Bitter', serif;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+p {
+  font-size: 18px;
+}
+
+.contact-form input{
+  border: 1px solid #a0bbd2;
+  border-radius: 10px;
+  padding: 8px;
+  line-height: 20px;
+  margin: 8px 0;
+  height: 34px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #c37d5d;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 0 30px 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer .img_logo {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.ico-logo {
+  width: 100px;
+}
+.social{
+  margin-top: 14px;
+}
+
+.social a {
+  padding: 0 2px;
+}
+.social a img {
+  width: 48px;
+}
+
+.ico-footer {
+  margin: 30px 6px;
+}
+
+/* Landing page */
+
+.cta-topo {
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+}
+.cta-topo img{
+  width: 100%;
+  border-radius: 30px;
+}
+.cta-topo h1 {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.cta-topo h2{
+  font-family: "Bitter", serif;
+  color: #fff;
+  font-size: 36px;
+  margin: 20px 0;
+}
+.cta-topo ul {
+  padding: 0;
+}
+.cta-topo ul li {
+  font-size: 32px;
+  background: url("https://rosiene.github.io/img/curso-iniciante/check.png") no-repeat left center;
+  padding: 24px 0 24px 84px;
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+}
+.cta-topo h3{
+  font-family: "Bitter", serif;
+  font-size: 36px;
+  margin: 30px 0;
+}
+
+.landing-texto-imagem {
+  color: #fff;
+  padding: 30px 30px 0 30px;
+  text-align: center;
+}
+.landing-texto-imagem img {
+  width: 60%;
+  height: 60%;
+}
+.landing-texto-imagem p{
+  font-size: 24px;
+  line-height: 2;
+}
+
+.landing-comentarios {
+  padding: 15px;
+  line-height: 0;
+  background: #79a9a6;
+}
+.landing-comentarios img{
+  width: -webkit-fill-available;
+  display: block;
+  padding: 15px;
+}
+
+.landing-lista {
+  padding: 30px;
+}
+.landing-lista h1 {
+  font-family: "Bitter", serif;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.landing-lista img {
+  width: -webkit-fill-available;
+  display: block;
+  margin: 15px auto;
+}
+.landing-lista ul {
+  font-size: 24px;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  line-height: 1.5;
+}
+.landing-lista ul li{
+  margin: 12px;
+  border-radius: 20px;
+}
+
+.eu {
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+.eu h1{
+  font-family: "Bitter", serif;
+  color: #fff;
+}
+.eu img{
+  margin: 30px 0;
+}
+.eu p{
+  font-size: 24px;
+  line-height: 2;
+  padding-bottom: 16px;
+}
+
+.cta-final {
+  background-color: #130f10;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.cta-final img{
+  width: 100%;
+}
+.cta-final h1{
+  font-family: "Bitter", serif;
+  font-size: 42px;
+  color: #fff;
+  margin: 0 30px;
+}
+.cta-final h2{
+  color: #fff;
+  margin: 30px 0;
+  text-shadow: 0 0 30px #000, 0 0 30px #000
+}
