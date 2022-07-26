@@ -794,33 +794,33 @@ a.destaque_links {
   padding: 12px 0;
 }
 
-.landing-topo {
+.cta-topo {
   padding: 30px;
   text-align: center;
   background: #79a9a6;
   justify-content: center;
 }
-.landing-topo img{
+.cta-topo img{
   width: 100%;
   border-radius: 30px;
 }
-.landing-topo h1 {
+.cta-topo h1 {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   margin-top: 20px;
   padding: 10px;
   border-radius: 10px;
 }
-.landing-topo h2{
+.cta-topo h2{
   font-family: "Bitter", serif;
   color: #fff;
   font-size: 36px;
   margin: 20px 0;
 }
-.landing-topo ul {
+.cta-topo ul {
   padding: 0;
 }
-.landing-topo ul li {
+.cta-topo ul li {
   font-size: 32px;
   background: url("https://rosiene.github.io/img/curso-iniciante/check.png") no-repeat left center;
   padding: 24px 0 24px 84px;
@@ -828,13 +828,12 @@ a.destaque_links {
   margin: 0;
   vertical-align: middle;
 }
-.landing-topo h3{
+.cta-topo h3{
   font-family: "Bitter", serif;
   font-size: 36px;
   margin: 30px 0;
 }
 .landing-texto-imagem {
-  background: #a44030;
   color: #fff;
   padding: 30px 30px 0 30px;
   text-align: center;
@@ -873,30 +872,30 @@ a.destaque_links {
   background-color: #98bcba;
   border-radius: 20px;
 }
-.quem {
+.eu {
   background: #a44030;
   padding: 30px;
   text-align: center;
   color: #fff;
 }
-.quem h1{
+.eu h1{
   font-family: "Bitter", serif;
   color: #fff;
 }
-.quem img{
+.eu img{
   margin: 30px 0;
 }
-.quem p{
+.eu p{
   font-size: 24px;
   line-height: 2;
   padding-bottom: 16px;
 }
-.comentarios {
+.landing-comentarios {
   padding: 15px;
   line-height: 0;
   background: #79a9a6;
 }
-.comentarios img{
+.landing-comentarios img{
   width: -webkit-fill-available;
   display: block;
   padding: 15px;
@@ -918,26 +917,8 @@ a.destaque_links {
   width: 100%;
   margin-top: 20px;
 }
-.chamada-final {
-  background-color: #130f10;
-  text-align: center;
-  padding-bottom: 60px;
-}
-.chamada-final img{
-  width: 100%;
-}
-.chamada-final h1{
-  font-family: "Bitter", serif;
-  font-size: 42px;
-  color: #fff;
-  margin: 0 30px;
-}
-.chamada-final h2{
-  color: #fff;
-  margin: 30px 0;
-  text-shadow: 0 0 30px #000, 0 0 30px #000
-}
-.landing-topo a, .chamada-final a {
+
+.cta-topo a, .cta-final a {
   font-family: "Bitter", serif;
   padding: 16px;
   background: #be495f;
@@ -1023,22 +1004,22 @@ a.destaque_links {
   .PopularPosts .widget-content ul li{
     width: 30%;
   }
-  .landing-topo {
+  .cta-topo {
     display: flex;
   }
-  .landing-topo div {
+  .cta-topo div {
     padding: 50px;
   }
-  .landing-topo img {
+  .cta-topo img {
     width: 500px;
   }
-  .landing-topo h1{
+  .cta-topo h1{
     margin-top: 0;
   }
-  .landing-topo ul {
+  .cta-topo ul {
     display: flex;
   }
-  .landing-topo ul li {
+  .cta-topo ul li {
     padding: 16px 10px 8px 70px
   }
   .eu img {
@@ -1048,7 +1029,7 @@ a.destaque_links {
     display: flex;
     padding: 0 16%;
   }
-  .landing-texto-imagem div p, .quem{
+  .landing-texto-imagem div p, .eu{
     padding: 50px 0;
   }
   .curso-iniciante, .eu {
@@ -1066,15 +1047,15 @@ a.destaque_links {
   .landing-lista img {
     width: 600px;
   }
-  .landing-lista, .comentarios {
+  .landing-lista, .landing-comentarios {
     padding: 50px 20%;
   }
-  .chamada-final {
+  .cta-final {
     padding: 280px 0;
     background: url(&#39;https://rosiene.github.io/img/curso-iniciante/final_curso.jpg&#39;), rgba(0, 0, 0, 0.8);
     background-size: 100%;
   }
-  .chamada-final img{
+  .cta-final img{
     display: none;
   }
 }

@@ -73,6 +73,20 @@ p {
   height: 34px;
 }
 
+/* background */
+.fundo-verde {
+  background: #79a9a6;
+}
+.fundo-chocolate {
+  background: #a44030;
+}
+.fundo-rosa {
+  background: #bd4b49;
+}
+.fundo-cafe {
+  background: #603813;
+}
+
 /* FOOTER */
 
 footer {
@@ -108,6 +122,13 @@ footer .img_logo {
 
 .ico-footer {
   margin: 30px 6px;
+}
+
+.img_capa {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  border: #fff solid 5px;
 }
 
 /* Landing page */
