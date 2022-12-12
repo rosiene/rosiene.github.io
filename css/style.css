@@ -255,8 +255,11 @@ form.gsc-search-box{
 }
 
 .iniciante h1 {
-  color: #7AA9A6;
-  margin-top: -40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 .iniciante p {
   color: #81827F;
