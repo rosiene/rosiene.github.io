@@ -945,7 +945,7 @@ a.destaque_links {
     height: 380px;
   }
 
-  .clube, .util, .iniciante, .post-container{
+  .clube, .util, .post-container{
     display: flex;
   }
 
