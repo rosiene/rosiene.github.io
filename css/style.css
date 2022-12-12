@@ -238,6 +238,9 @@ form.gsc-search-box{
 .iniciante {
   text-align: center;
   justify-content: center;
+  padding: 280px 0;
+  background: url(https://rosiene.github.io/img/curso.jpg), rgba(0, 0, 0, 0.8);
+  background-size: 100%;
 }
 
 .iniciante div {
