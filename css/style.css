@@ -1073,4 +1073,7 @@ a.destaque_links {
   .direitos_text p {
     margin: 10px 50px;
   }
+  .cta-topo img{
+    display: none;
+  }
 }
