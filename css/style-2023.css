@@ -490,6 +490,25 @@ a.destaque_links {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.home-eu {
+  color: #fff;
+  padding: 30px 30px 0 30px;
+  text-align: center;
+}
+.home-eu div:first-of-type {
+  padding: 30px 0;
+}
+
+.home-eu img {
+  width: 60%;
+  height: 60%;
+}
+
+.home-eu p{
+  font-size: 24px;
+  line-height: 1.5;
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
@@ -526,6 +545,22 @@ a.destaque_links {
   .post-body iframe, .video_espelhado iframe{
     width: 640px;
     height: 360px;
+  }
+
+  .home-eu {
+    display: flex;
+    padding: 0 16%;
+  }
+  .home-eu img {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+  .home-eu div{
+    margin: auto;
+  }
+  .home-eu div p{
+    margin: 12px;
   }
 }
 
