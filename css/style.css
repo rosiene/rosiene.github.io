@@ -238,7 +238,7 @@ form.gsc-search-box{
 .iniciante {
   text-align: center;
   justify-content: center;
-  padding: 280px 0;
+  padding: 180px 0;
   background: url(https://rosiene.github.io/img/curso.jpg), rgba(0, 0, 0, 0.8);
   background-size: 100%;
 }
@@ -260,6 +260,7 @@ form.gsc-search-box{
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
+    display: inline-block;
 }
 .iniciante p {
   color: #81827F;
@@ -800,12 +801,6 @@ a.destaque_links {
   padding: 12px 0;
 }
 
-.cta-topo {
-  padding: 30px;
-  text-align: center;
-  background: #79a9a6;
-  justify-content: center;
-}
 .cta-topo img{
   width: 100%;
   border-radius: 30px;
@@ -1009,9 +1004,6 @@ a.destaque_links {
 
   .PopularPosts .widget-content ul li{
     width: 30%;
-  }
-  .cta-topo {
-    display: flex;
   }
   .cta-topo div {
     padding: 50px;
