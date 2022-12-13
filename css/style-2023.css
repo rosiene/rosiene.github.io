@@ -500,10 +500,10 @@ a.destaque_links {
     min-width: 320px;
   }
 
-  .home-util {
+  .home-util, .post-container{
     display: flex;
   }
-
+  
   .home-curso-iniciante {
     padding: 180px 0;
     background: url("https://rosiene.github.io/img/curso.jpg"), rgba(0, 0, 0, 0.8);
