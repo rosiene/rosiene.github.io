@@ -22,7 +22,6 @@ body {
 h1 {
   font-family: 'Bitter', serif;
   font-size: 34px;
-  text-transform: uppercase;
   text-align: center;
   font-weight: 500;
 }
@@ -511,10 +510,6 @@ a.destaque_links {
   line-height: 1.5;
 }
 
-.home-eu div img {
-  width: 200px;
-}
-
 .home-trico {
   color: #fff;
   background-color: #caa175;
@@ -571,7 +566,6 @@ a.destaque_links {
     padding: 30px 16%;
   }
   .home-eu img {
-    width: 500px;
     height: auto;
     margin: 0;
   }
