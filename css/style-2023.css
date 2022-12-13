@@ -490,7 +490,8 @@ a.destaque_links {
 }
 
 .home-eu {
-  padding: 30px 30px 0 30px;
+  color: #fff;
+  padding: 30px;
   text-align: center;
   background-color: #c37d5d;
 }
