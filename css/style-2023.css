@@ -493,6 +493,9 @@ a.destaque_links {
 .home-eu {
   padding: 30px 30px 0 30px;
   text-align: center;
+  background: url('https://rosiene.github.io/img/eu-background.jpg');
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 .home-eu div:first-of-type {
   padding: 30px 0;
@@ -506,6 +509,10 @@ a.destaque_links {
 .home-eu p{
   font-size: 24px;
   line-height: 1.5;
+}
+
+.home-eu div img {
+  width: 200px;
 }
 
 .home-trico {
@@ -563,9 +570,9 @@ a.destaque_links {
     padding: 0 16%;
   }
   .home-eu img {
-    width: 300px;
+    width: 500px;
     height: auto;
-    margin: auto;
+    margin: 0;
   }
   .home-eu div{
     margin: auto;
