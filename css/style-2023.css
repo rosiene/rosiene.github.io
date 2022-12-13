@@ -518,13 +518,14 @@ a.destaque_links {
 .home-trico {
   color: #fff;
   background-color: #caa175;
-  padding: 30px 30px 0 30px;
+  padding: 30px;
   text-align: center;
 }
 
 .home-trico p{
   font-size: 24px;
   line-height: 1.5;
+  padding: 10px
 }
 
 @media only screen and (min-width: 1024px) {
@@ -567,7 +568,7 @@ a.destaque_links {
 
   .home-eu {
     display: flex;
-    padding: 0 16%;
+    padding: 30px 16%;
   }
   .home-eu img {
     width: 500px;
