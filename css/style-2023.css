@@ -460,7 +460,7 @@ a.destaque_links {
 }
 
 .home-curso-iniciante {
-  background-color: #79a9a6;
+  background-color: #241f20;
   text-align: center;
   padding-bottom: 60px;
 }
@@ -503,7 +503,7 @@ a.destaque_links {
   .home-util, .post-container{
     display: flex;
   }
-  
+
   .home-curso-iniciante {
     padding: 180px 0;
     background: url("https://rosiene.github.io/img/curso.jpg"), rgba(0, 0, 0, 0.8);
