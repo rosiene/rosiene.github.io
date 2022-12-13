@@ -326,72 +326,48 @@ URL:      www.rosiene.com.br
       <b:if cond='data:view.isHomepage'>
 
       <b:section class='homepage' id='homepage' name='Homepage' showaddelement='no'>
-        <b:widget id='HTML7' locked='false' title='Redes Sociais' type='HTML' version='1'>
+        <b:widget id='HTML2' locked='false' title='Eu' type='HTML' version='1'>
           <b:widget-settings>
-            <b:widget-setting name='content'>&lt;div class=&quot;session top&quot;&gt;
-&lt;img src=&#39;https://rosiene.github.io/img/Rosiene_2022_1080.jpg&#39; class=&#39;img_capa&#39; /&gt;
-  &lt;div class=&#39;social&#39;&gt;
-    &lt;a href=&#39;https://www.youtube.com/Rosiene&#39; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://rosiene.github.io/img/ico/top-youtube.svg&quot; alt=&quot;Youtube&quot; /&gt;&lt;/a&gt;
-    &lt;a href=&#39;https://www.instagram.com/rosiene_tricoetal/&#39; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://rosiene.github.io/img/ico/top-instagram.svg&quot; alt=&quot;Instagram&quot; /&gt;&lt;/a&gt;
-    &lt;a href=&#39;https://www.ravelry.com/designers/rosiene&#39; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://rosiene.github.io/img/ico/top-ravelry.svg&quot; alt=&quot;Ravelry&quot; /&gt;&lt;/a&gt;
-    &lt;a href=&#39;https://www.facebook.com/tricoetal&#39; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://rosiene.github.io/img/ico/top-facebook.svg&quot; alt=&quot;Facebook&quot; /&gt;&lt;/a&gt;
-    &lt;a href=&#39;https://br.pinterest.com/tricoetal/&#39; target=&quot;_blank&quot;&gt;&lt;img src=&quot;https://rosiene.github.io/img/ico/top-pinterest.svg&quot; alt=&quot;Pinterest&quot; /&gt;&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-      <b:if cond='data:view.isHomepage'>
-        <div class='widget-content'>
-          <data:content/>
-        </div>
-      </b:if>
-<b:include name='quickedit'/>
-</b:includable>
-        </b:widget>
-        <b:widget id='HTML8' locked='false' title='Oi, meu nome é Rosiene!' type='HTML' version='1'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>&lt;h2 class=&#39;oi_home&#39;&gt;Oi, meu nome é Rosiene!&lt;/h2&gt;
-&lt;div class=&quot;oi_descricao&quot;&gt;
-Eu sou professora e designer de tricô desde 2018.
-Aqui você encontra todas as minhas +160 receitas, biblioteca de pontos, curso de tricô para iniciantes, calculadora de amostras e muito mais! &lt;br/&gt;
-&lt;br/&gt;
-Bem-vinda(o) a nossa comunidade Tricô e Tal!&lt;br /&gt;
-Vamos tricotar!?
-&lt;/div&gt;</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-      <b:if cond='data:view.isHomepage'>
-<!-- only display title if it's non-empty -->
-<div class='widget-content'>
-<data:content/>
-</div>
-</b:if>
-</b:includable>
-        </b:widget>
-        <b:widget id='HTML3' locked='false' title='Clube' type='HTML' version='1'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>&lt;div class=&quot;session clube&quot;&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Clube Tricô e Tal&lt;/h1&gt;
-    &lt;p&gt;Seja membro e tenha acesso a receitas &lt;br/&gt;exclusivas e vários benefícios!&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;a class=&quot;clube_link&quot; href=&quot;https://www.youtube.com/Rosiene/join&quot;&gt;seja membro&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-<div class='widget-content'>
-<data:content/>
-</div>
+            <b:widget-setting name='content'>&lt;div class=&quot;session home-eu&quot;&gt;
+    &lt;div&gt;
 
+    &lt;h1&gt;Oi, meu nome é Rosiene&lt;/h1&gt;
+    &lt;p&gt;Eu sou professora e designer de tricô e idealizadora da comunidade Tricô e Tal!&lt;/p&gt;
+    &lt;p&gt;Eu amo criar e escrever receitas, me sinto feliz ao pensar em cada processo e todos os passos necessários até o resultado final da peça. E esse sentimento fica ainda mais intenso quando ensino e compartilho esse conhecimento com outras pessoas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;img src=&quot;https://rosiene.github.io/img/eu.jpg&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+        </b:widget>
+        <b:widget id='HTML3' locked='false' title='Tricô' type='HTML'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>&lt;div class=&quot;session home-trico&quot;&gt;
+    &lt;h1&gt;Tricô&lt;/h1&gt;
+    &lt;p&gt;Para mim, o tricô é uma arte manual que transforma vidas, ela funciona como uma ferramenta terapêutica, um momento de reflexão e descobertas. Mas pode ser muito mais do que um momento de relaxamento, pode ser o caminho para muitas oportunidades de trabalho através da exclusividade e beleza do artesanato.&lt;/p&gt;
+&lt;/div&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
         <b:widget id='HTML4' locked='false' title='Curso Iniciante' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div class=&quot;session home-curso-iniciante&quot;&gt;
-    &lt;img src=&quot;https://rosiene.github.io/img/curso-mobile.jpg&quot; /&gt;
-      &lt;h1&gt;CURSO DE TRICÔ &lt;br/&gt; PARA INICANTES&lt;/h1&gt;
+  &lt;img src=&quot;https://rosiene.github.io/img/curso-mobile.jpg&quot; /&gt;
+  &lt;h1&gt;CURSO DE TRICÔ PARA INICANTES&lt;/h1&gt;
 &lt;br/&gt;
 &lt;br/&gt;&lt;br/&gt;
 &lt;a href=&quot;http://www.cursodetrico.com.br/&quot;&gt;Saiba mais...&lt;/a&gt;
@@ -1225,7 +1201,7 @@ por escrito. Você pode compartilhar este material indicando o link da receita n
         <b:widget id='HTML1' locked='false' title='Footer' type='HTML' version='1'>
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;footer&gt;
-&lt;img class=&quot;img_logo&quot; src=&quot;https://rosiene.github.io/img/rosiene_logo_branca.png&quot; /&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;img class=&quot;img_logo&quot; src=&quot;https://rosiene.github.io/img/rosiene_logo_branca.png&quot; /&gt;&lt;/a&gt;
 
 &lt;br/&gt;
 

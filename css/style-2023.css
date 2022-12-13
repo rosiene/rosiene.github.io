@@ -491,8 +491,6 @@ a.destaque_links {
 }
 
 .home-eu {
-  color: #fff;
-  background-color: #caa175;
   padding: 30px 30px 0 30px;
   text-align: center;
 }
@@ -501,11 +499,23 @@ a.destaque_links {
 }
 
 .home-eu img {
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
 }
 
 .home-eu p{
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.home-trico {
+  color: #fff;
+  background-color: #caa175;
+  padding: 30px 30px 0 30px;
+  text-align: center;
+}
+
+.home-trico p{
   font-size: 24px;
   line-height: 1.5;
 }
