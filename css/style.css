@@ -41,13 +41,11 @@ h1 {
   font-size: 34px;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 100 !important;
 }
 
 h2 {
   font-family: 'Bitter', serif;
   font-size: 28px;
-  font-weight: 400;
 }
 
 h3 {
@@ -195,13 +193,11 @@ form.gsc-search-box{
 
 .clube p a {
   color: #ffffff;
-  font-weight: 600;
   text-decoration: underline;
 }
 
 .clube_link {
   text-transform: uppercase;
-  font-weight: 200;
   background: #ffffff;
   color: #be495f;
   padding: 16px 28px ;
@@ -231,7 +227,6 @@ form.gsc-search-box{
 
 .painel p a {
   color: #ffffff;
-  font-weight: 600;
   text-decoration: underline;
 }
 
@@ -248,10 +243,6 @@ form.gsc-search-box{
 }
 .iniciante div:first-of-type{
   display: none;
-}
-
-.iniciante div a{
-  font-weight: 200;
 }
 
 .iniciante h1 {
@@ -397,14 +388,12 @@ input.gsc-input {
 .post-title {
   color: #e49dac;
   font-size: 26px;
-  font-weight: 200;
   text-align: center;
   margin-top: 20px;
   border-bottom: #e49dac solid 1px;
 }
 
 .date-header {
-  font-weight: 100;
   text-align: center;
   line-height: 28px;
   color: #e49dac;
@@ -474,7 +463,6 @@ input.gsc-input {
 
 .post-item h3 {
   padding: 8px;
-  font-weight: 400;
 }
 
 .post-item img{
@@ -491,7 +479,6 @@ input.gsc-input {
 }
 
 .status_message h3{
-  font-weight: 400;
   font-size: 24px;
 }
 
@@ -555,7 +542,6 @@ input.gsc-input {
   font-family: 'PT Sans', sans-serif;
   Color: #be495f;
   margin-left: 20px;
-  font-weight: 600;
   background: url('../img/ico/arrow-menu.svg') no-repeat right;
 }
 
@@ -664,7 +650,6 @@ a.destaque_links {
   background-color: #f0d7dd;
   text-align: center;
   color: #be495f;
-  font-weight: 200;
   border-radius: 30px;
 }
 
@@ -779,7 +764,6 @@ a.destaque_links {
 
 .PopularPosts a h3{
   color: #241f20;
-  font-weight: 200;
   text-align: center;
   font-size: 18px;
   padding: 8px;
