@@ -284,6 +284,20 @@ input.gsc-input {
   display: none;
 }
 
+.direitos_text {
+  display: none;
+}
+
+a.destaque_links {
+  padding: 16px;
+  margin: 12px;
+  display: block;
+  background-color: #f0d7dd;
+  text-align: center;
+  color: #be495f;
+  border-radius: 30px;
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
