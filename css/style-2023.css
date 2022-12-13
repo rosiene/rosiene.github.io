@@ -66,6 +66,7 @@ p {
 #header-inner img{
   width: 260px;
 }
+
 .navigation {
   padding-left: 20px;
 }
@@ -80,6 +81,55 @@ p {
   min-height: 100%;
   background: #fff;
   z-index: 1;
+}
+
+.sidebar .menu-button{
+  margin-left:20px;
+}
+
+.sidebar h1 {
+  font-size: 36px;
+}
+
+.sidebar h2 {
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'PT Sans', sans-serif;
+  Color: #be495f;
+  margin-left: 20px;
+  background: url('../img/ico/arrow-menu.svg') no-repeat right;
+}
+
+.sidebar .Label{
+  margin: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(50, 51, 49, 0.2);;
+}
+.sidebar ul {
+  list-style-type: none;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.sidebar ul li{
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  font-size: 16px;
+}
+.sidebar ul li a{
+  color: #be495f;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover{
+  text-decoration: underline;
+}
+
+.sidebar .Label .list-label-widget-content {
+  display: none;
 }
 
 .page-overlay{
@@ -116,6 +166,10 @@ footer a {
 footer .img_logo {
   width: 60px;
   margin-bottom: 20px;
+}
+
+.ico-footer {
+  margin: 30px 6px;
 }
 
 input.gsc-input {
@@ -249,6 +303,11 @@ input.gsc-input {
 
 .status_message h3{
   font-size: 24px;
+  text-align: center;
+}
+
+.post-share-buttons {
+  margin-top: 30px;
 }
 
 .post-onlyone-item {
