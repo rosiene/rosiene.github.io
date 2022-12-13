@@ -573,6 +573,9 @@ a.destaque_links {
   .home-eu div p{
     margin: 12px;
   }
+  .home-trico {
+    padding: 0 16%;
+  }
 }
 
 @media print {
