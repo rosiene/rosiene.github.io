@@ -499,8 +499,9 @@ a.destaque_links {
 }
 
 .home-eu img {
-  width: 400px;
+  width: 100%;
   border-radius: 30px;
+  box-shadow: 5px 10px 18px #a44030;
 }
 
 .home-eu p{
@@ -519,6 +520,10 @@ a.destaque_links {
   font-size: 24px;
   line-height: 1.5;
   padding: 10px
+}
+
+#Header1 {
+  padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -564,7 +569,7 @@ a.destaque_links {
     padding: 30px 16%;
   }
   .home-eu img {
-    height: auto;
+    width: 400px;
     margin: 0;
   }
   .home-eu div{
