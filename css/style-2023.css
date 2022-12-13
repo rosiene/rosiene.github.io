@@ -477,6 +477,7 @@ a.destaque_links {
   margin: 0 30px;
   padding: 10px;
   border-radius: 10px;
+  display: inline-block;
 }
 
 .home-curso-iniciante a {
@@ -504,12 +505,22 @@ a.destaque_links {
   }
 
   .home-curso-iniciante {
-    padding: 280px 0;
+    padding: 180px 0;
     background: url("https://rosiene.github.io/img/curso.jpg"), rgba(0, 0, 0, 0.8);
     background-size: 100%;
   }
   .home-curso-iniciante img{
     display: none;
+  }
+  
+  .post-onlyone-item{
+    width: 960px;
+    margin: 20px auto;
+  }
+
+  .post-item {
+    margin: 10px;
+    width: 40%;
   }
 }
 
