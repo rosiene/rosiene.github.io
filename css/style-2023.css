@@ -283,3 +283,33 @@ input.gsc-input {
 .show-menu{
   display: none;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media print {
+
+  html, body {
+    min-height: auto;
+    display:table;
+  }
+
+  .navigation, .BlogSearch, .post-footer, .blog-pager, #bottom, iframe {
+    display: none;
+  }
+
+  .direitos_text {
+    display: block;
+    text-align: center;
+  }
+  .direitos_text p {
+    margin: 10px 50px;
+  }
+  .curso-iniciante img{
+    display: none;
+  }
+}
