@@ -233,7 +233,7 @@ form.gsc-search-box{
   text-decoration: underline;
 }
 
-.iniciante {
+.curso-iniciante {
   text-align: center;
   justify-content: center;
   padding: 180px 0;
@@ -241,14 +241,7 @@ form.gsc-search-box{
   background-size: 100%;
 }
 
-.iniciante div {
-  margin: 0 30px;
-}
-.iniciante div:first-of-type{
-  display: none;
-}
-
-.iniciante h1 {
+.curso-iniciante h1 {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     margin-top: 20px;
@@ -256,11 +249,8 @@ form.gsc-search-box{
     border-radius: 10px;
     display: inline-block;
 }
-.iniciante p {
-  color: #81827F;
-}
 
-.util {
+.home-util {
   background-color: #a44030;
   color: #ffffff;
   justify-content: center;
@@ -268,7 +258,7 @@ form.gsc-search-box{
   padding: 0 8%;
 }
 
-.util div {
+.home-util div {
   padding: 40px 15px;
   margin: 0 auto;
   text-align: center;
@@ -276,27 +266,27 @@ form.gsc-search-box{
   flex: 1 0 34%;
 }
 
-.util a {
+.home-util a {
   color: #ffffff;
   text-decoration: none;
 
 }
 
-.util a h2 {
+.home-util a h2 {
   padding: 8px 0 4px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.util a:hover h2 {
+.home-util a:hover h2 {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-.util a p {
+.home-util a p {
   font-style: italic;
   padding-top: 8px;
 }
 
-.util a img{
+.home-util a img{
   width: 64px;
 }
 
@@ -788,27 +778,27 @@ a.destaque_links {
   padding: 12px 0;
 }
 
-.cta-topo img{
+.curso-iniciante img{
   width: 100%;
   border-radius: 30px;
 }
-.cta-topo h1 {
+.curso-iniciante h1 {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   margin-top: 20px;
   padding: 10px;
   border-radius: 10px;
 }
-.cta-topo h2{
+.curso-iniciante h2{
   font-family: "Bitter", serif;
   color: #fff;
   font-size: 36px;
   margin: 20px 0;
 }
-.cta-topo ul {
+.curso-iniciante ul {
   padding: 0;
 }
-.cta-topo ul li {
+.curso-iniciante ul li {
   font-size: 32px;
   background: url("https://rosiene.github.io/img/curso-iniciante/check.png") no-repeat left center;
   padding: 24px 0 24px 84px;
@@ -816,12 +806,12 @@ a.destaque_links {
   margin: 0;
   vertical-align: middle;
 }
-.cta-topo h3{
+.curso-iniciante h3{
   font-family: "Bitter", serif;
   font-size: 36px;
   margin: 30px 0;
 }
-.cta-topo a{
+.curso-iniciante a{
   font-family: "Bitter", serif;
   padding: 16px;
   background: #be495f;
@@ -916,7 +906,7 @@ a.destaque_links {
   margin-top: 20px;
 }
 
-.cta-topo a, .cta-final a {
+.curso-iniciante a, .cta-final a {
   font-family: "Bitter", serif;
   padding: 16px;
   background: #be495f;
@@ -937,16 +927,8 @@ a.destaque_links {
     height: 380px;
   }
 
-  .clube, .util, .post-container{
+  .clube, .home-util, .post-container{
     display: flex;
-  }
-
-  .iniciante div:first-of-type{
-    display: block;
-  }
-
-  .iniciante div:first-of-type img{
-    width: 500px;
   }
 
   .post-onlyone-item{
@@ -1002,19 +984,19 @@ a.destaque_links {
   .PopularPosts .widget-content ul li{
     width: 30%;
   }
-  .cta-topo div {
+  .curso-iniciante div {
     padding: 50px;
   }
-  .cta-topo img {
+  .curso-iniciante img {
     width: 500px;
   }
-  .cta-topo h1{
+  .curso-iniciante h1{
     margin-top: 0;
   }
-  .cta-topo ul {
+  .curso-iniciante ul {
     display: flex;
   }
-  .cta-topo ul li {
+  .curso-iniciante ul li {
     padding: 16px 10px 8px 70px
   }
   .eu img {
@@ -1073,7 +1055,7 @@ a.destaque_links {
   .direitos_text p {
     margin: 10px 50px;
   }
-  .cta-topo img{
+  .curso-iniciante img{
     display: none;
   }
 }
