@@ -512,7 +512,7 @@ a.destaque_links {
   .home-curso-iniciante img{
     display: none;
   }
-  
+
   .post-onlyone-item{
     width: 960px;
     margin: 20px auto;
@@ -521,6 +521,11 @@ a.destaque_links {
   .post-item {
     margin: 10px;
     width: 40%;
+  }
+
+  .post-body iframe, .video_espelhado iframe{
+    width: 640px;
+    height: 360px;
   }
 }
 
