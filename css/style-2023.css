@@ -460,7 +460,7 @@ a.destaque_links {
 }
 
 .home-curso-iniciante {
-  background-color: #241f20;
+  background-color: #79a9a6;
   text-align: center;
   padding-bottom: 60px;
 }
@@ -482,7 +482,7 @@ a.destaque_links {
 .home-curso-iniciante a {
   font-family: "Bitter", serif;
   padding: 16px;
-  background: #79a9a6;
+  background: #be495f;
   border-radius: 10px;
   color: #fff;
   font-size: 42px;
