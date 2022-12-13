@@ -360,6 +360,59 @@ form.gsc-search-box{
   display: none;
 }
 
+.ferramenta-form {
+  padding: 20px;
+  margin: 10px;
+  background: #98bcba;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.contact-form-name,
+  .contact-form-email,
+  .contact-form-email-message,
+  .gsc-input {
+    max-width: 100%;
+    border: 1px solid #a0bbd2;
+    border-radius: 5px;
+    margin: 6px 0;
+    padding: 6px;
+    font-size: 16px;
+    min-height: 36px;
+}
+
+.contact-form-button-submit,
+  .gsc-search-button {
+    background: #be495f;
+    border: none;
+    border-radius: 5px;
+    margin: 6px 0;
+    line-height: 36px;
+    height: 36px;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.contact-form-button-submit:hover {
+  border: none;
+  background: #be495f;
+}
+
+.input-group ul{
+  list-style: none;
+}
+
+.input-group ul li{
+  margin: 6px 0;
+}
+
+.resultado {
+  text-align: center;
+  margin: 20px;
+}
+
 a.destaque_links {
   padding: 16px;
   margin: 12px;
