@@ -459,6 +459,39 @@ a.destaque_links {
   padding-top: 8px;
 }
 
+.home-curso-iniciante {
+  background-color: #241f20;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.home-curso-iniciante img{
+  width: 100%;
+}
+
+.home-curso-iniciante h1{
+  font-family: "Bitter", serif;
+  font-size: 42px;
+  color: #fff;
+  margin: 0 30px;
+}
+
+.home-curso-iniciante h2{
+  color: #fff;
+  margin: 30px 0;
+  text-shadow: 0 0 30px #000, 0 0 30px #000
+}
+
+.home-curso-iniciante a {
+  font-family: "Bitter", serif;
+  padding: 16px;
+  background: #be495f;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 42px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
@@ -471,6 +504,15 @@ a.destaque_links {
 
   .home-util {
     display: flex;
+  }
+
+  .home-curso-iniciante {
+    padding: 280px 0;
+    background: url("https://rosiene.github.io/img/curso-iniciante/final_curso.jpg"), rgba(0, 0, 0, 0.8);
+    background-size: 100%;
+  }
+  .home-curso-iniciante img{
+    display: none;
   }
 }
 
