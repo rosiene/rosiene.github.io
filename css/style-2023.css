@@ -151,7 +151,7 @@ p {
 }
 
 footer {
-  background-color: #241f20;
+  background-color: #be495f;
   color: #ffffff;
   text-align: center;
   padding: 50px 0 30px 0;
@@ -423,7 +423,7 @@ a.destaque_links {
 }
 
 .home-util {
-  background-color: #a44030;
+  background-color: #e49dac;
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
@@ -445,7 +445,6 @@ a.destaque_links {
 }
 
 .home-util a h2 {
-  padding: 8px 0 4px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -512,7 +511,7 @@ a.destaque_links {
 
 .home-trico {
   color: #fff;
-  background-color: #caa175;
+  background-color: #708aa0;
   padding: 30px;
   text-align: center;
 }
