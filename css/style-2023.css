@@ -422,6 +422,14 @@ a.destaque_links {
   border-radius: 30px;
 }
 
+.destaque_compra{
+  background: #be495f;
+  color: #ffffff !important;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 36px;
+}
+
 .home-util {
   background-color: #caa175;
   color: #ffffff;
