@@ -540,6 +540,14 @@ a.destaque_links {
   width: 100%;
 }
 
+.home-topo .mobile{
+  display: block;
+}
+
+.home-topo .web{
+  display: none;
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
@@ -594,6 +602,13 @@ a.destaque_links {
   }
   .home-trico {
     padding: 30px 16%;
+  }
+  .home-topo .mobile{
+    display: none;
+  }
+
+  .home-topo .web{
+    display: block;
   }
 }
 
