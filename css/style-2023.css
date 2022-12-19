@@ -441,7 +441,6 @@ a.destaque_links {
 }
 
 .home-clube-beneficios {
-  background-color: #caa175;
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
@@ -499,7 +498,7 @@ a.destaque_links {
 .home-curso-iniciante a, .home-clube a {
   font-family: "Bitter", serif;
   padding: 16px;
-  background: #be495f;
+  background: #c37d5d;
   border-radius: 10px;
   color: #fff;
   font-size: 42px;
@@ -510,7 +509,7 @@ a.destaque_links {
   color: #fff;
   padding: 30px;
   text-align: center;
-  background-color: #79a9a6;
+  background-color: #e49dac;
 }
 .home-eu div:first-of-type {
   padding: 30px 0;
