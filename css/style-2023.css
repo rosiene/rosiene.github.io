@@ -440,7 +440,15 @@ a.destaque_links {
   padding: 0 8%;
 }
 
-.home-util div {
+.home-clube-beneficios {
+  background-color: #be495f;
+  color: #ffffff;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 8%;
+}
+
+.home-util div, .home-clube-beneficios div {
   padding: 40px 15px;
   margin: 0 auto;
   text-align: center;
@@ -454,7 +462,7 @@ a.destaque_links {
 
 }
 
-.home-util a h2 {
+.home-util a h2, .home-clube-beneficios h2 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -462,7 +470,7 @@ a.destaque_links {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-.home-util a p {
+.home-util a p, .home-clube-beneficios p {
   font-style: italic;
   padding-top: 8px;
 }
@@ -569,7 +577,7 @@ a.destaque_links {
     min-width: 320px;
   }
 
-  .home-util, .post-container{
+  .home-util, .home-clube-beneficios, .post-container{
     display: flex;
   }
 
