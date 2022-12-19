@@ -441,7 +441,7 @@ a.destaque_links {
 }
 
 .home-clube-beneficios {
-  background-color: #be495f;
+  background-color: #e49dac;
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
@@ -496,7 +496,7 @@ a.destaque_links {
   display: inline-block;
 }
 
-.home-curso-iniciante a {
+.home-curso-iniciante a, .home-clube a {
   font-family: "Bitter", serif;
   padding: 16px;
   background: #be495f;
@@ -557,7 +557,7 @@ a.destaque_links {
 }
 
 .home-clube {
-  background-color: #be495f;
+  background-color: #e49dac;
   padding: 30px;
   text-align: center;
   color: #fff;
