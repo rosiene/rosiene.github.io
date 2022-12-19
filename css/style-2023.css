@@ -433,7 +433,7 @@ a.destaque_links {
 }
 
 .home-util {
-  background-color: #708aa0;
+  background-color: #c37d5d;
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
@@ -498,7 +498,7 @@ a.destaque_links {
 .home-curso-iniciante a, .home-clube a {
   font-family: "Bitter", serif;
   padding: 16px;
-  background: #c37d5d;
+  background: #be495f;
   border-radius: 10px;
   color: #fff;
   font-size: 42px;
@@ -556,7 +556,7 @@ a.destaque_links {
 }
 
 .home-clube {
-  background-color: #708aa0;
+  background-color: #c37d5d;
   padding: 30px;
   text-align: center;
   color: #fff;
@@ -613,7 +613,7 @@ a.destaque_links {
     margin: 0;
   }
   .home-eu div{
-    margin: auto;
+    margin: auto 12px;
   }
   .home-eu div p{
     margin: 12px;
