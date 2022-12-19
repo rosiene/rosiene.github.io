@@ -433,7 +433,7 @@ a.destaque_links {
 }
 
 .home-util {
-  background-color: #caa175;
+  background-color: #708aa0;
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
@@ -509,7 +509,7 @@ a.destaque_links {
   color: #fff;
   padding: 30px;
   text-align: center;
-  background-color: #e49dac;
+  background-color: #a44030;
 }
 .home-eu div:first-of-type {
   padding: 30px 0;
@@ -528,7 +528,7 @@ a.destaque_links {
 
 .home-trico {
   color: #fff;
-  background-color: #708aa0;
+  background-color: #a44030;
   padding: 30px;
   text-align: center;
 }
@@ -556,7 +556,7 @@ a.destaque_links {
 }
 
 .home-clube {
-  background-color: #caa175;
+  background-color: #708aa0;
   padding: 30px;
   text-align: center;
   color: #fff;
