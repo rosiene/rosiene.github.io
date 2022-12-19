@@ -548,6 +548,10 @@ a.destaque_links {
   display: none;
 }
 
+.home-clube {
+  background-color: #be495f;
+}
+
 @media only screen and (min-width: 1024px) {
 
   h1 {
@@ -611,6 +615,7 @@ a.destaque_links {
     display: block;
   }
 }
+
 
 @media print {
 
