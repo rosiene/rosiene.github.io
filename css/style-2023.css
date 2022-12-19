@@ -433,7 +433,7 @@ a.destaque_links {
 }
 
 .home-util {
-  background-color: #c37d5d;
+  background-color: #caa175;
   color: #ffffff;
   justify-content: center;
   flex-wrap: wrap;
@@ -498,7 +498,7 @@ a.destaque_links {
 .home-curso-iniciante a, .home-clube a {
   font-family: "Bitter", serif;
   padding: 16px;
-  background: #be495f;
+  background: #be495f ;
   border-radius: 10px;
   color: #fff;
   font-size: 42px;
