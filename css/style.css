@@ -678,6 +678,7 @@ a.destaque_links {
 }
 
 .landing-lista {
+  background-color: #79a9a6;
   padding: 30px;
 }
 
@@ -844,7 +845,6 @@ a.destaque_links {
     width: 600px;
   }
   .landing-lista, .landing-comentarios {
-    background-color: #79a9a6;
     padding: 50px 20%;
   }
   .cta-final {

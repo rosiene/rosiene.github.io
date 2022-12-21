@@ -247,7 +247,7 @@ URL:      www.rosiene.com.br
           </b:widget>
         </b:section>
       </b:if>
-
+      <b:if cond='!data:view.isHomepage'>
       <b:section class='main' id='main' name='Main' showaddelement='no'>
         <b:widget id='Blog1' locked='true' title='Postagens no blog' type='Blog' version='1'>
           <b:widget-settings>
@@ -1020,7 +1020,7 @@ URL:      www.rosiene.com.br
   </b:includable>
         </b:widget>
       </b:section>
-
+</b:if>
         <b:section id='bottom'>
           <b:widget id='HTML1' locked='false' title='Footer' type='HTML' version='1'>
             <b:widget-settings>
