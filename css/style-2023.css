@@ -528,7 +528,9 @@ a.destaque_links {
 
 .home-trico {
   color: #fff;
-  background-color: #a44030;
+  background-image: url(https://rosiene.github.io/img/fundo-trico.jpg);
+  background-size: 100%;
+  background-position: center;
   padding: 30px;
   text-align: center;
 }
