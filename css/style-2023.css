@@ -706,6 +706,7 @@ a.destaque_links {
 }
 
 .sobre-mim {
+  background-color: #a44030;
   padding: 30px;
   text-align: center;
   color: #fff;
@@ -724,6 +725,14 @@ a.destaque_links {
   font-size: 24px;
   line-height: 2;
   padding-bottom: 16px;
+}
+
+#blog-pager {
+  margin: 0;
+}
+
+.fundo-verde-claro {
+  background: #98bcba;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -795,6 +804,7 @@ a.destaque_links {
 
   .cta-topo {
     display: flex;
+    background-color: #79a9a6;
   }
   .cta-topo div {
     padding: 50px;
@@ -815,6 +825,7 @@ a.destaque_links {
     margin: 20px;
   }
   .landing-texto-imagem {
+    background-color: #a44030;
     display: flex;
     padding: 0 16%;
   }
@@ -833,6 +844,7 @@ a.destaque_links {
     width: 600px;
   }
   .landing-lista, .landing-comentarios {
+    background-color: #79a9a6;
     padding: 50px 20%;
   }
   .cta-final {
