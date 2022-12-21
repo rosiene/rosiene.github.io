@@ -153,7 +153,9 @@ p {
 }
 
 footer {
-  background-color: #a44030;
+  background-image: url(https://rosiene.github.io/img/fundo-trico.jpg);
+  background-size: 100%;
+  background-position: center;
   color: #ffffff;
   text-align: center;
   padding: 50px 0 30px 0;
@@ -528,9 +530,7 @@ a.destaque_links {
 
 .home-trico {
   color: #fff;
-  background-image: url(https://rosiene.github.io/img/fundo-trico.jpg);
-  background-size: 100%;
-  background-position: center;
+  background-color: #a44030;
   padding: 30px;
   text-align: center;
 }
