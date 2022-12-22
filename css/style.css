@@ -648,6 +648,7 @@ a.destaque_links {
 }
 
 .landing-texto-imagem {
+  background-color: #a44030;
   color: #fff;
   padding: 30px 30px 0 30px;
   text-align: center;
@@ -827,7 +828,6 @@ a.destaque_links {
     margin: 20px;
   }
   .landing-texto-imagem {
-    background-color: #a44030;
     display: flex;
     padding: 0 16%;
   }
