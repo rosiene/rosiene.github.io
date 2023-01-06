@@ -291,6 +291,7 @@ form.gsc-search-box{
 .post-container{
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .post-item {
@@ -738,6 +739,7 @@ a.destaque_links {
 .fundo-verde-claro {
   background: #98bcba;
 }
+
 
 @media only screen and (min-width: 1024px) {
 
