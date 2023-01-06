@@ -455,7 +455,7 @@ a.destaque_links {
   flex: 1 0 34%;
 }
 
-.home-util a {
+.home-util a, .home-clube-beneficios a.beneficios {
   color: #ffffff;
   text-decoration: none;
 
@@ -465,7 +465,7 @@ a.destaque_links {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.home-util a:hover h2 {
+.home-util a:hover h2, .home-clube-beneficios a.beneficios:hover h2 {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
