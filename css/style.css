@@ -495,7 +495,7 @@ a.destaque_links {
   display: inline-block;
 }
 
-.home-curso-iniciante a, .home-clube a {
+.home-curso-iniciante a, .home-clube a.seja-membro {
   font-family: "Bitter", serif;
   padding: 16px;
   background: #be495f ;
