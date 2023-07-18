@@ -23,11 +23,11 @@ $( document ).ready(function() {
         }
 
       }else{
-        $('.amostra_pontos').css('color','#ffffff');
+        $('.amostra_pontos').css('color','#241f20');
         $('#amostraPontos').css('border',' 1px solid #ddd');
-        $('.pto_multiplo').css('color','#ffffff');
+        $('.pto_multiplo').css('color','#241f20');
         $('#ptoMultiplo').css('border',' 1px solid #ddd');
-        $('.tamanho').css('color','#ffffff');
+        $('.tamanho').css('color','#241f20');
         $('#tamanho').css('border',' 1px solid #ddd');
 
         var amostraPontos = parseInt(document.getElementById("amostraPontos").value);
