@@ -1,11 +1,172 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
-    <script src='https://rosiene.github.io/js/topdown.js'/>
-    <title>My Basic Page</title>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/topdown.js"></script>
+    <script src="js/geradorTexto.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <title>Teste Top Down</title>
+    <style>
+      body {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 16px;
+      }
+      fieldset {
+        margin: 20px auto;
+      }
+      input {
+        margin: 6px auto;
+      }
+      .formulario, .resultado {
+        width: 960px;
+        margin: 50px auto;
+
+      }
+      .resultado{
+        line-height: 28px;
+      }
+      .sessao_peca {
+        line-height: 42px;
+      }
+      </style>
   </head>
   <body>
-    <h1>Teste Top Down</h1>
+    <form class="formulario">
+      <h1>Top Down: Minha Receita Pronta</h1>
+
+      <!--
+      <fieldset>
+        <legend>AMOSTRA</legend>
+        <div>
+          <label for="pts_amostra" class="pts_amostra">Nº de pontos na amostra (10 cm):</label>
+          <input type="number" id="ptsAmostra" name="pts_amostra" />
+        </div>
+        <div>
+        <label for="carr_amostra" class="carr_amostra">Nº de carreiras/voltas na amostra (10 cm):</label>
+        <input type="number" id="carrAmostra" name="carr_amostra" />
+      </div>
+      <div>
+      </fieldset>
+
+        <fieldset>
+          <legend>GOLA REDONDA</legend>
+
+          <div>
+            <label for="cm_gola" class="cm_gola">Circunferência da gola (cm):</label>
+            <input type="number" id="cmGola" name="cm_gola" />
+          </div>
+
+          <div>
+            <label for="cm_comp_gola" class="cm_comp_gola">Comprimento da gola (cm):</label>
+            <input type="number" id="cmCompGola" name="cm_comp_gola" />
+          </div>
+
+          <div>
+            <label for="cm_comp_dif_gola" class="cm_comp_dif_gola">Comprimento da diferença da gola (cm):</label>
+            <input type="number" id="cmCompDifGola" name="cm_comp_dif_gola" />
+          </div>
+
+        </fieldset>
+        <fieldset>
+          <legend>PALA</legend>
+
+          <div>
+            <input type="radio" id="circular" name="pala" value="circular" disabled />
+            <label for="circular">Circular</label>
+          </div>
+
+          <div>
+            <input type="radio" id="contiguos" name="pala" value="contiguos" disabled />
+            <label for="contiguos">Contíguos</label>
+          </div>
+
+          <div>
+            <input type="radio" id="raglan" name="pala" value="raglan" checked />
+            <label for="raglan">Raglan</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>RAGLAN</legend>
+
+            <div>
+              <label for="pts_divisao" class="pts_divisao">Nº de pontos da divisão (Entre 0 e 2):</label>
+              <input type="number" id="ptsDivisao" name="pts_divisao" min="0" max="2" />
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>DIVISÃO DA PALA</legend>
+
+            <div>
+              <label for="pts_cava" class="pts_cava">Nº de pontos da cava (par):</label>
+              <input type="number" id="ptsCava" name="pts_cava" step="2" />
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>CORPO</legend>
+
+          <div>
+           <label for="cm_corpo" class="cm_corpo">Circunferência do corpo (cm):</label>
+           <input type="number" id="cmCorpo" name="cm_corpo" />
+          </div>
+
+           <div>
+             <label for="cm_comp_corpo" class="cm_comp_corpo">Comprimento do corpo (cm):</label>
+             <input type="number" id="cmCompCorpo" name="cm_comp_corpo" />
+           </div>
+
+          <div>
+            <label for="cm_comp_corpo" class="cm_comp_corpo">Comprimento do corpo (cm):</label>
+            <input type="number" id="cmCompCorpo" name="cm_comp_corpo" />
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>MANGAS</legend>
+
+          <div>
+            <label for="cm_manga" class="cm_manga">Circunferência da manga (cm):</label>
+            <input type="number" id="cmManga" name="cm_manga" />
+          </div>
+
+          <div>
+            <label for="cm_comp_manga" class="cm_comp_manga">Comprimento da manga (cm):</label>
+            <input type="number" id="cmCompManga" name="cm_comp_manga" />
+          </div>
+
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>PONTO</legend>
+
+          <div>
+            <label for="estilo_punho" class="estilo_punho">Ponto empregado na gola, punho e barra final:</label>
+            <div>
+              <input type="radio" id="barra1" name="estilo_punho" value="barra1" />
+              <label for="barra1">Barra 1/1</label>
+            </div>
+
+            <div>
+              <input type="radio" id="barra2" name="estilo_punho" value="barra2" />
+              <label for="barra2">Barra 2/2</label>
+            </div>
+          </div>
+        </fieldset>
+        -->
+
+        <div>
+          <input type="submit" value="Calcular" id="calcular" />
+    </div>
+  </form>
+  <div class="resultado"></div>
+
   </body>
 </html>
