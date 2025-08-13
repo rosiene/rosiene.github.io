@@ -15,16 +15,15 @@ function gerarLegenda(){
   return "<b>ABREVIAÇÕES: </b></br>"
     +"</br>"
     +"<b>[marc]</b> posicionar ou mover o marcador, "
-    +"<b>1sf</b> passar 1 ponto sem fazer, "
     +"<b>2jm</b> 2 pontos juntos em meia, "
     +"<b>aumD</b> aumento em meia direcional para a direta, "
     +"<b>aumE</b> aumento em meia direcional para a esquerda, "
     +"<b>carr.</b> carreira(s), "
-    +"<b>laç</b> laçada, "
     +"<b>m</b> meia, "
     +"<b>ms</b> mate simples, "
     +"<b>pt(s)</b> ponto(s), "
-    +"<b>t</b> tricô.</br>";
+    +"<b>t</b> tricô, "
+    +"<b>v.</b> volta(s).</br>";
 }
 
 function gerarInstrucao(){
@@ -58,6 +57,7 @@ function gerarInstrucaoPreparacaoRaglan(ptsDivisao,
                                         ptsCostas1,
                                         ptsCostas2,
                                         ptsManga){
+
   return "<b class='sessao_peca'>Pala:</b></br>"
     + "Tecer a carreira de preparação fazendo a divisão do raglan: </br>"
     + identacaoInicio
@@ -102,13 +102,13 @@ function gerarInstrucaoRaglan(nVoltas,
                               ptsFinal,
                               ptsDivisao){
   return "Tecer as duas voltas abaixo por "
-    + nVoltas + " voltas, até ter "
-    + ptsFinal + " pts nas agulhas: </br>"
-    + identacaoInicio
-    + "<b>1ª v.:</b> * m até o próximo marc., aumD, [marc B], "
-    + ptsDivisao + "m, [marc B], aumE, *, rep. de * a * por 4 vezes, todos em m até o final.</br>"
-    + "<b>2ª v.:</b> todos em m."
-    + identacaoFinal;
+      + nVoltas + " voltas, até ter "
+      + ptsFinal + " pts nas agulhas: </br>"
+      + identacaoInicio
+      + "<b>1ª v.:</b> * m até o próximo marc., aumD, [marc B], "
+      + ptsDivisao + "m, [marc B], aumE, *, rep. de * a * por 4 vezes, todos em m até o final.</br>"
+      + "<b>2ª v.:</b> todos em m."
+      + identacaoFinal;
 }
 
 function gerarInstrucaoDivisaoRaglan(ptsFinalRaglan,
@@ -202,14 +202,14 @@ function gerarInstrucoesMangasAjustadas(ptsManga,
 
   if (vAntesDiminuicoesManga > 0){
     texto += "Tecer por "
-      + vAntesDiminuicoesManga + " v. em <b><i>m</i></b>. </br>"
+      + vAntesDiminuicoesManga + " v. em <b><i>m</i></b>. "
   }
 
   texto += "Em seguida, iniciar a sequência de diminuições definindo "
   + "como ponto central na direção abaixo da axila e sempre "
   + "seguindo o ponto central, intercalando as diminuições a cada "
-  + intervaloDiminuicoes + " v., e também intercalando as diminuições entre ms e 2jm. <br>"
-  + "Tecer as diminuições até a manga ter "
+  + intervaloDiminuicoes + " v., e também intercalando as diminuições entre <b><i>ms</i></b> e <b><i>2jm</b></i>, "
+  + "até a manga ter "
   + vComprimentoManga + " v. com total de "
   + totalDiminuicoes + " diminuições. <br>"
   + "Com "

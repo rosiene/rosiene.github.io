@@ -17,6 +17,7 @@
       }
       input {
         margin: 6px auto;
+        width: 100%;
       }
       .formulario, .resultado {
         width: 960px;
@@ -24,7 +25,7 @@
 
       }
       .resultado{
-        line-height: 28px;
+        line-height: 36px;
       }
       .sessao_peca {
         line-height: 42px;
@@ -35,20 +36,29 @@
     <form class="formulario">
       <h1>Top Down: Minha Receita Pronta</h1>
 
-      <!--
+      <fieldset>
+        <legend>Minha Receita:</legend>
+        <div>
+          <label for="nome_projeto" class="nome_projeto">Nome do Projeto*:</label>
+          <input type="text" id="nomeProjeto" name="nome_projeto" required />
+        </div>
+      <div>
+      </fieldset>
+
       <fieldset>
         <legend>AMOSTRA</legend>
         <div>
-          <label for="pts_amostra" class="pts_amostra">Nº de pontos na amostra (10 cm):</label>
-          <input type="number" id="ptsAmostra" name="pts_amostra" />
+          <label for="pts_amostra" class="pts_amostra">Nº de pontos na amostra (10 cm)*:</label>
+          <input type="number" id="ptsAmostra" name="pts_amostra" required />
         </div>
         <div>
-        <label for="carr_amostra" class="carr_amostra">Nº de carreiras/voltas na amostra (10 cm):</label>
-        <input type="number" id="carrAmostra" name="carr_amostra" />
+        <label for="carr_amostra" class="carr_amostra">Nº de carreiras/voltas na amostra (10 cm)*:</label>
+        <input type="number" id="carrAmostra" name="carr_amostra" required />
       </div>
       <div>
       </fieldset>
 
+            <!--
         <fieldset>
           <legend>GOLA REDONDA</legend>
 
@@ -163,7 +173,7 @@
         -->
 
         <div>
-          <input type="submit" value="Calcular" id="calcular" />
+          <input type="submit" value="Calcular" id="calcular" onsubmit="myFunction(event)" />
     </div>
   </form>
   <div class="resultado"></div>
