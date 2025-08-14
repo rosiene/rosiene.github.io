@@ -8,7 +8,7 @@ $( document ).ready(function() {
   var nomeProjeto = getNomeProjeto(urlParams);
   console.log(nomeProjeto);
 
-  if(nomeProjeto != '' || nomeProjeto != null){
+  if(nomeProjeto != '' && nomeProjeto != null){
 
     console.log("iniciado");
 
@@ -16,39 +16,46 @@ $( document ).ready(function() {
     var carrAmostra = getAmostraCarr(urlParams);
     var padraoBarra = 'barra1';
 
-      //Gola
-      var cmCircunferenciaGola = 60;
-      var cmComprimentoGola = 4;
-      var ptsGola = gerarPtsCircunferencia(ptsAmostra, cmCircunferenciaGola, padraoBarra);
-      var nVoltasGola = gerarNdeVoltas(carrAmostra, cmComprimentoGola);
+    // GOLA
+    var cmCircunferenciaGola = getGolaCircunferencia(urlParams);
+    var cmComprimentoGola = getGolaComprimento(urlParams);
+    var cmGolaAjustada = getGolaComprimentoDiferenca(urlParams)
 
-      //Corpo
-      var cmCircunferencisCorpo = 99;
-      var ptsCorpo = gerarPtsCircunferencia(ptsAmostra, cmCircunferencisCorpo, padraoBarra);
-      var cmComprimentoCorpo = 30;
-      var cmComprimentoBarraCorpo = 10;
-      var vComprimentoCorpo = gerarNdeVoltas(carrAmostra, cmComprimentoCorpo);
-      var vComprimentoBarraCorpo = gerarNdeVoltas(carrAmostra, cmComprimentoBarraCorpo);
+    // GOLA CÁLCULOS
+    var ptsGola = gerarPtsCircunferencia(ptsAmostra, cmCircunferenciaGola, padraoBarra);
+    var nVoltasGola = gerarNdeVoltas(carrAmostra, cmComprimentoGola);
+    var carrGolaAjustada = viraPar(gerarNdeVoltas(carrAmostra, cmGolaAjustada));
 
-      //Manga
-      var cmCircunferenciaManga = 32;
-      var ptsCircunferenciaManga = gerarPtsCircunferencia(ptsAmostra, cmCircunferenciaManga, padraoBarra);
-      var cmComprimentoManga = 40;
-      var cmComprimentoBarraManga = 8;
-      var cmCircunferenciaPunho = 19;
+    //CORPO
+    var cmCorpoCircunferencia = getCmCorpoCircunferencia(urlParams);
+    var cmCorpoComprimento = getCmCorpoComprimento(urlParams);
+    var cmCorpoComprimentoBarra = getCmCorpoComprimentoBarra(urlParams);
 
-      var vComprimentoManga = gerarNdeVoltas(carrAmostra, cmComprimentoManga);
-      var vComprimentoBarraManga = gerarNdeVoltas(carrAmostra, cmComprimentoBarraManga);
+    // CORPO CÁLCULO
+    var ptsCorpo = gerarPtsCircunferencia(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
+    var vComprimentoCorpo = gerarNdeVoltas(carrAmostra, cmCorpoComprimento);
+    var vComprimentoBarraCorpo = gerarNdeVoltas(carrAmostra, cmCorpoComprimentoBarra);
 
-      var mangaAjustada = true;
 
-      var ptsCircunferenciaPunho = gerarPtsCircunferencia(ptsAmostra, cmCircunferenciaPunho, padraoBarra);
-      var totalDiminuicoes = ptsCircunferenciaManga - ptsCircunferenciaPunho;
-      var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vComprimentoManga);
-      var vAntesDiminuicoesManga = vComprimentoManga - (intervaloDiminuicoesManga * totalDiminuicoes);
+    //MANGA
+    var cmMangaCircunferencia = getCmMangaCircunferencia(urlParams);
+    var cmMangaComprimento = getCmMangaComprimento(urlParams);
+    var cmMangaComprimentoBarra = getCmMangaComprimentoBarra(urlParams);
+    var cmCircunferenciaPunho = 19;
+
+    var ptsCircunferenciaManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
+    var vComprimentoManga = gerarNdeVoltas(carrAmostra, cmMangaComprimento);
+    var vComprimentoBarraManga = gerarNdeVoltas(carrAmostra, cmMangaComprimentoBarra);
+
+    var mangaAjustada = true;
+
+    var ptsCircunferenciaPunho = gerarPtsCircunferencia(ptsAmostra, cmCircunferenciaPunho, padraoBarra);
+    var totalDiminuicoes = ptsCircunferenciaManga - ptsCircunferenciaPunho;
+    var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vComprimentoManga);
+    var vAntesDiminuicoesManga = vComprimentoManga - (intervaloDiminuicoesManga * totalDiminuicoes);
 
       //PALA
-      var ptsCava = 4;
+      var ptsCava = getCava(ptsAmostra);
 
       var ptsFinalRaglan = gerarNdePtsFinalRaglan(ptsCorpo, ptsCircunferenciaManga, ptsCava);
       var nVoltasRaglan = gerarNdeVoltasRaglan(ptsGola, ptsFinalRaglan);
@@ -70,8 +77,6 @@ $( document ).ready(function() {
 
 
       //GOLA AJUSTADA
-      var cmGolaAjustada = 0;
-      var carrGolaAjustada = viraPar(gerarNdeVoltas(carrAmostra, cmGolaAjustada));
 
       var ptsCadaLateralFrenteInicio = parseInt(ptsCorpoFrenteInicioPala / 3);
       var ptsCadaLateralFrenteFinalCarrEncurtada = gerarPtsCadaLateralFrenteFinalCarrEncurtada(ptsCadaLateralFrenteInicio, carrGolaAjustada);
@@ -190,4 +195,66 @@ function getAmostraPts(url){
 
 function getAmostraCarr(url){
   return url.get('carr_amostra');
+}
+
+function getGolaCircunferencia(url){
+  return url.get('cm_gola');
+}
+
+function getGolaComprimento(url){
+  return url.get('cm_comp_gola');
+}
+
+function getGolaComprimentoDiferenca(url){
+  return url.get('cm_comp_dif_gola');
+}
+
+function getCava(ptsAmostra){
+  if (ptsAmostra <= 12){
+    return 4;
+  }else if(ptsAmostra <= 16){
+    return 6;
+  }else if(ptsAmostra <= 20){
+    return 8;
+  }else if(ptsAmostra <= 24){
+    return 10;
+  }else{
+    return 12;
+  }
+}
+
+function getCmCorpoCircunferencia(url){
+  return url.get('cm_corpo_circunferencia');
+}
+
+function getCmCorpoComprimento(url){
+  return url.get('cm_corpo_comprimento');
+}
+
+function getCmCorpoComprimentoBarra(url){
+  return url.get('cm_corpo_comprimento_barra');
+}
+
+function getCmMangaCircunferencia(url){
+  return url.get('cm_manga_circunferencia');
+}
+
+function getCmMangaComprimento(url){
+  return url.get('cm_manga_comprimento');
+}
+
+function getCmMangaComprimentoBarra(url){
+  return url.get('cm_manga_comprimento_barra');
+}
+
+function atualizarTipoManga(radio){
+  var punho = document.getElementById('punho');
+  var punhoInput = document.getElementById('cmPunhoCircunferencia');
+  if(radio.value == 'manga_curta'){
+    punho.style.display = 'none';
+    punhoInput.attributes.required = false;
+  }else{
+    punho.style.display = 'block';
+    punhoInput.attributes.required = true;
+  }
 }

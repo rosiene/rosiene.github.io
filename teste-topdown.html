@@ -10,14 +10,37 @@
     <style>
       body {
         font-family: 'PT Sans', sans-serif;
+        color: #241f20;
         font-size: 16px;
       }
       fieldset {
         margin: 20px auto;
+        border: 1px dotted #f6d7b2;
       }
-      input {
+      fieldset legend {
+        font-size: 20px;
+        font-weight: 600;
+        color: #db7f10;
+      }
+      fieldset div {
+        margin: 12px auto;
+      }
+      input[type=text], input[type=number] {
         margin: 6px auto;
         width: 100%;
+      }
+      input[type=radio]{
+        margin: 6px auto;
+      }
+      input[type=submit] {
+        background: #db7f10;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        color: #fff;
+        border: 1px;
+        padding: 16px;
+        border-radius: 12px;
       }
       .formulario, .resultado {
         width: 960px;
@@ -30,6 +53,15 @@
       .sessao_peca {
         line-height: 42px;
       }
+      .explicacao_input {
+        color: #666;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0;
+      }
+      .punho {
+        display: none;
+      }
       </style>
   </head>
   <body>
@@ -37,7 +69,7 @@
       <h1>Top Down: Minha Receita Pronta</h1>
 
       <fieldset>
-        <legend>Minha Receita:</legend>
+        <legend>MINHA RECEITA:</legend>
         <div>
           <label for="nome_projeto" class="nome_projeto">Nome do Projeto*:</label>
           <input type="text" id="nomeProjeto" name="nome_projeto" required />
@@ -58,61 +90,33 @@
       <div>
       </fieldset>
 
-            <!--
         <fieldset>
-          <legend>GOLA REDONDA</legend>
+          <legend>GOLA</legend>
 
           <div>
-            <label for="cm_gola" class="cm_gola">Circunferência da gola (cm):</label>
-            <input type="number" id="cmGola" name="cm_gola" />
+            <label for="cm_gola" class="cm_gola">Circunferência da gola (cm)*:</label>
+            <input type="number" id="cmGola" name="cm_gola" required />
           </div>
 
           <div>
-            <label for="cm_comp_gola" class="cm_comp_gola">Comprimento da gola (cm):</label>
-            <input type="number" id="cmCompGola" name="cm_comp_gola" />
+            <label for="cm_comp_gola_barra" class="cm_comp_gola">Comprimento da barra (cm)*:</label>
+            <input type="number" id="cmCompGolaBarra" name="cm_comp_gola_barra" required />
           </div>
 
           <div>
-            <label for="cm_comp_dif_gola" class="cm_comp_dif_gola">Comprimento da diferença da gola (cm):</label>
-            <input type="number" id="cmCompDifGola" name="cm_comp_dif_gola" />
+            <label for="cm_comp_dif_gola" class="cm_comp_dif_gola">Comprimento da diferença do pescoço (cm)*:</label>
+            <p class="explicacao_input">Colocar 0 (zero) caso a escolha seja sem as carreiras encurtadas.</p>
+            <input type="number" id="cmCompDifGola" name="cm_comp_dif_gola" required />
           </div>
 
         </fieldset>
-        <fieldset>
-          <legend>PALA</legend>
-
-          <div>
-            <input type="radio" id="circular" name="pala" value="circular" disabled />
-            <label for="circular">Circular</label>
-          </div>
-
-          <div>
-            <input type="radio" id="contiguos" name="pala" value="contiguos" disabled />
-            <label for="contiguos">Contíguos</label>
-          </div>
-
-          <div>
-            <input type="radio" id="raglan" name="pala" value="raglan" checked />
-            <label for="raglan">Raglan</label>
-          </div>
-        </fieldset>
 
         <fieldset>
-            <legend>RAGLAN</legend>
+          <legend>PALA RAGLAN</legend>
 
             <div>
-              <label for="pts_divisao" class="pts_divisao">Nº de pontos da divisão (Entre 0 e 2):</label>
-              <input type="number" id="ptsDivisao" name="pts_divisao" min="0" max="2" />
-            </div>
-
-        </fieldset>
-
-        <fieldset>
-            <legend>DIVISÃO DA PALA</legend>
-
-            <div>
-              <label for="pts_cava" class="pts_cava">Nº de pontos da cava (par):</label>
-              <input type="number" id="ptsCava" name="pts_cava" step="2" />
+              <label for="pts_divisao" class="pts_divisao">Nº de pontos da divisão (Entre 1 e 2)*:</label>
+              <input type="number" id="ptsDivisao" name="pts_divisao" min="1" max="2" required />
             </div>
 
         </fieldset>
@@ -121,18 +125,18 @@
           <legend>CORPO</legend>
 
           <div>
-           <label for="cm_corpo" class="cm_corpo">Circunferência do corpo (cm):</label>
-           <input type="number" id="cmCorpo" name="cm_corpo" />
+           <label for="cm_circunferencia_corpo" class="cm_circunferencia_corpo">Circunferência do corpo (cm):</label>
+           <input type="number" id="cmCircunferenciaCorpo" name="cm_circunferencia_corpo" required />
           </div>
 
            <div>
-             <label for="cm_comp_corpo" class="cm_comp_corpo">Comprimento do corpo (cm):</label>
-             <input type="number" id="cmCompCorpo" name="cm_comp_corpo" />
+             <label for="cm_comp_corpo" class="cm_comp_corpo">Comprimento total do corpo a partir da cava (cm)*:</label>
+             <input type="number" id="cmCompCorpo" name="cm_comp_corpo" required />
            </div>
 
           <div>
-            <label for="cm_comp_corpo" class="cm_comp_corpo">Comprimento do corpo (cm):</label>
-            <input type="number" id="cmCompCorpo" name="cm_comp_corpo" />
+            <label for="cm_comp_corpo_barra" class="cm_comp_corpo_barra">Comprimento da barra (cm):</label>
+            <input type="number" id="cmCompCorpoBarra" name="cm_comp_corpo_barra" required />
           </div>
 
         </fieldset>
@@ -141,18 +145,44 @@
           <legend>MANGAS</legend>
 
           <div>
-            <label for="cm_manga" class="cm_manga">Circunferência da manga (cm):</label>
-            <input type="number" id="cmManga" name="cm_manga" />
+            <label for="cm_manga" class="tipo_manga">Tipo de manga:</label>
+            <div>
+              <input type="radio" id="mangaCurta" name="tipo_manga" value="manga_curta" checked onclick="atualizarTipoManga(this)" />
+              <label for="manga_curta">Manga Curta</label>
+            </div>
+            <div>
+              <input type="radio" id="mangaCompridaReta" name="tipo_manga" value="manga_comprida_reta" onclick="atualizarTipoManga(this)" />
+              <label for="manga_comprida_reta">Manga Comprida Reta com Ajuste no Punho</label>
+            </div>
+            <div>
+              <input type="radio" id="mangaCompridaAjustada" name="tipo_manga" value="manga_comprida_ajustada" onclick="atualizarTipoManga(this)" />
+              <label for="manga_comprida_ajustada">Manga Comprida Ajustada no Comprimento</label>
+            </div>
+          </div>
+          <br/>
+          <div>
+            <label for="cm_manga_circunferencia" class="cm_manga_circunferencia">Circunferência da manga (cm)*:</label>
+            <input type="number" id="cmManga" name="cm_manga_circunferencia" required />
           </div>
 
           <div>
-            <label for="cm_comp_manga" class="cm_comp_manga">Comprimento da manga (cm):</label>
-            <input type="number" id="cmCompManga" name="cm_comp_manga" />
+            <label for="cm_manga_comprimento" class="cm_manga_comprimento">Comprimento total da manga a partir da cava (cm)*:</label>
+            <input type="number" id="cmMangaComprimento" name="cm_manga_comprimento" required />
           </div>
 
+          <div>
+            <label for="cm_manga_comprimento_barra" class="cm_manga_comprimento_barra">Comprimento da barra (cm)*:</label>
+            <input type="number" id="cmMangaComprimentoBarra" name="cm_manga_comprimento_barra" required />
+          </div>
+
+          <div class="punho" id="punho">
+            <label for="cm_punho_circunferencia " class="cm_punho_circunferencia">Circunferência do Punho (cm)*:</label>
+            <input type="number" id="cmPunhoCircunferencia" name="cm_punho_circunferencia" />
           </div>
 
         </fieldset>
+
+        <!--
 
         <fieldset>
           <legend>PONTO</legend>
