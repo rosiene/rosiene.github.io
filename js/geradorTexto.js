@@ -1,19 +1,23 @@
 var identacaoInicio = "<div style='margin: 12px 0px 12px 28px'>"
 var identacaoFinal = "</div>";
 
-function gerarTitulo(titulo){
-  return "<h1>"+titulo+"</h1>";
+function gerarTitulo(titulo, descricao){
+  console.log("descricao" + descricao);
+  if (descricao != ""){
+    return "<h1>"+titulo+"</h1><h4>" + descricao + "</h4>";
+  }else{
+    return "<h1>"+titulo+"</h1>";
+  }
 }
 
 function gerarAmostra(ptsAmostra, carrAmostra){
-  return "<b>AMOSTRA:</b> 10 cm x 10 cm = "
+  return "<h5>AMOSTRA:</h5> 10 cm x 10 cm = "
     + ptsAmostra + " pts e "
     + carrAmostra + " v./carr. no ponto malha.<br/>";
 }
 
 function gerarLegenda(){
-  return "<b>ABREVIAÇÕES: </b></br>"
-    +"</br>"
+  return "<h5>ABREVIAÇÕES: </h5>"
     +"<b>[marc]</b> posicionar ou mover o marcador, "
     +"<b>2jm</b> 2 pontos juntos em meia, "
     +"<b>aumD</b> aumento em meia direcional para a direta, "
@@ -27,7 +31,7 @@ function gerarLegenda(){
 }
 
 function gerarInstrucao(){
-  return "<b>INSTRUÇÕES: </b></br>";
+  return "<h5>INSTRUÇÕES: </h5>";
 }
 
 function gerarInstrucaoMontagem(ptsGola){
@@ -225,7 +229,14 @@ function gerarInstrucoesMangasAjustadas(ptsManga,
     texto += "* 2m, 2t *, rep. de * a * até o final."
   }
   texto += identacaoFinal;
-  texto += "Fazer com o arremate dos pontos.";
+  texto += "Fazer com o arremate dos pontos.</br>";
 
   return texto;
+}
+
+function consideracoesFinais(){
+  return "<div class='rodape'>Essa receita é uma criação de Rosiene Dilly.</br>"
+    + "É proibida a cópia, distribuição ou reprodução total ou parcial "
+    + "deste material sem autorização prévia do autor por escrito. "
+    + "É permitida a venda de peças feitas a partir desta receita.</div>";
 }
