@@ -56,9 +56,9 @@ input[type=submit]:active {
   background-color: #fff;
   border-radius: 20px;
 }
-.erro {
-  border: 2px red ridge;
-  border-radius: 2px;
+.erro_form {
+  color: red;
+  display: none;
 }
 .cabecalho {
   text-align: center;

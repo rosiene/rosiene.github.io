@@ -27,24 +27,27 @@ function validarInputsOnSubmit(){
 function validacaoCampoObrigatorioOnSubmit(input){
   console.log(input.id);
   // console.log(input.classList.value);
+  var spamErro = document.getElementById('erroForm');
 
-  if((input.classList.value == "obrigatorio" || input.classList.value == "obrigatorio erro") && input.value == ''){
-    input.classList.add('erro');
+  if(input.classList.value == "obrigatorio" && input.value == ''){
+    input.style.border = '2px red ridge';
+    spamErro.style.display = 'block';
     return false;
   }else{
-    input.classList.remove('erro');
+    input.style.border = '2px #241f20 ridge';
+    spamErro.style.display = 'none';
     return true;
   }
 }
 
 function validacaoCampoObrigatorioOnInput(e){
-  // console.log(e.target.value);
+  console.log(e.target);
 
-  if((e.target.classList.value == "obrigatorio" || e.target.classList.value == "obrigatorio erro") && e.target.value == ''){
-    e.target.classList.add('erro');
+  if(e.target.classList.value == "obrigatorio" && e.target.value == ''){
+    e.target.style.border = '2px red ridge';
     return false;
   }else{
-    e.target.classList.remove('erro');
+    e.target.style.border = '2px #241f20 ridge';
     return true;
   }
 }

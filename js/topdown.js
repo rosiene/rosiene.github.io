@@ -6,10 +6,8 @@ $( document ).ready(function() {
 
   validarInputsOnInput();
 
-
   calcular.addEventListener("click", function(event){
     event.preventDefault();
-
     console.log(validarInputsOnSubmit());
 
   });
