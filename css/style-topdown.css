@@ -2,6 +2,7 @@ body {
   font-family: 'PT Sans', sans-serif;
   color: #241f20;
   font-size: 40px;
+  background-color: #fff;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;
@@ -24,11 +25,16 @@ fieldset div {
   padding: 10px;
 }
 input[type=text], input[type=number] {
-  margin: 6px auto;
+  border: 2px #241f20 ridge;
+  margin: 10px auto;
+  padding: 4px;
   width: 100%;
+  border-radius: 10px;
 }
 input[type=radio]{
   margin: 6px auto;
+  width: 30px;
+  height: 30px;
 }
 input[type=submit] {
   background: #db7f10;
@@ -39,6 +45,16 @@ input[type=submit] {
   border: 1px;
   padding: 16px;
   border-radius: 12px;
+  cursor: pointer;
+}
+input[type=submit]:active {
+  background: #241f20;
+}
+
+.conteudo{
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 20px;
 }
 .erro {
   border: 2px red ridge;
@@ -63,8 +79,7 @@ input[type=submit] {
   font-style: italic;
 }
 .formulario, .resultado {
-  width: 960px;
-  margin: 50px auto;
+  padding: 20px;
 
 }
 .resultado{
@@ -74,10 +89,11 @@ input[type=submit] {
   line-height: 42px;
 }
 .explicacao_input {
+  line-height: 40px;
   color: #666;
-  font-size: 12px;
+  font-size: 30px;
   line-height: 16px;
-  margin: 0;
+  margin: 16px auto;
 }
 .punho {
   display: none;
@@ -92,12 +108,25 @@ input[type=submit] {
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 16px;
+    background-color: #241f20;
   }
   fieldset legend {
     font-size: 20px;
   }
   fieldset div {
     padding: 2px;
+  }
+  input[type=text], input[type=number] {
+    border: 1px #241f20 ridge;
+    border-radius: 6px;
+  }
+  input[type=radio]{
+    margin: 6px auto;
+    width: 12px;
+    height: 12px;
+  }
+  .conteudo{
+    width: 960px;
   }
   .cabecalho {
   padding: 40px 0 0 0;
@@ -113,5 +142,8 @@ input[type=submit] {
   }
   .cabecalho h3{
     font-size: 20px;
+  }
+  .explicacao_input {
+    font-size: 12px;
   }
 }
