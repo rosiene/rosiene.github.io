@@ -1,0 +1,117 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #241f20;
+  font-size: 40px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', sans-serif;
+}
+h5 {
+  font-weight: 600;
+  margin: 28px auto 12px auto;
+}
+fieldset {
+  margin: 20px auto;
+  border: 1px dotted #f6b163;
+}
+fieldset legend {
+  font-size: 48px;
+  font-weight: 600;
+  color: #db7f10;
+}
+fieldset div {
+  margin: 12px auto;
+  padding: 10px;
+}
+input[type=text], input[type=number] {
+  margin: 6px auto;
+  width: 100%;
+}
+input[type=radio]{
+  margin: 6px auto;
+}
+input[type=submit] {
+  background: #db7f10;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px;
+  padding: 16px;
+  border-radius: 12px;
+}
+.erro {
+  border: 2px red ridge;
+  border-radius: 2px;
+}
+.cabecalho {
+  text-align: center;
+  padding: 80px 0 40px 0;
+}
+.cabecalho img{
+  width: 300px;
+}
+.cabecalho h1{
+  font-size: 64px;
+}
+.cabecalho h2{
+  font-size: 36px;
+  font-weight: 600;
+}
+.cabecalho h3{
+  font-size: 36px;
+  font-style: italic;
+}
+.formulario, .resultado {
+  width: 960px;
+  margin: 50px auto;
+
+}
+.resultado{
+  line-height: 36px;
+}
+.sessao_peca {
+  line-height: 42px;
+}
+.explicacao_input {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
+.punho {
+  display: none;
+}
+.rodape {
+  width: 500px;
+  text-align: center;
+  margin: 20px auto;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  fieldset legend {
+    font-size: 20px;
+  }
+  fieldset div {
+    padding: 2px;
+  }
+  .cabecalho {
+  padding: 40px 0 0 0;
+  }
+  .cabecalho img{
+    width: 140px;
+  }
+  .cabecalho h1{
+    font-size: 48px;
+  }
+  .cabecalho h2{
+    font-size: 24px;
+  }
+  .cabecalho h3{
+    font-size: 20px;
+  }
+}

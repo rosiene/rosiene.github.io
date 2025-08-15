@@ -52,7 +52,7 @@ function validacaoCampoObrigatorioOnInput(e){
 function nPontosPalaRaglan(e){
   console.log(e);
 
-  if (e.target.value > 2){
+  if (e.target.value > 2 || e.target.value < 1){
     e.target.classList.add('erro');
   }else{
     e.target.classList.remove('erro');
