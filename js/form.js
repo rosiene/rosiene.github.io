@@ -142,3 +142,20 @@ function nPontosPalaRaglan(e){
     return true;
   }
 }
+
+
+function atualizarTipoManga(radio){
+  var punho = $('#punho');
+  var punhoInput = $('#cmPunhoCircunferencia');
+  if(radio.value == 'manga_curta'){
+    punho.hide();
+    punhoInput.removeClass("obrigatorio");
+  }else{
+    punho.show();
+    punhoInput.addClass("obrigatorio");
+  }
+}
+
+function validacaoCircunferenciaPunho(){
+
+}

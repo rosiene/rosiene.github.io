@@ -27,113 +27,107 @@ $( document ).ready(function() {
 
 
     //Validar os inputs antes de seguir com o resultado
-    //if(validarInputsOnSubmit()){
+    if(validarInputsOnSubmit()){
 
-      //Set variaveis com os resultados do form
-      setValoresReceita();
-      esconderFormulario();
+    //Set variaveis com os resultados do form
+    setValoresReceita();
+    esconderFormulario();
 
-      //GOLA
+    //GOLA
 
-      var ptsGola = gerarPtsCircunferencia(ptsAmostra, cmGolaCircunferencia, padraoBarra);
-      var vGola = gerarVoltas(carrAmostra, cmGolaComprimento);
+    var ptsGola = gerarPtsCircunferencia(ptsAmostra, cmGolaCircunferencia, padraoBarra);
+    var vGola = gerarVoltas(carrAmostra, cmGolaComprimento);
 
-      //PALA
+    //PALA
 
-      var ptsCorpo = gerarPtsCircunferencia(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
-      var ptsManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
-      var ptsFinalRaglan = gerarNdePtsFinalRaglan(ptsCorpo, ptsManga, ptsCava);
-      var vRaglan = gerarVoltasRaglan(ptsGola, ptsFinalRaglan);
+    var ptsCorpo = gerarPtsCircunferencia(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
+    var ptsManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
+    var ptsFinalRaglan = gerarNdePtsFinalRaglan(ptsCorpo, ptsManga, ptsCava);
+    var vRaglan = gerarVoltasRaglan(ptsGola, ptsFinalRaglan);
 
-      var nAumentosRaglan = vRaglan * 4;
+    var nAumentosRaglan = vRaglan * 4;
 
-      ptsFinalRaglan = atualizarPtsFinais(ptsGola, vRaglan);
-      ptsCorpo = atualizarPtsCorpo(ptsFinalRaglan, ptsManga, ptsCava);
+    ptsFinalRaglan = atualizarPtsFinais(ptsGola, vRaglan);
+    ptsCorpo = atualizarPtsCorpo(ptsFinalRaglan, ptsManga, ptsCava);
 
-      var ptsMangaInicioPala = ptsManga - vRaglan - ptsCava;
-      var ptsCorpoFrenteInicioPala = (ptsCorpo / 2) - vRaglan - ptsCava - (2 * ptsDivisaoRaglan);
-      var ptsCorpoCostas1InicioPala = parseInt(ptsCorpoFrenteInicioPala / 2);
-      var ptsCorpoCostas2InicioPala = ptsCorpoFrenteInicioPala - ptsCorpoCostas1InicioPala;
+    var ptsMangaInicioPala = ptsManga - vRaglan - ptsCava;
+    var ptsCorpoFrenteInicioPala = (ptsCorpo / 2) - vRaglan - ptsCava - (2 * ptsDivisaoRaglan);
+    var ptsCorpoCostas1InicioPala = parseInt(ptsCorpoFrenteInicioPala / 2);
+    var ptsCorpoCostas2InicioPala = ptsCorpoFrenteInicioPala - ptsCorpoCostas1InicioPala;
 
-      var ptsMangaFinalPala = ptsMangaInicioPala + vRaglan;
-      var ptsCorpoFrenteFinalPala = ptsCorpoFrenteInicioPala + vRaglan;
-      var ptsCorpoCostas1FinalPala = ptsCorpoCostas1InicioPala + (vRaglan / 2);
-      var ptsCorpoCostas2FinalPala = ptsCorpoCostas2InicioPala + (vRaglan / 2);
+    var ptsMangaFinalPala = ptsMangaInicioPala + vRaglan;
+    var ptsCorpoFrenteFinalPala = ptsCorpoFrenteInicioPala + vRaglan;
+    var ptsCorpoCostas1FinalPala = ptsCorpoCostas1InicioPala + (vRaglan / 2);
+    var ptsCorpoCostas2FinalPala = ptsCorpoCostas2InicioPala + (vRaglan / 2);
 
-      montarCabecalhoReceita();
-      montarInstrucaoMontagem(ptsGola, vGola);
-      montarPreparacaoRaglan(ptsDivisaoRaglan, ptsCorpoFrenteInicioPala, ptsCorpoCostas1InicioPala, ptsCorpoCostas2InicioPala, ptsMangaInicioPala);
-      montarInstrucaoRaglan(vRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
-      montarDivisaoRaglan(ptsFinalRaglan,
-                         ptsMangaFinalPala,
-                         ptsCorpoFrenteFinalPala,
-                         ptsCorpoCostas1FinalPala,
-                         ptsCorpoCostas2FinalPala,
-                         ptsDivisaoRaglan,
-                         ptsCava);
+    montarCabecalhoReceita();
+    montarInstrucaoMontagem(ptsGola, vGola);
+    montarPreparacaoRaglan(ptsDivisaoRaglan, ptsCorpoFrenteInicioPala, ptsCorpoCostas1InicioPala, ptsCorpoCostas2InicioPala, ptsMangaInicioPala);
+    montarInstrucaoRaglan(vRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
+    montarDivisaoRaglan(ptsFinalRaglan,
+                       ptsMangaFinalPala,
+                       ptsCorpoFrenteFinalPala,
+                       ptsCorpoCostas1FinalPala,
+                       ptsCorpoCostas2FinalPala,
+                       ptsDivisaoRaglan,
+                       ptsCava);
 
-      //CORPO
+    //CORPO
 
-      var vCorpo = gerarVoltas(carrAmostra, cmCorpoComprimento);
-      var vCorpoBarra = gerarVoltas(carrAmostra, cmCorpoBarraComprimento);
+    var vCorpo = gerarVoltas(carrAmostra, cmCorpoComprimento);
+    var vCorpoBarra = gerarVoltas(carrAmostra, cmCorpoBarraComprimento);
 
-      vCorpo -= vCorpoBarra;
+    vCorpo -= vCorpoBarra;
 
-      montarInstrucoesCorpo(ptsCorpo,
-                           vCorpo,
-                           padraoBarra,
-                           vCorpoBarra);
+    montarInstrucoesCorpo(ptsCorpo,
+                         vCorpo,
+                         padraoBarra,
+                         vCorpoBarra);
 
 
-      //MANGA
+    //MANGA
 
-      var vManga = gerarVoltas(carrAmostra, cmMangaComprimento);
-      var vMangaBarra = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
+    var vManga = gerarVoltas(carrAmostra, cmMangaComprimento);
+    var vMangaBarra = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
 
-      vManga -= vMangaBarra;
+    vManga -= vMangaBarra;
 
-      console.log(tipoManga);
-      console.log('ptsManga ' + ptsManga);
-      console.log('ptsCava ' + ptsCava);
-      console.log('vManga ' + vManga);
-      console.log('padraoBarra ' + padraoBarra);
-      console.log('vMangaBarra ' + vMangaBarra);
+    if (tipoManga == 'manga_curta'){
+      montarInstrucoesMangaCurta(ptsManga,
+                                ptsCava,
+                                vManga,
+                                padraoBarra,
+                                vMangaBarra);
+    // }else if(tipoManga == 'manga_comprida_reta'){
 
-      if (tipoManga == 'manga_curta'){
-        montarInstrucoesMangaCurta(ptsManga,
-                                  ptsCava,
-                                  vManga,
-                                  padraoBarra,
-                                  vMangaBarra);
-      }
+    }
 
-      //
-      // var ptsCircunferenciaManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
-      // var vComprimentoManga = gerarVoltas(carrAmostra, cmMangaComprimento);
-      // var vComprimentoBarraManga = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
-      //
-      // var mangaAjustada = true;
-      //
-      // var ptsCircunferenciaPunho = gerarPtsCircunferencia(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
-      // var totalDiminuicoes = ptsCircunferenciaManga - ptsCircunferenciaPunho;
-      // var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vComprimentoManga);
-      // var vAntesDiminuicoesManga = vComprimentoManga - (intervaloDiminuicoesManga * totalDiminuicoes);
-      //
-      //
+    //
+    // var ptsCircunferenciaManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
+    // var vComprimentoManga = gerarVoltas(carrAmostra, cmMangaComprimento);
+    // var vComprimentoBarraManga = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
+    //
+    // var mangaAjustada = true;
+    //
+    // var ptsCircunferenciaPunho = gerarPtsCircunferencia(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
+    // var totalDiminuicoes = ptsCircunferenciaManga - ptsCircunferenciaPunho;
+    // var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vComprimentoManga);
+    // var vAntesDiminuicoesManga = vComprimentoManga - (intervaloDiminuicoesManga * totalDiminuicoes);
+    //
+    //
 
-      //
-      //
-      //   $('.resultado').append(gerarInstrucaoCorpo(ptsCorpo, vComprimentoCorpo, padraoBarra, vComprimentoBarraCorpo));
-      //
-      //
-      //   if (mangaAjustada){
-      //     $('.resultado').append(gerarInstrucoesMangasAjustadas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga, intervaloDiminuicoesManga, totalDiminuicoes, vAntesDiminuicoesManga, ptsCircunferenciaPunho));
-      //   }else{
-      //     $('.resultado').append(gerarInstrucoesMangasRetas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga));
-      //   }
-        $('.resultado').append(consideracoesFinais());
-
-    //}
+    //
+    //
+    //   $('.resultado').append(gerarInstrucaoCorpo(ptsCorpo, vComprimentoCorpo, padraoBarra, vComprimentoBarraCorpo));
+    //
+    //
+    //   if (mangaAjustada){
+    //     $('.resultado').append(gerarInstrucoesMangasAjustadas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga, intervaloDiminuicoesManga, totalDiminuicoes, vAntesDiminuicoesManga, ptsCircunferenciaPunho));
+    //   }else{
+    //     $('.resultado').append(gerarInstrucoesMangasRetas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga));
+    //   }
+      $('.resultado').append(consideracoesFinais());
+    }
 
   });
 
@@ -210,18 +204,6 @@ function viraPar(numero) {
     return novoNumero;
   } else {
     return (novoNumero + 1);
-  }
-}
-
-function atualizarTipoManga(radio){
-  var punho = document.getElementById('punho');
-  var punhoInput = document.getElementById('cmPunhoCircunferencia');
-  if(radio.value == 'manga_curta'){
-    punho.style.display = 'none';
-    punhoInput.attributes.required = false;
-  }else{
-    punho.style.display = 'block';
-    punhoInput.attributes.required = true;
   }
 }
 
