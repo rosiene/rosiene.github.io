@@ -84,6 +84,7 @@ input[type=submit]:active {
 }
 .resultado{
   line-height: 36px;
+  padding-bottom: 70px;
 }
 .sessao_peca {
   line-height: 42px;

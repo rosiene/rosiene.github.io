@@ -1,3 +1,86 @@
+
+function getNomeProjeto(){
+  return $("#nomeProjeto").val();
+}
+
+function getDescricaoProjeto(){
+  return $("#descricaoProjeto").val();
+}
+
+function getAmostraPts(){
+  return $("#ptsAmostra").val();
+}
+
+function getAmostraCarr(){
+  return $("#carrAmostra").val();
+}
+
+function getGolaCircunferencia(){
+  return $("#cmGola").val();
+}
+
+function getGolaComprimento(){
+  return $("#cmCompGola").val();
+}
+
+function getGolaComprimentoDiferenca(){
+  return $("#cmCompDifGola").val();
+}
+
+function getPtsDivisao(){
+  return $("#ptsDivisao").val();
+}
+
+function getCava(ptsAmostra){
+  if (ptsAmostra <= 12){
+    return 4;
+  }else if(ptsAmostra <= 16){
+    return 6;
+  }else if(ptsAmostra <= 20){
+    return 8;
+  }else if(ptsAmostra <= 24){
+    return 10;
+  }else{
+    return 12;
+  }
+}
+
+function getCmCorpoCircunferencia(){
+  return $("#cmCircunferenciaCorpo").val();
+}
+
+function getCmCorpoComprimento(){
+  return $("#cmCompCorpo").val();
+}
+
+function getCmCorpoComprimentoBarra(){
+  return $("#cmCompCorpoBarra").val();
+}
+
+function getTipoManga(){
+  return $('input[name="tipo_manga"]:checked').val();
+}
+
+function getCmMangaCircunferencia(){
+  return $("#cmMangaCircunferencia").val();
+}
+
+function getCmMangaComprimento(){
+  return $("#cmMangaComprimento").val();
+}
+
+function getCmMangaComprimentoBarra(){
+  return $("#cmMangaComprimentoBarra").val();
+}
+
+function getPunhoCircunferencia(){
+  return $("#cmPunhoCircunferencia").val();
+}
+
+function getEstiloBarra(){
+  return $('input[name="estilo_barra"]:checked').val();
+}
+
 function validarInputsOnInput(){
   const inputs = document.getElementById("formulario").querySelectorAll("input[type=text], input[type=number]");
 
@@ -21,12 +104,11 @@ function validarInputsOnSubmit(){
       count++;
     }
   }
-  return (count);
+  return (count == 0);
 }
 
 function validacaoCampoObrigatorioOnSubmit(input){
-  console.log(input.id);
-  // console.log(input.classList.value);
+
   var spamErro = document.getElementById('erroForm');
 
   if(input.classList.value == "obrigatorio" && input.value == ''){
@@ -41,7 +123,6 @@ function validacaoCampoObrigatorioOnSubmit(input){
 }
 
 function validacaoCampoObrigatorioOnInput(e){
-  console.log(e.target);
 
   if(e.target.classList.value == "obrigatorio" && e.target.value == ''){
     e.target.style.border = '2px red ridge';
@@ -53,7 +134,6 @@ function validacaoCampoObrigatorioOnInput(e){
 }
 
 function nPontosPalaRaglan(e){
-  console.log(e);
 
   if (e.target.value > 2 || e.target.value < 1){
     e.target.classList.add('erro');

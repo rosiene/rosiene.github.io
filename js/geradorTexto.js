@@ -2,7 +2,6 @@ var identacaoInicio = "<div style='margin: 12px 0px 12px 28px'>"
 var identacaoFinal = "</div>";
 
 function gerarTitulo(titulo, descricao){
-  console.log("descricao" + descricao);
   if (descricao != ""){
     return "<h1>"+titulo+"</h1><h4>" + descricao + "</h4>";
   }else{
@@ -30,7 +29,7 @@ function gerarLegenda(){
     +"<b>v.</b> volta(s).</br>";
 }
 
-function gerarInstrucao(){
+function gerarInstrucaoTitulo(){
   return "<h5>INSTRUÇÕES: </h5>";
 }
 
