@@ -25,26 +25,44 @@
 
           <div>
             <label for="nomeProjeto" class="nome_projeto">Nome do Projeto*:</label>
-            <input type="text" id="nomeProjeto" name="nome_projeto" class="obrigatorio" />
+            <input type="text" id="nomeProjeto" name="nome_projeto" class="obrigatorio" value="Teste"/>
           </div>
 
           <div>
             <label for="descricaoProjeto" class="descricao_projeto">Descrição do Projeto:</label>
-            <input type="text" id="descricaoProjeto" name="descricao_projeto" />
+            <input type="text" id="descricaoProjeto" name="descricao_projeto" value="Meu Primeiro Top Down" />
           </div>
         </fieldset>
+        <!-- <fieldset>
+          <legend>MATERIAIS</legend>
+
+          <div>
+            <label for="nAgulha" class="n_agulha">Nº de Agulha:</label>
+            <input type="number" id="nAgulha" name="n_agulha" value="7" />
+          </div>
+
+          <div>
+            <label for="nomeFio" class="nome_fio">Nome Fio:</label>
+            <input type="text" id="nomeFio" name="nome_fio" value="7" />
+          </div>
+
+          <div>
+            <label for="marcaFio" class="nome_fio">Marca Fio:</label>
+            <input type="text" id="nomeFio" name="nome_fio" value="7" />
+          </div>
+        </fieldset> -->
 
         <fieldset>
           <legend>AMOSTRA</legend>
 
           <div>
             <label for="ptsAmostra" class="pts_amostra">Nº de pontos na amostra (10 cm)*:</label>
-            <input type="number" id="ptsAmostra" name="pts_amostra" class="obrigatorio" />
+            <input type="number" id="ptsAmostra" name="pts_amostra" class="obrigatorio" value="15" />
           </div>
 
           <div>
             <label for="carrAmostra" class="carr_amostra">Nº de carreiras/voltas na amostra (10 cm)*:</label>
-            <input type="number" id="carrAmostra" name="carr_amostra" class="obrigatorio" />
+            <input type="number" id="carrAmostra" name="carr_amostra" class="obrigatorio" value="18" />
           </div>
         </fieldset>
 
@@ -53,18 +71,18 @@
 
           <div>
             <label for="cmGola" class="cm_gola">Circunferência da gola (cm)*:</label>
-            <input type="number" id="cmGola" name="cm_gola" class="obrigatorio" />
+            <input type="number" id="cmGola" name="cm_gola" class="obrigatorio" value="60" />
           </div>
 
           <div>
             <label for="cmCompGola" class="cm_comp_gola">Comprimento da gola (cm)*:</label>
-            <input type="number" id="cmCompGola" name="cm_comp_gola" class="obrigatorio" />
+            <input type="number" id="cmCompGola" name="cm_comp_gola" class="obrigatorio" value="8" />
           </div>
 
           <div>
             <label for="cmCompDifGola" class="cm_comp_dif_gola">Comprimento da diferença do pescoço (cm)*:</label>
             <p class="explicacao_input">Colocar 0 (zero) caso a escolha seja sem as carreiras encurtadas.</p>
-            <input type="number" id="cmCompDifGola" name="cm_comp_dif_gola" class="obrigatorio" />
+            <input type="number" id="cmCompDifGola" name="cm_comp_dif_gola" class="obrigatorio" value="0" />
           </div>
         </fieldset>
 
@@ -73,7 +91,7 @@
 
           <div>
             <label for="ptsDivisao" class="pts_divisao">Nº de pontos da divisão (Entre 1 e 2)*:</label>
-            <input type="number" id="ptsDivisao" name="pts_divisao" class="obrigatorio" />
+            <input type="number" id="ptsDivisao" name="pts_divisao" class="obrigatorio" value="2" />
           </div>
         </fieldset>
 
@@ -82,17 +100,17 @@
 
           <div>
            <label for="cmCircunferenciaCorpo" class="cm_circunferencia_corpo">Circunferência do corpo (cm):</label>
-           <input type="number" id="cmCircunferenciaCorpo" name="cm_circunferencia_corpo" class="obrigatorio" />
+           <input type="number" id="cmCircunferenciaCorpo" name="cm_circunferencia_corpo" class="obrigatorio" value="99" />
           </div>
 
           <div>
             <label for="cmCompCorpo" class="cm_comp_corpo">Comprimento total do corpo a partir da cava (cm)*:</label>
-            <input type="number" id="cmCompCorpo" name="cm_comp_corpo" class="obrigatorio" />
+            <input type="number" id="cmCorpoComprimento" name="cm_comp_corpo" class="obrigatorio" value="40" />
           </div>
 
           <div>
             <label for="cmCompCorpoBarra" class="cm_comp_corpo_barra">Comprimento da barra (cm):</label>
-            <input type="number" id="cmCompCorpoBarra" name="cm_comp_corpo_barra" class="obrigatorio" />
+            <input type="number" id="cmCorpoBarraComprimento" name="cm_comp_corpo_barra" class="obrigatorio" value="10" />
           </div>
         </fieldset>
 
@@ -120,17 +138,17 @@
 
           <div>
             <label for="cmMangaCircunferencia" class="cm_manga_circunferencia">Circunferência da manga (cm)*:</label>
-            <input type="number" id="cmMangaCircunferencia" name="cm_manga_circunferencia" class="obrigatorio" />
+            <input type="number" id="cmMangaCircunferencia" name="cm_manga_circunferencia" class="obrigatorio" value="34" />
           </div>
 
           <div>
             <label for="cmMangaComprimento" class="cm_manga_comprimento">Comprimento total da manga a partir da cava (cm)*:</label>
-            <input type="number" id="cmMangaComprimento" name="cm_manga_comprimento" class="obrigatorio" />
+            <input type="number" id="cmMangaComprimento" name="cm_manga_comprimento" class="obrigatorio" value="10" />
           </div>
 
           <div>
             <label for="cmMangaComprimentoBarra" class="cm_manga_comprimento_barra">Comprimento da barra (cm)*:</label>
-            <input type="number" id="cmMangaComprimentoBarra" name="cm_manga_comprimento_barra" class="obrigatorio" />
+            <input type="number" id="cmMangaBarraComprimento" name="cm_manga_comprimento_barra" class="obrigatorio" value="8" />
           </div>
 
           <div class="punho" id="punho">

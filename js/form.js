@@ -50,11 +50,11 @@ function getCmCorpoCircunferencia(){
 }
 
 function getCmCorpoComprimento(){
-  return $("#cmCompCorpo").val();
+  return $("#cmCorpoComprimento").val();
 }
 
-function getCmCorpoComprimentoBarra(){
-  return $("#cmCompCorpoBarra").val();
+function getCmCorpoBarraComprimento(){
+  return $("#cmCorpoBarraComprimento").val();
 }
 
 function getTipoManga(){
@@ -69,8 +69,8 @@ function getCmMangaComprimento(){
   return $("#cmMangaComprimento").val();
 }
 
-function getCmMangaComprimentoBarra(){
-  return $("#cmMangaComprimentoBarra").val();
+function getCmMangaBarraComprimento(){
+  return $("#cmMangaBarraComprimento").val();
 }
 
 function getPunhoCircunferencia(){

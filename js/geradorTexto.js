@@ -9,6 +9,7 @@ function gerarTitulo(titulo, descricao){
   }
 }
 
+
 function gerarAmostra(ptsAmostra, carrAmostra){
   return "<h5>AMOSTRA:</h5> 10 cm x 10 cm = "
     + ptsAmostra + " pts e "
@@ -62,7 +63,7 @@ function gerarInstrucaoPreparacaoRaglan(ptsDivisao,
                                         ptsManga){
 
   return "<b class='sessao_peca'>Pala:</b></br>"
-    + "Tecer a carreira de preparação fazendo a divisão do raglan: </br>"
+    + "Tecer a volta de preparação fazendo a divisão do raglan: </br>"
     + identacaoInicio
     + "<b>v.:</b> "
     + ptsCostas1 + "m, [marc B], "
@@ -121,17 +122,22 @@ function gerarInstrucaoDivisaoRaglan(ptsFinalRaglan,
                                      ptsCorpoCostas2Final,
                                      ptsDivisaoRaglan,
                                      ptsCava){
+
+  var ptsCostas1ComDivisao = parseInt(ptsCorpoCostas1Final) + parseInt(ptsDivisaoRaglan);
+  var ptsFrenteComDivisao = ptsCorpoFrenteFinal + (2 * ptsDivisaoRaglan);
+  var ptsCostas2ComDivisao = parseInt(ptsCorpoCostas2Final) + parseInt(ptsDivisaoRaglan);
+
   return "Com "
     + ptsFinalRaglan + " pts nas agulhas, fazer a divisão do corpo e das mangas:</br>"
     + identacaoInicio
     + "<b>v.:</b> "
-    + (ptsCorpoCostas1Final + ptsDivisaoRaglan) + "m, reservar "
+    + ptsCostas1ComDivisao + "m, reservar "
     + ptsMangaFinal + " pts, montar "
     + ptsCava + " pts, "
-    + (ptsCorpoFrenteFinal + (2 * ptsDivisaoRaglan)) + "m, reservar "
+    + ptsFrenteComDivisao + "m, reservar "
     + ptsMangaFinal + " pts, montar "
     + ptsCava + " pts, "
-    + (ptsCorpoCostas2Final + ptsDivisaoRaglan) + "m.";
+    + ptsCostas2ComDivisao + "m.";
     + identacaoFinal;
 }
 
@@ -160,7 +166,7 @@ function gerarInstrucaoCorpo(ptsCorpo,
   return texto;
 }
 
-function gerarInstrucoesMangasRetas(ptsManga,
+function gerarInstrucoesMangasCurta(ptsManga,
                                     ptsCava,
                                     vComprimentoManga,
                                     padraoBarra,
@@ -171,7 +177,7 @@ function gerarInstrucoesMangasRetas(ptsManga,
     + ptsCava + " pts da cava. </br>Com "
     + ptsManga + " pts nas agulhas, tecer por "
     + vComprimentoManga + " v. em ponto <b><i>m</i></b>.</br>"
-    + "Tecer o punho por "
+    + "Tecer a barra por "
     + vComprimentoBarraManga + " voltas:</br>"
     + identacaoInicio
     + "<b>1ª até "
@@ -183,7 +189,7 @@ function gerarInstrucoesMangasRetas(ptsManga,
       texto += "* 2m, 2t *, rep. de * a * até o final."
     }
     texto += identacaoFinal;
-    texto += "Fazer com o arremate dos pontos.";
+    texto += "Fazer com o arremate dos pontos.</br>";
 
     return texto;
 }
@@ -234,7 +240,9 @@ function gerarInstrucoesMangasAjustadas(ptsManga,
 }
 
 function consideracoesFinais(){
-  return "<div class='rodape'>Essa receita é uma criação de Rosiene Dilly.</br>"
+  return "Fazer os acabamentos da peça e blocar se necessário.</br>"
+    + "<div class='rodape'>Essa receita foi gerada de forma automática "
+    + "através do sistema</br> &quot;Minha Receita Pronta&quot; por Rosiene Dilly.</br>"
     + "É proibida a cópia, distribuição ou reprodução total ou parcial "
     + "deste material sem autorização prévia do autor por escrito. "
     + "É permitida a venda de peças feitas a partir desta receita.</div>";
