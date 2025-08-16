@@ -35,13 +35,13 @@ $( document ).ready(function() {
 
     //GOLA
 
-    var ptsGola = gerarPtsCircunferencia(ptsAmostra, cmGolaCircunferencia, padraoBarra);
+    var ptsGola = gerarPontos(ptsAmostra, cmGolaCircunferencia, padraoBarra);
     var vGola = gerarVoltas(carrAmostra, cmGolaComprimento);
 
     //PALA
 
-    var ptsCorpo = gerarPtsCircunferencia(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
-    var ptsManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
+    var ptsCorpo = gerarPontos(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
+    var ptsManga = gerarPontos(ptsAmostra, cmMangaCircunferencia, padraoBarra);
     var ptsFinalRaglan = gerarNdePtsFinalRaglan(ptsCorpo, ptsManga, ptsCava);
     var vRaglan = gerarVoltasRaglan(ptsGola, ptsFinalRaglan);
 
@@ -98,21 +98,33 @@ $( document ).ready(function() {
                                 vManga,
                                 padraoBarra,
                                 vMangaBarra);
-    // }else if(tipoManga == 'manga_comprida_reta'){
+    }else{
+      console.log(cmPunhoCircunferencia);
 
+      var ptsPunho = gerarPontos(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
+      var totalDiminuicoes = ptsManga - ptsPunho;
+      var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vManga);
+      var vAntesDiminuicoesManga = vManga - (intervaloDiminuicoesManga * totalDiminuicoes);
+
+      montarInstrucoesMangasAjustadas(ptsManga,
+                                      ptsCava,
+                                      vManga,
+                                      padraoBarra,
+                                      vMangaBarra,
+                                      intervaloDiminuicoesManga,
+                                      totalDiminuicoes,
+                                      vAntesDiminuicoesManga,
+                                      ptsPunho);
     }
 
     //
-    // var ptsCircunferenciaManga = gerarPtsCircunferencia(ptsAmostra, cmMangaCircunferencia, padraoBarra);
+    // var ptsCircunferenciaManga = gerarPontos(ptsAmostra, cmMangaCircunferencia, padraoBarra);
     // var vComprimentoManga = gerarVoltas(carrAmostra, cmMangaComprimento);
     // var vComprimentoBarraManga = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
     //
     // var mangaAjustada = true;
     //
-    // var ptsCircunferenciaPunho = gerarPtsCircunferencia(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
-    // var totalDiminuicoes = ptsCircunferenciaManga - ptsCircunferenciaPunho;
-    // var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vComprimentoManga);
-    // var vAntesDiminuicoesManga = vComprimentoManga - (intervaloDiminuicoesManga * totalDiminuicoes);
+    // var ptsCircunferenciaPunho = gerarPontos(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
     //
     //
 
@@ -150,7 +162,7 @@ $( document ).ready(function() {
 });
 
 
-function gerarPtsCircunferencia(ptsAmostra, cmCircunferencia, padraoBarra){
+function gerarPontos(ptsAmostra, cmCircunferencia, padraoBarra){
 
   var pts = ptsAmostra * cmCircunferencia / 10;
 
@@ -241,6 +253,7 @@ function setValoresReceita(){
   tipoManga = getTipoManga();
   cmMangaCircunferencia = getCmMangaCircunferencia();
   cmPunhoCircunferencia = getPunhoCircunferencia();
+
   cmMangaComprimento = getCmMangaComprimento()
   cmMangaBarraComprimento = getCmMangaBarraComprimento();
 
@@ -302,4 +315,24 @@ function montarInstrucoesMangaCurta(ptsManga,
                                       vComprimentoManga,
                                       padraoBarra,
                                       vComprimentoBarraManga));
+}
+
+function montarInstrucoesMangasAjustadas(ptsManga,
+                                ptsCava,
+                                vManga,
+                                padraoBarra,
+                                vMangaBarra,
+                                intervaloDiminuicoesManga,
+                                totalDiminuicoes,
+                                vAntesDiminuicoesManga,
+                                ptsPunho){
+  $('.resultado').append(gerarInstrucoesMangasAjustadas(ptsManga,
+                                  ptsCava,
+                                  vManga,
+                                  padraoBarra,
+                                  vMangaBarra,
+                                  intervaloDiminuicoesManga,
+                                  totalDiminuicoes,
+                                  vAntesDiminuicoesManga,
+                                  ptsPunho));                       
 }
