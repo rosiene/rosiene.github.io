@@ -16,6 +16,8 @@ var nomeProjeto,
   cmMangaComprimento,
   cmMangaBarraComprimento;
 
+// const { jsPDF } = window.jspdf;
+
 $( document ).ready(function() {
 
   var calcular = document.getElementById('calcular');
@@ -25,97 +27,98 @@ $( document ).ready(function() {
   calcular.addEventListener("click", function(event){
     event.preventDefault();
 
-
     //Validar os inputs antes de seguir com o resultado
     if(validarInputsOnSubmit()){
 
-    //Set variaveis com os resultados do form
-    setValoresReceita();
-    esconderFormulario();
+      //Set variaveis com os resultados do form
+      setValoresReceita();
+      esconderFormulario();
 
-    //GOLA
+      //GOLA
 
-    var ptsGola = gerarPontos(ptsAmostra, cmGolaCircunferencia, padraoBarra);
-    var vGola = gerarVoltas(carrAmostra, cmGolaComprimento);
+      var ptsGola = gerarPontos(ptsAmostra, cmGolaCircunferencia, padraoBarra);
+      var vGola = gerarVoltas(carrAmostra, cmGolaComprimento);
 
-    //PALA
+      //PALA
 
-    var ptsCorpo = gerarPontos(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
-    var ptsManga = gerarPontos(ptsAmostra, cmMangaCircunferencia, padraoBarra);
-    var ptsFinalRaglan = gerarNdePtsFinalRaglan(ptsCorpo, ptsManga, ptsCava);
-    var vRaglan = gerarVoltasRaglan(ptsGola, ptsFinalRaglan);
+      var ptsCorpo = gerarPontos(ptsAmostra, cmCorpoCircunferencia, padraoBarra);
+      var ptsManga = gerarPontos(ptsAmostra, cmMangaCircunferencia, padraoBarra);
+      var ptsFinalRaglan = gerarNdePtsFinalRaglan(ptsCorpo, ptsManga, ptsCava);
+      var vRaglan = gerarVoltasRaglan(ptsGola, ptsFinalRaglan);
 
-    var nAumentosRaglan = vRaglan * 4;
+      var nAumentosRaglan = vRaglan * 4;
 
-    ptsFinalRaglan = atualizarPtsFinais(ptsGola, vRaglan);
-    ptsCorpo = atualizarPtsCorpo(ptsFinalRaglan, ptsManga, ptsCava);
+      ptsFinalRaglan = atualizarPtsFinais(ptsGola, vRaglan);
+      ptsCorpo = atualizarPtsCorpo(ptsFinalRaglan, ptsManga, ptsCava);
 
-    var ptsMangaInicioPala = ptsManga - vRaglan - ptsCava;
-    var ptsCorpoFrenteInicioPala = (ptsCorpo / 2) - vRaglan - ptsCava - (2 * ptsDivisaoRaglan);
-    var ptsCorpoCostas1InicioPala = parseInt(ptsCorpoFrenteInicioPala / 2);
-    var ptsCorpoCostas2InicioPala = ptsCorpoFrenteInicioPala - ptsCorpoCostas1InicioPala;
+      var ptsMangaInicioPala = ptsManga - vRaglan - ptsCava;
+      var ptsCorpoFrenteInicioPala = (ptsCorpo / 2) - vRaglan - ptsCava - (2 * ptsDivisaoRaglan);
+      var ptsCorpoCostas1InicioPala = parseInt(ptsCorpoFrenteInicioPala / 2);
+      var ptsCorpoCostas2InicioPala = ptsCorpoFrenteInicioPala - ptsCorpoCostas1InicioPala;
 
-    var ptsMangaFinalPala = ptsMangaInicioPala + vRaglan;
-    var ptsCorpoFrenteFinalPala = ptsCorpoFrenteInicioPala + vRaglan;
-    var ptsCorpoCostas1FinalPala = ptsCorpoCostas1InicioPala + (vRaglan / 2);
-    var ptsCorpoCostas2FinalPala = ptsCorpoCostas2InicioPala + (vRaglan / 2);
+      var ptsMangaFinalPala = ptsMangaInicioPala + vRaglan;
+      var ptsCorpoFrenteFinalPala = ptsCorpoFrenteInicioPala + vRaglan;
+      var ptsCorpoCostas1FinalPala = ptsCorpoCostas1InicioPala + (vRaglan / 2);
+      var ptsCorpoCostas2FinalPala = ptsCorpoCostas2InicioPala + (vRaglan / 2);
 
-    montarCabecalhoReceita();
-    montarInstrucaoMontagem(ptsGola, vGola);
-    montarPreparacaoRaglan(ptsDivisaoRaglan, ptsCorpoFrenteInicioPala, ptsCorpoCostas1InicioPala, ptsCorpoCostas2InicioPala, ptsMangaInicioPala);
-    montarInstrucaoRaglan(vRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
-    montarDivisaoRaglan(ptsFinalRaglan,
-                       ptsMangaFinalPala,
-                       ptsCorpoFrenteFinalPala,
-                       ptsCorpoCostas1FinalPala,
-                       ptsCorpoCostas2FinalPala,
-                       ptsDivisaoRaglan,
-                       ptsCava);
+      montarCabecalhoReceita();
+      montarInstrucaoMontagem(ptsGola, vGola);
+      montarPreparacaoRaglan(ptsDivisaoRaglan, ptsCorpoFrenteInicioPala, ptsCorpoCostas1InicioPala, ptsCorpoCostas2InicioPala, ptsMangaInicioPala);
+      montarInstrucaoRaglan(vRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
+      montarDivisaoRaglan(ptsFinalRaglan,
+                         ptsMangaFinalPala,
+                         ptsCorpoFrenteFinalPala,
+                         ptsCorpoCostas1FinalPala,
+                         ptsCorpoCostas2FinalPala,
+                         ptsDivisaoRaglan,
+                         ptsCava);
 
-    //CORPO
+      //CORPO
 
-    var vCorpo = gerarVoltas(carrAmostra, cmCorpoComprimento);
-    var vCorpoBarra = gerarVoltas(carrAmostra, cmCorpoBarraComprimento);
+      var vCorpo = gerarVoltas(carrAmostra, cmCorpoComprimento);
+      var vCorpoBarra = gerarVoltas(carrAmostra, cmCorpoBarraComprimento);
 
-    vCorpo -= vCorpoBarra;
+      vCorpo -= vCorpoBarra;
 
-    montarInstrucoesCorpo(ptsCorpo,
-                         vCorpo,
-                         padraoBarra,
-                         vCorpoBarra);
+      montarInstrucoesCorpo(ptsCorpo,
+                           vCorpo,
+                           padraoBarra,
+                           vCorpoBarra);
 
 
-    //MANGA
+      //MANGA
 
-    var vManga = gerarVoltas(carrAmostra, cmMangaComprimento);
-    var vMangaBarra = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
+      var vManga = gerarVoltas(carrAmostra, cmMangaComprimento);
+      var vMangaBarra = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
 
-    vManga -= vMangaBarra;
+      vManga -= vMangaBarra;
 
-    if (tipoManga == 'manga_curta'){
-      montarInstrucoesMangaCurta(ptsManga,
-                                ptsCava,
-                                vManga,
-                                padraoBarra,
-                                vMangaBarra);
-    }else{
-      console.log(cmPunhoCircunferencia);
+      if (tipoManga == 'manga_curta'){
+        montarInstrucoesMangaCurta(ptsManga,
+                                  ptsCava,
+                                  vManga,
+                                  padraoBarra,
+                                  vMangaBarra);
+      }else{
+        console.log(cmPunhoCircunferencia);
 
-      var ptsPunho = gerarPontos(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
-      var totalDiminuicoes = ptsManga - ptsPunho;
-      var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vManga);
-      var vAntesDiminuicoesManga = vManga - (intervaloDiminuicoesManga * totalDiminuicoes);
+        var ptsPunho = gerarPontos(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
+        var totalDiminuicoes = ptsManga - ptsPunho;
+        var intervaloDiminuicoesManga = gerarIntervaloDiminuicoesManga(totalDiminuicoes, vManga);
+        var vAntesDiminuicoesManga = vManga - (intervaloDiminuicoesManga * totalDiminuicoes);
 
-      montarInstrucoesMangasAjustadas(ptsManga,
-                                      ptsCava,
-                                      vManga,
-                                      padraoBarra,
-                                      vMangaBarra,
-                                      intervaloDiminuicoesManga,
-                                      totalDiminuicoes,
-                                      vAntesDiminuicoesManga,
-                                      ptsPunho);
-    }
+        montarInstrucoesMangasAjustadas(ptsManga,
+                                        ptsCava,
+                                        vManga,
+                                        padraoBarra,
+                                        vMangaBarra,
+                                        intervaloDiminuicoesManga,
+                                        totalDiminuicoes,
+                                        vAntesDiminuicoesManga,
+                                        ptsPunho);
+
+        $('.resultado').append(consideracoesFinais());
+      }
 
     //
     // var ptsCircunferenciaManga = gerarPontos(ptsAmostra, cmMangaCircunferencia, padraoBarra);
@@ -138,7 +141,7 @@ $( document ).ready(function() {
     //   }else{
     //     $('.resultado').append(gerarInstrucoesMangasRetas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga));
     //   }
-      $('.resultado').append(consideracoesFinais());
+
     }
 
   });
@@ -260,9 +263,13 @@ function setValoresReceita(){
 }
 
 function montarCabecalhoReceita(){
-  $('.resultado').append(gerarTitulo(nomeProjeto, descricaoProjeto));
+  var titulo = gerarTitulo(nomeProjeto, descricaoProjeto);
+
+  $('.resultado').append(titulo);
   $('.resultado').append(gerarAmostra(ptsAmostra, carrAmostra));
   $('.resultado').append(gerarLegenda());
+
+  // doc.text(titulo, 10, 10);
 }
 
 function montarInstrucaoMontagem(ptsGola, vGola){
@@ -334,5 +341,5 @@ function montarInstrucoesMangasAjustadas(ptsManga,
                                   intervaloDiminuicoesManga,
                                   totalDiminuicoes,
                                   vAntesDiminuicoesManga,
-                                  ptsPunho));                       
+                                  ptsPunho));
 }

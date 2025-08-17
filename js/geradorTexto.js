@@ -242,7 +242,7 @@ function gerarInstrucoesMangasAjustadas(ptsManga,
 function consideracoesFinais(){
   return "Fazer os acabamentos da peça e blocar se necessário.</br>"
     + "<div class='rodape'>Essa receita foi gerada de forma automática "
-    + "através do sistema</br> &quot;Minha Receita Pronta&quot; por Rosiene Dilly.</br>"
+    + "através do sistema &quot;Minha Receita Pronta&quot; por Rosiene Dilly.</br>"
     + "É proibida a cópia, distribuição ou reprodução total ou parcial "
     + "deste material sem autorização prévia do autor por escrito. "
     + "É permitida a venda de peças feitas a partir desta receita.</div>";
