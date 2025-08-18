@@ -156,10 +156,9 @@ $( document ).ready(function() {
                                         totalDiminuicoes,
                                         vAntesDiminuicoesManga,
                                         ptsPunho);
-
-        $('.resultado').append(consideracoesFinais());
       }
-    }
+
+      $('.resultado').append(consideracoesFinais());
 
   });
 
