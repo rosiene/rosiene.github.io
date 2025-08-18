@@ -160,6 +160,8 @@ $( document ).ready(function() {
 
       $('.resultado').append(consideracoesFinais());
       $('html,body').scrollTop(0);
+
+      gerarPDF();
     }
 
   });
@@ -345,4 +347,19 @@ function montarInstrucoesMangasAjustadas(ptsManga,
                                   totalDiminuicoes,
                                   vAntesDiminuicoesManga,
                                   ptsPunho));
+}
+
+function gerarPDF(){
+
+  var element = document.getElementById('resultado');
+
+  opt = {
+    margin:       1,
+    filename:     'receita.pdf',
+    image:        { type: 'png', quality: 1 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(element).save();
 }

@@ -109,7 +109,6 @@ input[type=submit]:active {
   display: none;
 }
 .rodape {
-  width: 700px;
   text-align: center;
   margin: 40px auto;
   font-style: italic;
@@ -157,6 +156,42 @@ input[type=submit]:active {
   .explicacao_input {
     font-size: 12px;
     margin: 2px auto;
+  }
+  .resultado{
+    line-height: 36px;
+    margin: 0;
+  }
+  .resultado h1 {
+    font-size: 36px;
+  }
+  .resultado h4 {
+    font-size: 18px;
+  }
+  .resultado h5 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 28px auto 12px auto;
+  }
+}
+
+@media print {
+  body {
+    font-size: 16px;
+  }
+  .cabecalho {
+    padding: 40px 0 0 0;
+  }
+  .cabecalho img{
+    width: 140px;
+  }
+  .cabecalho h1{
+    font-size: 48px;
+  }
+  .cabecalho h2{
+    font-size: 24px;
+  }
+  .cabecalho h3{
+    font-size: 20px;
   }
   .resultado{
     line-height: 36px;

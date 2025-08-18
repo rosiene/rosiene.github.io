@@ -310,6 +310,6 @@ function consideracoesFinais(){
     + "<div class='rodape'>Essa receita foi gerada de forma automática "
     + "através do sistema &quot;Minha Receita Pronta&quot; por Rosiene Dilly.</br>"
     + "É proibida a cópia, distribuição ou reprodução total ou parcial "
-    + "deste material sem autorização prévia do autor por escrito. "
+    + "deste material sem autorização prévia do autor por escrito. </br>"
     + "É permitida a venda de peças feitas a partir desta receita.</div>";
 }
