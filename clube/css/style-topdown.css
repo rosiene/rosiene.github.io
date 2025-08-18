@@ -174,3 +174,62 @@ input[type=submit]:active {
     margin: 28px auto 12px auto;
   }
 }
+
+@media print {
+  body {
+    font-size: 16px;
+  }
+  fieldset legend {
+    font-size: 20px;
+  }
+  fieldset div {
+    padding: 2px;
+  }
+  input[type=text], input[type=number] {
+    border: 1px #241f20 ridge;
+    border-radius: 6px;
+    margin: 6px auto;
+  }
+  input[type=radio]{
+    margin: 6px auto;
+    width: 12px;
+    height: 12px;
+  }
+  .conteudo{
+    width: 960px;
+  }
+  .cabecalho {
+    padding: 40px 0 0 0;
+  }
+  .cabecalho img{
+    width: 140px;
+  }
+  .cabecalho h1{
+    font-size: 48px;
+  }
+  .cabecalho h2{
+    font-size: 24px;
+  }
+  .cabecalho h3{
+    font-size: 20px;
+  }
+  .explicacao_input {
+    font-size: 12px;
+    margin: 2px auto;
+  }
+  .resultado{
+    line-height: 36px;
+    margin: 0;
+  }
+  .resultado h1 {
+    font-size: 36px;
+  }
+  .resultado h4 {
+    font-size: 18px;
+  }
+  .resultado h5 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 28px auto 12px auto;
+  }
+}
