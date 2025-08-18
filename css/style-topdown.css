@@ -129,6 +129,7 @@ input[type=submit]:active {
   input[type=text], input[type=number] {
     border: 1px #241f20 ridge;
     border-radius: 6px;
+    margin: 6px auto;
   }
   input[type=radio]{
     margin: 6px auto;
@@ -155,6 +156,7 @@ input[type=submit]:active {
   }
   .explicacao_input {
     font-size: 12px;
+    margin: 2px auto;
   }
   .resultado{
     line-height: 36px;

@@ -85,7 +85,7 @@ function gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisao,
                                         ptsCostas2,
                                         ptsManga){
   return "<b class='sessao_peca'>Pala:</b></br>"
-    + "Tecer a carreira de preparação fazendo a divisão do raglan: </br>"
+    + "Tecer a carreira de preparação fazendo a divisão do raglan e carreira encurtada: </br>"
     + identacaoInicio
     + "<b>v.:</b> "
     + ptsCostas1 + "m, [marc B], "
@@ -98,8 +98,74 @@ function gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisao,
     + ptsDivisao + "m, [marc B], "
     + ptsManga + "m, [marc B], "
     + ptsDivisao + "m, [marc B], "
-    + ptsCostas2 + "m.</br>";
+    + ptsCostas2 + "m.</br>"
     + identacaoFinal;
+}
+
+function gerarInstrucaoCarrEncurtada1Carr(ptsDivisaoRaglan){
+  return "Tecer as carreiras encurtadas:</br>"
+    + identacaoInicio
+    + "<b>1ª carr.:</b> todos em m até o marc B, aumt, [marc B], "
+    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc. B, aumt, "
+    + "[marc B], "
+    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc C, "
+    + "remover o marc C.</br>"
+    + identacaoFinal;
+}
+
+function gerarInstrucaoCarrEncurtadaMeio(ptsDivisaoRaglan,
+                                        vCarrEncurtada,
+                                        interavaloPtsCarrEncurtada){
+    var ultimaPar = vCarrEncurtada - 4;
+    var ultimaImpar = vCarrEncurtada - 3;
+    var intervaloMenos1 = interavaloPtsCarrEncurtada - 1;
+
+    return identacaoInicio
+      + "<b>2ª e todas as pares até a "
+      +  ultimaPar + "ª carr.:</b> com o fio na frente, 1sf, "
+      + "passa o fio por cima da agulha direita até revelar os "
+      + "fios do ponto da carr. anterior, "
+      +  intervaloMenos1 + "t, [marc C], todos em "
+      + "t até o marc D, remover o marc D. </br>"
+      + identacaoFinal
+      + identacaoInicio
+      + "<b>3ª e todas as impares até a "
+      + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, passa "
+      + "o fio por cima da agulha direita até revelar os "
+      + "fios do ponto da carr. anterior, "
+      + intervaloMenos1 + "m, [marc D], "
+      + "todos em m até o marc B, aumt, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc E, remover o marc E.</br>"
+      + identacaoFinal;
+}
+
+function gerarInstrucaoCarrEncurtadaFinal(ptsDivisaoRaglan,
+                                        vCarrEncurtada,
+                                        interavaloPtsCarrEncurtada){
+  var ultimaPar = vCarrEncurtada - 2;
+  var ultimaImpar = vCarrEncurtada - 1;
+
+  return identacaoInicio
+    + "<b>"
+    + ultimaPar + "ª carr.:</b> com o fio na frente, 1sf, "
+    + "passa o fio por cima da agulha direita até revelar os fios "
+    + "do ponto da carr. anterior, todos em t até o marc D, "
+    + "remover o marc D. </br>"
+    + identacaoFinal
+    + identacaoInicio
+    + "<b>"
+    + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, "
+    + "passa o fio por cima da agulha direita até revelar os fios "
+    + "do ponto da carr. anterior, todos em m até o marc B, aumt, [marc B] "
+    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
+    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc. A."
+    + identacaoFinal
+    + "Tecer uma volta de finalização das carreiras encurtadas toda em "
+    + "<b><i>m</i></b> com atenção aos pontos que foram passados sem fazer na "
+    + "sequência das carreiras encurtadas. </br>";
 }
 
 function gerarInstrucaoRaglan(nVoltas,

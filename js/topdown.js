@@ -5,6 +5,7 @@ var nomeProjeto,
   padraoBarra,
   cmGolaCircunferencia,
   cmGolaComprimento,
+  cmGolaComprimentoDiferenca,
   cmCorpoCircunferencia,
   tipoManga,
   cmMangaCircunferencia,
@@ -34,6 +35,8 @@ $( document ).ready(function() {
       setValoresReceita();
       esconderFormulario();
 
+      montarCabecalhoReceita();
+
       //GOLA
 
       var ptsGola = gerarPontos(ptsAmostra, cmGolaCircunferencia, padraoBarra);
@@ -61,17 +64,55 @@ $( document ).ready(function() {
       var ptsCorpoCostas1FinalPala = ptsCorpoCostas1InicioPala + (vRaglan / 2);
       var ptsCorpoCostas2FinalPala = ptsCorpoCostas2InicioPala + (vRaglan / 2);
 
-      montarCabecalhoReceita();
       montarInstrucaoMontagem(ptsGola, vGola);
-      montarPreparacaoRaglan(ptsDivisaoRaglan, ptsCorpoFrenteInicioPala, ptsCorpoCostas1InicioPala, ptsCorpoCostas2InicioPala, ptsMangaInicioPala);
-      montarInstrucaoRaglan(vRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
-      montarDivisaoRaglan(ptsFinalRaglan,
-                         ptsMangaFinalPala,
-                         ptsCorpoFrenteFinalPala,
-                         ptsCorpoCostas1FinalPala,
-                         ptsCorpoCostas2FinalPala,
-                         ptsDivisaoRaglan,
-                         ptsCava);
+
+      // VERIFICA SE TEM CARREIRA ENCURTADA NA GOLA
+      if (cmGolaComprimentoDiferenca == 0){
+
+        montarPreparacaoRaglan(ptsDivisaoRaglan, ptsCorpoFrenteInicioPala, ptsCorpoCostas1InicioPala, ptsCorpoCostas2InicioPala, ptsMangaInicioPala);
+        montarInstrucaoRaglan(vRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
+        montarDivisaoRaglan(ptsFinalRaglan,
+                           ptsMangaFinalPala,
+                           ptsCorpoFrenteFinalPala,
+                           ptsCorpoCostas1FinalPala,
+                           ptsCorpoCostas2FinalPala,
+                           ptsDivisaoRaglan,
+                           ptsCava);
+      }else{
+
+        var vCarrEncurtada = gerarVoltas(carrAmostra, cmGolaComprimentoDiferenca);
+
+        console.log('vCarrEncurtada ' + vCarrEncurtada);
+
+        var ptsFrenteLateralInicio = parseInt(ptsCorpoFrenteInicioPala / 3);
+        var ptsFrenteLateralFinalCarrEncurtada = gerarptsFrenteLateralFinalCarrEncurtada(ptsFrenteLateralInicio, vCarrEncurtada);
+        var interavaloPtsCarrEncurtada = gerarIntervaloPtsCarrEncurtada(vCarrEncurtada, ptsFrenteLateralFinalCarrEncurtada);
+        ptsFrenteLateral = (vCarrEncurtada / 2) * interavaloPtsCarrEncurtada;
+        var ptsFrenteCentral = ptsCorpoFrenteInicioPala - (2 * ptsFrenteLateralInicio);
+
+        $('.resultado').append(gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisaoRaglan,
+                                                ptsFrenteCentral,
+                                                ptsFrenteLateral,
+                                                ptsCorpoCostas1InicioPala,
+                                                ptsCorpoCostas2InicioPala,
+                                                ptsMangaInicioPala));
+
+        $('.resultado').append(gerarInstrucaoCarrEncurtada1Carr(ptsDivisaoRaglan));
+        $('.resultado').append(gerarInstrucaoCarrEncurtadaMeio(ptsDivisaoRaglan, vCarrEncurtada ,interavaloPtsCarrEncurtada));
+        $('.resultado').append(gerarInstrucaoCarrEncurtadaFinal(ptsDivisaoRaglan, vCarrEncurtada ,interavaloPtsCarrEncurtada));
+
+        var novoVRaglan = vRaglan - (vCarrEncurtada - 2);
+
+        montarInstrucaoRaglan(novoVRaglan, ptsFinalRaglan, ptsDivisaoRaglan);
+        montarDivisaoRaglan(ptsFinalRaglan,
+                           ptsMangaFinalPala,
+                           ptsCorpoFrenteFinalPala,
+                           ptsCorpoCostas1FinalPala,
+                           ptsCorpoCostas2FinalPala,
+                           ptsDivisaoRaglan,
+                           ptsCava);
+      }
+
 
       //CORPO
 
@@ -100,7 +141,6 @@ $( document ).ready(function() {
                                   padraoBarra,
                                   vMangaBarra);
       }else{
-        console.log(cmPunhoCircunferencia);
 
         var ptsPunho = gerarPontos(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
         var totalDiminuicoes = ptsManga - ptsPunho;
@@ -119,48 +159,9 @@ $( document ).ready(function() {
 
         $('.resultado').append(consideracoesFinais());
       }
-
-    //
-    // var ptsCircunferenciaManga = gerarPontos(ptsAmostra, cmMangaCircunferencia, padraoBarra);
-    // var vComprimentoManga = gerarVoltas(carrAmostra, cmMangaComprimento);
-    // var vComprimentoBarraManga = gerarVoltas(carrAmostra, cmMangaBarraComprimento);
-    //
-    // var mangaAjustada = true;
-    //
-    // var ptsCircunferenciaPunho = gerarPontos(ptsAmostra, cmPunhoCircunferencia, padraoBarra);
-    //
-    //
-
-    //
-    //
-    //   $('.resultado').append(gerarInstrucaoCorpo(ptsCorpo, vComprimentoCorpo, padraoBarra, vComprimentoBarraCorpo));
-    //
-    //
-    //   if (mangaAjustada){
-    //     $('.resultado').append(gerarInstrucoesMangasAjustadas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga, intervaloDiminuicoesManga, totalDiminuicoes, vAntesDiminuicoesManga, ptsCircunferenciaPunho));
-    //   }else{
-    //     $('.resultado').append(gerarInstrucoesMangasRetas(ptsCircunferenciaManga, ptsCava, vComprimentoManga, padraoBarra, vComprimentoBarraManga));
-    //   }
-
     }
 
   });
-
-
-  //
-  //
-  //     //GOLA AJUSTADA
-  //
-  //     var ptsCadaLateralFrenteInicio = parseInt(ptsCorpoFrenteInicioPala / 3);
-  //     var ptsCadaLateralFrenteFinalCarrEncurtada = gerarPtsCadaLateralFrenteFinalCarrEncurtada(ptsCadaLateralFrenteInicio, carrGolaAjustada);
-  //     var interavaloPtsCarrEncurtada = gerarIntervaloPtsCarrEncurtada(carrGolaAjustada, ptsCadaLateralFrenteFinalCarrEncurtada);
-  //     ptsCadaLateralFrente = (carrGolaAjustada / 2) * interavaloPtsCarrEncurtada;
-  //     var ptsCentralFrente = ptsCorpoFrenteInicioPala - (2 * ptsCadaLateralFrenteInicio);
-  //
-
-  //
-
-
 
 });
 
@@ -203,12 +204,12 @@ function gerarIntervaloDiminuicoesManga(totalDiminuicoes, vComprimentoManga){
   return parseInt(vComprimentoManga/totalDiminuicoes);
 }
 
-function gerarIntervaloPtsCarrEncurtada(carrGolaAjustada, ptsCadaLateralFrente){
-  return parseInt(ptsCadaLateralFrente / (carrGolaAjustada / 2));
+function gerarIntervaloPtsCarrEncurtada(vCarrEncurtada, ptsFrenteLateral){
+  return parseInt(ptsFrenteLateral / (vCarrEncurtada / 2));
 }
 
-function gerarPtsCadaLateralFrenteFinalCarrEncurtada(ptsCadaLateralFrenteInicio, carrGolaAjustada){
-  return (ptsCadaLateralFrenteInicio + (carrGolaAjustada/2) - 1);
+function gerarptsFrenteLateralFinalCarrEncurtada(ptsFrenteLateralInicio, vCarrEncurtada){
+  return (ptsFrenteLateralInicio + (vCarrEncurtada/2) - 1);
 }
 
 function viraPar(numero) {
@@ -242,6 +243,7 @@ function setValoresReceita(){
   //GOLA
   cmGolaCircunferencia = getGolaCircunferencia();
   cmGolaComprimento = getGolaComprimento();
+  cmGolaComprimentoDiferenca = getGolaComprimentoDiferenca();
 
   //PALA
   ptsCava = getCava(ptsAmostra);
