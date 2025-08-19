@@ -116,7 +116,7 @@ function gerarInstrucaoCarrEncurtada1Carr(ptsDivisaoRaglan){
 function gerarInstrucaoCarrEncurtadaMeio(ptsDivisaoRaglan,
                                         vCarrEncurtada,
                                         interavaloPtsCarrEncurtada){
-    var ultimaPar = vCarrEncurtada - 4;
+    var ultimaPar = vCarrEncurtada - 2;
     var ultimaImpar = vCarrEncurtada - 3;
     var intervaloMenos1 = interavaloPtsCarrEncurtada - 1;
 
@@ -138,7 +138,7 @@ function gerarInstrucaoCarrEncurtadaMeio(ptsDivisaoRaglan,
       + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
       + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
       + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc E, remover o marc E.</br>"
+      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc C, remover o marc C.</br>"
       + identacaoFinal;
 }
 
@@ -150,13 +150,6 @@ function gerarInstrucaoCarrEncurtadaFinal(ptsDivisaoRaglan,
 
   return identacaoInicio
     + "<b>"
-    + ultimaPar + "ª carr.:</b> com o fio na frente, 1sf, "
-    + "passa o fio por cima da agulha direita até revelar os fios "
-    + "do ponto da carr. anterior, todos em t até o marc D, "
-    + "remover o marc D. </br>"
-    + identacaoFinal
-    + identacaoInicio
-    + "<b>"
     + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, "
     + "passa o fio por cima da agulha direita até revelar os fios "
     + "do ponto da carr. anterior, todos em m até o marc B, aumt, [marc B] "
@@ -165,7 +158,7 @@ function gerarInstrucaoCarrEncurtadaFinal(ptsDivisaoRaglan,
     + identacaoFinal
     + "Tecer uma volta de finalização das carreiras encurtadas toda em "
     + "<b><i>m</i></b> com atenção aos pontos que foram passados sem fazer na "
-    + "sequência das carreiras encurtadas. </br>";
+    + "sequência das carreiras encurtadas e remover o marc C e D. </br>";
 }
 
 function gerarInstrucaoRaglan(nVoltas,
