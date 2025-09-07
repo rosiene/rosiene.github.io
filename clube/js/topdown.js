@@ -56,6 +56,7 @@ $( document ).ready(function() {
 
       var ptsMangaInicioPala = ptsManga - vRaglan - ptsCava;
       var ptsCorpoFrenteInicioPala = (ptsCorpo / 2) - vRaglan - ptsCava - (2 * ptsDivisaoRaglan);
+
       var ptsCorpoCostas1InicioPala = parseInt(ptsCorpoFrenteInicioPala / 2);
       var ptsCorpoCostas2InicioPala = ptsCorpoFrenteInicioPala - ptsCorpoCostas1InicioPala;
 
@@ -82,13 +83,12 @@ $( document ).ready(function() {
 
         var vCarrEncurtada = gerarVoltas(carrAmostra, cmGolaComprimentoDiferenca);
 
-        console.log('vCarrEncurtada ' + vCarrEncurtada);
-
         var ptsFrenteLateralInicio = parseInt(ptsCorpoFrenteInicioPala / 3);
+
         var ptsFrenteLateralFinalCarrEncurtada = gerarptsFrenteLateralFinalCarrEncurtada(ptsFrenteLateralInicio, vCarrEncurtada);
         var interavaloPtsCarrEncurtada = gerarIntervaloPtsCarrEncurtada(vCarrEncurtada, ptsFrenteLateralFinalCarrEncurtada);
         ptsFrenteLateral = (vCarrEncurtada / 2) * interavaloPtsCarrEncurtada;
-        var ptsFrenteCentral = ptsCorpoFrenteInicioPala - (2 * ptsFrenteLateralInicio);
+        var ptsFrenteCentral = ptsCorpoFrenteInicioPala - (2 * ptsFrenteLateral);
 
         $('.resultado').append(gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisaoRaglan,
                                                 ptsFrenteCentral,
