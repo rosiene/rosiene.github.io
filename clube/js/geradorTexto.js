@@ -42,7 +42,7 @@ function gerarInstrucaoMontagem(ptsGola){
 }
 
 function gerarInstrucaoGola(padraoBarra, nVoltasGola){
-  if (padraoBarra = 'barra1') {
+  if (padraoBarra == 'barra1') {
     return "<b class='sessao_peca'>Gola:</b></br>"
       + "Tecer por " + nVoltasGola + " v. no ponto barra 1/1:</br>"
       + identacaoInicio
