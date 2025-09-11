@@ -83,12 +83,17 @@ $( document ).ready(function() {
 
         var vCarrEncurtada = gerarVoltas(carrAmostra, cmGolaComprimentoDiferenca);
 
+        if(vCarrEncurtada % 2 !== 0){
+          vCarrEncurtada -= 1;
+        }
+
         var ptsFrenteLateralInicio = parseInt(ptsCorpoFrenteInicioPala / 3);
 
         var ptsFrenteLateralFinalCarrEncurtada = gerarptsFrenteLateralFinalCarrEncurtada(ptsFrenteLateralInicio, vCarrEncurtada);
         var interavaloPtsCarrEncurtada = gerarIntervaloPtsCarrEncurtada(vCarrEncurtada, ptsFrenteLateralFinalCarrEncurtada);
-        ptsFrenteLateral = (vCarrEncurtada / 2) * interavaloPtsCarrEncurtada;
-        var ptsFrenteCentral = ptsCorpoFrenteInicioPala - (2 * ptsFrenteLateral);
+
+        ptsFrenteLateral = ptsFrenteLateralInicio;
+        var ptsFrenteCentral = ptsCorpoFrenteInicioPala - (2 * ptsFrenteLateralInicio);
 
         $('.resultado').append(gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisaoRaglan,
                                                 ptsFrenteCentral,

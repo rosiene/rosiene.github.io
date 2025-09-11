@@ -105,10 +105,10 @@ function gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisao,
 function gerarInstrucaoCarrEncurtada1Carr(ptsDivisaoRaglan){
   return "Tecer as carreiras encurtadas:</br>"
     + identacaoInicio
-    + "<b>1ª carr.:</b> todos em m até o marc B, aumt, [marc B], "
-    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc. B, aumt, "
+    + "<b>1ª carr.:</b> todos em m até o marc B, aumD, [marc B], "
+    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc. B, aumD, "
     + "[marc B], "
-    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc C, "
+    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc C, "
     + "remover o marc C.</br>"
     + identacaoFinal;
 }
@@ -134,11 +134,11 @@ function gerarInstrucaoCarrEncurtadaMeio(ptsDivisaoRaglan,
       + "o fio por cima da agulha direita até revelar os "
       + "fios do ponto da carr. anterior, "
       + intervaloMenos1 + "m, [marc D], "
-      + "todos em m até o marc B, aumt, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc C, remover o marc C.</br>"
+      + "todos em m até o marc B, aumD, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
+      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc C, remover o marc C.</br>"
       + identacaoFinal;
 }
 
@@ -152,9 +152,9 @@ function gerarInstrucaoCarrEncurtadaFinal(ptsDivisaoRaglan,
     + "<b>"
     + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, "
     + "passa o fio por cima da agulha direita até revelar os fios "
-    + "do ponto da carr. anterior, todos em m até o marc B, aumt, [marc B] "
-    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc B, aumt, [marc B] "
-    + ptsDivisaoRaglan + "m, [marc B], aumt, todos em m até o marc. A."
+    + "do ponto da carr. anterior, todos em m até o marc B, aumD, [marc B] "
+    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
+    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc. A."
     + identacaoFinal
     + "Tecer uma volta de finalização das carreiras encurtadas toda em "
     + "<b><i>m</i></b> com atenção aos pontos que foram passados sem fazer na "
