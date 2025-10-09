@@ -19,6 +19,19 @@ font-size: 60px;
   line-height: 2.0;
 }
 
+.fluxo{
+  text-align: center;
+  font-style: italic;
+  background-color: #f6ede3;
+  border: 1px dotted #f6b163;
+  margin: 20px;
+  padding: 20px
+}
+.fluxo span{
+  font-weight: 900;
+  color: #db7f10;
+}
+
 .feito{
   color: green;
 }
@@ -28,7 +41,7 @@ font-size: 60px;
 }
 
 /* HIDE RADIO */
-.modelagem [type=radio] {
+.estilo [type=radio] {
   position: absolute;
   opacity: 0;
   width: 0;
@@ -36,37 +49,43 @@ font-size: 60px;
 }
 
 /* IMAGE STYLES */
-.modelagem [type=radio] + div {
+.estilo [type=radio] + div {
   color: #241f20;
   background-color: #fff;
-  border: 6px #241f20 solid;
+  border: 2px #241f20 solid;
   border-radius: 6px;
   cursor: pointer;
   margin: 20px;
   text-align: center;;
 }
 
-.modelagem [type=radio] + div img {
+.estilo [type=radio] + div img {
   margin-top: 40px;
 }
 
-.modelagem .barra{
+.estilo .barra{
   width: 90%;
 }
 
-.modelagem [type=radio] + div p {
+.estilo [type=radio] + div p {
   font-weight: bold;
 }
 
 /* CHECKED STYLES */
-.modelagem [type=radio]:checked + div {
+.estilo [type=radio]:checked + div {
   background-color: #f8e4cd;
 }
-.modelo_selecionado {
-  text-align: center;
-}
+
 .modelo_selecionado img{
   width: 100%;
+}
+
+.esquema {
+  text-align: center;
+}
+
+.esquema img {
+  width: 70%;
 }
 
 .formulario fieldset {

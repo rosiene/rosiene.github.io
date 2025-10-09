@@ -2,83 +2,110 @@
 <html>
   <head>
     <script src="js/jquery-3.7.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/topdown-dev.js"></script>
-    <script src="js/formMedida.js"></script>
-    <script src="js/form-dev.js"></script>
-    <script src="js/geradorTexto-dev.js"></script>
+    <script src="js/formEstilo.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="css/style-topdown-dev.css">
     <title>Minha Receita Pronta</title>
   </head>
   <body>
-    <div class="conteudo" id="conteudo">
+    <div class="conteudo" id="projeto-estilo">
       <div class="cabecalho">
         <img src="https://rosiene.github.io/img/logo_preta.png" />
         <h1>Minha Receita Pronta</h1>
         <h2>Exclusivo: Clube Tricô e Tal</h2>
         <h3>Por Rosiene Dilly</h3>
-
+      </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > <span>ESTILO</span> > MEDIDAS
       </div>
 
-
-      <form class="formulario" id="formulario">
-
+      <form class="formulario estilo">
         <fieldset>
-          <legend>MODELO</legend>
-          <p class="modelo_selecionado"><img src="img/raglan/raglan-gola-reta-manga-curta.png" /></p>
-          <p class="modelo_selecionado">Raglan com gola redonda e mangas curtas</p>
-        </fieldset>
-
-        <fieldset>
-          <legend>PALA</legend>
-          <p>A pala raglan é dividida em 4 partes: frente, costas e mangas. Essa divisão entre as partes pode ser feita com zero ou mais pontos.</p>
+          <legend>PALA RAGLAN</legend>
+          <p>A pala raglan é estruturada em quatro partes: mangas, frente e costas. Para organizar essa divisão, é necessário definir quantos pontos irão compor cada uma dessas partes, marcando os limites entre elas.</p>
+          <p class="esquema">
+            <img src="img/medidas/raglan-esquema.png" />
+          </p>
           <div>
-            <label for="ptsDivisao" class="pts_divisao">Número de pontos da divisão*:</label>
-            <input type="number" id="ptsDivisao" name="pts_divisao" class="obrigatorio" value="2" />
+            <label for="divisao" class="divisao">Número de pontos da divisão (entre 0 e 8):</label>
+            <input type="number" id="divisao" name="divisao" class="obrigatorio" value="0"/>
           </div>
         </fieldset>
-
         <fieldset>
-          <legend>PONTO</legend>
+          <legend>GOLA</legend>
+          <label>
+            <input type="radio" name="gola" value="redonda" checked />
+            <div>
+              <img src="img/gola/gola-redonda.png" alt="Gola Redonda"/>
+              <p>Gola Redonda</p>
+            </div>
+          </label>
 
-          <div>
-            <label for="estilo_barra" class="estilo_barra">Ponto empregado na gola, punho e barra final:</label>
+          <label>
+            <input type="radio" name="gola" value="ajustada">
             <div>
-              <input type="radio" id="barra1" name="estilo_barra" value="barra1" checked />
-              <label for="barra1">Barra 1/1</label>
+              <img src="img/gola/gola-ajustada.png" alt="Gola Ajustada"/>
+              <p>Gola Ajustada</p>
             </div>
+          </label>
+
+          </fieldset>
+          <fieldset>
+          <legend>MANGA</legend>
+          <label>
+            <input type="radio" name="manga" value="curta" checked>
             <div>
-              <input type="radio" id="barra2" name="estilo_barra" value="barra2" />
-              <label for="barra2">Barra 2/2</label>
+              <img src="img/manga/curta.png" alt="Manga Curta"/>
+              <p>Manga Curta</p>
             </div>
-          </div>
+          </label>
+
+          <label>
+            <input type="radio" name="manga" value="comprida">
+            <div>
+              <img src="img/manga/comprida.png" alt="Manga Comprida Ajustada"/>
+              <p>Manga Comprida Ajustada</p>
+            </div>
+          </label>
         </fieldset>
+
         <fieldset>
           <legend>BARRA</legend>
+          <label>
+            <input type="radio" name="barra" value="barra-1-1" checked>
+            <div>
+              <img src="img/barra/barra-1-1.jpg" class="barra" alt="Barra 1/1"/>
+              <p>Barra 1/1</p>
+            </div>
+          </label>
 
-        <div>
-          <label for="cmCompGola" class="cm_comp_gola">Comprimento da gola (cm)*:</label>
-          <input type="number" id="cmCompGola" name="cm_comp_gola" class="obrigatorio" value="4" />
-        </div>
+          <label>
+            <input type="radio" name="barra" value="barra-2-2">
+            <div>
+              <img src="img/barra/barra-2-2.jpg" class="barra" alt="Barra 2/2"/>
+              <p>Barra 2/2</p>
+            </div>
+          </label>
 
+          <label>
+            <input type="radio" name="barra" value="arroz">
+            <div>
+              <img src="img/barra/arroz.jpg" class="barra" alt="Ponto Arroz"/>
+              <p>Ponto Arroz</p>
+            </div>
+          </label>
 
-        <div>
-          <label for="cmMangaComprimentoBarra" class="cm_manga_comprimento_barra">Comprimento da barra (cm)*:</label>
-          <input type="number" id="cmMangaBarraComprimento" name="cm_manga_comprimento_barra" class="obrigatorio" value="8" />
-        </div>
-          <div>
-            <label for="cmCompCorpoBarra" class="cm_comp_corpo_barra">Comprimento da barra (cm):</label>
-            <input type="number" id="cmCorpoBarraComprimento" name="cm_comp_corpo_barra" class="obrigatorio" value="8" />
-          </div>
-      </fieldset>
+          <label>
+            <input type="radio" name="barra" value="cordoes">
+            <div>
+              <img src="img/barra/cordoes.jpg" class="barra" alt="Cordões de Tricô"/>
+              <p>Cordões de Tricô</p>
+            </div>
+          </label>
 
-        <div>
-          <input type="button" onclick="voltarModelo();" value="< Voltar" />
-          <input type="submit" value="Calcular" id="calcular >" />
-          <span class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</span>
-        </div>
-      </form>
-    </div>
+          <input type="button" onclick="voltarInfo();" value="< informações" />
+          <input type="submit" value="estilo >" id="estilo" />
+        </form>
+      </div>
   </body>
 </html>

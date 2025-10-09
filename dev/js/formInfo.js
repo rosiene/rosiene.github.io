@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams);
+
   if(urlParams.size != 0){
       setNomeProjeto(urlParams);
       setDescricaoProjeto(urlParams);
@@ -13,7 +13,7 @@ $( document ).ready(function() {
   }
 });
 
-function voltarInicio(){
+function voltar(){
   const url = "inicio.html";
   window.location.href = url;
 }

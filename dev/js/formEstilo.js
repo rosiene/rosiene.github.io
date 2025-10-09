@@ -2,33 +2,45 @@ $( document ).ready(function() {
 
   const urlParams = new URLSearchParams(window.location.search);
   console.log(urlParams);
+
   if(urlParams.get('gola')){
+    setDivisao(urlParams);
     setGola(urlParams);
     setManga(urlParams);
     setBarra(urlParams);
   }
 
-  var modelo = document.getElementById('modelo');
+  var estilo = document.getElementById('estilo');
 
-  modelo.addEventListener("click", function(event){
+  estilo.addEventListener("click", function(event){
     event.preventDefault();
-    montarUrlInformacoesModelo();
+    montarUrlInformacoesEstilo();
   });
 });
 
-function montarUrlInformacoesModelo(){
+function montarUrlInformacoesEstilo(){
   const urlParams = new URLSearchParams(window.location.search);
+  const inputDivisao = getDivisao();
   const radioGola = getGola();
   const radioManga = getManga();
   const radioBarra = getBarra();
 
   const url = 'medida.html?'
     + urlParams.toString()
-    + '&gola=' + radioGola;
-    + '&manga=' + radioManga;
+    + '&divisao=' + inputDivisao
+    + '&gola=' + radioGola
+    + '&manga=' + radioManga
     + '&barra=' + radioBarra;
 
   window.location.href = url;
+}
+
+function getDivisao(){
+  return $("#divisao").val();
+}
+
+function setDivisao(urlParams){
+  $("#divisao").val(urlParams.get('divisao'));
 }
 
 function getGola(){

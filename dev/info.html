@@ -15,8 +15,11 @@
         <h2>Exclusivo: Clube Tricô e Tal</h2>
         <h3>Por Rosiene Dilly</h3>
       </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > ESTILO > MEDIDAS
+      </div>
 
-      <form class="formulario" action="modelo.html" id="inicio-projeto">
+      <form class="formulario" action="estilo.html" id="projeto-info">
         <fieldset>
           <legend>RECEITA</legend>
 
@@ -54,12 +57,12 @@
           <legend>MATERIAIS</legend>
 
           <div>
-            <label for="agulha" class="agulha">Nº de Agulha:</label>
+            <label for="agulha" class="agulha">Nº de Agulha*:</label>
             <input type="number" id="agulha" name="agulha" value="7" required />
           </div>
 
           <div>
-            <label for="fio" class="fio">Nome Fio:</label>
+            <label for="fio" class="fio">Nome Fio*:</label>
             <input type="text" id="fio" name="fio" value="Balloon" required />
           </div>
         </fieldset>
@@ -78,8 +81,8 @@
           </div>
         </fieldset>
 
-        <input type="button" onclick="voltarInicio();" value="< Voltar" />
-        <input type="submit" value="Escolher Modelo >" id="continuar" />
+        <input type="button" onclick="voltar();" value="< inicio" />
+        <input type="submit" value="Estilo >" id="continuar" />
       </form>
     </div>
   </body>
