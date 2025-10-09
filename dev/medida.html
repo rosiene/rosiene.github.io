@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formMedida.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/style-topdown-dev.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="conteudo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+
+      <form class="formulario" id="formulario">
+
+        <fieldset>
+          <legend>MODELO SELECIONADO</legend>
+          <p class="modelo_selecionado">Pala raglan com gola redonda e mangas curtas</p>
+          <p class="modelo_selecionado"><img src="img/medidas/raglan-gola-redonda-manga-curta.png" /></p>
+          <p>Todas as informações de medidas devem ser informadas em cm e todos os campos do formulário são obrigatórios.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>GOLA</legend>
+          <div>
+            <label for="cmGolaCircunferencia" class="cm_gola_circunferencia">A - Circunferência da gola:</label>
+            <input type="number" id="cmGolaCircunferencia" name="cm_gola_circunferencia" class="obrigatorio" value="60" />
+          </div>
+
+          <div>
+            <label for="cmGolaComprimento" class="cm_gola_comprimento">B - Comprimento da gola:</label>
+            <input type="number" id="cmGolaComprimento" name="cm_gola_comprimento" class="obrigatorio" value="4" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>MANGAS</legend>
+          <div>
+            <label for="cmMangaCircunferencia" class="cm_manga_circunferencia">B - Circunferência da manga:</label>
+           <input type="number" id="cmMangaCircunferencia" name="cm_manga_circunferencia" class="obrigatorio" value=40 />
+          </div>
+
+          <div>
+            <label for="cmMangaComprimento" class="cm_manga_comprimento">D - Comprimento da manga a partir da cava:</label>
+            <input type="number" id="cmMangaComprimento" name="cm_manga_comprimento" class="obrigatorio" value="12" />
+          </div>
+
+          <div>
+            <label for="cmMangaComprimentoBarra" class="cm_manga_comprimento_barra">E - Comprimento da barra:</label>
+            <input type="number" id="cmMangaBarraComprimento" name="cm_manga_comprimento_barra" class="obrigatorio" value="8" />
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>CORPO</legend>
+
+          <div>
+            <label for="cmCorpoCircunferencia" class="cm_corpo_circunferencia">F - Circunferência do corpo:</label>
+            <input type="number" id="cmCorpoCircunferencia" name="cm_corpo_circunferencia" class="obrigatorio" value="100" />
+          </div>
+
+          <div>
+            <label for="cmCorpoComprimentoBarra" class="cm_corpo_comprimento_barra">G - Comprimento do corpo a partir da cava:</label>
+            <input type="number" id="cmCorpoComprimentoBarra" name="cm_corpo_comprimento_barra" class="obrigatorio" value="24" />
+          </div>
+
+          <div>
+            <label for="cmCorpoComprimento" class="cm_corpo_comprimento">H - Comprimento da barra:</label>
+            <input type="number" id="cmCorpoComprimento" name="cm_corpo_comprimento" class="obrigatorio" value="24" />
+          </div>
+        </fieldset>
+
+        <div>
+          <input type="button" onclick="voltarModelo();" value="< Voltar" />
+          <input type="submit" value="Calcular!" />
+          <span class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</span>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

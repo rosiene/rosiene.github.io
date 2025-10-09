@@ -1,32 +1,3 @@
-
-function getNomeProjeto(){
-  return $("#nomeProjeto").val();
-}
-
-function getDescricaoProjeto(){
-  return $("#descricaoProjeto").val();
-}
-
-function getAmostraPts(){
-  return $("#ptsAmostra").val();
-}
-
-function getAmostraCarr(){
-  return $("#carrAmostra").val();
-}
-
-function getGolaCircunferencia(){
-  return $("#cmGola").val();
-}
-
-function getGolaComprimento(){
-  return $("#cmCompGola").val();
-}
-
-function getGolaComprimentoDiferenca(){
-  return $("#cmCompDifGola").val();
-}
-
 function getPtsDivisao(){
   return $("#ptsDivisao").val();
 }
@@ -112,7 +83,7 @@ function validacaoCampoObrigatorioOnSubmit(input){
   var spamErro = document.getElementById('erroForm');
 
   if(input.classList.value == "obrigatorio" && input.value == ''){
-    input.style.border = '2px red ridge';
+    input.style.border = '1px red ridge';
     spamErro.style.display = 'block';
     return false;
   }else{
@@ -140,19 +111,6 @@ function nPontosPalaRaglan(e){
   }else{
     e.target.classList.remove('erro');
     return true;
-  }
-}
-
-
-function atualizarTipoManga(radio){
-  var punho = $('#punho');
-  var punhoInput = $('#cmPunhoCircunferencia');
-  if(radio.value == 'manga_curta'){
-    punho.hide();
-    punhoInput.removeClass("obrigatorio");
-  }else{
-    punho.show();
-    punhoInput.addClass("obrigatorio");
   }
 }
 

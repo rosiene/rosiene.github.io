@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/topdown-dev.js"></script>
+    <script src="js/formMedida.js"></script>
+    <script src="js/form-dev.js"></script>
+    <script src="js/geradorTexto-dev.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/style-topdown-dev.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="conteudo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+
+      </div>
+
+
+      <form class="formulario" id="formulario">
+
+        <fieldset>
+          <legend>MODELO</legend>
+          <p class="modelo_selecionado"><img src="img/raglan/raglan-gola-reta-manga-curta.png" /></p>
+          <p class="modelo_selecionado">Raglan com gola redonda e mangas curtas</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>PALA</legend>
+          <p>A pala raglan é dividida em 4 partes: frente, costas e mangas. Essa divisão entre as partes pode ser feita com zero ou mais pontos.</p>
+          <div>
+            <label for="ptsDivisao" class="pts_divisao">Número de pontos da divisão*:</label>
+            <input type="number" id="ptsDivisao" name="pts_divisao" class="obrigatorio" value="2" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>PONTO</legend>
+
+          <div>
+            <label for="estilo_barra" class="estilo_barra">Ponto empregado na gola, punho e barra final:</label>
+            <div>
+              <input type="radio" id="barra1" name="estilo_barra" value="barra1" checked />
+              <label for="barra1">Barra 1/1</label>
+            </div>
+            <div>
+              <input type="radio" id="barra2" name="estilo_barra" value="barra2" />
+              <label for="barra2">Barra 2/2</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>BARRA</legend>
+
+        <div>
+          <label for="cmCompGola" class="cm_comp_gola">Comprimento da gola (cm)*:</label>
+          <input type="number" id="cmCompGola" name="cm_comp_gola" class="obrigatorio" value="4" />
+        </div>
+
+
+        <div>
+          <label for="cmMangaComprimentoBarra" class="cm_manga_comprimento_barra">Comprimento da barra (cm)*:</label>
+          <input type="number" id="cmMangaBarraComprimento" name="cm_manga_comprimento_barra" class="obrigatorio" value="8" />
+        </div>
+          <div>
+            <label for="cmCompCorpoBarra" class="cm_comp_corpo_barra">Comprimento da barra (cm):</label>
+            <input type="number" id="cmCorpoBarraComprimento" name="cm_comp_corpo_barra" class="obrigatorio" value="8" />
+          </div>
+      </fieldset>
+
+        <div>
+          <input type="button" onclick="voltarModelo();" value="< Voltar" />
+          <input type="submit" value="Calcular" id="calcular >" />
+          <span class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</span>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

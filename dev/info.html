@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formInfo.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/style-topdown-dev.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="conteudo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+
+      <form class="formulario" action="modelo.html" id="inicio-projeto">
+        <fieldset>
+          <legend>RECEITA</legend>
+
+          <div>
+            <label for="nomeProjeto" class="nome_projeto">Nome do Projeto*:</label>
+            <input type="text" id="nomeProjeto" name="nome_projeto" class="obrigatorio" value="Teste" required/>
+          </div>
+
+          <div>
+            <label for="descricaoProjeto" class="descricao_projeto">Descrição do Projeto:</label>
+            <input type="text" id="descricaoProjeto" name="descricao_projeto" value="Meu Primeiro Top Down" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>TAMANHO</legend>
+
+          <div>
+            <input type="radio" id="tamanhoAdulto" name="tamanho" value="adulto" checked />
+            <label for="tamanhoAdulto">Adulto</label>
+          </div>
+
+          <div>
+            <input type="radio" id="tamanhoBebe" name="tamanho" value="bebe" />
+            <label for="tamanhoBebe">Bebê</label>
+          </div>
+
+          <div>
+            <input type="radio" id="tamanhoInfantil" name="tamanho" value="infantil" />
+            <label for="tamanhoInfantil">Infantil</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>MATERIAIS</legend>
+
+          <div>
+            <label for="agulha" class="agulha">Nº de Agulha:</label>
+            <input type="number" id="agulha" name="agulha" value="7" required />
+          </div>
+
+          <div>
+            <label for="fio" class="fio">Nome Fio:</label>
+            <input type="text" id="fio" name="fio" value="Balloon" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>AMOSTRA</legend>
+
+          <div>
+            <label for="amostraPts" class="amostra_pts">Nº de pontos na amostra (10 cm)*:</label>
+            <input type="number" id="amostraPts" name="amostra_pts" class="obrigatorio" value="18" required />
+          </div>
+
+          <div>
+            <label for="amostraCarr" class="amostra_carr">Nº de carreiras/voltas na amostra (10 cm)*:</label>
+            <input type="number" id="amostraCarr" name="amostra_carr" class="obrigatorio" value="26" required />
+          </div>
+        </fieldset>
+
+        <input type="button" onclick="voltarInicio();" value="< Voltar" />
+        <input type="submit" value="Escolher Modelo >" id="continuar" />
+      </form>
+    </div>
+  </body>
+</html>

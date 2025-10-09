@@ -3,48 +3,110 @@ body {
   color: #241f20;
   font-size: 40px;
   background-color: #fff;
+  margin: 30px;
+  height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;
 }
 
-fieldset {
+h3 {
+font-size: 60px;
+}
+
+.apresentacao{
+  margin: 40px;
+  line-height: 2.0;
+}
+
+.feito{
+  color: green;
+}
+
+.fazendo{
+  font-weight: 900;
+}
+
+/* HIDE RADIO */
+.modelagem [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+.modelagem [type=radio] + div {
+  color: #241f20;
+  background-color: #fff;
+  border: 6px #241f20 solid;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px;
+  text-align: center;;
+}
+
+.modelagem [type=radio] + div img {
+  margin-top: 40px;
+}
+
+.modelagem .barra{
+  width: 90%;
+}
+
+.modelagem [type=radio] + div p {
+  font-weight: bold;
+}
+
+/* CHECKED STYLES */
+.modelagem [type=radio]:checked + div {
+  background-color: #f8e4cd;
+}
+.modelo_selecionado {
+  text-align: center;
+}
+.modelo_selecionado img{
+  width: 100%;
+}
+
+.formulario fieldset {
   margin: 20px auto;
   border: 1px dotted #f6b163;
 }
-fieldset legend {
+.formulario fieldset legend {
   font-size: 48px;
   font-weight: 600;
   color: #db7f10;
 }
-fieldset div {
+.formulario fieldset div {
   margin: 12px auto;
   padding: 10px;
 }
-input[type=text], input[type=number] {
+.formulario input[type=text], input[type=number] {
   border: 2px #241f20 ridge;
   margin: 10px auto;
   padding: 4px;
   width: 100%;
   border-radius: 10px;
 }
-input[type=radio]{
+
+.formulario input[type=radio]{
   margin: 6px auto;
   width: 30px;
   height: 30px;
 }
-input[type=submit] {
+.formulario input[type=submit], input[type=button] {
   background: #db7f10;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-weight: 600;
   color: #fff;
   border: 1px;
-  padding: 16px;
+  padding: 16px 32px;
   border-radius: 12px;
   cursor: pointer;
 }
-input[type=submit]:active {
+.formulario input[type=submit]:active {
   background: #241f20;
 }
 
@@ -114,6 +176,8 @@ input[type=submit]:active {
   font-size: 18px;
   margin: 28px auto 12px auto;
 }
+
+
 
 @media screen and (min-width: 1024px) {
   body {
