@@ -1,3 +1,6 @@
+
+
+
 $( document ).ready(function() {
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -23,8 +26,12 @@ if (userChoice) {
   }
 }
 
+
+
 function getNomeProjeto(){
-  return $("#nomeProjeto").val();
+  if ($("#nomeProjeto").val()){
+    return $("#nomeProjeto").val();
+  }
 }
 
 function setNomeProjeto(urlParams){
@@ -56,7 +63,7 @@ function setAgulha(urlParams){
 }
 
 function getFio(){
-  return $("#nomeFio").val();
+  return $("#fio").val();
 }
 
 function setFio(urlParams){

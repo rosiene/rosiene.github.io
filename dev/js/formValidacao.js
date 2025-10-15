@@ -1,23 +1,6 @@
-$( document ).ready(function() {
+function validarInputsOnInput(formulario){
 
-  validarInputsOnInput();
-
-  if ($("#submitInfo")){
-
-    var submitInfo = $('#submitInfo');
-
-    submitInfo.on("click", function(event){
-      event.preventDefault();
-
-      if(validarInputsOnSubmit()){
-        console.log('valido');
-      }
-    });
-  }
-});
-
-function validarInputsOnInput(){
-  const inputs = document.getElementById("formulario").querySelectorAll("input[type=text], input[type=number]");
+  const inputs = formulario.querySelectorAll("input[type=text], input[type=number]");
 
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i];
@@ -25,17 +8,24 @@ function validarInputsOnInput(){
   }
 }
 
-function validarInputsOnSubmit(){
-  const inputs = document.getElementById("formulario").querySelectorAll("input[type=text], input[type=number]");
+function validarInputsOnSubmit(formulario, msg_erro){
+
+  const inputs = formulario.querySelectorAll("input[type=text], input[type=number]");
+
   var count = 0;
+
+  console.log(inputs);
 
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i];
-    if (!validacaoCampoObrigatorioOnSubmit(input)){
+    if (!validacaoCampoObrigatorioOnSubmit(input, msg_erro)){
       count++;
     }
   }
   var valido = (count == 0);
+
+  console.log(valido);
+
   if (!valido){
     $("#erroForm").css("display", "block");
   }else{
@@ -44,9 +34,9 @@ function validarInputsOnSubmit(){
   return valido;
 }
 
-function validacaoCampoObrigatorioOnSubmit(input){
+function validacaoCampoObrigatorioOnSubmit(input, msg_erro){
 
-  var spamErro = document.getElementById('erroForm');
+  var spamErro = msg_erro;
 
   if(input.classList.value == "obrigatorio" && input.value == ''){
     input.style.border = '2px red ridge';
@@ -59,13 +49,13 @@ function validacaoCampoObrigatorioOnSubmit(input){
   }
 }
 
-function validacaoCampoObrigatorioOnInput(e){
+function validacaoCampoObrigatorioOnInput(input){
 
-  if(e.target.classList.value == "obrigatorio" && e.target.value == ''){
-    e.target.style.border = '2px red ridge';
+  if(input.target.classList.value == "obrigatorio" && input.target.value == ''){
+    input.target.style.border = '2px red ridge';
     return false;
   }else{
-    e.target.style.border = '1px #ebc9d1 ridge';
+    input.target.style.border = '1px #ebc9d1 ridge';
     return true;
   }
 }
