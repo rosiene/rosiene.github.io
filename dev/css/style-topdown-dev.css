@@ -102,7 +102,7 @@ font-size: 60px;
   padding: 10px;
 }
 .formulario input[type=text], input[type=number] {
-  border: 2px #241f20 ridge;
+  border: 1px #ebc9d1 ridge;
   margin: 10px auto;
   padding: 4px;
   width: 100%;
@@ -135,6 +135,7 @@ font-size: 60px;
   border-radius: 20px;
 }
 .erro_form {
+  margin-top: 40px;
   color: red;
   display: none;
 }
@@ -197,7 +198,7 @@ font-size: 60px;
 }
 
 
-
+/*
 @media screen and (min-width: 1024px) {
   body {
     font-size: 16px;
@@ -210,7 +211,7 @@ font-size: 60px;
     padding: 2px;
   }
   input[type=text], input[type=number] {
-    border: 1px #241f20 ridge;
+    border: 1px #ebc9d1 ridge;
     border-radius: 6px;
     margin: 6px auto;
   }
@@ -241,4 +242,4 @@ font-size: 60px;
     font-size: 12px;
     margin: 2px auto;
   }
-}
+} */

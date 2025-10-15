@@ -14,8 +14,13 @@ $( document ).ready(function() {
 });
 
 function voltar(){
-  const url = "inicio.html";
-  window.location.href = url;
+  let userChoice = confirm("Você tem certeza que deseja apagar o formulário?");
+
+if (userChoice) {
+    // Code to execute if the user clicked "OK" (Yes)
+    const url = "inicio.html";
+    window.location.href = url;
+  }
 }
 
 function getNomeProjeto(){
@@ -39,7 +44,6 @@ function getTamanho(){
 }
 
 function setTamanho(urlParams){
-  console.log(urlParams.get('tamanho'));
   $('input[name="tamanho"][value="'+ urlParams.get('tamanho') +'"]').prop("checked", true);
 }
 
