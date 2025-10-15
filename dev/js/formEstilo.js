@@ -1,38 +1,44 @@
 $( document ).ready(function() {
 
-  const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams);
+  var form = document.getElementById("form_estilo");
+  var msg_erro = document.getElementById("erroForm");
 
-  if(urlParams.get('gola')){
-    setDivisao(urlParams);
-    setGola(urlParams);
-    setManga(urlParams);
-    setBarra(urlParams);
-  }
+  validarInputsOnInput(form);
 
-  var estilo = document.getElementById('estilo');
+  var submitEstilo = $('#submitEstilo');
 
-  estilo.addEventListener("click", function(event){
+  submitEstilo.on("click", function(event){
     event.preventDefault();
-    montarUrlInformacoesEstilo();
+
+    if(validarInputsOnSubmit(form, msg_erro)){
+
+      var parametros = montarParametrosInfoEstilo();
+      var urlMedida = montarUrl();
+
+      window.location.href = urlMedida + "?" + parametros;
+    }
   });
 });
 
-function montarUrlInformacoesEstilo(){
+function montarParametrosInfoEstilo(){
   const urlParams = new URLSearchParams(window.location.search);
-  const inputDivisao = getDivisao();
-  const radioGola = getGola();
-  const radioManga = getManga();
-  const radioBarra = getBarra();
 
-  const url = 'medida.html?'
-    + urlParams.toString()
-    + '&divisao=' + inputDivisao
-    + '&gola=' + radioGola
-    + '&manga=' + radioManga
-    + '&barra=' + radioBarra;
+  const url = urlParams.toString()
+    + '&divisao=' + getDivisao()
+    + '&gola=' + getGola()
+    + '&manga=' + getManga()
+    + '&barra=' + getBarra();
 
-  window.location.href = url;
+  return url;
+}
+
+function montarUrl(golaInput, mangaInput){
+
+  return "medidas-gola-"
+    + getGola()
+    + "-manga-"
+    + getManga()
+    + ".html";
 }
 
 function getDivisao(){

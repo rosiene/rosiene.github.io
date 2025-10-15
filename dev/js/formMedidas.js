@@ -1,18 +1,35 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
   const urlParams = new URLSearchParams(window.location.search);
-
   setEstilo(urlParams);
 
-  var medida = document.getElementById('medida');
 
-  medida.addEventListener("click", function(event){
+  var form = document.getElementById("form_medidas");
+  var msg_erro = document.getElementById("erroForm");
+
+  validarInputsOnInput(form);
+
+  var submitEstilo = $('#submitMedidas');
+
+  submitEstilo.on("click", function(event){
     event.preventDefault();
 
-    if (validar()){
-      calcular();
+    if(validarInputsOnSubmit(form, msg_erro)){
+
+      console.log('calcular!');
     }
   });
+
+
+  // var medida = document.getElementById('medida');
+  //
+  // medida.addEventListener("click", function(event){
+  //   event.preventDefault();
+  //
+  //   if (validar()){
+  //     calcular();
+  //   }
+  // });
 
 });
 
@@ -32,7 +49,7 @@ function setEstilo(urlParams){
 function getTextoEstilo(divisaoInput, golaInput, mangaInput, barraInput){
 
   var gola, manga, barra;
-  
+
   if (golaInput == 'redonda'){
     gola = "redonda";
   }else if (golaInput == 'ajustada'){
@@ -70,12 +87,4 @@ function getImgEstilo(golaInput, mangaInput){
     + "-manga-"
     + mangaInput
     + ".png' />";
-}
-
-function voltar(){
-  const urlParams = new URLSearchParams(window.location.search);
-  const url = "estilo.html?"
-    + urlParams.toString(); // Use encodeURIComponent para garantir que a URL seja segura
-
-  window.location.href = url;
 }

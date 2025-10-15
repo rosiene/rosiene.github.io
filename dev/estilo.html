@@ -3,12 +3,14 @@
   <head>
     <script src="js/jquery-3.7.1.slim.min.js"></script>
     <script src="js/formEstilo.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script src="js/formValidacao.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="css/style-topdown-dev.css">
     <title>Minha Receita Pronta</title>
   </head>
   <body>
-    <div class="conteudo" id="projeto-estilo">
+    <div class="conteudo" id="form_estilo">
       <div class="cabecalho">
         <img src="https://rosiene.github.io/img/logo_preta.png" />
         <h1>Minha Receita Pronta</h1>
@@ -19,7 +21,7 @@
         <span>INFORMAÇÕES</span> > <span>ESTILO</span> > MEDIDAS
       </div>
 
-      <form class="formulario estilo">
+      <form class="formulario estilo" id="form_estilo">
         <fieldset>
           <legend>PALA RAGLAN</legend>
           <p>A pala raglan é estruturada em quatro partes: mangas, frente e costas. Para organizar essa divisão, é necessário definir quantos pontos irão compor cada uma dessas partes, marcando os limites entre elas.</p>
@@ -103,8 +105,9 @@
             </div>
           </label>
 
-          <input type="button" onclick="voltarInfo();" value="< informações" />
-          <input type="submit" value="Medidas >" id="estilo" />
+          <input type="button" onclick="voltar();" value="< inicio" />
+          <input type="submit" value="Medidas >" id="submitEstilo" />
+          <div class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</div>
         </form>
       </div>
   </body>

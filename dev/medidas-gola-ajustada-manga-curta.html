@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formMedidas.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script src="js/formValidacao.js"></script>
+    <script src="js/calcular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/style-topdown-dev.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="conteudo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > <span>ESTILO</span> > <span>MEDIDAS</span>
+      </div>
+
+      <form class="formulario" id="form_medidas">
+
+        <fieldset>
+          <legend>ESTILO SELECIONADO</legend>
+          <div class="modelo_selecionado">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>GOLA</legend>
+          <div>
+            <label for="cmGolaCircunferencia" class="cm_gola_circunferencia">A - Circunferência da gola (cm)*:</label>
+            <input type="number" id="cmGolaCircunferencia" name="cm_gola_circunferencia" class="obrigatorio" value="60" />
+          </div>
+
+          <div>
+            <label for="cmGolaComprimento" class="cm_gola_comprimento">B - Comprimento da barra da gola (cm)*:</label>
+            <input type="number" id="cmGolaComprimento" name="cm_gola_comprimento" class="obrigatorio" value="4" />
+          </div>
+
+          <div>
+            <label for="cmGolaDiferenca" class="cm_gola_diferenca">C - Comprimento da diferença do pescoço (cm)*:</label>
+            <input type="number" id="cmGolaDiferenca" name="cm_gola_diferenca" class="obrigatorio" value="4" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>MANGAS</legend>
+          <div>
+            <label for="cmMangaCircunferencia" class="cm_manga_circunferencia">D - Circunferência da manga (cm)*:</label>
+           <input type="number" id="cmMangaCircunferencia" name="cm_manga_circunferencia" class="obrigatorio" value=40 />
+          </div>
+
+          <div>
+            <label for="cmMangaComprimento" class="cm_manga_comprimento">E - Comprimento da manga (cm)*:</label>
+            <input type="number" id="cmMangaComprimento" name="cm_manga_comprimento" class="obrigatorio" value="12" />
+          </div>
+
+          <div>
+            <label for="cmMangaComprimentoBarra" class="cm_manga_comprimento_barra">F - Comprimento da barra da manga (cm)*:</label>
+            <input type="number" id="cmMangaBarraComprimento" name="cm_manga_comprimento_barra" class="obrigatorio" value="8" />
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>CORPO</legend>
+
+          <div>
+            <label for="cmCorpoCircunferencia" class="cm_corpo_circunferencia">G - Circunferência do corpo (cm)*:</label>
+            <input type="number" id="cmCorpoCircunferencia" name="cm_corpo_circunferencia" class="obrigatorio" value="100" />
+          </div>
+
+          <div>
+            <label for="cmCorpoComprimentoBarra" class="cm_corpo_comprimento_barra">H - Comprimento do corpo (cm)*:</label>
+            <input type="number" id="cmCorpoComprimentoBarra" name="cm_corpo_comprimento_barra" class="obrigatorio" value="24" />
+          </div>
+
+          <div>
+            <label for="cmCorpoComprimento" class="cm_corpo_comprimento">I - Comprimento da barra do corpo (cm)*:</label>
+            <input type="number" id="cmCorpoComprimento" name="cm_corpo_comprimento" class="obrigatorio" value="24" />
+          </div>
+        </fieldset>
+
+        <div>
+          <input type="button" onclick="voltar();" value="< inicio" />
+          <input type="submit" value="Calcular!" id="submitMedidas"/>
+          <div class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

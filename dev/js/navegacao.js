@@ -1,37 +1,9 @@
-$( document ).ready(function() {
+function voltar(){
+  let userChoice = confirm("Você tem certeza que deseja apagar o formulário?");
 
-  if ($("#submitInfo")){
-
-    var form = document.getElementById("form_info");
-    var msg_erro = document.getElementById("erroForm");
-
-    validarInputsOnInput(form);
-
-    var submitInfo = $('#submitInfo');
-
-    submitInfo.on("click", function(event){
-      event.preventDefault();
-
-      if(validarInputsOnSubmit(form, msg_erro)){
-
-        var parametros = montarParametros();
-
-        window.location.href = "estilo.html" + parametros;
-      }
-    });
+if (userChoice) {
+    // Code to execute if the user clicked "OK" (Yes)
+    const url = "inicio.html";
+    window.location.href = url;
   }
-});
-
-function montarParametros(){
-
-  const url = '?'
-    + 'nome_projeto=' + getNomeProjeto()
-    + '&descricao_projeto=' + getDescricaoProjeto()
-    + '&tamanho=' + getTamanho()
-    + '&agulha=' + getAgulha()
-    + '&fio=' + getFio()
-    + '&amostra_pts=' + getAmostraPts()
-    + '&amostra_carr=' + getAmostraCarr();
-
-  return url;
 }
