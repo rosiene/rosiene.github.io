@@ -1,37 +1,90 @@
+const gola_redonda_manga_curta =
+  [ "A - Circunferência da gola (cm)*:"
+  , "B - Comprimento da barra da gola (cm)*:"
+  , false
+  , "C - Circunferência da manga (cm)*:"
+  , "D - Comprimento da manga (cm)*:"
+  , false
+  , "E - Comprimento da barra da manga (cm)*:"
+  , "F - Circunferência do corpo (cm)*:"
+  , "G - Comprimento do corpo (cm)*:"
+  , "H - Comprimento da barra do corpo (cm)*:"
+];
+
+const gola_ajustada_manga_curta =
+  [ "A - Circunferência da gola (cm)*:"
+  , "B - Comprimento da barra da gola (cm)*:"
+  , "C - Comprimento da diferença do pescoço (cm)*:"
+  , "D - Circunferência da manga (cm)*:"
+  , "E - Comprimento da manga (cm)*:"
+  , false
+  , "F - Comprimento da barra da manga (cm)*:"
+  , "G - Circunferência do corpo (cm)*:"
+  , "H - Comprimento do corpo (cm)*:"
+  , "I - Comprimento da barra do corpo (cm)*:"
+];
+
+const gola_redonda_manga_comprida =
+  [ "A - Circunferência da gola (cm)*:"
+  , "B - Comprimento da barra da gola (cm)*:"
+  , false
+  , "C - Circunferência da manga (cm)*:"
+  , "D - Comprimento da manga (cm)*:"
+  , "E - Circunferência do punho (cm)*:"
+  , "F - Comprimento da barra da manga (cm)*:"
+  , "G - Circunferência do corpo (cm)*:"
+  , "H - Comprimento do corpo (cm)*:"
+  , "I - Comprimento da barra do corpo (cm)*:"
+];
+
+const gola_ajustada_manga_comprida =
+  [ "A - Circunferência da gola (cm)*:"
+  , "B - Comprimento da barra da gola (cm)*:"
+  , "C - Comprimento da diferença do pescoço (cm)*:"
+  , "D - Circunferência da manga (cm)*:"
+  , "E - Comprimento da manga (cm)*:"
+  , "F - Circunferência do punho (cm)*:"
+  , "G - Comprimento da barra da manga (cm)*:"
+  , "H - Circunferência do corpo (cm)*:"
+  , "I - Comprimento do corpo (cm)*:"
+  , "J - Comprimento da barra do corpo (cm)*:"
+];
+
 $(document).ready(function() {
 
   const urlParams = new URLSearchParams(window.location.search);
-  setEstilo(urlParams);
-
-
-  var form = document.getElementById("form_medidas");
+  const form = document.getElementById("form_medidas");
   var msg_erro = document.getElementById("erroForm");
-
-  validarInputsOnInput(form);
-
-  var submitEstilo = $('#submitMedidas');
-
-  submitEstilo.on("click", function(event){
-    event.preventDefault();
-
-    if(validarInputsOnSubmit(form, msg_erro)){
-
-      console.log('calcular!');
-    }
-  });
-
-
-  // var medida = document.getElementById('medida');
   //
-  // medida.addEventListener("click", function(event){
+  setEstilo(urlParams);
+  setInputs(urlParams, form);
+
+  // validarInputsOnInput(form);
+  //
+  // var submitMedidas = $('#submitMedidas');
+  //
+  // submitMedidas.on("click", function(event){
   //   event.preventDefault();
   //
-  //   if (validar()){
-  //     calcular();
+  //   if(validarInputsOnSubmit(form, msg_erro)){
+  //     //calcularGeral();
+  //     console.log('calcular!');
   //   }
   // });
 
 });
+
+function montarParametrosInfoEstiloMedida(){
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const url = urlParams.toString()
+    + '&gola_circunferencia=' + getGolaCircunferencia()
+    + '&gola_comprimento=' + getGolaComprimento()
+    + '&gola_=' + getManga()
+    + '&barra=' + getBarra();
+
+  return url;
+}
 
 function setEstilo(urlParams){
   const divisao = urlParams.get('divisao');
@@ -87,4 +140,81 @@ function getImgEstilo(golaInput, mangaInput){
     + "-manga-"
     + mangaInput
     + ".png' />";
+}
+
+function setInputs(urlParams, formulario){
+
+  var textLabels;
+  const gola = urlParams.get('gola');
+  const manga = urlParams.get('manga');
+
+  if (gola == 'redonda'){
+    const childElement = document.getElementById('golaDiferenca');
+    const parentElement = childElement.parentElement;
+    parentElement.style.display = 'none';
+  }
+
+  if (manga == 'curta'){
+    const childElement = document.getElementById('punhoCircunferencia');
+    const parentElement = childElement.parentElement;
+    parentElement.style.display = 'none';
+  }
+
+  const labels = formulario.querySelectorAll("label");
+
+  if (gola == 'redonda' && manga == 'curta'){
+    textLabels = gola_redonda_manga_curta;
+  }else if (gola == 'ajustada' && manga == 'curta'){
+    textLabels = gola_ajustada_manga_curta;
+  }else if (gola == 'redonda' && manga == 'comprida'){
+    textLabels = gola_redonda_manga_comprida;
+  }else{
+    textLabels = gola_ajustada_manga_comprida;
+  }
+
+  for (let i = 0; i < labels.length; i++) {
+    var label = labels[i];
+    label.innerHTML = textLabels[i];
+  }
+
+}
+
+function getGolaCircunferencia(){
+  return $("#golaCircunferencia").val();
+}
+
+function getGolaComprimento(){
+  return $("#golaComprimento").val();
+}
+
+function getGolaDiferenca(){
+  return $("#golaDiferenca").val();
+}
+
+function getMangaCircunferencia(){
+  return $("#mangaCircunferencia").val();
+}
+
+function getMangaComprimento(){
+  return $("#mangaComprimento").val();
+}
+
+function getPunhoCircunferencia(){
+  return $("#punhoCircunferencia").val();
+}
+
+function getMangaComprimentoBarra(){
+  return $("#mangaComprimentoBarra").val();
+}
+
+function getCorpoCircunferencia(){
+  return $("#corpoCircunferencia").val();
+}
+
+function getCorpoComprimento(){
+  return $("#corpoComprimento").val();
+}
+
+function getCorpoComprimentoBarra(){
+  return $("#corpoComprimento").val();
 }

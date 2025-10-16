@@ -15,7 +15,7 @@ $( document ).ready(function() {
       var parametros = montarParametrosInfoEstilo();
       var urlMedida = montarUrl();
 
-      window.location.href = urlMedida + "?" + parametros;
+      window.location.href = "medidas.html?" + parametros;
     }
   });
 });
@@ -30,15 +30,6 @@ function montarParametrosInfoEstilo(){
     + '&barra=' + getBarra();
 
   return url;
-}
-
-function montarUrl(golaInput, mangaInput){
-
-  return "medidas-gola-"
-    + getGola()
-    + "-manga-"
-    + getManga()
-    + ".html";
 }
 
 function getDivisao(){

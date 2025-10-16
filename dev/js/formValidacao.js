@@ -14,8 +14,6 @@ function validarInputsOnSubmit(formulario, msg_erro){
 
   var count = 0;
 
-  console.log(inputs);
-
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i];
     if (!validacaoCampoObrigatorioOnSubmit(input, msg_erro)){
