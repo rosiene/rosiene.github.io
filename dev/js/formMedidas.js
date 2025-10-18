@@ -141,7 +141,7 @@ function getTextoEstilo(divisaoInput, golaInput, mangaInput, barraInput){
 
 function getImgEstilo(golaInput, mangaInput){
 
-  return "<img src='img/medidas/raglan-gola-"
+  return "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
     + golaInput
     + "-manga-"
     + mangaInput

@@ -18,7 +18,7 @@ function gerarAmostra(ptsAmostra, carrAmostra){
 
 function gerarTamanho(tamanho, gola, manga){
   return "<h5>TAMANHO:</h5>" + tamanho
-    + "<img src='img/medidas/raglan-gola-"
+    + "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
       + gola
       + "-manga-"
       + manga
