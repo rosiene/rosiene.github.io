@@ -27,14 +27,14 @@ $(document).ready(function() {
 
   montarCabecalhoReceita();
 
+  download();
+
 
 });
 
 function montarCabecalhoReceita(){
 
   montarCabecalhoReceita();
-
-  download();
 }
 
 function montarCabecalhoReceita(){

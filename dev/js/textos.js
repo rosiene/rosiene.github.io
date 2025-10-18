@@ -11,14 +11,15 @@ function gerarTitulo(titulo, descricao){
 
 
 function gerarAmostra(ptsAmostra, carrAmostra){
-  return "<h5>AMOSTRA:</h5> 10 cm x 10 cm = "
+  return "<h5>AMOSTRA:</h5> "
+    + "<p> 10 cm x 10 cm = "
     + ptsAmostra + " pts e "
-    + carrAmostra + " v./carr. no ponto malha.<br/>";
+    + carrAmostra + " v./carr. no ponto malha.</p>";
 }
 
 function gerarTamanho(tamanho, gola, manga){
-  return "<h5>TAMANHO:</h5>" + tamanho
-    + "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
+  return "<h5>TAMANHO:</h5><p>" + tamanho + "</p>"
+      + "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
       + gola
       + "-manga-"
       + manga

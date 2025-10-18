@@ -1,7 +1,7 @@
 body {
   font-family: 'PT Sans', sans-serif;
   color: #241f20;
-  font-size: 40px;
+  font-size: 42px;
   background-color: #fff;
   margin: 30px;
   height: 100%;
@@ -150,16 +150,12 @@ font-size: 60px;
   font-size: 64px;
 }
 .cabecalho h2{
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 600;
 }
 .cabecalho h3{
-  font-size: 36px;
+  font-size: 42px;
   font-style: italic;
-}
-.formulario, .resultado {
-  padding: 20px;
-
 }
 .sessao_peca {
   line-height: 42px;
@@ -180,23 +176,17 @@ font-size: 60px;
   font-style: italic;
 }
 
-.resultado{
-  font-size: 32px;
-  line-height: 72px;
-  margin: 0;
-}
 .resultado h1 {
-  font-size: 72px;
+  font-size: 64px;
 }
 .resultado h4 {
-  font-size: 32px;
+  font-size: 42px;
 }
 .resultado h5 {
   font-weight: 600;
-  font-size: 32px;
-  margin: 28px auto 12px auto;
+  font-size: 42px;
+  margin-top: 50px;
 }
-
 
 /*
 @media screen and (min-width: 1024px) {
