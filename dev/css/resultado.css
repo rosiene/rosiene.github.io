@@ -1,0 +1,36 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  margin: 50px 80px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.cabecalho {
+  text-align: center;
+}
+
+.cabecalho img{
+  width: 120px;
+}
+
+.cabecalho h2 {
+  font-size: 24px;
+}
+.cabecalho h3 {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+}
+.resultado h5 {
+  margin-top: 30px;
+  font-weight: 600;
+}
+.resultado img {
+  width: 36%;
+}
+.resultado p {
+  line-height: 2.5;
+}

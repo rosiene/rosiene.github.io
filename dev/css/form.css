@@ -4,7 +4,6 @@ body {
   font-size: 42px;
   background-color: #fff;
   margin: 30px;
-  height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'PT Sans', sans-serif;
@@ -27,6 +26,7 @@ font-size: 60px;
   margin: 20px;
   padding: 20px
 }
+
 .fluxo span{
   font-weight: 900;
   color: #db7f10;
@@ -176,18 +176,34 @@ font-size: 60px;
   font-style: italic;
 }
 
-.resultado h1 {
-  font-size: 64px;
+.cabecalho-resultado{
+  text-align: center;
+  padding: 80px 0 40px 0;
 }
-.resultado h4 {
-  font-size: 42px;
+.cabecalho-resultado img{
+  width: 150px;
 }
-.resultado h5 {
+.cabecalho-resultado h1{
+  font-size: 36px;
+}
+.cabecalho-resultado h2{
+  font-size: 24px;
   font-weight: 600;
-  font-size: 42px;
-  margin-top: 50px;
+}
+.cabecalho-resultado h3{
+  font-size: 18px;
+  font-style: italic;
 }
 
+.resultado h5 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.resultado p {
+  font-size: 14px;
+}
 /*
 @media screen and (min-width: 1024px) {
   body {

@@ -24,23 +24,18 @@
 const urlParams = new URLSearchParams(window.location.search);
 
 $(document).ready(function() {
-
   montarCabecalhoReceita();
 
-  download();
-
-
+  setTimeout(() => {
+    download();
+  }, 1000);
 });
-
-function montarCabecalhoReceita(){
-
-  montarCabecalhoReceita();
-}
 
 function montarCabecalhoReceita(){
   //Título, Materiais, Amostra, Tamanho, Abreviacoes
 
-  $('.resultado').append(gerarTitulo(getNomeProjeto(), getDescricaoProjeto()));
+  $('.titulo').append(gerarTitulo(getNomeProjeto()));
+  $('.resultado').append(gerarDescricao(getDescricaoProjeto()));
   $('.resultado').append(gerarAmostra(getAmostraPts(), getAmostraCarr()));
   $('.resultado').append(gerarTamanho(getTamanho(), getGola(), getManga()));
   $('.resultado').append(gerarLegenda());
@@ -48,19 +43,17 @@ function montarCabecalhoReceita(){
 }
 
 function download(){
-  var buttonDownload = $("#download")
-
-  buttonDownload.on("click", function(event){
-    var element = document.getElementById('conteudo');
-    var opt = {
-      margin:       0,
-      filename:     'file.pdf',
-      image:        { type: 'png', quality: 0.70 },
-      html2canvas:  { scale: 2, useCORS: true},
-      jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(element).save();
-  });
+  var element = document.body;
+  var opt = {
+    margin:       0,
+    filename:     'file.pdf',
+    image:        { type: 'jpg', quality: 0.98 },
+    pagebreak: { mode: ['avoid-all'] },
+    // pagebreak: { mode: ['css', 'legacy'] },
+    html2canvas:  { scale: 2, useCORS: true, letterRendering: true},
+    jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(element).save();
 }
 
 function calcularGeral(){

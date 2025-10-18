@@ -1,11 +1,14 @@
 var identacaoInicio = "<div style='margin: 12px 0px 12px 28px'>"
 var identacaoFinal = "</div>";
 
-function gerarTitulo(titulo, descricao){
+function gerarTitulo(titulo){
+  return "<h1>- "+titulo+" -</h1>";
+}
+function gerarDescricao(descricao){
   if (descricao != ""){
-    return "<h1>"+titulo+"</h1><h4>" + descricao + "</h4>";
+    return "<p>"+descricao+"</p>";
   }else{
-    return "<h1>"+titulo+"</h1>";
+    return "";
   }
 }
 
@@ -29,7 +32,7 @@ function gerarTamanho(tamanho, gola, manga){
 
 function gerarLegenda(){
   return "<h5>ABREVIAÇÕES: </h5>"
-    +"<b>[marc]</b> posicionar ou mover o marcador, "
+    +"<p><b>[marc]</b> posicionar ou mover o marcador, "
     +"<b>2jm</b> 2 pontos juntos em meia, "
     +"<b>aumD</b> aumento em meia direcional para a direta, "
     +"<b>aumE</b> aumento em meia direcional para a esquerda, "
@@ -38,7 +41,7 @@ function gerarLegenda(){
     +"<b>ms</b> mate simples, "
     +"<b>pt(s)</b> ponto(s), "
     +"<b>t</b> tricô, "
-    +"<b>v.</b> volta(s).</br>";
+    +"<b>v.</b> volta(s).</p>";
 }
 
 function gerarInstrucaoTitulo(){
