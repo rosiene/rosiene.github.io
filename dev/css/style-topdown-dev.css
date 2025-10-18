@@ -181,19 +181,19 @@ font-size: 60px;
 }
 
 .resultado{
-  font-size: 16px;
-  line-height: 36px;
+  font-size: 32px;
+  line-height: 72px;
   margin: 0;
 }
 .resultado h1 {
-  font-size: 36px;
+  font-size: 72px;
 }
 .resultado h4 {
-  font-size: 18px;
+  font-size: 32px;
 }
 .resultado h5 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 32px;
   margin: 28px auto 12px auto;
 }
 

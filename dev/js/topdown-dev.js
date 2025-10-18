@@ -37,7 +37,7 @@ $( document ).ready(function() {
   //     setValoresReceita();
   //     esconderFormulario();
   //
-  //     montarCabecalhoReceita();
+      montarCabecalhoReceita();
   //
   //     //GOLA
   //
@@ -67,7 +67,7 @@ $( document ).ready(function() {
   //     var ptsCorpoCostas1FinalPala = ptsCorpoCostas1InicioPala + (vRaglan / 2);
   //     var ptsCorpoCostas2FinalPala = ptsCorpoCostas2InicioPala + (vRaglan / 2);
   //
-  //     montarInstrucaoMontagem(ptsGola, vGola);
+      // montarInstrucaoMontagem(ptsGola, vGola);
   //
   //     // VERIFICA SE TEM CARREIRA ENCURTADA NA GOLA
   //     if (cmGolaComprimentoDiferenca == 0){
@@ -282,21 +282,19 @@ function voltarModelo(){
 //
 // }
 //
-// function montarCabecalhoReceita(){
-//   var titulo = gerarTitulo(nomeProjeto, descricaoProjeto);
-//
-//   $('.resultado').append(titulo);
-//   $('.resultado').append(gerarAmostra(ptsAmostra, carrAmostra));
-//   $('.resultado').append(gerarLegenda());
-//
-//   // doc.text(titulo, 10, 10);
-// }
-//
-// function montarInstrucaoMontagem(ptsGola, vGola){
-//   $('.resultado').append(gerarInstrucaoTitulo());
-//   $('.resultado').append(gerarInstrucaoMontagem(ptsGola));
-//   $('.resultado').append(gerarInstrucaoGola(padraoBarra, vGola));
-// }
+function montarCabecalhoReceita(){
+  var titulo = gerarTitulo(nomeProjeto, descricaoProjeto);
+
+  $('.resultado').append(titulo);
+  $('.resultado').append(gerarAmostra(ptsAmostra, carrAmostra));
+  $('.resultado').append(gerarLegenda());
+}
+
+function montarInstrucaoMontagem(ptsGola, vGola){
+  $('.resultado').append(gerarInstrucaoTitulo());
+  $('.resultado').append(gerarInstrucaoMontagem(ptsGola));
+  $('.resultado').append(gerarInstrucaoGola(padraoBarra, vGola));
+}
 //
 // function montarPreparacaoRaglan(ptsDivisaoRaglan, ptsFrente, ptsCostas1, ptsCostas2, ptsManga){
 //   $('.resultado').append(gerarInstrucaoPreparacaoRaglan(ptsDivisaoRaglan, ptsFrente, ptsCostas1, ptsCostas2, ptsManga));

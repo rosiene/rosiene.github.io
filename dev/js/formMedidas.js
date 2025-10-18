@@ -55,23 +55,23 @@ $(document).ready(function() {
   const urlParams = new URLSearchParams(window.location.search);
   const form = document.getElementById("form_medidas");
   var msg_erro = document.getElementById("erroForm");
-  //
+
   setEstilo(urlParams);
   setInputs(urlParams, form);
 
-  // validarInputsOnInput(form);
-  //
-  // var submitMedidas = $('#submitMedidas');
-  //
-  // submitMedidas.on("click", function(event){
-  //   event.preventDefault();
-  //
-  //   if(validarInputsOnSubmit(form, msg_erro)){
-  //     //calcularGeral();
-  //     console.log('calcular!');
-  //   }
-  // });
+  validarInputsOnInput(form);
 
+  var submitMedidas = $('#submitMedidas');
+
+  submitMedidas.on("click", function(event){
+    event.preventDefault();
+
+    if(validarInputsOnSubmit(form, msg_erro)){
+
+      var parametros = montarParametrosInfoEstiloMedida();
+      window.location.href = "resultado.html?" + parametros;
+    }
+  });
 });
 
 function montarParametrosInfoEstiloMedida(){
@@ -80,8 +80,14 @@ function montarParametrosInfoEstiloMedida(){
   const url = urlParams.toString()
     + '&gola_circunferencia=' + getGolaCircunferencia()
     + '&gola_comprimento=' + getGolaComprimento()
-    + '&gola_=' + getManga()
-    + '&barra=' + getBarra();
+    + '&gola_diferenca=' + getGolaDiferenca()
+    + '&manga_circunferencia=' + getMangaCircunferencia()
+    + '&manga_comprimento=' + getMangaComprimento()
+    + '&punho_circunferencia=' + getPunhoCircunferencia()
+    + '&manga_comprimento_barra=' + getMangaComprimentoBarra()
+    + '&corpo_circunferencia=' + getCorpoCircunferencia()
+    + '&corpo_comprimento=' + getCorpoComprimento()
+    + '&corpo_comprimento_barra=' + getCorpoComprimentoBarra();
 
   return url;
 }
@@ -216,5 +222,5 @@ function getCorpoComprimento(){
 }
 
 function getCorpoComprimentoBarra(){
-  return $("#corpoComprimento").val();
+  return $("#corpoComprimentoBarra").val();
 }

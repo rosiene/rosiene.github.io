@@ -13,8 +13,6 @@ $( document ).ready(function() {
     if(validarInputsOnSubmit(form, msg_erro)){
 
       var parametros = montarParametrosInfoEstilo();
-      var urlMedida = montarUrl();
-
       window.location.href = "medidas.html?" + parametros;
     }
   });

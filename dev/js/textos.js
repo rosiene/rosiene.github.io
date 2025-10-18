@@ -16,6 +16,16 @@ function gerarAmostra(ptsAmostra, carrAmostra){
     + carrAmostra + " v./carr. no ponto malha.<br/>";
 }
 
+function gerarTamanho(tamanho, gola, manga){
+  return "<h5>TAMANHO:</h5>" + tamanho
+    + "<img src='img/medidas/raglan-gola-"
+      + gola
+      + "-manga-"
+      + manga
+      + ".png' />";;
+
+}
+
 function gerarLegenda(){
   return "<h5>ABREVIAÇÕES: </h5>"
     +"<b>[marc]</b> posicionar ou mover o marcador, "
