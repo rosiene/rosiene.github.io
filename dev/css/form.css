@@ -204,24 +204,30 @@ font-size: 60px;
 .resultado p {
   font-size: 14px;
 }
-/*
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 16px;
     background-color: #241f20;
   }
-  fieldset legend {
+  .fluxo {
+    padding: 10px;
+  }
+  .formulario {
+    padding: 20px;
+  }
+  .formulario fieldset legend {
     font-size: 20px;
   }
-  fieldset div {
+  .formulario fieldset div {
     padding: 2px;
   }
-  input[type=text], input[type=number] {
+  .formulario input[type=text], input[type=number] {
     border: 1px #ebc9d1 ridge;
     border-radius: 6px;
     margin: 6px auto;
   }
-  input[type=radio]{
+  .formulario input[type=radio]{
     margin: 6px auto;
     width: 12px;
     height: 12px;
@@ -248,4 +254,20 @@ font-size: 60px;
     font-size: 12px;
     margin: 2px auto;
   }
-} */
+  .esquema img {
+    width: 36%;
+  }
+  .estilo [type=radio] + div{
+    display: inline-block;
+    padding: 40px;
+  }
+  .estilo [type=radio] + div img {
+    margin-top: 0px;
+  }
+  .estilo  .barra{
+    width: 200px;
+  }
+  .modelo_selecionado img {
+    width: 300px
+  }
+}
