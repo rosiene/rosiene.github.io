@@ -12,21 +12,32 @@ function gerarDescricao(descricao){
   }
 }
 
+function gerarMateriais(parametros){
+  return "<h5>MATERIAIS:</h5>"
+    + "<ul>"
+    + "<li>" + parametros.fioQuantidade + "m de fio " + parametros.fioNome + ", considerando que o fio é da espessura categoria "
+    + parametros.fioCategoria + ";</li>"
+    + "<li> Agulha circular nº " + parametros.agulha + " com cabo de 80 cm;</li>"
+    + "<li>9 marcadores - 1 cor A e 8 cor B;</li>"
+    + "<li>Tesoura;</li>"
+    + "<li>Agulha de tapeçaria.</li>"
 
-function gerarAmostra(ptsAmostra, carrAmostra){
-  return "<h5>AMOSTRA:</h5> "
-    + "<p> 10 cm x 10 cm = "
-    + ptsAmostra + " pts e "
-    + carrAmostra + " v./carr. no ponto malha.</p>";
 }
 
-function gerarTamanho(tamanho, gola, manga){
-  return "<h5>TAMANHO:</h5><p>" + tamanho + "</p>"
+function gerarAmostra(parametros){
+  return "<h5>AMOSTRA:</h5> "
+    + "<p> 10 cm x 10 cm = "
+    + parametros.amostraPts + " pts e "
+    + parametros.amostraCarr + " v./carr. no ponto malha.</p>";
+}
+
+function gerarTamanho(parametros){
+  return "<h5>TAMANHO:</h5><p>" + parametros.tamanho + "</p>"
       + "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
-      + gola
+      + parametros.gola
       + "-manga-"
-      + manga
-      + ".png' />";;
+      + parametros.manga
+      + ".png' />";
 
 }
 
@@ -312,11 +323,14 @@ function gerarInstrucoesMangasAjustadas(ptsManga,
   return texto;
 }
 
-function consideracoesFinais(){
-  return "Fazer os acabamentos da peça e blocar se necessário.</br>"
-    + "<div class='rodape'>Essa receita foi gerada de forma automática "
+function acabamento(){
+  return "<p>Fazer os acabamentos da peça e blocar se necessário.</p>";
+}
+
+function rodape(){
+  return "<div class='rodape'>Essa receita foi gerada de forma automática "
     + "através do sistema &quot;Minha Receita Pronta&quot; por Rosiene Dilly.</br>"
     + "É proibida a cópia, distribuição ou reprodução total ou parcial "
-    + "deste material sem autorização prévia do autor por escrito. </br>"
+    + "deste material <br/>sem autorização prévia do autor por escrito. </br>"
     + "É permitida a venda de peças feitas a partir desta receita.</div>";
 }
