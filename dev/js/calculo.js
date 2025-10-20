@@ -5,20 +5,43 @@ function calcularReceita(parametros){
 
   var topDown = new Object();
 
+  topDown.cava = parametros.cava;
+  topDown.divisao = parametros.divisao
+
   topDown.golaPontos = calcularPontos(parametros.amostraPts, parametros.golaCircunferencia, parametros.multiploPontos);
   topDown.golaVoltas = calcularVoltas(parametros.amostraCarr, parametros.golaComprimento, parametros.multiploVoltas);
 
   //PALA
 
-  var corpoPontos = calcularPontos(parametros.amostraPts, parametros.corpoCircunferencia, parametros.multiploPontos);
-  var mangaPontos = calcularPontos(parametros.amostraPts, parametros.mangaCircunferencia, parametros.multiploPontos);
-  var raglanFinalPontos = calcularPontosFinalRaglan(corpoPontos, mangaPontos, parametros.cava);
+  topDown.corpoPontos = calcularPontos(parametros.amostraPts, parametros.corpoCircunferencia, parametros.multiploPontos);
+  topDown.mangaPontos = calcularPontos(parametros.amostraPts, parametros.mangaCircunferencia, parametros.multiploPontos);
+  topDown.raglanFinalPontos = calcularPontosFinalRaglan(topDown.corpoPontos, topDown.mangaPontos, topDown.cava);
 
-  //var raglanVoltas = calcularVoltasRaglan(golaPontos, raglanFinalPontos);
+  topDown.raglanVoltas = calcularVoltasRaglan(topDown.golaPontos, topDown.raglanFinalPontos);
+  topDown.totalAumentosRaglan = topDown.raglanVoltas * 4;
 
-  //var totalAumentosRaglan = raglanVoltas * 4;
+  topDown.raglanFinalPontos = atualizarPontosFinais(topDown.golaPontos, topDown.raglanVoltas);
+  topDown.corpoPontos = atualizarPontosCorpo(topDown.raglanFinalPontos, topDown.mangaPontos, topDown.cava);
 
   console.log(parametros);
+
+  //calculo divisao gola inicio
+  topDown.corpoDivisaoPontos = Math.round(topDown.divisao / 2);
+  topDown.mangaDivisaoPontos = Math.round(topDown.divisao - topDown.corpoDivisaoPontos);
+
+  topDown.mangaInicioPalaPontos = topDown.mangaPontos - topDown.raglanVoltas - (topDown.mangaDivisaoPontos * 2) - topDown.cava;
+  topDown.corpoFrenteInicioPalaPontos = (topDown.corpoPontos / 2) - topDown.raglanVoltas - (topDown.corpoDivisaoPontos * 2) - parametros.cava;
+  topDown.corpoCostasPrimeiroPalaPontos = Math.round(topDown.corpoFrenteInicioPalaPontos / 2);
+  topDown.corpoCostasSegundoPalaPontos = topDown.corpoFrenteInicioPalaPontos - topDown.corpoCostasPrimeiroPalaPontos;
+
+  console.log(topDown.mangaPontos);
+  console.log(topDown.raglanVoltas);
+  console.log(topDown.mangaDivisaoPontos);
+  console.log(topDown.mangaInicioPalaPontos);
+  console.log(topDown.corpoFrenteInicioPalaPontos);
+  console.log(topDown.corpoCostasPrimeiroPalaPontos);
+  console.log(topDown.corpoCostasSegundoPalaPontos);
+  console.log((topDown.divisao * 4) + (topDown.mangaInicioPalaPontos * 2) + topDown.corpoFrenteInicioPalaPontos + topDown.corpoCostasPrimeiroPalaPontos + topDown.corpoCostasSegundoPalaPontos)
 
   return topDown;
 
@@ -99,7 +122,7 @@ function calcularVoltasRaglan(ptsGola, ptsFinalRaglan){
   return viraPar((ptsFinalRaglan - ptsGola) / 4);
 }
 
-function atualizarPtsFinais(ptsGola, nVoltasRaglan){
+function atualizarPontosFinais(ptsGola, nVoltasRaglan){
   return (ptsGola + (nVoltasRaglan * 4));
 }
 
