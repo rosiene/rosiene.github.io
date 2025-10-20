@@ -1,4 +1,4 @@
-var identacaoInicio = "<div style='margin: 12px 0px 12px 28px'>"
+var identacaoInicio = "<div class='identacao'>"
 var identacaoFinal = "</div>";
 
 function gerarTitulo(titulo){
@@ -59,26 +59,27 @@ function gerarInstrucaoTitulo(){
   return "<h5>INSTRUÇÕES: </h5>";
 }
 
-function gerarInstrucaoMontagem(ptsGola){
-  return "Montar " + (ptsGola + 1) + " pts na agulha circular, derrubar "
+function gerarInstrucaoMontagem(golaPontos){
+  return "<p>Montar " + (golaPontos + 1) + " pts na agulha circular, derrubar "
     + "o último ponto colocado na agulha em cima do primeiro pt fechando "
-    + " o círculo de pts, ficando assim com " + ptsGola + " pts."
-    + " Posicionei o marc. A para marcar o início e final de cada volta.</br>";
+    + " o círculo de pts, ficando assim com " + golaPontos + " pts."
+    + " Posicionei o <i>marc. A</i> para marcar o início e final de cada volta.</p>";
 }
 
-function gerarInstrucaoGola(padraoBarra, nVoltasGola){
-  if (padraoBarra == 'barra1') {
-    return "<b class='sessao_peca'>Gola:</b></br>"
-      + "Tecer por " + nVoltasGola + " v. no ponto barra 1/1:</br>"
-      + identacaoInicio
-      + "<b>1ª até " + nVoltasGola + "ª v.:</b> * 1m, 1t, *, rep. de * a* até o final.</br>"
-      + identacaoFinal;
-  } else {
-    return "Tecer por " + nVoltasGola + " v. no ponto barra 2/2:</br>"
-      + identacaoInicio
-      + "<b>1ª até " + nVoltasGola + "ª v.:</b> * 2m, 2t, *, rep. de * a* até o final.</br>"
-      + identacaoFinal;
+function gerarInstrucaoGola(golaVoltas, barra){
+
+  var texto = "<p class='sessao_peca'>Gola:</p>"
+
+  if (barra == 'barra1') {
+    texto += barra1(golaVoltas);
+  }else if (barra == 'barra2') {
+    texto += barra1(golaVoltas);
+  }else if (barra == 'arroz') {
+    texto += arroz(golaVoltas);
+  }else{
+    texto += cordoes(golaVoltas);
   }
+  return texto;
 }
 
 function gerarInstrucaoPreparacaoRaglan(ptsDivisao,
@@ -325,6 +326,36 @@ function gerarInstrucoesMangasAjustadas(ptsManga,
 
 function acabamento(){
   return "<p>Fazer os acabamentos da peça e blocar se necessário.</p>";
+}
+
+function barra1(voltas){
+  return "<p>Tecer por " + voltas + " v. no ponto barra 1/1:</p>"
+    + identacaoInicio
+    + "<p><b>1ª até " + voltas + "ª v.:</b> * 1m, 1t, *, rep. de * a* até o final.</p>"
+    + identacaoFinal;
+}
+
+function barra2(voltas){
+  return "<p>Tecer por " + voltas + " v. no ponto barra 2/2:</p>"
+    + identacaoInicio
+    + "<p><b>1ª até " + voltas + "ª v.:</b> * 2m, 2t, *, rep. de * a* até o final.</p>"
+    + identacaoFinal;
+}
+
+function arroz(voltas){
+  return "<p>Tecer por " + voltas + " v. no ponto barra 1/1:</p>"
+    + identacaoInicio
+    + "<p><b>1ª e todas ímpares até " + (voltas - 1) + "ª v.:</b> * 1m, 1t, *, rep. de * a* até o final.</p>"
+    + "<p><b>2ª e todas pares até " + voltas + "ª v.:</b> * 1t, 1m, *, rep. de * a* até o final.</p>"
+    + identacaoFinal;
+}
+
+function cordoes(voltas){
+  return "<p>Tecer por " + voltas + " v. no ponto cordões de tricô:</p>"
+    + identacaoInicio
+    + "<p><b>1ª e todas ímpares até " + (voltas - 1) + "ª v.:</b> todos em t até o final.</p>"
+    + "<p><b>2ª e todas pares até " + voltas + "ª v.:</b> todos em m até o final.</p>"
+    + identacaoFinal;
 }
 
 function rodape(){

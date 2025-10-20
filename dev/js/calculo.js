@@ -1,6 +1,33 @@
 const volumoso = 72.4, medio = 98, leve = 127, fino = 147, superFino = 175;
 
 
+function calcularReceita(parametros){
+
+  var topDown = new Object();
+
+  topDown.golaPontos = calcularPontos(parametros.amostraPts, parametros.golaCircunferencia, parametros.multiploPontos);
+  topDown.golaVoltas = calcularVoltas(parametros.amostraCarr, parametros.golaComprimento, parametros.multiploVoltas);
+
+  //PALA
+
+  var corpoPontos = calcularPontos(parametros.amostraPts, parametros.corpoCircunferencia, parametros.multiploPontos);
+  var mangaPontos = calcularPontos(parametros.amostraPts, parametros.mangaCircunferencia, parametros.multiploPontos);
+  var raglanFinalPontos = calcularPontosFinalRaglan(corpoPontos, mangaPontos, parametros.cava);
+
+  //var raglanVoltas = calcularVoltasRaglan(golaPontos, raglanFinalPontos);
+
+  //var totalAumentosRaglan = raglanVoltas * 4;
+
+  console.log(parametros);
+
+  return topDown;
+
+}
+
+function calcularPontosFinalRaglan(ptsCorpo, ptsManga, ptsCava){
+  return (ptsCorpo + (2 * ptsManga) - (4 * ptsCava));
+}
+
 function calcularCategoriaFio(amostraPts){
   if (amostraPts < 15){
     return "volumoso";
@@ -48,8 +75,13 @@ function calcularPontos(ptsAmostra, cmCircunferencia, multiplo){
   }
 }
 
-function calcularVoltas(amostraCarr, comprimento) {
-  return Math.round(amostraCarr * comprimento / 10);
+function calcularVoltas(amostraCarr, comprimento, multiploVoltas) {
+  var voltas = Math.round(amostraCarr * comprimento / 10);
+
+  if (multiploVoltas == 2){
+    return viraPar(voltas);
+  }
+  return voltas;
 }
 
 function viraPar(numero) {
@@ -63,7 +95,7 @@ function viraPar(numero) {
   }
 }
 
-function gerarVoltasRaglan(ptsGola, ptsFinalRaglan){
+function calcularVoltasRaglan(ptsGola, ptsFinalRaglan){
   return viraPar((ptsFinalRaglan - ptsGola) / 4);
 }
 
@@ -71,7 +103,7 @@ function atualizarPtsFinais(ptsGola, nVoltasRaglan){
   return (ptsGola + (nVoltasRaglan * 4));
 }
 
-function atualizarPtsCorpo(ptsFinal, ptsManga, ptsCava){
+function atualizarPontosCorpo(ptsFinal, ptsManga, ptsCava){
   return ptsFinal - (2 * (ptsManga - ptsCava)) + (2 * ptsCava);
 }
 

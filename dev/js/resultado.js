@@ -30,6 +30,14 @@ $(document).ready(function() {
 
   setToDownParametros();
 
+  escreverReceita();
+
+  // setTimeout(() => {
+  //   download();
+  // }, 1000);
+});
+
+function escreverReceita(){
   montarCabecalho();
   montarMateriais();
   montarAmostra();
@@ -38,13 +46,9 @@ $(document).ready(function() {
 
   montarInstrucoes();
 
-  // montarAcabamento();
   montarRodape();
 
-  // setTimeout(() => {
-  //   download();
-  // }, 1000);
-});
+}
 
 function montarCabecalho(){
   //Título, Materiais, Amostra, Tamanho, Abreviacoes
@@ -71,7 +75,10 @@ function montarLegenda(){
 
 function montarInstrucoes(){
   $('.resultado').append(gerarInstrucaoTitulo());
-  // topDown = calcularPala(parametros);
+  topDown = calcularReceita(parametros);
+  // console.log(topDown);
+  $('.resultado').append(gerarInstrucaoMontagem(topDown.golaPontos));
+  $('.resultado').append(gerarInstrucaoGola(topDown.golaVoltas, topDown.barra));
 }
 
 function montarAcabamento(){
@@ -84,7 +91,7 @@ function montarRodape(){
 
 function download(){
 
-  var titulo = getNomeProjeto();
+  var titulo = parametros.nomeProjeto;
   var element = document.body;
   var opt = {
     margin:       0.5,
@@ -112,14 +119,20 @@ function getCava(ptsAmostra){
   }
 }
 
-function getMultiplo(barra){
-  var multiplo = 2
-
-  if (barra == "barra-2-2"){
-    multiplo = 4;
+function getMultiploPontos(padrao){
+  if (padrao == "barra-2-2"){
+    return 4;
   }
-  return multiplo;
+  return 2;
 }
+
+function getMultiploVoltas(padrao){
+  if (padrao == "cordoes" || padrao == "arroz"){
+    return 2;
+  }
+  return 1;
+}
+
 
 function getFioCategoria(amostra){
   return calcularCategoriaFio(amostra);
@@ -147,7 +160,8 @@ function setToDownParametros(){
   parametros.corpoCircunferencia = urlParams.get('corpo_circunferencia');
   parametros.corpoComprimento = urlParams.get('corpo_comprimento');
   parametros.corpoComprimentoBarra = urlParams.get('corpo_comprimento_barra');
-  parametros.multiplo = getMultiplo(urlParams.get('barra'));
+  parametros.multiploPontos = getMultiploPontos(urlParams.get('barra'));
+  parametros.multiploVoltas = getMultiploVoltas(urlParams.get('barra'));
   parametros.cava = getCava(urlParams.get('amostra_pts'));
   parametros.fioCategoria = getFioCategoria(urlParams.get('amostra_pts'));
 }
