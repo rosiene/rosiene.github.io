@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formMedidas.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script src="js/formValidacao.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="conteudo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/mrp/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > <span>ESTILO</span> > <span>MEDIDAS</span>
+      </div>
+
+      <form class="formulario" id="form_medidas">
+
+        <fieldset>
+          <legend>ESTILO SELECIONADO</legend>
+          <div class="modelo_selecionado">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>GOLA</legend>
+          <div>
+            <label for="golaCircunferencia" class="gola_circunferencia">A - Circunferência da gola (cm)*:</label>
+            <input type="number" id="golaCircunferencia" name="gola_circunferencia" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="golaComprimento" class="gola_comprimento">B - Comprimento da barra da gola (cm)*:</label>
+            <input type="number" id="golaComprimento" name="gola_comprimento" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="golaDiferenca" class="gola_diferenca">C - Comprimento da diferença do pescoço (cm)*:</label>
+            <p class="explicacao_input">É indicado no mínimo 4 cm de comprimento.</p>
+            <input type="number" id="golaDiferenca" name="gola_diferenca" class="obrigatorio" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>MANGAS</legend>
+          <div>
+            <label for="mangaCircunferencia" class="manga_circunferencia">D - Circunferência da manga (cm)*:</label>
+           <input type="number" id="mangaCircunferencia" name="manga_circunferencia" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="mangaComprimento" class="manga_comprimento">E - Comprimento da manga (cm)*:</label>
+            <input type="number" id="mangaComprimento" name="manga_comprimento" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="punhoCircunferencia" class="punho_circunferencia">F - Circunferência do punho (cm)*:</label>
+           <input type="number" id="punhoCircunferencia" name="punho_circunferencia" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="mangaBarraComprimento" class="manga_barra_comprimento">G - Comprimento da barra da manga (cm)*:</label>
+            <input type="number" id="mangaBarraComprimento" name="manga_comprimento_barra" class="obrigatorio" />
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>CORPO</legend>
+
+          <div>
+            <label for="corpoCircunferencia" class="corpo_circunferencia">H - Circunferência do corpo (cm)*:</label>
+            <input type="number" id="corpoCircunferencia" name="corpo_circunferencia" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="corpoComprimento" class="corpo_comprimento">I - Comprimento do corpo (cm)*:</label>
+            <input type="number" id="corpoComprimento" name="corpo_comprimento" class="obrigatorio" />
+          </div>
+
+          <div>
+            <label for="corpoBarraComprimento" class="corpo_barra_comprimento">J - Comprimento da barra do corpo (cm)*:</label>
+            <input type="number" id="corpoBarraComprimento" name="corpo_barra_comprimento" class="obrigatorio" />
+          </div>
+        </fieldset>
+
+        <div>
+          <input type="button" onclick="voltar();" value="< inicio" />
+          <input type="submit" value="Calcular!" id="submitMedidas"/>
+          <div class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #241f20;
+  font-size: 42px;
+  background-color: #fff;
+  margin: 50px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h3 {
+font-size: 60px;
+}
+
+.apresentacao{
+  margin: 40px;
+  line-height: 2.0;
+}
+
+.fluxo{
+  text-align: center;
+  font-style: italic;
+  background-color: #f6ede3;
+  border: 1px dotted #f6b163;
+  margin: 40px 0;
+  padding: 20px
+}
+
+.fluxo span{
+  font-weight: 900;
+  color: #db7f10;
+}
+
+.feito{
+  color: green;
+}
+
+.fazendo{
+  font-weight: 900;
+}
+
+/* HIDE RADIO */
+.estilo [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.estilo [type=radio] + div {
+  color: #241f20;
+  background-color: #fff;
+  border: 2px #241f20 solid;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px;
+  text-align: center;;
+}
+
+.estilo [type=radio] + div img {
+  margin-top: 40px;
+}
+
+.estilo .barra{
+  width: 90%;
+}
+
+.estilo [type=radio] + div p {
+  font-weight: bold;
+}
+
+.estilo [type=radio]:checked + div {
+  background-color: #f8e4cd;
+}
+
+.modelo_selecionado img{
+  width: 100%;
+}
+
+.esquema {
+  text-align: center;
+}
+
+.esquema img {
+  width: 70%;
+}
+
+.formulario fieldset {
+  margin: 20px auto;
+  border: 1px dotted #f6b163;
+}
+.formulario fieldset legend {
+  font-size: 48px;
+  font-weight: 600;
+  color: #db7f10;
+}
+.formulario fieldset div {
+  margin: 12px auto;
+  padding: 10px;
+}
+.formulario input[type=text], input[type=number] {
+  border: 1px #ebc9d1 ridge;
+  margin: 10px auto;
+  padding: 4px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.formulario input[type=radio]{
+  margin: 6px auto;
+  width: 30px;
+  height: 30px;
+}
+.formulario input[type=submit], input[type=button] {
+  background: #db7f10;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.formulario input[type=submit]:active {
+  background: #241f20;
+}
+
+.conteudo{
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.erro_form {
+  margin-top: 40px;
+  color: red;
+  display: none;
+}
+.cabecalho {
+  text-align: center;
+  padding: 80px 0 40px 0;
+}
+.cabecalho img{
+  width: 300px;
+}
+.cabecalho h1{
+  font-size: 64px;
+}
+.cabecalho h2{
+  font-size: 42px;
+  font-weight: 600;
+}
+.cabecalho h3{
+  font-size: 42px;
+  font-style: italic;
+}
+.sessao_peca {
+  line-height: 42px;
+}
+.explicacao_input {
+  line-height: 40px;
+  color: #666;
+  font-size: 30px;
+  line-height: 16px;
+  margin: 16px auto;
+}
+.punho {
+  display: none;
+}
+.rodape {
+  text-align: center;
+  margin: 40px auto;
+  font-style: italic;
+}
+
+.cabecalho-resultado{
+  text-align: center;
+  padding: 80px 0 40px 0;
+}
+.cabecalho-resultado img{
+  width: 150px;
+}
+.cabecalho-resultado h1{
+  font-size: 36px;
+}
+.cabecalho-resultado h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+.cabecalho-resultado h3{
+  font-size: 18px;
+  font-style: italic;
+}
+
+.resultado h5 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.resultado p {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+    background-color: #241f20;
+  }
+  .fluxo {
+    padding: 10px;
+    margin: 0 20px;
+  }
+  .formulario {
+    padding: 20px;
+  }
+  .formulario fieldset legend {
+    font-size: 20px;
+  }
+  .formulario fieldset div {
+    padding: 2px;
+  }
+  .formulario input[type=text], input[type=number] {
+    border: 1px #ebc9d1 ridge;
+    border-radius: 6px;
+    margin: 6px auto;
+  }
+  .formulario input[type=radio]{
+    margin: 6px auto;
+    width: 12px;
+    height: 12px;
+  }
+  .conteudo{
+    width: 960px;
+  }
+  .cabecalho {
+    padding: 40px 0 0 0;
+  }
+  .cabecalho img{
+    width: 140px;
+  }
+  .cabecalho h1{
+    font-size: 48px;
+  }
+  .cabecalho h2{
+    font-size: 24px;
+  }
+  .cabecalho h3{
+    font-size: 20px;
+  }
+  .explicacao_input {
+    font-size: 12px;
+    margin: 2px auto;
+  }
+  .esquema img {
+    width: 36%;
+  }
+  .estilo [type=radio] + div{
+    display: inline-block;
+    padding: 40px;
+  }
+  .estilo [type=radio] + div img {
+    margin-top: 0px;
+  }
+  .estilo  .barra{
+    width: 200px;
+  }
+  .modelo_selecionado img {
+    width: 300px
+  }
+}

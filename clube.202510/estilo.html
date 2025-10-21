@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formEstilo.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script src="js/formValidacao.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="form_estilo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/mrp/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > <span>ESTILO</span> > MEDIDAS
+      </div>
+
+      <form class="formulario estilo" id="form_estilo">
+        <fieldset>
+          <legend>PALA RAGLAN</legend>
+          <p>A pala raglan é estruturada em quatro partes: mangas, frente e costas. Para organizar essa divisão, é necessário definir quantos pontos irão compor cada uma dessas partes, marcando os limites entre elas.</p>
+          <p class="esquema">
+            <img src="https://rosiene.github.io/mrp/img/medidas/raglan-esquema.png" />
+          </p>
+          <div>
+            <label for="divisao" class="divisao">Número de pontos da divisão (entre 0 e 8):</label>
+            <input type="number" id="divisao" name="divisao" class="obrigatorio" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>GOLA</legend>
+          <label>
+            <input type="radio" name="gola" value="redonda" checked />
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/gola/gola-redonda.png" alt="Gola Redonda"/>
+              <p>Gola Redonda</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="gola" value="ajustada">
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/gola/gola-ajustada.png" alt="Gola Ajustada"/>
+              <p>Gola Ajustada</p>
+            </div>
+          </label>
+
+          </fieldset>
+          <fieldset>
+          <legend>MANGA</legend>
+          <label>
+            <input type="radio" name="manga" value="curta" checked>
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/manga/curta.png" alt="Manga Curta"/>
+              <p>Manga Curta</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="manga" value="comprida">
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/manga/comprida.png" alt="Manga Comprida Ajustada"/>
+              <p>Manga Comprida Ajustada</p>
+            </div>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>BARRA</legend>
+          <label>
+            <input type="radio" name="barra" value="barra-1-1" checked>
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/barra/barra-1-1.jpg" class="barra" alt="Barra 1/1"/>
+              <p>Barra 1/1</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="barra" value="barra-2-2">
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/barra/barra-2-2.jpg" class="barra" alt="Barra 2/2"/>
+              <p>Barra 2/2</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="barra" value="arroz">
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/barra/arroz.jpg" class="barra" alt="Ponto Arroz"/>
+              <p>Ponto Arroz</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="barra" value="cordoes">
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/barra/cordoes.jpg" class="barra" alt="Cordões de Tricô"/>
+              <p>Cordões de Tricô</p>
+            </div>
+          </label>
+        </fieldset>
+
+        <input type="button" onclick="voltar();" value="< inicio" />
+        <input type="submit" value="Medidas >" id="submitEstilo" />
+        <div class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</div>
+        </form>
+      </div>
+  </body>
+</html>
