@@ -34,15 +34,6 @@ function calcularReceita(parametros){
   topDown.corpoCostasPrimeiroPalaPontos = Math.round(topDown.corpoFrenteInicioPalaPontos / 2);
   topDown.corpoCostasSegundoPalaPontos = topDown.corpoFrenteInicioPalaPontos - topDown.corpoCostasPrimeiroPalaPontos;
 
-  console.log(topDown.mangaPontos);
-  console.log(topDown.raglanVoltas);
-  console.log(topDown.mangaDivisaoPontos);
-  console.log(topDown.mangaInicioPalaPontos);
-  console.log(topDown.corpoFrenteInicioPalaPontos);
-  console.log(topDown.corpoCostasPrimeiroPalaPontos);
-  console.log(topDown.corpoCostasSegundoPalaPontos);
-  console.log((topDown.divisao * 4) + (topDown.mangaInicioPalaPontos * 2) + topDown.corpoFrenteInicioPalaPontos + topDown.corpoCostasPrimeiroPalaPontos + topDown.corpoCostasSegundoPalaPontos)
-
   return topDown;
 
 }

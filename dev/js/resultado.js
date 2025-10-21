@@ -79,6 +79,12 @@ function montarInstrucoes(){
   // console.log(topDown);
   $('.resultado').append(gerarInstrucaoMontagem(topDown.golaPontos));
   $('.resultado').append(gerarInstrucaoGola(topDown.golaVoltas, topDown.barra));
+  $('.resultado').append(gerarInstrucaoPreparacaoRaglan(topDown.divisao,
+                                                        topDown.corpoFrenteInicioPalaPontos,
+                                                        topDown.corpoCostasPrimeiroPalaPontos,
+                                                        topDown.corpoCostasSegundoPalaPontos,
+                                                        topDown.mangaInicioPalaPontos));
+
 }
 
 function montarAcabamento(){

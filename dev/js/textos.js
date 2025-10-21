@@ -13,15 +13,20 @@ function gerarDescricao(descricao){
 }
 
 function gerarMateriais(parametros){
-  return "<h5>MATERIAIS:</h5>"
+
+  var texto = "<h5>MATERIAIS:</h5>"
     + "<ul>"
     + "<li>" + parametros.fioQuantidade + "m de fio " + parametros.fioNome + ", considerando que o fio é da espessura categoria "
     + parametros.fioCategoria + ";</li>"
-    + "<li> Agulha circular nº " + parametros.agulha + " com cabo de 80 cm;</li>"
-    + "<li>9 marcadores - 1 cor A e 8 cor B;</li>"
-    + "<li>Tesoura;</li>"
-    + "<li>Agulha de tapeçaria.</li>"
+    + "<li> Agulha circular nº " + parametros.agulha + " com cabo de 80 cm;</li>";
 
+  if (parametros.divisao == 0){
+    texto += "<li>5 marcadores - 1 cor A e 4 cor B;</li>";
+  }else{
+    texto += "<li>9 marcadores - 1 cor A e 8 cor B;</li>";
+  }
+  return texto + "<li>Tesoura;</li>"
+    + "<li>Agulha de tapeçaria.</li>";
 }
 
 function gerarAmostra(parametros){
@@ -82,25 +87,34 @@ function gerarInstrucaoGola(golaVoltas, barra){
   return texto;
 }
 
-function gerarInstrucaoPreparacaoRaglan(ptsDivisao,
-                                        ptsFrente,
-                                        ptsCostas1,
-                                        ptsCostas2,
-                                        ptsManga){
-
-  return "<b class='sessao_peca'>Pala:</b></br>"
-    + "Tecer a volta de preparação fazendo a divisão do raglan: </br>"
+function gerarInstrucaoPreparacaoRaglan(divisaoPontos,
+                                        corpoFrenteInicioPalaPontos,
+                                        corpoCostasPrimeiroPalaPontos,
+                                        corpoCostasSegundoPalaPontos,
+                                        mangaInicioPalaPontos){
+  var texto = "<p class='sessao_peca'>Pala:</p>"
+    + "<p>Tecer a volta de preparação fazendo a divisão do raglan: </p>"
     + identacaoInicio
-    + "<b>v.:</b> "
-    + ptsCostas1 + "m, [marc B], "
-    + ptsDivisao + "m, [marc B], "
-    + ptsManga + "m, [marc B], "
-    + ptsDivisao + "m, [marc B], "
-    + ptsFrente + "m, [marc B], "
-    + ptsDivisao + "m, [marc B], "
-    + ptsManga + "m, [marc B], "
-    + ptsDivisao + "m, [marc B], "
-    + ptsCostas2 + "m.</br>";
+    + "<p><b>v.:</b> "
+
+  if (divisaoPontos == 0){
+    return texto + corpoCostasPrimeiroPalaPontos + "m, [marc B], "
+    + mangaInicioPalaPontos + "m, [marc B], "
+    + corpoFrenteInicioPalaPontos + "m, [marc B], "
+    + mangaInicioPalaPontos + "m, [marc B], "
+    + corpoCostasSegundoPalaPontos + "m.</p>";
+    + identacaoFinal;
+  }
+
+  return texto + corpoCostasPrimeiroPalaPontos + "m, [marc B], "
+    + divisaoPontos + "m, [marc B], "
+    + mangaInicioPalaPontos + "m, [marc B], "
+    + divisaoPontos + "m, [marc B], "
+    + corpoFrenteInicioPalaPontos + "m, [marc B], "
+    + divisaoPontos + "m, [marc B], "
+    + mangaInicioPalaPontos + "m, [marc B], "
+    + divisaoPontos + "m, [marc B], "
+    + corpoCostasSegundoPalaPontos + "m.</p>";
     + identacaoFinal;
 }
 
