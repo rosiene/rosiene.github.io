@@ -57,12 +57,12 @@ function calcularReceita(parametros){
   topDown.mangaBarraVoltas = calcularVoltas(parametros.amostraCarr, parametros.mangaBarraComprimento, parametros.multiploVoltas);
 
   if (parametros.manga == "comprida"){
-    topDown.punhoPontos = calcularPontos(parametros.amostraPts, parametros.punho, parametros.multiploPontos)
-    topDown.mangaDiminuicoes = topDown.mangaPontos = topDown.punhoPontos;
+
+    topDown.punhoPontos = calcularPontos(parametros.amostraPts, parametros.punhoCircunferencia, parametros.multiploPontos)
+    topDown.mangaDiminuicoes = topDown.mangaPontos - topDown.punhoPontos;
     topDown.mangaIntervaloDiminuicoes = gerarIntervaloDiminuicoesManga(topDown.mangaVoltas, topDown.mangaDiminuicoes);
     topDown.mangaAntesDiminuicoesVoltas = topDown.mangaVoltas - (topDown.mangaDiminuicoes * topDown.mangaIntervaloDiminuicoes);
   }
-  console.log(topDown);
   return topDown;
 }
 

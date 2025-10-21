@@ -67,8 +67,6 @@ function montarInstrucoes(){
                                              topDown.corpoVoltas,
                                              topDown.corpoBarraVoltas,
                                              parametros.barra));
-  console.log(topDown.corpoPontos);
-  console.log(topDown.mangaPontos);
 
   $('.resultado').append(gerarInstrucaoMangas(topDown, parametros.manga, parametros.barra));
 

@@ -74,8 +74,6 @@ function getCmMangaBarraComprimento(){
 }
 
 function getPunhoCircunferencia(){
-  console.log('cmPunhoCircunferencia');
-  console.log($("#cmPunhoCircunferencia").val());
   return $("#cmPunhoCircunferencia").val();
 }
 
