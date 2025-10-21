@@ -87,7 +87,7 @@ function montarParametrosInfoEstiloMedida(){
     + '&manga_comprimento_barra=' + getMangaComprimentoBarra()
     + '&corpo_circunferencia=' + getCorpoCircunferencia()
     + '&corpo_comprimento=' + getCorpoComprimento()
-    + '&corpo_comprimento_barra=' + getCorpoComprimentoBarra();
+    + '&corpo_comprimento_barra=' + get corpoBarraComprimento();
 
   return url;
 }
@@ -221,6 +221,6 @@ function getCorpoComprimento(){
   return $("#corpoComprimento").val();
 }
 
-function getCorpoComprimentoBarra(){
-  return $("#corpoComprimentoBarra").val();
+function get corpoBarraComprimento(){
+  return $("# corpoBarraComprimento").val();
 }

@@ -23,19 +23,34 @@ function calcularReceita(parametros){
   topDown.raglanFinalPontos = atualizarPontosFinais(topDown.golaPontos, topDown.raglanVoltas);
   topDown.corpoPontos = atualizarPontosCorpo(topDown.raglanFinalPontos, topDown.mangaPontos, topDown.cava);
 
-  console.log(parametros);
-
   //calculo divisao gola inicio
   topDown.corpoDivisaoPontos = Math.round(topDown.divisao / 2);
   topDown.mangaDivisaoPontos = Math.round(topDown.divisao - topDown.corpoDivisaoPontos);
 
   topDown.mangaInicioPalaPontos = topDown.mangaPontos - topDown.raglanVoltas - (topDown.mangaDivisaoPontos * 2) - topDown.cava;
   topDown.corpoFrenteInicioPalaPontos = (topDown.corpoPontos / 2) - topDown.raglanVoltas - (topDown.corpoDivisaoPontos * 2) - parametros.cava;
-  topDown.corpoCostasPrimeiroPalaPontos = Math.round(topDown.corpoFrenteInicioPalaPontos / 2);
-  topDown.corpoCostasSegundoPalaPontos = topDown.corpoFrenteInicioPalaPontos - topDown.corpoCostasPrimeiroPalaPontos;
+  topDown. corpoCostasPrimeiroInicioPalaPontos = Math.round(topDown.corpoFrenteInicioPalaPontos / 2);
+  topDown. corpoCostasSegundoInicioPalaPontos = topDown.corpoFrenteInicioPalaPontos - topDown. corpoCostasPrimeiroInicioPalaPontos;
+
+  console.log(parametros);
+
+  if (parametros.gola == "ajustada"){
+
+    topDown.carreiraEncurtadaVoltas = calcularVoltas(parametros.amostraCarr, parametros.golaDiferenca, 2);
+    topDown.corpoFrenteLateralPontos = parseInt(topDown.corpoFrenteInicioPalaPontos / 3);
+
+    var corpoFrenteLateralCarrEncurtadaFinalPontos = calcularFrenteLateralFinalCarrEncurtadaPontos(topDown.corpoFrenteLateralPontos, topDown.carreiraEncurtadaVoltas);
+
+    topDown.carreiraEncurtadaIntervaloVoltas = calcularCarreiraEncurtadaIntervaloPontos(topDown.carreiraEncurtadaVoltas, corpoFrenteLateralCarrEncurtadaFinalPontos);
+    topDown.corpoFrenteCentralPontos = topDown.corpoFrenteInicioPalaPontos - (2 * topDown.corpoFrenteLateralPontos);
+
+    //atualizar voltas raglan sem carreiras carreiraEncurtadaVoltas
+    topDown.raglanVoltasDepoisCarreirasEncurtadas = topDown.raglanVoltas - (topDown.carreiraEncurtadaVoltas - 2);
+  }
+  topDown.corpoVoltas = calcularVoltas(parametros.amostraCarr, (parametros.corpoComprimento - parametros. corpoBarraComprimento), topDown.multiploVoltas);
+  topDown.corpoBarraVoltas = calcularVoltas(parametros.amostraCarr, parametros. corpoBarraComprimento, topDown.multiploVoltas);
 
   return topDown;
-
 }
 
 function calcularPontosFinalRaglan(ptsCorpo, ptsManga, ptsCava){
@@ -121,6 +136,13 @@ function atualizarPontosCorpo(ptsFinal, ptsManga, ptsCava){
   return ptsFinal - (2 * (ptsManga - ptsCava)) + (2 * ptsCava);
 }
 
+function calcularFrenteLateralFinalCarrEncurtadaPontos(ptsFrenteLateralInicio, vCarrEncurtada){
+  return (ptsFrenteLateralInicio + (vCarrEncurtada/2) - 1);
+}
+
+function calcularCarreiraEncurtadaIntervaloPontos(vCarrEncurtada, ptsFrenteLateral){
+  return parseInt(ptsFrenteLateral / (vCarrEncurtada / 2));
+}
 
 // function calcularPala(amostraPts,
 //                       multiplo,

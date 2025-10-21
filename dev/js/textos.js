@@ -46,16 +46,24 @@ function gerarTamanho(parametros){
 
 }
 
-function gerarLegenda(){
-  return "<h5>ABREVIAÇÕES: </h5>"
+function gerarLegenda(divisaoPontos){
+  var texto = "<h5>ABREVIAÇÕES: </h5>"
     +"<p><b>[marc]</b> posicionar ou mover o marcador, "
-    +"<b>2jm</b> 2 pontos juntos em meia, "
-    +"<b>aumD</b> aumento em meia direcional para a direta, "
-    +"<b>aumE</b> aumento em meia direcional para a esquerda, "
-    +"<b>carr.</b> carreira(s), "
+    +"<b>2jm</b> 2 pontos juntos em meia, ";
+
+  if (divisaoPontos > 0){
+    texto += "<b>aumD</b> aumento em meia direcional para a direta, "
+      +"<b>aumE</b> aumento em meia direcional para a esquerda, ";
+  }
+  texto += "<b>carr.</b> carreira(s), "
     +"<b>m</b> meia, "
-    +"<b>ms</b> mate simples, "
-    +"<b>pt(s)</b> ponto(s), "
+    +"<b>ms</b> mate simples, ";
+
+  if (divisaoPontos == 0){
+    texto += "<b>mlm</b> 2 aumentos no mesmo ponto: tecer no mesmo ponto 1m, [marc B], laç, 1m, ";
+  }
+
+  return texto + "<b>pt(s)</b> ponto(s), "
     +"<b>t</b> tricô, "
     +"<b>v.</b> volta(s).</p>";
 }
@@ -87,35 +95,52 @@ function gerarInstrucaoGola(golaVoltas, barra){
   return texto;
 }
 
-function gerarInstrucaoPreparacaoRaglan(divisaoPontos,
-                                        corpoFrenteInicioPalaPontos,
-                                        corpoCostasPrimeiroPalaPontos,
-                                        corpoCostasSegundoPalaPontos,
-                                        mangaInicioPalaPontos){
-  var texto = "<p class='sessao_peca'>Pala:</p>"
-    + "<p>Tecer a volta de preparação fazendo a divisão do raglan: </p>"
-    + identacaoInicio
+function gerarInstrucaoPreparacaoRaglan(topDown){
+  var texto = "<p class='sessao_peca'>Pala:</p>";
+
+  if (topDown.carreiraEncurtadaVoltas){
+    texto += "<p>Tecer a carreira de preparação fazendo a divisão do raglan e carreira encurtada: </p>"
+  }else{
+    texto += "<p>Tecer a volta de preparação fazendo a divisão do raglan: </p>"
+  }
+  texto += identacaoInicio
     + "<p><b>v.:</b> "
 
-  if (divisaoPontos == 0){
-    return texto + corpoCostasPrimeiroPalaPontos + "m, [marc B], "
-    + mangaInicioPalaPontos + "m, [marc B], "
-    + corpoFrenteInicioPalaPontos + "m, [marc B], "
-    + mangaInicioPalaPontos + "m, [marc B], "
-    + corpoCostasSegundoPalaPontos + "m.</p>";
+  texto += topDown. corpoCostasPrimeiroInicioPalaPontos + "m, "
+    + addMarcadorRaglan(topDown.divisao)
+    + topDown.mangaInicioPalaPontos + "m, ";
+    + addMarcadorRaglan(topDown.divisao);
+
+  if (topDown.carreiraEncurtadaVoltas){
+    texto += topDown.corpoFrenteLateralPontos + "m, [marc C], "
+      + topDown.corpoFrenteCentralPontos + "m, [marc D], "
+      + topDown.corpoFrenteLateralPontos + "m, "
+  }else{
+    texto += corpoFrenteInicioPalaPontos + "m, ";
+  }
+  texto += addMarcadorRaglan(topDown.divisao)
+    + topDown.mangaInicioPalaPontos + "m, "
+    + addMarcadorRaglan(topDown.divisao)
+    + topDown. corpoCostasSegundoInicioPalaPontos + "m.</p>";
     + identacaoFinal;
+
+  return texto;
+}
+
+function addMarcadorRaglan(divisaoPontos){
+  if (divisaoPontos > 0){
+    return "[marc B], " + divisaoPontos + "m, [marc B], ";
+  }
+  return "[marc B], ";
+}
+
+function addAumentosRaglan(divisaoPontos){
+  if (divisaoPontos > 0){
+    return "aumD, [marc B], " + divisaoPontos + ", [marc B], aumE, ";
+  }else{
+    return "mlm, ";
   }
 
-  return texto + corpoCostasPrimeiroPalaPontos + "m, [marc B], "
-    + divisaoPontos + "m, [marc B], "
-    + mangaInicioPalaPontos + "m, [marc B], "
-    + divisaoPontos + "m, [marc B], "
-    + corpoFrenteInicioPalaPontos + "m, [marc B], "
-    + divisaoPontos + "m, [marc B], "
-    + mangaInicioPalaPontos + "m, [marc B], "
-    + divisaoPontos + "m, [marc B], "
-    + corpoCostasSegundoPalaPontos + "m.</p>";
-    + identacaoFinal;
 }
 
 function gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisao,
@@ -125,7 +150,6 @@ function gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisao,
                                         ptsCostas2,
                                         ptsManga){
   return "<b class='sessao_peca'>Pala:</b></br>"
-    + "Tecer a carreira de preparação fazendo a divisão do raglan e carreira encurtada: </br>"
     + identacaoInicio
     + "<b>v.:</b> "
     + ptsCostas1 + "m, [marc B], "
@@ -142,125 +166,124 @@ function gerarInstrucoesPreparacaoRaglanComCarrEncurtada(ptsDivisao,
     + identacaoFinal;
 }
 
-function gerarInstrucaoCarrEncurtada1Carr(ptsDivisaoRaglan){
-  return "Tecer as carreiras encurtadas:</br>"
+function gerarInstrucaoCarrEncurtada1Carr(divisao){
+  return "<p>Tecer, no modo plano em carreiras no método alemão as carreiras encurtadas:</p>"
     + identacaoInicio
-    + "<b>1ª carr.:</b> todos em m até o marc B, aumD, [marc B], "
-    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc. B, aumD, "
-    + "[marc B], "
-    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc C, "
-    + "remover o marc C.</br>"
+    + "<p><b>1ª carr.:</b> * todos em m até o marc B, "
+    + addAumentosRaglan(divisao)
+    + " *, rep. de * a * por 2 vezes, "
+    + "todos em m até o marc C, "
+    + "remover o marc C.</p>"
     + identacaoFinal;
 }
 
-function gerarInstrucaoCarrEncurtadaMeio(ptsDivisaoRaglan,
-                                        vCarrEncurtada,
-                                        interavaloPtsCarrEncurtada){
-    var ultimaPar = vCarrEncurtada - 2;
-    var ultimaImpar = vCarrEncurtada - 3;
-    var intervaloMenos1 = interavaloPtsCarrEncurtada - 1;
+function gerarInstrucaoCarrEncurtadaMeio(divisao,
+                                        carreiraEncurtadaVoltas,
+                                        carreiraEncurtadaIntervaloVoltas){
+    var ultimaPar = carreiraEncurtadaVoltas - 2;
+    var ultimaImpar = carreiraEncurtadaVoltas - 3;
+    var intervaloMenos1 = carreiraEncurtadaIntervaloVoltas - 1;
 
-    return identacaoInicio
-      + "<b>2ª e todas as pares até a "
-      +  ultimaPar + "ª carr.:</b> com o fio na frente, 1sf, "
-      + "passa o fio por cima da agulha direita até revelar os "
-      + "fios do ponto da carr. anterior, "
-      +  intervaloMenos1 + "t, [marc C], todos em "
-      + "t até o marc D, remover o marc D. </br>"
-      + identacaoFinal
-      + identacaoInicio
-      + "<b>3ª e todas as impares até a "
-      + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, passa "
-      + "o fio por cima da agulha direita até revelar os "
-      + "fios do ponto da carr. anterior, "
-      + intervaloMenos1 + "m, [marc D], "
-      + "todos em m até o marc B, aumD, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
-      + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc C, remover o marc C.</br>"
-      + identacaoFinal;
+    var texto = "";
+
+    if (ultimaPar > 2){
+      texto += identacaoInicio
+        + "<p><b>2ª e todas as pares até a "
+        + ultimaPar + "ª carr.:</b> com o fio na frente, 1sf, "
+        + "passa o fio por cima da agulha direita até revelar os "
+        + "fios do ponto da carr. anterior, "
+        +  intervaloMenos1 + "t, [marc C], todos em "
+        + "t até o marc D, remover o marc D. </p>"
+        + identacaoFinal
+    }
+    if (ultimaImpar > 3){
+      texto += identacaoInicio
+        + "<p><b>3ª e todas as impares até a "
+        + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, passa "
+        + "o fio por cima da agulha direita até revelar os "
+        + "fios do ponto da carr. anterior, "
+        + intervaloMenos1 + "m, [marc D], "
+        + "* todos em m até o marc B, "
+        + addAumentosRaglan(divisao)
+        + "*, rep. de * a * por 4 vezes, todos em m até o marc C, remover o marc C.</br>"
+        + identacaoFinal;
+    }
+    return texto;
 }
 
-function gerarInstrucaoCarrEncurtadaFinal(ptsDivisaoRaglan,
-                                        vCarrEncurtada,
-                                        interavaloPtsCarrEncurtada){
-  var ultimaPar = vCarrEncurtada - 2;
-  var ultimaImpar = vCarrEncurtada - 1;
+function gerarInstrucaoCarrEncurtadaFinal(divisao,
+                                        carreiraEncurtadaVoltas){
+  var ultimaPar = carreiraEncurtadaVoltas - 2;
+  var ultimaImpar = carreiraEncurtadaVoltas - 1;
 
   return identacaoInicio
-    + "<b>"
-    + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, "
+    + "<p><b>" + ultimaImpar + "ª carr.:</b> com o fio na frente, 1sf, "
     + "passa o fio por cima da agulha direita até revelar os fios "
-    + "do ponto da carr. anterior, todos em m até o marc B, aumD, [marc B] "
-    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc B, aumD, [marc B] "
-    + ptsDivisaoRaglan + "m, [marc B], aumE, todos em m até o marc. A."
+    + "do ponto da carr. anterior, * todos em m até o marc B, "
+    + addAumentosRaglan(divisao)
+    + " *, rep. de * a * por 2 vezes, "
+    + "todos em m até o marc. A.</p>"
     + identacaoFinal
-    + "Tecer uma volta de finalização das carreiras encurtadas toda em "
+    + "<p>Tecer uma volta de finalização das carreiras encurtadas toda em "
     + "<b><i>m</i></b> com atenção aos pontos que foram passados sem fazer na "
-    + "sequência das carreiras encurtadas e remover o marc C e D. </br>";
+    + "sequência das carreiras encurtadas e remover o marc C e D. </p>";
 }
 
-function gerarInstrucaoRaglan(nVoltas,
-                              ptsFinal,
-                              ptsDivisao){
-  return "Tecer as duas voltas abaixo por "
-      + nVoltas + " voltas, até ter "
-      + ptsFinal + " pts nas agulhas: </br>"
+function gerarInstrucaoRaglan(raglanVoltas,
+                              raglanFinalPontos,
+                              divisao){
+  return "<p>Tecer as duas voltas abaixo por "
+      + raglanVoltas + " voltas, até ter "
+      + raglanFinalPontos + " pts nas agulhas: </p>"
       + identacaoInicio
-      + "<b>1ª v.:</b> * m até o próximo marc., aumD, [marc B], "
-      + ptsDivisao + "m, [marc B], aumE, *, rep. de * a * por 4 vezes, todos em m até o final.</br>"
-      + "<b>2ª v.:</b> todos em m."
+      + "<p><b>1ª v.:</b> * m até o próximo marc., "
+      + addAumentosRaglan(divisao)
+      + ", *, rep. de * a * por 4 vezes, todos em m até o final.</p>"
+      + "<p><b>2ª v.:</b> todos em m.</p>"
       + identacaoFinal;
 }
 
-function gerarInstrucaoDivisaoRaglan(ptsFinalRaglan,
-                                     ptsMangaFinal,
-                                     ptsCorpoFrenteFinal,
-                                     ptsCorpoCostas1Final,
-                                     ptsCorpoCostas2Final,
-                                     ptsDivisaoRaglan,
-                                     ptsCava){
+function gerarInstrucaoDivisaoRaglan(topDown){
 
-  var ptsCostas1ComDivisao = parseInt(ptsCorpoCostas1Final) + parseInt(ptsDivisaoRaglan);
-  var ptsFrenteComDivisao = ptsCorpoFrenteFinal + (2 * ptsDivisaoRaglan);
-  var ptsCostas2ComDivisao = parseInt(ptsCorpoCostas2Final) + parseInt(ptsDivisaoRaglan);
+  var costasPrimeiraPontos = parseInt(topDown.corpoCostasPrimeiroInicioPalaPontos) + parseInt(topDown.corpoDivisaoPontos) + (topDown.raglanVoltas / 2);
+  var frentePontos = parseInt(topDown.corpoFrenteInicioPalaPontos) + (2 * parseInt(topDown.corpoDivisaoPontos)) + topDown.raglanVoltas;
+  var costasSegundaPontos = parseInt(topDown.corpoCostasSegundoInicioPalaPontos) + parseInt(topDown.corpoDivisaoPontos) + (topDown.raglanVoltas / 2);
 
-  return "Com "
-    + ptsFinalRaglan + " pts nas agulhas, fazer a divisão do corpo e das mangas:</br>"
+  var mangaPontos = parseInt(topDown.mangaInicioPalaPontos) + (2 * parseInt(topDown.mangaDivisaoPontos)) + topDown.raglanVoltas;
+
+  return "<p>Com "
+    + topDown.raglanFinalPontos + " pts nas agulhas, fazer a divisão do corpo e das mangas:</p>"
     + identacaoInicio
-    + "<b>v.:</b> "
-    + ptsCostas1ComDivisao + "m, reservar "
-    + ptsMangaFinal + " pts, montar "
-    + ptsCava + " pts, "
-    + ptsFrenteComDivisao + "m, reservar "
-    + ptsMangaFinal + " pts, montar "
-    + ptsCava + " pts, "
-    + ptsCostas2ComDivisao + "m.";
+    + "<p><b>v.:</b> "
+    + costasPrimeiraPontos + "m, reservar "
+    + mangaPontos + " pts, montar "
+    + topDown.cava + " pts, "
+    + frentePontos + "m, reservar "
+    + mangaPontos + " pts, montar "
+    + topDown.cava  + " pts, "
+    + costasSegundaPontos + "m.</p>";
     + identacaoFinal;
 }
 
-function gerarInstrucaoCorpo(ptsCorpo,
-                             vComprimentoCorpo,
-                             padraoBarra,
-                             vComprimentoBarraCorpo){
-  var texto = "<b class='sessao_peca'>Corpo:</b></br>"
-    + "Com "
-    + ptsCorpo + " pts nas agulhas, tecer por "
-    + vComprimentoCorpo + " voltas em ponto malha, ou seja, todos os pontos em <b><i>m</i></b>. </br>"
-    + "Em seguida, tecer a barra final por "
-    + vComprimentoBarraCorpo + " v.: </br>"
-    + identacaoInicio
-    + "<b>1ª até "
-    + vComprimentoBarraCorpo + "ª v.:</b> ";
+function gerarInstrucaoCorpo(corpoPontos,
+                             corpoVoltas,
+                             corpoBarraVoltas,
+                             barra){
+  var texto = "<p><b class='sessao_peca'>Corpo:</b></p>"
+    + "<p>Com "
+    + corpoPontos + " pts nas agulhas, tecer por "
+    + corpoVoltas + " voltas em ponto malha, ou seja, todos os pontos em <b><i>m</i></b>. </p>";
 
-  if (padraoBarra == "barra1"){
-    texto += "* 1m, 1t *, rep. de * a * até o final."
+  if (barra == 'barra1') {
+    texto += barra1(corpoBarraVoltas);
+  }else if (barra == 'barra2') {
+    texto += barra1(corpoBarraVoltas);
+  }else if (barra == 'arroz') {
+    texto += arroz(corpoBarraVoltas);
   }else{
-    texto += "* 2m, 2t *, rep. de * a * até o final."
+    texto += cordoes(corpoBarraVoltas);
   }
-  texto += identacaoFinal;
-  texto += "Fazer com o arremate dos pontos.</br>";
+  texto += "<p>Fazer com o arremate dos pontos.</p>";
 
   return texto;
 }

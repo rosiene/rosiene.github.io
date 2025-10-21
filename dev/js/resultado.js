@@ -70,7 +70,7 @@ function montarTamanho(){
 }
 
 function montarLegenda(){
-    $('.resultado').append(gerarLegenda());
+    $('.resultado').append(gerarLegenda(parametros.divisao));
 }
 
 function montarInstrucoes(){
@@ -79,12 +79,23 @@ function montarInstrucoes(){
   // console.log(topDown);
   $('.resultado').append(gerarInstrucaoMontagem(topDown.golaPontos));
   $('.resultado').append(gerarInstrucaoGola(topDown.golaVoltas, topDown.barra));
-  $('.resultado').append(gerarInstrucaoPreparacaoRaglan(topDown.divisao,
-                                                        topDown.corpoFrenteInicioPalaPontos,
-                                                        topDown.corpoCostasPrimeiroPalaPontos,
-                                                        topDown.corpoCostasSegundoPalaPontos,
-                                                        topDown.mangaInicioPalaPontos));
+  $('.resultado').append(gerarInstrucaoPreparacaoRaglan(topDown));
 
+  if (parametros.gola == "ajustada"){
+    $('.resultado').append(gerarInstrucaoCarrEncurtada1Carr(topDown.divisao));
+    $('.resultado').append(gerarInstrucaoCarrEncurtadaMeio(topDown.divisao, topDown.carreiraEncurtadaVoltas, topDown.carreiraEncurtadaIntervaloVoltas));
+    $('.resultado').append(gerarInstrucaoCarrEncurtadaFinal(topDown.divisao, topDown.carreiraEncurtadaVoltas));
+    $('.resultado').append(gerarInstrucaoRaglan(topDown.raglanVoltasDepoisCarreirasEncurtadas, topDown.raglanFinalPontos, topDown.divisao));
+  }else{
+    $('.resultado').append(gerarInstrucaoRaglan(topDown.raglanVoltas, topDown.raglanFinalPontos, topDown.divisao));
+  }
+
+  console.log(topDown);
+  $('.resultado').append(gerarInstrucaoDivisaoRaglan(topDown));
+  $('.resultado').append(gerarInstrucaoCorpo(topDown.corpoPontos,
+                                             topDown.corpoVoltas,
+                                             topDown.corpoBarraVoltas,
+                                             topDown.barra));
 }
 
 function montarAcabamento(){
@@ -165,7 +176,7 @@ function setToDownParametros(){
   parametros.mangaComprimentoBarra = urlParams.get('manga_comprimento_barra');
   parametros.corpoCircunferencia = urlParams.get('corpo_circunferencia');
   parametros.corpoComprimento = urlParams.get('corpo_comprimento');
-  parametros.corpoComprimentoBarra = urlParams.get('corpo_comprimento_barra');
+  parametros. corpoBarraComprimento = urlParams.get('corpo_comprimento_barra');
   parametros.multiploPontos = getMultiploPontos(urlParams.get('barra'));
   parametros.multiploVoltas = getMultiploVoltas(urlParams.get('barra'));
   parametros.cava = getCava(urlParams.get('amostra_pts'));
