@@ -22,8 +22,6 @@ function validarInputsOnSubmit(formulario, msg_erro){
   }
   var valido = (count == 0);
 
-  console.log(valido);
-
   if (!valido){
     $("#erroForm").css("display", "block");
   }else{

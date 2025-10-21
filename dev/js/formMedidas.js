@@ -84,10 +84,10 @@ function montarParametrosInfoEstiloMedida(){
     + '&manga_circunferencia=' + getMangaCircunferencia()
     + '&manga_comprimento=' + getMangaComprimento()
     + '&punho_circunferencia=' + getPunhoCircunferencia()
-    + '&manga_comprimento_barra=' + getMangaComprimentoBarra()
+    + '&manga_barra_comprimento=' + getMangaBarraComprimento()
     + '&corpo_circunferencia=' + getCorpoCircunferencia()
     + '&corpo_comprimento=' + getCorpoComprimento()
-    + '&corpo_comprimento_barra=' + get corpoBarraComprimento();
+    + '&corpo_barra_comprimento=' + getCorpoBarraComprimento();
 
   return url;
 }
@@ -209,8 +209,8 @@ function getPunhoCircunferencia(){
   return $("#punhoCircunferencia").val();
 }
 
-function getMangaComprimentoBarra(){
-  return $("#mangaComprimentoBarra").val();
+function getMangaBarraComprimento(){
+  return $("#mangaBarraComprimento").val();
 }
 
 function getCorpoCircunferencia(){
@@ -221,6 +221,6 @@ function getCorpoComprimento(){
   return $("#corpoComprimento").val();
 }
 
-function get corpoBarraComprimento(){
-  return $("# corpoBarraComprimento").val();
+function getCorpoBarraComprimento(){
+  return $("#corpoBarraComprimento").val();
 }

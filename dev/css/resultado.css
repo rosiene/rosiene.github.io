@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 p {
-  line-height: 2.5;
+  line-height: 1.8;
 }
 
 .identacao{
@@ -29,7 +29,7 @@ p {
 }
 
 .cabecalho h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 .cabecalho h3 {
   font-size: 14px;
@@ -37,13 +37,33 @@ p {
   font-style: italic;
 }
 .resultado h5 {
-  margin-top: 20px;
+  margin-top: 12px;
   font-weight: 600;
 }
-.resultado img {
-  width: 36%;
+.tamanho {
+  display: flex;
+  align-items: center;
+}
+.tamanho div{
+  width: 50%;
+}
+.tamanho img{
+  width: 90%;
+}
+.tamanho table {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.tamanho table tr {
+  border-bottom: 1px dotted #f6b163;
+}
+.tamanho table tr td {
+  padding: 2px 12px;
 }
 
+.tamanho .tabela_valores{
+  text-align: right;
+}
 .rodape {
   text-align: center;
   margin: 40px auto;

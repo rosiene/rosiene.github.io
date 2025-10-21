@@ -1,8 +1,60 @@
 var identacaoInicio = "<div class='identacao'>"
 var identacaoFinal = "</div>";
 
+const gola_redonda_manga_curta =
+  [ "A - Circunferência da gola: "
+  , "B - Comprimento da barra da gola: "
+  , false
+  , "C - Circunferência da manga: "
+  , "D - Comprimento da manga: "
+  , false
+  , "E - Comprimento da barra da manga: "
+  , "F - Circunferência do corpo: "
+  , "G - Comprimento do corpo: "
+  , "H - Comprimento da barra do corpo: "
+];
+
+const gola_ajustada_manga_curta =
+  [ "A - Circunferência da gola: "
+  , "B - Comprimento da barra da gola: "
+  , "C - Diferença do pescoço: "
+  , "D - Circunferência da manga: "
+  , "E - Comprimento da manga: "
+  , false
+  , "F - Comprimento da barra da manga: "
+  , "G - Circunferência do corpo: "
+  , "H - Comprimento do corpo: "
+  , "I - Comprimento da barra do corpo: "
+];
+
+const gola_redonda_manga_comprida =
+  [ "A - Circunferência da gola: "
+  , "B - Comprimento da barra da gola: "
+  , false
+  , "C - Circunferência da manga: "
+  , "D - Comprimento da manga: "
+  , "E - Circunferência do punho: "
+  , "F - Comprimento da barra da manga: "
+  , "G - Circunferência do corpo: "
+  , "H - Comprimento do corpo: "
+  , "I - Comprimento da barra do corpo: "
+];
+
+const gola_ajustada_manga_comprida =
+  [ "A - Circunferência da gola: "
+  , "B - Comprimento da barra da gola: "
+  , "C - Diferença do pescoço: "
+  , "D - Circunferência da manga: "
+  , "E - Comprimento da manga: "
+  , "F - Circunferência do punho: "
+  , "G - Comprimento da barra da manga: "
+  , "H - Circunferência do corpo: "
+  , "I - Comprimento do corpo: "
+  , "J - Comprimento da barra do corpo: "
+];
+
 function gerarTitulo(titulo){
-  return "<h1>- "+titulo+" -</h1>";
+  return "<h1>"+titulo+"</h1>";
 }
 function gerarDescricao(descricao){
   if (descricao != ""){
@@ -20,10 +72,14 @@ function gerarMateriais(parametros){
     + parametros.fioCategoria + ";</li>"
     + "<li> Agulha circular nº " + parametros.agulha + " com cabo de 80 cm;</li>";
 
-  if (parametros.divisao == 0){
-    texto += "<li>5 marcadores - 1 cor A e 4 cor B;</li>";
-  }else{
+  if (parametros.divisao > 0 && parametros.gola == "ajustada"){
+    texto += "<li>11 marcadores - 1 cor A, 8 cor B, 1 cor C e 1 cor D;</li>";
+  }else if (parametros.divisao > 0 && parametros.gola == "redonda"){
     texto += "<li>9 marcadores - 1 cor A e 8 cor B;</li>";
+  }else if (parametros.divisao == 0 && parametros.gola == "ajustada"){
+    texto += "<li>7 marcadores - 1 cor A, 4 cor B, 1 cor C e 1 cor D;</li>";
+  }else{
+    texto += "<li>5 marcadores - 1 cor A e 4 cor B;</li>";
   }
   return texto + "<li>Tesoura;</li>"
     + "<li>Agulha de tapeçaria.</li>";
@@ -37,13 +93,66 @@ function gerarAmostra(parametros){
 }
 
 function gerarTamanho(parametros){
-  return "<h5>TAMANHO:</h5><p>" + parametros.tamanho + "</p>"
-      + "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
-      + parametros.gola
-      + "-manga-"
-      + parametros.manga
-      + ".png' />";
+  var texto = "<h5>TAMANHO (" + parametros.tamanho + "):</h5>"
+        + "<div class='tamanho'>";
 
+  texto += gerarTabelaMedidas(parametros);
+
+  texto += gerarImgMedidas(parametros);
+
+  return texto;
+}
+
+function gerarTabelaMedidas(parametros){
+  var texto = "<div><table>";
+  var tabela;
+
+  // total de 10 itens
+  var estilo;
+
+  var valores = [
+    parametros.golaCircunferencia,
+    parametros.golaComprimento,
+    parametros.golaDiferenca,
+    parametros.mangaCircunferencia,
+    parametros.mangaComprimento,
+    parametros.punhoCircunferencia,
+    parametros.mangaBarraComprimento,
+    parametros.corpoCircunferencia,
+    parametros.corpoComprimento,
+    parametros.corpoBarraComprimento
+  ];
+
+  if (parametros.gola == 'redonda' && parametros.manga == 'curta'){
+    estilo = gola_redonda_manga_curta;
+  }else if (parametros.gola == 'ajustada' && parametros.manga == 'curta'){
+    estilo = gola_ajustada_manga_curta;
+  }else if (parametros.gola == 'redonda' && parametros.manga == 'comprida'){
+    estilo = gola_redonda_manga_comprida;
+  }else{
+    estilo = gola_ajustada_manga_comprida;
+  }
+
+  for (let i = 0; i < valores.length; i++) {
+
+    if(estilo[i]){
+      texto += "<tr><td>"
+        + estilo[i]
+        + "</td><td class='tabela_valores'>"
+        + valores[i]
+        + " cm</td></tr>";
+    }
+  }
+  return texto + "</table></div>";
+}
+
+function gerarImgMedidas(parametros){
+  return "<div><img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
+  + parametros.gola
+  + "-manga-"
+  + parametros.manga
+  + ".png' /></div>"
+  + "</div>";
 }
 
 function gerarLegenda(divisaoPontos){
@@ -83,10 +192,10 @@ function gerarInstrucaoGola(golaVoltas, barra){
 
   var texto = "<p class='sessao_peca'>Gola:</p>"
 
-  if (barra == 'barra1') {
+  if (barra == 'barra-1-1') {
     texto += barra1(golaVoltas);
-  }else if (barra == 'barra2') {
-    texto += barra1(golaVoltas);
+  }else if (barra == 'barra-2-2') {
+    texto += barra2(golaVoltas);
   }else if (barra == 'arroz') {
     texto += arroz(golaVoltas);
   }else{
@@ -116,7 +225,7 @@ function gerarInstrucaoPreparacaoRaglan(topDown){
       + topDown.corpoFrenteCentralPontos + "m, [marc D], "
       + topDown.corpoFrenteLateralPontos + "m, "
   }else{
-    texto += corpoFrenteInicioPalaPontos + "m, ";
+    texto += topDown.corpoFrenteInicioPalaPontos + "m, ";
   }
   texto += addMarcadorRaglan(topDown.divisao)
     + topDown.mangaInicioPalaPontos + "m, "
@@ -249,17 +358,17 @@ function gerarInstrucaoDivisaoRaglan(topDown){
   var frentePontos = parseInt(topDown.corpoFrenteInicioPalaPontos) + (2 * parseInt(topDown.corpoDivisaoPontos)) + topDown.raglanVoltas;
   var costasSegundaPontos = parseInt(topDown.corpoCostasSegundoInicioPalaPontos) + parseInt(topDown.corpoDivisaoPontos) + (topDown.raglanVoltas / 2);
 
-  var mangaPontos = parseInt(topDown.mangaInicioPalaPontos) + (2 * parseInt(topDown.mangaDivisaoPontos)) + topDown.raglanVoltas;
+  var mangaInicioPontos = parseInt(topDown.mangaInicioPalaPontos) + (2 * parseInt(topDown.mangaDivisaoPontos)) + topDown.raglanVoltas;
 
   return "<p>Com "
     + topDown.raglanFinalPontos + " pts nas agulhas, fazer a divisão do corpo e das mangas:</p>"
     + identacaoInicio
     + "<p><b>v.:</b> "
     + costasPrimeiraPontos + "m, reservar "
-    + mangaPontos + " pts, montar "
+    + mangaInicioPontos + " pts, montar "
     + topDown.cava + " pts, "
     + frentePontos + "m, reservar "
-    + mangaPontos + " pts, montar "
+    + mangaInicioPontos + " pts, montar "
     + topDown.cava  + " pts, "
     + costasSegundaPontos + "m.</p>";
     + identacaoFinal;
@@ -274,10 +383,10 @@ function gerarInstrucaoCorpo(corpoPontos,
     + corpoPontos + " pts nas agulhas, tecer por "
     + corpoVoltas + " voltas em ponto malha, ou seja, todos os pontos em <b><i>m</i></b>. </p>";
 
-  if (barra == 'barra1') {
+  if (barra == 'barra-1-1') {
     texto += barra1(corpoBarraVoltas);
-  }else if (barra == 'barra2') {
-    texto += barra1(corpoBarraVoltas);
+  }else if (barra == 'barra-2-2') {
+    texto += barra2(corpoBarraVoltas);
   }else if (barra == 'arroz') {
     texto += arroz(corpoBarraVoltas);
   }else{
@@ -288,77 +397,43 @@ function gerarInstrucaoCorpo(corpoPontos,
   return texto;
 }
 
-function gerarInstrucoesMangasCurta(ptsManga,
-                                    ptsCava,
-                                    vComprimentoManga,
-                                    padraoBarra,
-                                    vComprimentoBarraManga){
-  var texto = "<b class='sessao_peca'>Mangas:</b></br>"
-    + "Pegar os pontos reservados, tecer "
+function gerarInstrucaoMangas(topDown, manga, barra){
+
+  var texto = "<p><b class='sessao_peca'>Mangas:</b></p>"
+    + "<p>Pegar os "
+    + (topDown.mangaPontos - topDown.cava)
+    + " pontos reservados, tecer "
     + "a primeira volta em <b><i>m</i></b>, subindo os "
-    + ptsCava + " pts da cava. </br>Com "
-    + ptsManga + " pts nas agulhas, tecer por "
-    + vComprimentoManga + " v. em ponto <b><i>m</i></b>.</br>"
-    + "Tecer a barra por "
-    + vComprimentoBarraManga + " voltas:</br>"
-    + identacaoInicio
-    + "<b>1ª até "
-    + vComprimentoBarraManga + "ª v.:</b> ";
+    + topDown.cava + " pts da cava, ficando assim com "
+    + topDown.mangaPontos + " pts nas agulhas.</br>"
 
-    if (padraoBarra == "barra1"){
-      texto += "* 1m, 1t *, rep. de * a * até o final."
-    }else{
-      texto += "* 2m, 2t *, rep. de * a * até o final."
-    }
-    texto += identacaoFinal;
-    texto += "Fazer com o arremate dos pontos.</br>";
-
-    return texto;
-}
-
-function gerarInstrucoesMangasAjustadas(ptsManga,
-                                        ptsCava,
-                                        vComprimentoManga,
-                                        padraoBarra,
-                                        vComprimentoBarraManga,
-                                        intervaloDiminuicoes,
-                                        totalDiminuicoes,
-                                        vAntesDiminuicoesManga,
-                                        ptsCircunferenciaPunho){
-  var texto = "<b class='sessao_peca'>Mangas:</b></br>"
-    + "Pegar os pontos reservados, tecer "
-    + "a primeira volta em <b><i>m</i></b>, subindo os "
-    + ptsCava + " pts da cava, ficando assim com "
-    + ptsManga + " pts nas agulhas.</br>"
-
-  if (vAntesDiminuicoesManga > 0){
-    texto += "Tecer por "
-      + vAntesDiminuicoesManga + " v. em <b><i>m</i></b>. "
-  }
-
-  texto += "Em seguida, iniciar a sequência de diminuições definindo "
-  + "como ponto central na direção abaixo da axila e sempre "
-  + "seguindo o ponto central, intercalando as diminuições a cada "
-  + intervaloDiminuicoes + " v., e também intercalando as diminuições entre <b><i>ms</i></b> e <b><i>2jm</b></i>, "
-  + "até a manga ter "
-  + vComprimentoManga + " v. com total de "
-  + totalDiminuicoes + " diminuições. <br>"
-  + "Com "
-  + ptsCircunferenciaPunho + " pts nas agulhas, tecer o punho por "
-  + vComprimentoBarraManga + " voltas:</br>"
-  + identacaoInicio
-  + "<b>1ª até "
-  + vComprimentoBarraManga + "ª v.:</b> ";
-
-  if (padraoBarra == "barra1"){
-    texto += "* 1m, 1t *, rep. de * a * até o final."
+  if (manga == "comprida"){
+    texto += "<p>Tecer por "
+      + topDown.mangaAntesDiminuicoesVoltas + " v. em <b><i>m</i></b>. "
+      + "Em seguida, iniciar a sequência de diminuições definindo "
+      + "como ponto central na direção abaixo da axila e sempre "
+      + "seguindo o ponto central, intercalando as diminuições a cada "
+      + topDown.mangaIntervaloDiminuicoes + " v., e também intercalando as diminuições entre <b><i>ms</i></b> e <b><i>2jm</b></i>, "
+      + "até a manga ter "
+      + topDown.mangaVoltas + " v. com total de "
+      + topDown.mangaDiminuicoes + " diminuições. </p>";
   }else{
-    texto += "* 2m, 2t *, rep. de * a * até o final."
+    texto += "<p>Tecer por "
+      + topDown.mangaVoltas + " v. em <b><i>m</i></b>. </p>";
   }
-  texto += identacaoFinal;
-  texto += "Fazer com o arremate dos pontos.</br>";
 
-  return texto;
+  if (barra == 'barra-1-1') {
+    texto += barra1(topDown.mangaBarraVoltas);
+  }else if (barra == 'barra-2-2') {
+    texto += barra2(topDown.mangaBarraVoltas);
+  }else if (barra == 'arroz') {
+    texto += arroz(topDown.mangaBarraVoltas);
+  }else{
+    texto += cordoes(topDown.mangaBarraVoltas);
+  }
+  texto += "<p>Fazer com o arremate dos pontos.</p>";
+
+  return texto;;
 }
 
 function acabamento(){

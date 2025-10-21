@@ -1,26 +1,3 @@
-
-// nome_projeto=Teste
-// descricao_projeto=Meu+Primeiro+Top+Down
-// tamanho=adulto
-// agulha=7
-// fio=Balloon
-// amostra_pts=18
-// amostra_carr=26
-// divisao=0
-// gola=redonda
-// manga=curta
-// barra=barra-1-1
-// gola_circunferencia=60
-// gola_comprimento=4
-// gola_diferenca=4
-// manga_circunferencia=40
-// manga_comprimento=12
-// punho_circunferencia=40
-// manga_comprimento_barra=undefined
-// corpo_circunferencia=100
-// corpo_comprimento=24
-// corpo_comprimento_barra=24
-
 const urlParams = new URLSearchParams(window.location.search);
 
 var parametros = new Object();
@@ -29,12 +6,8 @@ var topDown = new Object();
 $(document).ready(function() {
 
   setToDownParametros();
-
   escreverReceita();
-
-  // setTimeout(() => {
-  //   download();
-  // }, 1000);
+  // download();
 });
 
 function escreverReceita(){
@@ -43,11 +16,8 @@ function escreverReceita(){
   montarAmostra();
   montarTamanho();
   montarLegenda();
-
   montarInstrucoes();
-
   montarRodape();
-
 }
 
 function montarCabecalho(){
@@ -74,11 +44,13 @@ function montarLegenda(){
 }
 
 function montarInstrucoes(){
-  $('.resultado').append(gerarInstrucaoTitulo());
+
   topDown = calcularReceita(parametros);
-  // console.log(topDown);
+
+  $('.resultado').append(gerarInstrucaoTitulo());
+
   $('.resultado').append(gerarInstrucaoMontagem(topDown.golaPontos));
-  $('.resultado').append(gerarInstrucaoGola(topDown.golaVoltas, topDown.barra));
+  $('.resultado').append(gerarInstrucaoGola(topDown.golaVoltas, parametros.barra));
   $('.resultado').append(gerarInstrucaoPreparacaoRaglan(topDown));
 
   if (parametros.gola == "ajustada"){
@@ -90,15 +62,17 @@ function montarInstrucoes(){
     $('.resultado').append(gerarInstrucaoRaglan(topDown.raglanVoltas, topDown.raglanFinalPontos, topDown.divisao));
   }
 
-  console.log(topDown);
   $('.resultado').append(gerarInstrucaoDivisaoRaglan(topDown));
   $('.resultado').append(gerarInstrucaoCorpo(topDown.corpoPontos,
                                              topDown.corpoVoltas,
                                              topDown.corpoBarraVoltas,
-                                             topDown.barra));
-}
+                                             parametros.barra));
+  console.log(topDown.corpoPontos);
+  console.log(topDown.mangaPontos);
 
-function montarAcabamento(){
+  $('.resultado').append(gerarInstrucaoMangas(topDown, parametros.manga, parametros.barra));
+
+  // ACABAMENTOS
   $('.resultado').append(acabamento());
 }
 
@@ -111,12 +85,11 @@ function download(){
   var titulo = parametros.nomeProjeto;
   var element = document.body;
   var opt = {
-    margin:       0.5,
+    margin:       [0.8, 0.5, 0.8, 0.5],
     filename:     titulo + '.pdf',
-    image:        { type: 'jpg', quality: 1 },
-    pagebreak: { mode: ['css'] },
-    // pagebreak: { mode: ['css', 'legacy'] },
-    html2canvas:  { scale: 3, useCORS: true, letterRendering: true},
+    image:        { type: 'jpg', quality: 0.98 },
+    pagebreak: { mode: ['avoid-all'] },
+    html2canvas:  { scale: 2, useCORS: true, letterRendering: true},
     jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
   };
   html2pdf().set(opt).from(element).save();
@@ -173,10 +146,10 @@ function setToDownParametros(){
   parametros.mangaCircunferencia = urlParams.get('manga_circunferencia');
   parametros.mangaComprimento = urlParams.get('manga_comprimento');
   parametros.punhoCircunferencia = urlParams.get('punho_circunferencia');
-  parametros.mangaComprimentoBarra = urlParams.get('manga_comprimento_barra');
+  parametros.mangaBarraComprimento = urlParams.get('manga_barra_comprimento');
   parametros.corpoCircunferencia = urlParams.get('corpo_circunferencia');
   parametros.corpoComprimento = urlParams.get('corpo_comprimento');
-  parametros. corpoBarraComprimento = urlParams.get('corpo_comprimento_barra');
+  parametros.corpoBarraComprimento = urlParams.get('corpo_barra_comprimento');
   parametros.multiploPontos = getMultiploPontos(urlParams.get('barra'));
   parametros.multiploVoltas = getMultiploVoltas(urlParams.get('barra'));
   parametros.cava = getCava(urlParams.get('amostra_pts'));
