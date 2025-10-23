@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+  setPala();
+
   var form = document.getElementById("form_estilo");
   var msg_erro = document.getElementById("erroForm");
 
@@ -17,6 +19,17 @@ $( document ).ready(function() {
     }
   });
 });
+
+function setPala(){
+  const urlParams = new URLSearchParams(window.location.search);
+  const pala = urlParams.get('pala');
+
+  if (pala == "contiguos"){
+    $("#raglan").hide();
+  }else if (pala == "raglan"){
+    $("#contiguos").hide();
+  }
+}
 
 function montarParametrosInfoEstilo(){
   const urlParams = new URLSearchParams(window.location.search);

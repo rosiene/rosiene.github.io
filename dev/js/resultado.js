@@ -6,11 +6,16 @@ var topDown = new Object();
 $(document).ready(function() {
 
   setToDownParametros();
-  escreverReceita();
+
+  if (parametros.pala == 'contiguos'){
+    escreverReceitaContiguos()
+  }else{
+    escreverReceitaRaglan();
+  }
   download();
 });
 
-function escreverReceita(){
+function escreverReceitaRaglan(){
   montarCabecalho();
   montarMateriais();
   montarAmostra();

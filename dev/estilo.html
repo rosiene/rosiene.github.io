@@ -18,19 +18,30 @@
         <h3>Por Rosiene Dilly</h3>
       </div>
       <div class="fluxo">
-        <span>INFORMAÇÕES</span> > <span>ESTILO</span> > MEDIDAS
+        <span>INFORMAÇÕES</span> > <span>PALA</span> ><span>ESTILO</span> > MEDIDAS
       </div>
 
       <form class="formulario estilo" id="form_estilo">
-        <fieldset>
-          <legend>PALA RAGLAN</legend>
+        <fieldset id="contiguos">
+          <legend>CONTÍGUOS</legend>
+          <p>A pala contíguos simula a aparência de uma peça feita com costuras, ela é estruturada em duas etapas: primeiro os aumentos nos ombro, e depois os aumentos nas mangas. Para organizar essa divisão, é necessário definir quantos pontos irão compor o ombro.</p>
+          <p class="esquema">
+            <img src="https://rosiene.github.io/mrp/img/medidas/contiguos-esquema.png" />
+          </p>
+          <div>
+            <label for="divisao_contiguos" class="divisao_contiguos">N. de pontos dos ombros (entre 0 e 12):</label>
+            <input type="number" id="divisaoContiguos" name="divisao_contiguos" class="obrigatorio" value="0"/>
+          </div>
+        </fieldset>
+        <fieldset id="raglan">
+          <legend>RAGLAN</legend>
           <p>A pala raglan é estruturada em quatro partes: mangas, frente e costas. Para organizar essa divisão, é necessário definir quantos pontos irão compor cada uma dessas partes, marcando os limites entre elas.</p>
           <p class="esquema">
             <img src="https://rosiene.github.io/mrp/img/medidas/raglan-esquema.png" />
           </p>
           <div>
-            <label for="divisao" class="divisao">Número de pontos da divisão (entre 0 e 8):</label>
-            <input type="number" id="divisao" name="divisao" class="obrigatorio" value="0"/>
+            <label for="divisao_raglan" class="divisao_raglan">Número de pontos da divisão (entre 0 e 8):</label>
+            <input type="number" id="divisaoRaglan" name="divisao_raglan" class="obrigatorio" value="0"/>
           </div>
         </fieldset>
         <fieldset>

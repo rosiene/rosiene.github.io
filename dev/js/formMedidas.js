@@ -94,12 +94,13 @@ function montarParametrosInfoEstiloMedida(){
 
 function setEstilo(urlParams){
   const divisao = urlParams.get('divisao');
+  const pala = urlParams.get('pala');
   const gola = urlParams.get('gola');
   const manga = urlParams.get('manga');
   const barra = urlParams.get('barra');
 
   const textoEstilo = getTextoEstilo(divisao, gola, manga, barra);
-  const imgEstilo = getImgEstilo(gola, manga);
+  const imgEstilo = getImgEstilo(pala, gola, manga);
 
   $('.modelo_selecionado').empty();
   $('.modelo_selecionado').html(textoEstilo + imgEstilo);
@@ -139,9 +140,11 @@ function getTextoEstilo(divisaoInput, golaInput, mangaInput, barraInput){
     + ".</p>";
 }
 
-function getImgEstilo(golaInput, mangaInput){
+function getImgEstilo(palaInput, golaInput, mangaInput){
 
-  return "<img src='https://rosiene.github.io/mrp/img/medidas/raglan-gola-"
+  return "<img src='https://rosiene.github.io/mrp/img/medidas/"
+    + palaInput
+    + "-gola-"
     + golaInput
     + "-manga-"
     + mangaInput

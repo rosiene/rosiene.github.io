@@ -11,23 +11,13 @@ $( document ).ready(function() {
     event.preventDefault();
 
     if(validarInputsOnSubmit(form, msg_erro)){
-
-      var parametros = montarParametrosInfoEstilo();
-
-      var palaContiguos = 'contiguos.html';
-      var palaRaglan = 'raglan.html';
-
-      if (getPala() == 'contiguos'){
-        window.location.href = palaContiguos + "?" + parametros;
-      }else{
-        window.location.href = palaRaglan + "?" + parametros;
-      }
-
+      var parametros = montarParametrosInfoPala();
+      window.location.href = "estilo.html?" + parametros;
     }
   });
 });
 
-function montarParametrosInfoEstilo(){
+function montarParametrosInfoPala(){
   const urlParams = new URLSearchParams(window.location.search);
 
   const url = urlParams.toString()
