@@ -14,7 +14,7 @@ $( document ).ready(function() {
 
       var parametros = montarParametrosInfo();
 
-      window.location.href = "estilo.html?" + parametros;
+      window.location.href = "pala.html?" + parametros;
     }
   });
 

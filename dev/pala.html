@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formPala.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script src="js/formValidacao.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="form_estilo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/mrp/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > <span>PALA</span> > ESTILO > MEDIDAS
+      </div>
+
+      <form class="formulario pala" id="form_pala">
+        <fieldset>
+          <legend>PALA</legend>
+          <label>
+            <input type="radio" name="pala" value="contiguos" checked />
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/pala/contiguos.png" alt="Contíguos"/>
+              <p>Contíguos</p>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="pala" value="raglan">
+            <div>
+              <img src="https://rosiene.github.io/mrp/img/pala/raglan.png" alt="Raglan"/>
+              <p>Raglan</p>
+            </div>
+          </label>
+        </fieldset>
+
+        <input type="button" onclick="voltar();" value="< inicio" />
+        <input type="submit" value="Estilo >" id="submitPala" />
+        <div class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</div>
+        </form>
+      </div>
+  </body>
+</html>

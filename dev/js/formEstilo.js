@@ -61,11 +61,3 @@ function getBarra(){
 function setBarra(urlParams){
   $("input[name='barra'][value='" + urlParams.get('barra') + "']").prop("checked", true);
 }
-
-function voltarInfo(){
-  const urlParams = new URLSearchParams(window.location.search);
-  const url = "info.html?"
-    + urlParams.toString(); // Use encodeURIComponent para garantir que a URL seja segura
-
-  window.location.href = url;
-}
