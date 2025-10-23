@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="js/formInfo.js"></script>
+    <script src="js/navegacao.js"></script>
+    <script src="js/formValidacao.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Minha Receita Pronta</title>
+  </head>
+  <body>
+    <div class="conteudo" id="conteudo">
+      <div class="cabecalho">
+        <img src="https://rosiene.github.io/mrp/img/logo_preta.png" />
+        <h1>Minha Receita Pronta</h1>
+        <h2>Exclusivo: Clube Tricô e Tal</h2>
+        <h3>Por Rosiene Dilly</h3>
+      </div>
+      <div class="fluxo">
+        <span>INFORMAÇÕES</span> > ESTILO > MEDIDAS
+      </div>
+
+      <form class="formulario" id="form_info">
+        <fieldset>
+          <legend>RECEITA</legend>
+
+          <div>
+            <label for="nomeProjeto" class="nome_projeto">Nome do Projeto*:</label>
+            <input type="text" id="nomeProjeto" name="nome_projeto" class="obrigatorio" value="Teste" required/>
+          </div>
+
+          <div>
+            <label for="descricaoProjeto" class="descricao_projeto">Descrição do Projeto:</label>
+            <input type="text" id="descricaoProjeto" name="descricao_projeto" value="Meu Primeiro Top Down" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>TAMANHO</legend>
+
+          <div>
+            <input type="radio" id="tamanhoAdulto" name="tamanho" value="adulto" checked />
+            <label for="tamanhoAdulto">Adulto</label>
+          </div>
+
+          <div>
+            <input type="radio" id="tamanhoBebe" name="tamanho" value="bebe" />
+            <label for="tamanhoBebe">Bebê</label>
+          </div>
+
+          <div>
+            <input type="radio" id="tamanhoInfantil" name="tamanho" value="infantil" />
+            <label for="tamanhoInfantil">Infantil</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>MATERIAIS</legend>
+
+          <div>
+            <label for="agulha" class="agulha">Nº de Agulha*:</label>
+            <input type="number" id="agulha" name="agulha" class="obrigatorio" value="7" />
+          </div>
+
+          <div>
+            <label for="fio" class="fio">Nome do Fio*:</label>
+            <input type="text" id="fio" name="fio" class="obrigatorio" value="Balloon" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>AMOSTRA</legend>
+
+          <div>
+            <label for="amostraPts" class="amostra_pts">Nº de pontos na amostra (10 cm)*:</label>
+            <input type="number" id="amostraPts" name="amostra_pts" class="obrigatorio" class="obrigatorio" value="18"  />
+          </div>
+
+          <div>
+            <label for="amostraCarr" class="amostra_carr">Nº de carreiras/voltas na amostra (10 cm)*:</label>
+            <input type="number" id="amostraCarr" name="amostra_carr" class="obrigatorio" class="obrigatorio" value="26" />
+          </div>
+        </fieldset>
+
+        <input type="button" onclick="voltar();" value="< inicio" />
+        <input type="submit" value="Estilo >" id="submitInfo" />
+        <div class="erro_form" id="erroForm">* Corrigir os erros indicados de vermelho no formulário.</div>
+      </form>
+    </div>
+  </body>
+</html>
