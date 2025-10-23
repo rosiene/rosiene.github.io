@@ -93,20 +93,26 @@ function montarParametrosInfoEstiloMedida(){
 }
 
 function setEstilo(urlParams){
-  const divisao = urlParams.get('divisao');
+
   const pala = urlParams.get('pala');
   const gola = urlParams.get('gola');
   const manga = urlParams.get('manga');
   const barra = urlParams.get('barra');
+  var divisao;
 
-  const textoEstilo = getTextoEstilo(divisao, gola, manga, barra);
+  if (pala == "contiguos"){
+    divisao = urlParams.get('divisao');
+  }
+
+
+  const textoEstilo = getTextoEstilo(pala, divisao, gola, manga, barra);
   const imgEstilo = getImgEstilo(pala, gola, manga);
 
   $('.modelo_selecionado').empty();
   $('.modelo_selecionado').html(textoEstilo + imgEstilo);
 }
 
-function getTextoEstilo(divisaoInput, golaInput, mangaInput, barraInput){
+function getTextoEstilo(palaInput, divisaoInput, golaInput, mangaInput, barraInput){
 
   var gola, manga, barra;
 
@@ -132,7 +138,9 @@ function getTextoEstilo(divisaoInput, golaInput, mangaInput, barraInput){
     barra = 'Cordões de Tricô';
   }
 
-  return "<p>Pala raglan em malha com "
+  return "<p>Pala "
+    + palaInput
+    + " em malha com "
     + divisaoInput + " pontos de divisão, "
     + " gola " + gola
     + ", mangas " + manga

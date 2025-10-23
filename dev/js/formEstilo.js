@@ -44,7 +44,14 @@ function montarParametrosInfoEstilo(){
 }
 
 function getDivisao(){
-  return $("#divisao").val();
+  const urlParams = new URLSearchParams(window.location.search);
+  const pala = urlParams.get('pala');
+
+  if (pala == "contiguos"){
+    return $("#divisaoContiguos").val();
+  }
+  return $("#divisaoRaglan").val();
+
 }
 
 function setDivisao(urlParams){
