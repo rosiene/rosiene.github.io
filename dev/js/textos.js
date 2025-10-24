@@ -404,15 +404,15 @@ function gerarInstrucaoMangas(topDown, manga, barra){
     + (topDown.mangaPontos - topDown.cava)
     + " pontos reservados, e subir os "
     + topDown.cava + " pts da cava, ficando assim com "
-    + topDown.mangaPontos + " pts nas agulhas.</br>"
+    + topDown.mangaPontos + " pts nas agulhas. Posicionar o <i>marc. A</i> no meio dos pontos da cava.</p>"
 
   if (manga == "comprida"){
     texto += "<p>Tecer por "
       + topDown.mangaAntesDiminuicoesVoltas + " v. em <b><i>m</i></b>. "
-      + "Em seguida, iniciar a sequência de diminuições definindo "
-      + "como ponto central na direção abaixo da axila e sempre "
-      + "seguindo o ponto central, intercalando as diminuições a cada "
-      + topDown.mangaIntervaloDiminuicoes + " v., e também intercalando as diminuições entre <b><i>ms</i></b> e <b><i>2jm</b></i>, "
+      + "Em seguida, iniciar a sequência de diminuições direcionais "
+      + "em <b><i>2jm</i></b> e <b><i>ms</i></b>, em relação ao <i>marc. A</i,> "
+      + "invercalando no início e no final da volta respectivamente a cada "
+      + topDown.mangaIntervaloDiminuicoes + " v., "
       + "até a manga ter "
       + topDown.mangaVoltas + " v. com total de "
       + topDown.mangaDiminuicoes + " diminuições. </p>";
