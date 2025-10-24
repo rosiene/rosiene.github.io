@@ -402,8 +402,7 @@ function gerarInstrucaoMangas(topDown, manga, barra){
   var texto = "<p><b class='sessao_peca'>Mangas:</b></p>"
     + "<p>Pegar os "
     + (topDown.mangaPontos - topDown.cava)
-    + " pontos reservados, tecer "
-    + "a primeira volta em <b><i>m</i></b>, subindo os "
+    + " pontos reservados, e subir os "
     + topDown.cava + " pts da cava, ficando assim com "
     + topDown.mangaPontos + " pts nas agulhas.</br>"
 
